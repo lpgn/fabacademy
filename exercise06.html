@@ -338,6 +338,52 @@
                     </li>
                 </ul>
                 <br>
+    
+                <p>
+                    Bellow is the 3Dprint test model:
+
+                    <canvas id="cv" width=640 height=480>
+	
+                        It seems you are using an outdated browser that does not support canvas :-(
+	
+                    </canvas>
+	
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('cv');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl','media/2018week6/3D_test_V3_0.4mm.stl');
+                        viewer.setParameter('ModelColor','#CAA618');
+                        viewer.setParameter('BackgroundColor1','#E5D7BA');
+                        viewer.setParameter('BackgroundColor2','#383840');
+                        viewer.setParameter('RenderMode','flat');
+                        viewer.setParameter('MipMapping','on');
+                        viewer.setParameter('Definition','high');
+                        viewer.setParameter('Renderer','webgl');
+                        viewer.init();
+                        viewer.update();
+	
+                    </script> 
+                    <legend>
+                    rendered 3D model of the STL file
+                    </legend>
+    
+                </p>
+                
+                <p>
+                    The author also suplyes a image tfor reference when checking the print
+                </p>
+
+                <p class="pic">
+                    <img src="media/2018week6/testIII.jpg">
+                    <legend>
+                        infografics from the forun 
+                        <a href="http://www.whoote.com/viewtopic.php?f=13&t=13"> 
+                            phpBB 
+                        </a> 
+                    </legend>
+                </p>
+                
+                <br>
                 <li>
                     On the software Repetier Host I loaded the stl file and sliced for each printer. Naming the Gcode with the printer designation in front.
                 </li>
@@ -377,15 +423,62 @@
                 </p>
             
                 <li>
-                    The prints were not bad but there was a lot of oozing (spider web). So I increased the retraction by half mm and the improvement is noticeable in both printers.
+                    The prints were not bad but there was a lot of oozing (spider web). So I increased the retraction by .5 mm and then by 1 mm the improvements were very noticeable in both printers.
+                    <p class="pic"> <img src="media/2018week6/before_and_afterpictures/minibeforeaftercollage2.jpg"><legend>photo of prints with 1.5(left) and 2.5mm(right) retraction settings</legend></p>
                 </li>
                 
                 
                 
                 
                 <li>
-                    ...........
+                    The results
                 </li>
+                <br>
+                <style type="text/css">
+                    table.tableizer-table {
+                        font-size: 12px;
+                        border: 1px solid #CCC; 
+                        font-family: Arial, Helvetica, sans-serif;
+                    } 
+                    .tableizer-table td {
+                        padding: 4px;
+                        margin: 3px;
+                        border: 1px solid #CCC;
+                    }
+                    .tableizer-table th {
+                        background-color: #104E8B; 
+                        color: #FFF;
+                        font-weight: bold;
+                </style>
+
+                <table class="tableizer-table">
+
+                    <thead><tr class="tableizer-firstrow"><th></th><th>Parameter</th><th>Results</th><th>&nbsp;</th></tr></thead><tbody>
+                    <tr><td>&nbsp;</td><td>&nbsp;</td><td>Mini</td><td>Delta</td></tr>
+                    <tr><td>1</td><td>Nut, Size M4 Nut should fit perfectly</td><td>Yes</td><td>No</td></tr>
+                    <tr><td>2</td><td>Wave, rounded print</td><td>Yes</td><td>Yes</td></tr>
+                    <tr><td>3</td><td>Star, Sharp Edges</td><td>Yes</td><td>Yes</td></tr>
+                    <tr><td>4</td><td>Name, Complex Shapes</td><td>Yes</td><td>Yes</td></tr>
+                    <tr><td>5</td><td>Holes, Size 3, 4, 5 mm</td><td>2.9, 3.9, 4.9</td><td>3, 4, 5 mm oval</td></tr>
+                    <tr><td>6</td><td>minimal Distance: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td><td> 0.1mm not good</td><td>0.1, 0.2, 0.3 not good scale wrong 6.5mm intead of 7mm</td></tr>
+                    <tr><td>7</td><td>Z height: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1 mm</td><td>0.1mm printed with 0.2 and 1.1 with 1</td><td>Yes</td></tr>
+                    <tr><td>8</td><td>Wall Thickness: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td><td>did't print 0.1, 0.2 next walls printed as 0.5 until last as 1mm</td><td>Yes</td></tr>
+                    <tr><td>9</td><td>Bridge Print: 2, 4, 8, 16 mm</td><td>Printed as 2.85, 3.9, 7.9, 15.8</td><td>Yes</td></tr>
+                    <tr><td>10</td><td>Sphere, Rounded Print 4.8mm height</td><td>5.1</td><td>Yes</td></tr>
+                    <tr><td>11</td><td>Sphere Mix, 7 mm height</td><td>7.15</td><td>Yes</td></tr>
+                    <tr><td>12</td><td>Pyramide, 7 mm height</td><td>6.95</td><td>Yes</td></tr>
+                    <tr><td>13</td><td>Overhang: 25, 30, 35, 40, 45, 50, 55, 60, 65, 70°</td><td>Yes</td><td>Yes</td></tr>
+                    <tr><td>14</td><td>Warp, does it bend?</td><td>no</td><td>Yes</td></tr>
+                    <tr><td>15</td><td>3D Print Font, optimized for 3D printing</td><td>Yes</td><td>Yes</td></tr>
+                    <tr><td>16</td><td>Surface, Flatness</td><td>a bit rough </td><td>Yes</td></tr>
+                    <tr><td>17</td><td>Size, 100 x 100mm x 23.83 (10mm width)</td><td>99.45 x 99.8 x 23.2 (10.2 with)</td><td>Yes</td></tr>
+                    <tr><td>18</td><td>Spike, minimum Layer Time, 21 mm height from Bottom (include Baseplate)</td><td>15mm</td><td>Yes</td></tr>
+                    <tr><td>19</td><td>Hole in Wall, 4 mm diameter, check for proper print</td><td>Yes</td><td>Yes</td></tr>
+                    <tr><td>20</td><td>Raft Test, raft should be just under the model</td><td>didn't test</td><td>Yes</td></tr>
+                    <tr><td>21</td><td>Retract Travel, check retract settings for longer travel</td><td>almost no ozzing</td><td>Yes</td></tr>
+                    <tr><td>&nbsp;</td><td>Conclusion</td><td>For an FDM printer I belive the result is verry good. The sizes difeerences are probabily due to a PLA shirincage</td><td></td></tr>
+                    </tbody>
+                </table>
             </ol>
         </ol>
         
