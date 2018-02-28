@@ -146,6 +146,15 @@
             <li>
                 Mini 3D Printer
             </li>
+            <li>
+                Caliper
+            </li>
+            <li>
+                0.4 mm neddle
+            </li>
+            <li>
+                Uhu glue
+            </li>
         </ul>
         <hr>
         <h3>
@@ -157,10 +166,10 @@
                 Repetier Host
             </li>
             <li>
-                ...
+                Solid Works
             </li>
             <li>
-                ...
+                Autodesk Recap
             </li>
         </ul>
         <hr>
@@ -170,12 +179,32 @@
         <ul style="list-style-type:disc">
     
             <li>
-                <a href="media/2018week6/3Dprintertestmodel.zip">STL file: 
+                Test's stl file: 
+                <a href="media/2018week6/3d_test_v3_0.4mm.stl">
+                    3D Printer test model from thingiverse
                 </a>
-                3D Printer test model from thingiverse
+                
             </li>
             <li>
-                <a href="media/2018week6/generatedgcode.zip">Gcode:</a> Generated Gcode from STL file
+                Gcode file:
+                <a href="media/2018week6/generatedgcode.zip">
+                    all week's generated Gcode from STL files
+                </a>
+                
+            </li>
+            <li>
+                Solid Works file:
+                <a href="media/2018week6/wire_organiser_chain_solidworks_file.zip">
+                    3D model for a wire organiser used on my final project
+                </a>
+                
+            </li>
+            <li>
+                Chain's stl file:
+                <a href="media/2018week6/wire_organiser_chain.stl">
+                     Generated stl file from the solidworks archive
+                </a>
+               
             </li>
         </ul>
         
@@ -338,21 +367,23 @@
                     </li>
                 </ul>
                 <br>
-    
+
                 <p>
                     Bellow is the 3Dprint test model:
-
-                    <canvas id="cv" width=640 height=480>
+                </p>
+                
+                <p>    
+                    <canvas id="testmodel" width=640 height=480>
 	
                         It seems you are using an outdated browser that does not support canvas :-(
 	
                     </canvas>
 	
                     <script type="text/javascript">
-                        var canvas = document.getElementById('cv');
+                        var canvas = document.getElementById('testmodel');
                         var viewer = new JSC3D.Viewer(canvas);
-                        viewer.setParameter('SceneUrl','media/2018week6/3D_test_V3_0.4mm.stl');
-                        viewer.setParameter('ModelColor','#CAA618');
+                        viewer.setParameter('SceneUrl','media/2018week6/3d_test_v3_0.4mm.stl');
+                        viewer.setParameter('ModelColor','#1826ca');
                         viewer.setParameter('BackgroundColor1','#E5D7BA');
                         viewer.setParameter('BackgroundColor2','#383840');
                         viewer.setParameter('RenderMode','flat');
@@ -424,11 +455,8 @@
             
                 <li>
                     The prints were not bad but there was a lot of oozing (spider web). So I increased the retraction by .5 mm and then by 1 mm the improvements were very noticeable in both printers.
-                    <p class="pic"> <img src="media/2018week6/before_and_afterpictures/minibeforeaftercollage2.jpg"><legend>photo of prints with 1.5(left) and 2.5mm(right) retraction settings</legend></p>
+                    <p class="pic"> <img src="media/2018week6/minibeforeaftercollage2.jpg"><legend>photo of prints with 1.5(left) and 2.5mm(right) retraction settings</legend></p>
                 </li>
-                
-                
-                
                 
                 <li>
                     The results
@@ -480,8 +508,205 @@
                     </tbody>
                 </table>
             </ol>
+            <br>
+            <li>
+                Designing and printing an object
+            </li>
+            
+            <br>
+            
+            <ol type="i">
+                <li>
+                        I decided to create a nescessary part of my final project. Its a wire organiser that when connected together works as a chain.
+                </li>
+                
+                <li>
+                        The desig is parametric so I can easily change the size as needed
+                </li>
+                <p class="pic">
+                    <img src="media/2018week6/designingcollage.jpg">
+                    <legend>
+                        parametric design on solidworks from begining to gcode generation
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/2018week6/image11.jpg">
+                    <legend>
+                        model finished
+                    </legend>
+                </p>
+                <li>
+                    As I finished the solidworks model I then export the file as stl
+                </li>
+                <br>    
+                <p>
+                    <canvas id="wireorganiser" width=640 height=480>
+                        It seems you are using an outdated browser that does not support canvas :-(
+                    </canvas>
+                    <legend>
+                    render of my 3D model of the wire organiser
+                    </legend>
+                    
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('wireorganiser');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl','media/2018week6/wire_organiser_chain.stl');
+                        viewer.setParameter('ModelColor','#1826ca');
+                        viewer.setParameter('BackgroundColor1','#E5D7BA');
+                        viewer.setParameter('BackgroundColor2','#383840');
+                        viewer.setParameter('RenderMode','flat');
+                        viewer.setParameter('MipMapping','on');
+                        viewer.setParameter('Definition','high');
+                        viewer.setParameter('Renderer','webgl');
+                        viewer.init();
+                        viewer.update();
+                    </script> 
+
+    
+                </p>
+                
+                <p class="pic">
+                    <img src="media/2018week6/image13.jpg">
+                    <legend>
+                        printer almost finished printing chain organiser
+                    </legend>
+                </p>
+                
+                <p class="pic">
+                    
+                    <video controls>
+                        
+                        <source src="media/2018week6/videoplayback.webm">
+                        
+                        Your browser does not support HTML5 video.
+                        
+                    </video> 
+                    
+                    <legend>
+                        
+                        Video of printers printing the organiser and the organised assembled in a chain
+                    
+                    </legend>
+                
+                </p>
+                
+            </ol>
+            <li>
+            3D Scanning
+            </li>
+            <br>
+            
+            <ol type="i">
+                
+                <li>
+                    For that part of the assignment I used Autodesk Remake. It relies on <a href="https://www.engineering.com/DesignSoftware/DesignSoftwareArticles/ArticleID/13313/Photogrammetry-Explained-The-State-of-Reality-Capture.aspx">Photogrammetry</a>. 
+                </li>
+                <p class="pic">
+                    <img src="media/2018week6/remake.jpg">
+                    <legend>
+                    
+                    </legend>
+                </p>
+                <li>
+                    luckly I was at the beach and I saw a model that would be interesting. Someone had but a large rock equilibrated.
+                </li>
+                 <p class="pic">
+                    <img src="media/2018week6/rock.jpg">
+                    <legend>
+                    equilibrated rock at the Figeira beach near Lagos, Portugal
+                    </legend>
+                </p>
+                <li> 
+                    Next step was to take around 40 photos from all angles and in preference without moving background like people or clouds.
+                </li>
+                <p class="pic">
+                    <img src="media/2018week6/rockcollage.jpg">
+                    <legend>
+                        sample of the 90+ images taken to make the model
+                    </legend>
+                </p>
+                <li>
+                    Next I uploaded the files to Remake. Its important to select only good images and restrict background moving objects. After upload is done press create model. It can take a while during your model generation.
+                </li>
+                <p class="pic">
+                    <img src="media/2018week6/image14.jpg">
+                    <legend>
+                        print from remake uploading images
+                    </legend>
+                </p>
+                <li>
+                    After upload chose option on the generation process. I chose standard as its free.
+                </li>
+                <p class="pic">
+                    <img src="media/2018week6/image14b.jpg">
+                    <legend>
+                        print from options on remake
+                    </legend>
+                </p>
+                <li>
+                    On the lower part of the screen ReMake shows models beeing generated and on queue. The top part shows models already done.
+                </li>
+                <p class="pic">
+                    <img src="media/2018week6/image16.jpg">
+                    <legend>
+                        print from Autodesk ReMake
+                    </legend>
+                </p>
+                
+                <li>
+                    With the model ready you can click on it and entering the edit mode of ReMake.
+                </li>
+                <p class="pic">
+                
+                    <video controls>
+                        
+                        <source src="media/2018week6/rotatestonemodel.mp4">
+                        
+                        Your browser does not support HTML5 video.
+                        
+                    </video>
+                    <legend>
+                        model generate showing problems with openned faces. no ready for printing.
+                    </legend>
+                </p>
+                    
+                <li>
+                I compile the edditing sequence on the following mosaic, in synteses. I selected the undesired parts deleted it and filled the holles left. finaly I generated a stl file that should be ready to print.
+                </li>
+                               <p class="pic">
+                    <img src="media/2018week6/editthescan.jpg">
+                    <legend>
+                        collage from screen prints edditing sequence of Autodesk ReMake
+                    </legend>
+                </p>
+                <br>
+                <p>The result!</p>
+                <p>
+                    <canvas id="stone" width=640 height=480>
+                        It seems you are using an outdated browser that does not support canvas :-(
+                    </canvas>
+                    <legend>
+                    render of my 3D model from Photogrammetry scanning on ReMake
+                    </legend>
+                    
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('stone');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl','media/2018week6/stonemodel.stl');
+                        viewer.setParameter('ModelColor','#1826ca');
+                        viewer.setParameter('BackgroundColor1','#E5D7BA');
+                        viewer.setParameter('BackgroundColor2','#383840');
+                        viewer.setParameter('RenderMode','flat');
+                        viewer.setParameter('MipMapping','on');
+                        viewer.setParameter('Definition','high');
+                        viewer.setParameter('Renderer','webgl');
+                        viewer.init();
+                        viewer.update();
+                    </script> 
+                
+                
+            </ol>
         </ol>
-        
         
     <!-- End of your content -->
     </div>
