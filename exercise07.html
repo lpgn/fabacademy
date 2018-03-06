@@ -81,100 +81,94 @@
 	<!-- Insert your content here below! -->
 
         <h2>
-            Assignment
+            <a href="http://fabacademy.org/2018/docs/FabAcademy-Assessment/electronics_design.html">
+                Assignment
+            </a>
         </h2>
     
 
         <section class="todo">
-                    
             <ul class="todo-list" style="list-style-type:none">
-                        
                 <li> 
                     <label class="tasks-list-item">
-                                
-                        <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
-                                
+                        <input type="checkbox" name="task_1" value="1" class="tasks-list-cb" checked="">
                         <span class="tasks-list-mark">
                         </span>
-                                
-                        <span class="tasks-list-desc"> add a button and LED to the echo hello-world board 
+                        <span class="tasks-list-desc"> 
+                            group project: Use the test equipment in your lab to observe the operation of a microcontroller circuit board
                         </span>
-                            
                     </label>  
                 </li>
                         
                 <li> 
                     <label class="tasks-list-item">
-                                
                         <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
-                                
                         <span class="tasks-list-mark">
                         </span>
-                                
+                        <span class="tasks-list-desc">
+                            Redraw the echo hello-world board
+                        </span>
+                    </label>  
+                </li>
+                <li> 
+                    <label class="tasks-list-item">
+                        <input type="checkbox" name="task_3" value="1" class="tasks-list-cb" checked="">
+                        <span class="tasks-list-mark">
+                        </span>
+                        <span class="tasks-list-desc"> 
+                            add a button and LED to the echo hello-world board 
+                        </span>
+                    </label>  
+                </li>
+                        
+                <li> 
+                    <label class="tasks-list-item">
+                        <input type="checkbox" name="task_4" value="1" class="tasks-list-cb" checked="">
+                        <span class="tasks-list-mark">
+                        </span>
                         <span class="tasks-list-desc"> 
                             check the design rules
                         </span>
-                            
                     </label>  
                 </li>
-                        
                 <li> 
                     <label class="tasks-list-item">
-                                
-                        <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
-                                
+                        <input type="checkbox" name="task_5" value="1" class="tasks-list-cb" checked="">
                         <span class="tasks-list-mark">
                         </span>
-                                
                         <span class="tasks-list-desc"> 
                             and make it 
                         </span>
-                            
                     </label>  
                 </li>
-                        
                 <li> 
                     <label class="tasks-list-item">
-                                
-                        <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
-                                
+                        <input type="checkbox" name="task_6" value="1" class="tasks-list-cb" checked="">
                         <span class="tasks-list-mark">
                         </span>
-                                
                         <span class="tasks-list-desc"> 
                             Review 
-                            <a href="http://academy.cba.mit.edu/classes/electronics_design/index.html">Neil's class page</a>
+                            <a href="http://academy.cba.mit.edu/classes/electronics_design/index.html">
+                                Neil's class page
+                            </a>
                         </span>
-                            
                     </label>  
                 </li>
-                          
-                    
             </ul>
       
             
         </section>
         <hr>
-
-
         <h3>
             Week workflow
         </h3>
-
-
         <p>
             Wekely assignment → introduction to eagle → Edit Schematic/Boad → Mill the board→ solder componets → debug → edit and publish website
         </p>
         <hr>
-
-
-
         <h3>
             Tools used
         </h3>
-
-
-
         <ul style="list-style-type:disc">
   
             <li>
@@ -183,6 +177,10 @@
   
             <li>
                 TaoBao CNC
+            </li>
+            
+            <li>
+                test equipment: digital voltmeter, oscilloscope, regulated power supply
             </li>
 
         </ul>
@@ -208,15 +206,130 @@
             </li>
 
         </ul>
+        <hr>        
+        
+        <ol type="1">
+            <li>
+            Using the test equipment in our lab
+            </li>
+            
+            <br>
+            
+            
+                <li>
+                    I started by waching a sparkfun's <a href="https://www.youtube.com/watch?time_continue=279&v=u4zyptPLlJI">youtube video</a> on ociloscope. 
 
-        <hr>
+                    <br>
+                    <br>
 
+                    I learned:
+                </li>
+                
+            <ul style="list-style-type:disc">
+   
+                   
+                    
+                <li>
+                    that a ociloscope measures voltage over time: getting amplitude, frequency, transient signals;
+                </li>
+                
+                <li>The important buttons...
+                    <p class="pic">         
+                    <img src="media/2018week7/ociloscope.jpg">
+                    <legend>     
+                        Our Lab Ociloscope
+                    </legend> 
+                </p>
+                </li>
+                <li>
+                    Calibrating the probe/Adjusting compensation capacitor
+                </li>
+                                    
+                <p class="pic">
+                    <img src="media/2018week7/probe.jpg">
+                        <legend>
+                            Ociloscope's probe
+                        </legend>
+                    
+                </p>
+            
+                <ol type="a">
+                
+                    <li>
+                    
+                        on the probe select to X10;
+                    </li>
 
-        <h2>
-            Eagle introduction:
-        </h2>
+                    <li>
+                    
+                        connect the probe to channel one plug;
+                    </li>
+                    <li>
+                        turn on ociloscope
+                    </li>
+                    <li>
+                
+                        make sure only channel one is on, click on CH2 button until its off and the other way around on CH1 button;
+                    </li>
+                    <li>
+                    
+                        sellect DC coupling with the F1 key;
+                    </li>
+                    <li>
+                    
+                        press button F4 to sellect 10X on probe mode;
+                    </li>
+                    <li>
+                    
+                        press trig/menu button and sellect type as "edge" and source CH1
+                    </li>
+                    <li>
+                    
+                        Select slope as "Rise"
+                    </li>
+                    <li>
+                    
+                        Adjust the Vertical and horizontal knobs until you see the wave
+                    </li>
+                    <li>
+                    
+                        if wave is moving adjust trig nob until it stops
+                    </li>
+                    <li>
+                    
+                        to calibrate the probe adjust the screw on the base of the probe until the wave is square.
+                    </li>
+                    
+                                    
+                    <p class="pic">
+                    <img src="media/2018week7/beforeafter.jpg">
+                        <legend>
+                            Picture of the wave before and after adjustment
+                        </legend>
+                    
+                
+                    </p>
+                    
+                </ol>
+                
+            </ul>
+            
+            <br>
 
-        <p class="pic">
+            <li>
+                Eagle introduction:            
+            </li>
+            
+            <ol type="i">
+                <li>
+                    I started by watching the video tutorials below I had a look through the 
+                    <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html">
+                        eagle tutorial
+                    </a> 
+            for the week6. Following it I downloaded and instaled the Fab library for eagle.
+                </li>
+            </ol>
+                    <p class="pic">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/1AXwjZoyNno" frameborder="0" allowfullscreen="">
             </iframe>
         </p>
@@ -229,55 +342,57 @@
                 Printed Circuit Board Layout
             </legend>
 	               
-        </p>
+        </p>    
 
-
-        <p>
-            After watching the video tutorials above I had a look through the 
-            <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html">eagle tutorial
-            </a> 
-            for the week6. Following it I downloaded and instaled the Fab library for eagle. 
-        </p>
-
-
-        <hr>
-    
-
-        <h3>
-            Reverse engineering Neil's Board
-        </h3>
+         
+            <li>
+            
+                Reverse engineering Neil's Board
+                <p class="pic">
+            
+                    <img src="media/week6/hello.ftdi.44.jpg">
+            
+                    <legend>
+                
+                        Neil's Hello Board
+            
+                    </legend>
+                </p>
+            </li>
+         
  
-
-        <p class="pic">
-            <img src="media/week6/hello.ftdi.44.png">
-            <legend>
-                Neil's Hello Board
-            </legend>
-        </p>
-
-
-        <p>
-            I started by having a look at the 
-            <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step5">
+            <ol type="i">
+            
+                <li>I started by having a look at the 
+            
+                    <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step5">
                 Electronics Design - Eagle tutorial
-            </a>
+            
+                    </a>
 
-            With the above schematics in hand I started redrawing it at Eagle
-        </p>
-  
+            
+                    With the above schematics in hand I started redrawing it at Eagle
+            
+                </li>
+                
+                <br>
+                
+            </ol>
 
-        <h3>
+            <li>
             Schematics Step by Step:
-        </h3>
+        
+            </li>
         
 
-        <ol type="a">
+        
+            <ol type="a">
     
             <li>under projects → right click on eagle → click on new project → name project
             </li>
     
             <p class="pic">
-                <img src="media/week6/image02.png">
+                <img src="media/week6/image02.jpg">
             </p>
     
             <li>
@@ -285,7 +400,7 @@
             </li>
     
             <p class="pic">
-                <img src="media/week6/image06.png">
+                <img src="media/week6/image06.jpg">
             </p>
     
             <li>
@@ -293,7 +408,7 @@
             </li>
     
             <p class="pic">
-                <img src="media/week6/image07.png">
+                <img src="media/week6/image07.jpg">
             </p>
     
             <li>
@@ -301,7 +416,7 @@
             </li>
     
             <p class="pic">
-                <img src="media/week6/image04.png">
+                <img src="media/week6/image04.jpg">
             </p>
     
             <li>
@@ -337,9 +452,9 @@
         <hr>
      
 
-        <h3>
+        <li>
             Drawing the Board
-        </h3>
+        </li>
         <br>
 
         <h4>
@@ -356,7 +471,7 @@
 
 
             <p class="pic">
-                <img src="media/week6/image01.png">
+                <img src="media/week6/image01.jpg">
             </p>
     
 
@@ -382,7 +497,7 @@
             </li>
 
             <p class="pic">
-                <img src="media/week6/image13.png">
+                <img src="media/week6/image13.jpg">
             </p>
 
             <li>
@@ -390,7 +505,7 @@
             </li>
 
             <p class="pic">
-                <img src="media/week6/image11.png">
+                <img src="media/week6/image11.jpg">
             </p>
 
             <li>
@@ -409,6 +524,7 @@
         </ol>
         
 
+            <br>
         <p> 
             You can wacth how I did it here, pump up the volume for some Cash!
 
@@ -439,9 +555,12 @@
 
 
 
-        <h3>
-            Adding the LED and Button
-        </h3>
+        
+            <li>
+            
+                Adding the LED and Button
+        
+            </li>
 
 
         <ol type="a">
@@ -471,7 +590,7 @@
             </li>
 
             <p class="pic">
-                <img src="media/week6/image14.png">
+                <img src="media/week6/image14.jpg">
             </p>   
 
             <li> 
@@ -493,9 +612,9 @@
         <hr>
 
 
-        <h3>
+        <li>
             Make BOM (Bill of Materials)
-        </h3>
+        </li>
             
 
 
@@ -506,7 +625,7 @@
             </li>
     
             <p class="pic">
-                <img src="media/week6/image08.png">
+                <img src="media/week6/image08.jpg">
             </p>
     
             <li>
@@ -514,7 +633,7 @@
             </li>
     
             <p class="pic">
-                <img src="media/week6/image09.png">
+                <img src="media/week6/image09.jpg">
             </p>
     
             <li>
@@ -526,7 +645,7 @@
             </li>
     
             <p class="pic">
-                <img src="media/week6/image10.png">
+                <img src="media/week6/image10.jpg">
             </p>
         </ol>
         
@@ -663,21 +782,21 @@
             <hr>
   
 
-<h3>Exporting the image for fabmodules</h3>
+<li>Exporting the image for fabmodules</li>
         
 <ol type="i">
 <li>On layers toolbar select only the top layer</li>
-<p class="pic"><img src="media/week6/image05.png"></p>
+<p class="pic"><img src="media/week6/image05.jpg"></p>
 <li>next type "export"→ select image nd monocromatic→and in resolution type 500</li>
 <li>save to desired location</li>
-<p class="pic"><img src="media/week6/image00.png"></p>
+<p class="pic"><img src="media/week6/image00.jpg"></p>
         
 <li>the result is a black and white image</li>
 
             
 </ol>
-
-<h3>Edit in gimp</h3>
+<br>
+<li>Edit in gimp</li>
         
 <ol type="i">
     <li>With the exported eagle file in hand open in gimp.</li>
@@ -687,26 +806,30 @@
 <li>in the end you should have two images, one for the PCB and one for the outline</li>
 </ol>
 
-<p class="pic"><img src="media/week6/neilhelloboard.png"><legend>PCB image ready for fabmodules</legend></p>
+<p class="pic"><img src="media/week6/neilhelloboard.jpg"><legend>PCB image ready for fabmodules</legend></p>
 
-<p class="pic"><img src="media/week6/neilhelloboardoutline.png"><legend>pcb outline ready for fabmodules</legend></p>
+<p class="pic"><img src="media/week6/neilhelloboardoutline.jpg"><legend>pcb outline ready for fabmodules</legend></p>
 
 <hr>
-<h3> Fab modules and Milling</h3>
+<li> Fab modules and Milling</li>
 
 <p>The process in Fabmodules and Milling is already outlined by the <a href="exercise04.html">week 4 </a>assignment so I will only keep here a image of the result </p>
   <p class="pic"><img src="media/week6/image15.jpg"><legend>milled pcb, polished with tothpast for best apearance</legend></p>       
 <hr>
         
-<h3>Soldering/Populating the PCB and Debuging</h3>
+<li>Soldering/Populating the PCB and Debuging</li>
     <h4> The result</h4>
-    <p>As before the populating and debuging is already outlined by the <a href="exercise04.html">week 4 </a>assignment so I will only keep here a image of the result </p>
+    <p>As before the populating and debuging is already outlined by the <a href="exercise05.html">week 5 </a>assignment so I will only keep here a image of the result </p>
   <p class="pic"><img src="media/week6/image16.jpg"><legend>populated PCB ready for burning firmware</legend></p>      
 <hr>
         
-<h3>Conclusion</h3>
+<li>Conclusion</li>
         
 <p>I really enjoyed learning this new tool. I have used eagle before to view pcbs but never actually designd one. I feel it opens my mind to a lot of new things to come!</p>
+
+            
+
+        </ol>  
         
     <!-- End of your content -->
 
