@@ -97,7 +97,7 @@
             <h4>Have you:</h4>
             <ul>
                 <li>Described your design and fabrication process using words/images/screenshots.</li>
-                <li>Explained the programming process/es you used and how the microcontroller data sheethelped you.</li>
+                <li>Explained the programming process/es you used and how the microcontroller data sheet helped you.</li>
                 <li>Explained problems and how you fixed them.</li>
                 <li>Included original design files and code.</li>
             </ul>
@@ -159,11 +159,72 @@
         </h3>
         
         <p>
-        As I am making a large CNC for my final project I decided an encoder for the steppers would be a nice addition.
+        As I am making a large CNC for my final project I decided to make an optical encoder. The Optical encoder would assure that the CNC movements are where they should be. 
         </p>
         
-        <p>As done on <a href="exercise07.html">week 7</a> I started by revewing Neil's boards. The one I would be redesigning is the <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png"> visible light input board</a>.</p>
+        <p class="pic"><img src="media/2018week11/sketch.JPG"><legend>My encoder sketch</legend></p>
+        <hr>
+        <h4>
+        What is an Optical Encoder
+        </h4>
+        <p>The Optical Encoders is a electromechanical device that monitors movement, speed and or direction.</p>
+        <p> <a href="https://www.youtube.com/watch?v=6KBOLXrw94c">video expaining what is an encoder</a></p>
+        <p> <a href="https://www.youtube.com/watch?v=CHE1imH9tdg">video explaining what is an absolute encoder</a></p>
+
+        <p class="pic"><img src="media/2018week11/encoderworking.jpg"><legend>image extracted from this <a href="https://rekadayaupaya.wordpress.com/2013/06/13/8-4-the-mcu-and-other-components-of-the-nc-system/">website (no sources given)</a> </legend></p>
         
+        
+        <hr>
+        <h4>References</h4>
+        
+        <p>As done on <a href="exercise07.html">week 7</a> I started by reviewing Neil's boards. The one I would be redesigning is the <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png"> visible light input board</a>.</p>
+        <p class="pic"><img src="media/2018week11/hello.temp.45.jpg"><legend>Professor Neil's light board</legend></p>
+        <p>I checked this <a href="http://fab.cba.mit.edu/classes/863.10/people/dimitris.papanikolaou/Assignment_8.html">website</a>
+            <p class="pic"><img src="media/2018week11/websitereference.jpg"><legend>Assignment website under CBA</legend></p>
+        <hr>
+        <h4>Designing the PCB</h4>
+        <p>The first step was creating the schematics. I based my schematics on the design of professor Neil's <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png"> visible light input board</a> and addapted it with consideration of what a <a href="http://fab.cba.mit.edu/classes/863.10/people/dimitris.papanikolaou/Assignment_8.html">previous Professor Neil's Student</a> did on his assignment. The difference is I want to have extra 2 led as light source and aslso an extra 2x6 header for being able to repurpose this prototype board.</p>
+        <h4>The Datasheets and resistor calculations</h4>
+        <p>
+            In orther to calculate the resistor values and other, I examined the following Datahsets and the calculations/observations I made:
+        </p>
+        <ol>
+            <li>
+                <a href="http://www.everlight.com/file/ProductFile/PT15-21C-TR8.pdf">Phototransistor</a>
+            </li>
+            
+            <p>
+                Neil on his light input devices uses a 10K resistor on the collector side of the phototransistor, as I am using the same phototransistor as him It would be safe to use the same value, but I wanted to understand a bit more of its inner workings so I extracted some parts of its datasheet:
+            </p>
+            <li>
+                <a href="https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTST-C230TBKT.pdf">Blue LED</a>
+            </li>
+                
+            <p class="pic"><img src="media/2018week11/leddatasheetextraction.jpg"><legend>datasheet extraction</legend></p>
+            <p class="pic"><img src="media/2018week11/ledresistorcalculation.jpg"><legend>resistor calculation</legend></p>
+            
+            <li>
+                <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf">ATTINY45</a>
+            </li>
+        </ol>
+        <p>
+        
+        </p>
+        <p>
+        Bellow is how my schematics looks like:</p>
+        <p class="pic left"><img src="media/2018week11/encodermodule.sch.jpg"><legend>....</legend></p>
+        <p class="pic left"><img src="media/2018week11/encodermodule.brd.jpg"><legend>....</legend></p>
+        <p class="pic left"><img src="media/2018week11/tiny.sch.jpg"><legend>....</legend></p>
+        <p class="pic left"><img src="media/2018week11/tiny.brd.jpg"><legend>....</legend></p>
+        
+        <p>Now I need to design the board around a stepper motor. I will need a hole for the axis and also holes to screw the pcb to the motor. To achieve this I will export a dxf file from solid works with a stteper design that I am using and try to design the pcb around it.
+        </p>
+        <p class="pic"></p>
+        
+        <p> One thing I was worried was how to tell direction and what would be the ideal position for the phototransistors.</p>
+        <p>
+        http://www.machinedesign.com/sensors/basics-rotary-encoders-overview-and-new-technologies-0
+        </p>
         
     <!-- End of your content -->
 
