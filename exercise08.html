@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2019 - Lucio Pentagna</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Load the menu file -->
+    <script>
+    function menu() {
+                      $('#exercises').load("exercises-menu.html");
+                      $('#project').load("project-menu.html");
+                      $('#cclicense').load("license.html");
+                      }
+    </script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+    <!-- Insert your content here below! -->
+
+        <div class="jumbotron" style="width: 100%">
+            <h1>Week 08</h1>
+            <h3>Computer-Controlled Machining</h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <ul><li>test runout, alignment, speeds, feeds, and toolpaths for your machine</li></ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Make something big (on a CNC machine).</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Demonstrate 2D design development for CNC production</li>
+                <li>Describe workflows for CNC production</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Explained how you made your files for machining (2D or 3D)</li>
+                <li>Shown how you made something BIG (setting up the machine, using fixings, testing joints, adjusting feeds and speeds, depth of cut etc)</li>
+                <li>Described problems and how you fixed them</li>
+                <li>Included your design files and ‘hero shot’ photos of final object</li>
+            </ul>
+        </div>
+
+        <h3>Tools used</h3>
+
+
+        <ul style="list-style-type:disc">
+    <li>large self made CNC</li>
+        </ul><hr>
+
+
+
+        <h3>Software Used</h3>
+
+        <ul style="list-style-type:disc">
+        <li>Solid Works</li>
+        <li>HSM</li>
+        <li>Mach3</li>
+
+        </ul>
+
+        <hr>
+
+        <ol type="1">
+            <li>
+                Introduction:
+                <br>
+                <br>
+                For this weeks assignment I started by looking for inspiration on a CNC electronics enclosure. This is part of my final Project,<a href="project01.html"> The Large CNC</a> The idea I have in mind was to have all the electronics inside a box that could be adapted with time with different "windows" that could be exchanged as I change the equipment without having to change everything. After a web search I found a few inspirations that I present below:
+                <br>
+                <br>
+
+                    <p class="pic">
+
+                        <img src="media/week08/readleaf_1-800.jpg">
+                        <legend>image from <a href="https://buildyourcnc.com/Item/cnc-computer-system-redLeaf"> BuildyourCNC Website</a></legend>
+                    </p>
+
+                    <p class="pic">
+                        <img src="media/week08/img_9220-800.jpg">
+                        <legend>image from <a href="https://buildyourcnc.com/Item/cnc-computer-system-redFly"> BuildyourCNC Website</a></legend>
+                    </p>
+
+                    <p class="pic">
+                        <img src="media/week08/maxresdefault.jpg">
+                        <legend>image from <a href="https://www.youtube.com/watch?v=l8kj5ZymFbs"> the you tube channel Educating Savvas</a></legend>
+                    </p>
+            </li>
+            <li>
+            The caracteristics:
+                <br>
+                <br>
+                currently most of the electronics are mounted to a piece of MDF and some are just nearby so I really need a box :-).
+                <br>
+                <br>
+                <P class="pic">
+                    <img src="media/week08/img_20180313_111829.jpg">
+                    <legend>imge of my current setup. I really need a total makeover!</legend>
+                </P>
+            </li>
+            <li>
+            The Parts inside:
+                <br>
+                <br>
+                <style type="text/css">
+                    table.tableizer-table
+                    {
+                        font-size: 12px;
+                        border: 1px solid #CCC;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    .tableizer-table td
+                    {
+                        padding: 4px;
+                        margin: 3px;
+                        border: 1px solid #CCC;
+                    }
+                    .tableizer-table th
+                    {
+                        background-color: #104E8B;
+                        color: #FFF;
+                        font-weight: bold;
+                    }
+
+                </style>
+                <table class="tableizer-table">
+                    <thead><tr class="tableizer-firstrow"><th>item</th><th>&nbsp;Model#</th><th>&nbsp;dimenssions</th><th>&nbsp;Requirements</th><th>&nbsp;Link</th></tr></thead><tbody>
+                    <tr><td>X Stepper Driver</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>YL Stepper Driver</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>YR Stepper Driver</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Z Stepper Driver</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>A Stepper Driver</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Power 19V</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Frequency Inverter</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Board</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>RaspberryPi</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Wifi dongle</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Raspberry Pi screen</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Pump</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Pump Power</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>X stepper 4pin Conector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>YL stepper 4pin Conector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>YR stepper 4pin Conector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Z stepper 4pin Conector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>A stepper 4pin Conector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Emergency stop swicth</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Power on Swicth</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>X Max/Min endstop 2pin Connector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>YL Max/Min endstop 2pin Connector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>YR Max/Min endstop 2pin Connector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>Z Max/Min endstop 2pin Connector</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr><td>A Max/Min endstop 2pin Connector</td><td>&nbsp;</td><td>&nbsp;</td><td></td></tr>
+                    </tbody></table>
+            </li>
+            <br>
+            <br>
+
+            <li>
+            The design:
+                <br>
+                <br>
+                The design is going to be made in Solidworks and parametric so I can reuse it in the future for other projects.
+                <ol type="a">
+                <li>
+
+                </li>
+                </ol>
+            </li>
+
+        </ol>
+    <!-- End of your content -->
+
+      </div> <!-- /container -->
+
+    <!-- footer -->
+
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery)
+    </script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>
