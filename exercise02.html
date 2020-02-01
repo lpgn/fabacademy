@@ -8,41 +8,52 @@
     <meta name="description" content="">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
-    <title>Fab Academy 2019 - Lucio Pentagna</title>
+
+    <title>Fab Academy 2020 - Lucio Pentagna</title>
+
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
+
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
     <script type="text/javascript" src="media/jsc3d.min.js"></script>
     <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
     <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <!-- Load the menu file -->
     <script>
         function menu() {
-                $('#exercises').load("exercises-menu.html");
-                $('#project').load("project-menu.html");
-                $('#cclicense').load("license.html");
-            }
-        </script>
+                      $('#exercises').load("exercises-menu.html");
+                      $('#project').load("project-menu.html");
+                      $('#cclicense').load("license.html");
+                      }
+    </script>
+
 </head>
 
 <body onload="menu()">
+
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
@@ -66,266 +77,349 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
+
     <div class="container">
+
         <!-- Insert your content here below! -->
         <div class="jumbotron" style="width: 100%">
             <h1>Week 02</h1>
-            <h3>Project Management</h3>
+            <h3>Computer-aided Design</h3>
             <hr>
             <h4>Individual assignment</h4>
             <ul>
-                <li>Build a personal site describing you and your final project.</li>
-                <li>Upload it to the class archive. Work through a git tutorial.</li>
+                <li>Model (raster, vector, 2D, 3D, render, animate, simulate, ...) a <a href="project_update.html"> possible final project</a>, and post it on your class page.</li>
             </ul>
             <h4>Learning outcomes:</h4>
             <ul>
-                <li>Explore and use website development tools</li>
-                <li>Identify and utilise version control protocol</li>
+                <li> Evaluate and select 2D and 3D software
+                </li>
+                <li>Demonstrate and describe processes used in modelling with 2D and 3D software</li>
             </ul>
             <h4>Have you:</h4>
             <ul>
-                <li>made a website and described how you did it</li>
-                <li>introduced yourself</li>
-                <li>documented steps for uploading files to archive</li>
-                <li>pushed to the class archive</li>
+                <li>Modelled experimental objects/part of a possible project in 2D and 3D software</li>
+                <li>Shown how you did it with words/images/screenshots</li>
+                <li>Included your original design files</li>
             </ul>
         </div>
+        <hr>
+        <h3>Tools used</h3>
+        <ul style="list-style-type:disc">
+            <li>Caliper</li>
+            <li>Camera</li>
+        </ul>
+        <hr>
         <h3>Software Used</h3>
         <ul style="list-style-type:disc">
-            <li>git</li>
-            <li>cmd</li>
-            <li>brackets</li>
-            <li>sublime_text3</li>
-        </ul>
-        <h3>Useful Links</h3>
-
-        <ul>
-            <li><a href="http://fab.academany.org/2019/">Fab Academy Archieve</a></li>
-            <li><a href="http://fabacademy.org/2019/docs/FabAcademy-Assessment/">Fab Academy Assignments and Assessment</a></li>
-            <li><a href="https://gitlab.fabcloud.org/academany/fabacademy/2019/labs">Gitlab 2019</a></li>
-            <li><a href="http://fabmodules.org/">Fab Modules</a></li>
-            <li><a href="http://mods.cba.mit.edu/">Mods</a></li>
-            <li><a href="http://nueval.fabacademy.org">Student Dashboard</a> </li>
-            <li><a href="http://fab.academany.org/2019/labs/algarve/students/lucio">My Personal Website</a></li>
+            <li><a href="https://www.solidworks.com/">Solid Works</a></li>
+            <li><a href="https://www.autodesk.com/products/fusion-360/free-trial">Fusion 360</a></li>
+            <li><a href="https://inkscape.org/">Inkscape</a></li>
+            <li><a href="https://bcnc.org/">BCNC</a></li>
         </ul>
         <hr>
-        <h3>Making a Website</h3>
-        <br>
-        <h4>Useful remiders</h4>
-        <p>I keep forgetting basic stuff on html editing so in order to make my life easier I will start by enumerating useful codes and location of stuff like my template page:</p>
-        <p>Html uses tags for each entry like a paragraph or a button so I enumerate the tags I will use the most while editing my pages:</p>
-        <p>ps: one should open the tag with <code>&lt;some tag inside here&gt;</code> and not forget to close the tag with <code>&lt;/same tag inside here&gt;</code></p>
-        <ul>
-            <li>the <code>&lt;p&gt;</code> element is used to create a paragraph</li>
-            <li>the <code>&lt;button&gt;</code> element is used to create a button like this <button>click me</button></li>
-            <li><a href="/exercisetemplatenew.html">this</a> is my exercise template page</li>
-            <li>the code <code>&lt;a href="replace with the address"&gt; replace with content&lt;/a&gt;</code> like that creates a link like <a href="">this</a> that directs to another page.</li>
-            <li> the code <code>&lt;p class="pic"&gt;&lt;img src="path/path/image.jpg"&gt;&lt;/p&gt;</code> adds an image to the page like the ones bellow</li>
-            <li>using this code <code>&lt;pre class="prettyprint linenums"&gt;stuff inside here&lt;/pre&gt;</code> adds a terminal appearance like this:
-                <pre class="prettyprint linenums">stuff inside here</pre>
-            </li>
-            <li>To generate tables use the <a href="http://www.tablesgenerator.com/html_tables">HTML Table Generator</a>
-                <p class="pic">
-                    <img src="media/week02/tablegen.jpg"></p>
-            </li>
+        <h3>Files used/remixed from external sources</h3>
+        <ul style="list-style-type: disc">
+            <li><a href="https://grabcad.com/library/ball-bearing-608zz-1">Ball Bearing</a> from grabcad, Autor - <a href="https://grabcad.com/hendricks-1">Hendricks</a></li>
+            <li><a href="https://grabcad.com/library/servo-motor-12">Servo Motor</a> remixed from grabcad, Autor - <a href="https://grabcad.com/gustavozanetti-2">GustavoZanetti</a> </li>
+            <li><a href="https://grabcad.com/library/1-3-oled-module-1">Oled module</a> from Grabcad, Autor - <a href="https://grabcad.com/thmjpr">thmjpr</a></li>
+            <li><a href="https://grabcad.com/library/dht22-humidity-temperature-sensor-1">Humidity sensor</a> from grabcad, autor- <a href="https://grabcad.com/nonthanut.hoku-1">Nonthanut Hoku</a> </li>
         </ul>
-        <h4>Research</h4>
-        <p>To get an idea of what my site would look like I went to the <a href="http://archive.fabacademy.org/archives/2016/master/students.html">2016 Fab Academy Student Archives</a> in order to have a look of what others have done and used the random student button.</p>
-        <p class="pic">
-            <img src="media/week02/randomstudent.jpg"></p>
-        <p>After review of a few pages I found <a href="http://archive.fabacademy.org/archives/2016/fablabkyushu/students/120/index.html">Yuji OKI's page</a> wich led me to the <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org/">Massimo Menichinelli</a></p>
-        <p class="pic">
-            <img src="media/week02/yuji.jpg">
-            <legend>Yuji OKI's page</legend>
-        </p>
-        <p class="pic">
-            <img src="media/week02/fabtemplate.jpg">
-            <legend>Fab Academy Template by Massimo Menichinelli</legend>
-        </p>
-        <h4>Using Massimos's template</h4>
-        <br>
-        <p>On github I cloned the repository for Massimo's <a href="https://github.com/openp2pdesign/FabAcademy_Template">template</a> page to my hard drive. Then copied its contents to a directory with my name.</p>
-        <br>
-        <h4>Editing</h4>
-        <br>
-        <p>The code editor I chose to use are <a href="https://www.sublimetext.com/3">Sublime_text3</a> and <a href="http://brackets.io/">Brackets</a>.</p>
-        <h5>About Sublime_text3:</h5>
-        <p>Sublime is great for coding, diffing and merging two codes. I specially like to use the plugin "Sublimerge3", It let me compare 2 files and then merge portions of the code.</p>
-        <h5>About Brackets:</h5>
-        <p> Most of the time that's where I code HTML. The great feature Brackets have is to update in realtime what you code into the browser page. This way every single modification can be viewed without the need to refresh.</p>
-        <p>To install it on a MACOS I simply run the following terminal comands:</p>
-        <pre class="prettyprint linenums">$ brew cask install sublime-text</pre>
-        <pre class="prettyprint linenums">$ brew cask install brackets</pre>
-        <p class="pic">
-            <img src="media/week02/brackets.jpg">
-            <legend>Brackets Snapshot</legend>
-        </p>
-        <h4>Customization of the template's CSS</h4>
-        <p>CSS let you to style you HTML. This can be done in 3 ways: Inline, Internally and externally.</p>
-        <p>As the current template uses a an external method, and its a huge time saver, that's how I went with. In some places of my website, for lack of better understanding how CSS works I might have used inline styling.</p>
-        <p>The external style files are <a href="bootstrap/css/bootstrap.css">bootstrap.css</a> and <a href="media/fabacademy.css">fabacademy.css</a>. These files are referenced in the &lt;head&gt; section on the beginning of each HTML file.</p>
-        <p>So far I changed only a few settings in other to achieve the current settings and they are in the fabacademy.css file:</p>
-        <ul>
-            <li>the image container max-width from 920px to a variable 95%;</li>
-            <li>the legend margin was increased from 2px to 10px</li>
+        <hr>
+        <h3>Design files of final project proposal</h3>
+        <ul style="list-style-type: disc">
+            <li><a href="https://gitlab.fabcloud.org/Lucio/incubator">incubator</a> solidworks source files on Fabacademy Gitlab</li>
         </ul>
+        <hr>
+        <h3> Video render and <a href="project_update.html"> link</a> of my possible final project proposal page</h3>
 
-        <p>In the bootstrap.css I also did some changes as exemplified bellow:</p>
+        <video width="400" controls>
+            <source src="media/week03/wweggsincubator.mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <legend>Egg Incubator</legend>
 
-        <ul>
-            <li>the background was changed to black by adding a the code <code>background-color: #ffffff;</code> in the html bracket </li>
-            <li>The text was justified, the font color and style was modified in the body bracket section with the code: <br>
-                <code>
-                    text-align: justify;<br>
-                    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;<br>
-                    color: green;
-                </code></li>
-            <li>Also modified the vertical alignment of images in the img bracket with the code: <br><code> vertical-align: center;</code>
-            </li>
-        </ul>
+        <hr>
+        <h2>Introduction</h2>
+        <p> In this assignment I will review 3 softwares, Solidworks, 360Fusion and Inkscape. Second I will model a possible final project with Solidworks.</p>
+        <hr>
 
-        <p>As I had near 0 knowledge on HTML editing or CSS and to better understand HTML Prior to the above modifications I watched <a href="https://www.youtube.com/watch?v=PeWIU7UQ_rc">Massimo's lecture on HTML and CSS</a></p>
-        <p class="pic">
-            <img src="media/week02/maxlecturehtml.jpg"></p>
-        <p>Also used html references at <a href="http://www.w3schools.com/tags/default.asp">w3schools.com</a></p>
-        <p class="pic">
-            <img src="media/week02/w3chools.jpg"></p>
-        <h4>Website Folder Structure</h4>
+        <h3>Fusion 360</h3>
+        <p>In my review of fusion I will go thru the process of creating 2 solids. One will match the other based on the grain contour of an oak door frame piece I need repairing.</p>
 
-        <p>Currentely the folder structure is quite simple and well need some cleanup. </p>
-        <h5>Folder Structure:</h5>
-        <ul>
-            <li>All HTML files are on the root <code>/</code> folder.</li>
-            <p>The exercises or weeks are within html files named after the number of the week they correspond with the EX: week01.html, week02.html. Because I am having to adapt this website to the current 2018 fabacademy requirements I decided in other to differentiate the files adding a year number in front of the name of the file: Ex. 2018week01.html</p>
-            <li>An exercise template file is located here <a href="exercisetemplate.html">"exercisetemplate.html"</a> </li>
-            <li>All multimedia files or codes are on the folder <code>/media</code></li>
-            <p> this includes files like: STL, PNG, JPG, MP4, ZIP and etc...</p>
-            <li>All the CSS files are in the <code>/bootstrap</code> folder</li>
-        </ul>
-        <p class="pic"><img src="media/week02/img8.jpg">current folder structure</p>
-
-        <h4>Installing and using git</h4>
-        <br>
-        <p>First I am using MacOS. With that in mind and with many possible terminal applications to be installed its useful to have
-            <a href="http://brew.sh/">Brew</a> it helps with all installations one need to do on Terminal and desktop.</p>
-        <p>to install open terminal and run:</p>
-        <pre class="prettyprint linenums">$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</pre>
-        <p>next install Cask it helps installing desktop app</p>
-        <pre class="prettyprint linenums">$ brew tap caskroom/cask</pre>
-        <p>next install Github desktop that will include Git as well</p>
-        <pre class="prettyprint linenums">$ brew cask install github</pre>
-        <p class="pic">
-            <img src="media/week02/github.jpg">
-            <legend>Github Snapshot</legend>
-        </p>
-        <h4>Creating a new Repo</h4>
-        <p>I wanted to include instructions on how to create a new repo and upload it to github for future reference even it was not how I did</p>
         <ol>
-            <li>First its necessary to be on the working directory and then make it a git directory with:</li>
-            <pre class="prettyprint linenums">git init</pre>
-            <li>next add all files to the local repo and stages them for commit</li>
-            <pre class="prettyprint linenums">git add .</pre>
-            <li>Next needs to be committed with:</li>
-            <pre class="prettyprint linenums">git commit -m "First commit"</pre>
-            <li>now create a new repository on github</li>
-            <p class="pic"><img src="media/week02/img5.jpg"></p>
-            <p class="pic"><img src="media/week02/img6.jpg"></p>
-            <li>Then copy the remote repository address</li>
-            <p class="pic"><img src="media/week02/img7.jpg"></p>
-            <li>now add a remote with the copied address</li>
-            <pre class="prettyprint linenums">git remote add origin copied_adress_here </pre>
-            <li>Finally push everything with:</li>
-            <pre class="prettyprint linenums">git push -u origin master</pre>
-            <p>and its done</p>
-        </ol>
-        <br>
+            <li>I started by taking a picture of the damage on the oak door frame I want to try fixing. </li>
+            <p class="pic"><img src="media/week03/fusion360/00.jpg">The ruler in the photo will be used in the following steps</p>
+            <li>When fusion starts the work area opens automatically and one can just start designing</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion1.jpg"></p>
+            <li>The repair I am attempting is based on the grain geometry of the oak, for that reason I will first insert the picture previously taken into fusion environment The following steps are going to create a 2D sketch environment and let one to insert a picture on it for future reverse engeneering:</li>
+            <ul>
+                <li>Click on insert</li>
+                <li>then click on attachedcanvas</li>
+            </ul>
+            <p class="pic"><img src="media/week03/fusion360/fusion3.jpg"></p>
+            <li>Now one need to select a plane. The image or canvas as fusion calls it will be inserted next on that plane.</li>
+            <ul>
+                <li>direcly click on a desired plane, in case one has previously created a solid, a face can be selected as well.</li>
+            </ul>
+            <p class="pic"><img src="media/week03/fusion360/fusion4.jpg"></p>
+            <li>With the plane selected its time to find the image </li>
+            <ul>
+                <li>on the opened dialog click on select image </li>
+                <li>a file explorer will be opened allowing to find the desired file, select it</li>
+                <li>press open</li>
+            </ul>
 
-        <h4>Working with your Repository</h4>
-        <p>Now that I have the website set locally its time to upload it to the Fabacademy repository.</p>
-        <p>To do that I will have to save my public ssh key into the Fabacademy's gitlab website it will let me access it using git without the need to type my password every time. After that its necessary to clone your repo to the local drive to start working on it.</p>
-        <p>A source of info on how to do it is at the ssh help at <a href="https://gitlab.fabcloud.org/help/ssh/README">gitlab</a>, following is how I did it.</p>
-        <h5>Step-by-step instructions:</h5>
-        <ol>
-            <li>Since I previously had installed git I go ahead to the directory I want to work and create a ssh key with:</li>
-            <pre class="prettyprint linenums">ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"</pre>
-            <p>This will generate the SSH key and the label of the key will be whatever you include inside the quotes</p>
-            <pre class="prettyprint linenums">Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/someone/.ssh/id_rsa):
-</pre>
-            <li>after a while a message will ask to either leave the location and name of the new SSH key as default or make a new one. I chose a new typing a location and a new file name.</li>
-            <pre class="prettyprint linenums">Enter file in which to save the key (/Users/someone/.ssh/id_rsa): /Users/someone/.ssh/id_rsafab
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /Users/someone/.ssh/id_rsafab.
-Your public key has been saved in /Users/someone/.ssh/id_rsafab.pub.
-The key fingerprint is:
-SHA256:IheXdVbB4DChb7Lyo5nJPHhNyExDKAFw5kADUTMR7MU your_email@domain.com
-The key's randomart image is:
-+---[RSA 4096]----+
-|XBX= .    =.++o. |
-| =+oE .  + *  .  |
-| ..o .. +   .    |
-|  .   oo .       |
-|    .+ooS o      |
-|     o+..+       |
-|     ..o.        |
-|    .oo*o        |
-|     .Bo..       |
-+----[SHA256]-----+
+            <p class="pic"><img src="media/week03/fusion360/fusion5.jpg"></p>
+            <li>This frame shows the image inserted on the XY plane</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion6.jpg"></p>
+            <li>Now its time to scale the image.</li>
+            <ul>
+                <li>Click on calibrate.</li>
+            </ul>
+            <p class="pic"><img src="media/week03/fusion360/fusion7.jpg"></p>
+            <li>Now using the ruler as a reference and as accurate as possible select on 2 points and insert the know measure.</li>
+            <ul>
+                <li>click on the first point</li>
+                <li>click on the second point</li>
+                <li>assisted by the ruler in the photo type the know measurement</li>
+            </ul>
+            <p class="pic"><img src="media/week03/fusion360/fusion9.jpg"></p>
+            <li>Now with the image aligned and scaled its time to sketch a 2D design</li>
+            <ul>
+                <li>click on scketch</li>
+                <li>clicking on the image</li>
+                <li>following the image grains draw a pattern</li>
+            </ul>
+            <p class="pic"><img src="media/week03/fusion360/fusion11.jpg"></p>
+            <li>Basicaly following the pattern of the grain I draw lines to form a geometry</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion1a.jpg"></p>
+            <li>thats the Geometry with sharp corners.</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion12.jpg"></p>
+            <li>in other to remove the sharp corners as the won't be milled one can use the fillet tool.</li>
+            <ul>
+                <li>In the sketch drop down menu select fillet</li>
+                <li>Select the corners to be filleted</li>
+                <li>add a dimension in my case I typed 1.5mm as this is the radius of the tool I will use to mill the wood damage</li>
+            </ul>
+            <p class="pic"><img src="media/week03/fusion360/fusion2a.jpg"></p>
+            <p class="pic"><img src="media/week03/fusion360/fusion2b.jpg"></p>
+            <p class="pic"><img src="media/week03/fusion360/fusion2c.jpg"></p>
+            <li>The final 2D sketch is done and ready for virtual extrusion.</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion13.jpg"></p>
+            <li>The process of virtual extrusion in summary is the same as creating a solid 3D object from a 2D sketch:</li>
+            <ul>
+                <li>click on the Extrude icon on top of Create</li>
+                <li>select the 2D sketch</li>
+                <li>add a dimention</li>
+            </ul>
+            <p class="pic"><img src="media/week03/fusion360/fusion14a.jpg"></p>
+            <p class="pic"><img src="media/week03/fusion360/fusion14b.jpg"></p>
+            <p class="pic"><img src="media/week03/fusion360/fusion14c.jpg"></p>
+            <p class="pic"><img src="media/week03/fusion360/fusion14d.jpg"></p>
+            <li>Based on the solid (positive) one is ready to make the negative part</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion15.jpg"></p>
+            <li>In my case I wanted to have a negative and a positive of the shape so I can mill the pocket and the repair piece. So the next steps:</li>
+            <ul>
+                <li>
+                    select the underside</li>
+                <li>click on create sketch</li>
+            </ul>
+            <p class="pic"><img src="media/week03/fusion360/fusion16.jpg"></p>
+            <li>Whith the new sketch created I drawn a square around it in preparation for ne next step.</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion17.jpg"></p>
+            <li>selecting the new sketch and following the same steps on making the last solid I could extrude the base for milling the pocket.</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion18.jpg"></p>
+            <li>Thats how both parts look like</li>
+            <p class="pic"><img src="media/week03/fusion360/fusion19.jpg"></p>
 
-</pre>
 
-            <li>show your ssh key running </li>
-            <pre class="prettyprint linenums">$ cat ~/.ssh/id_rsafab.pub</pre>
-            <li>next you can select the text on the screen that will look like this </li>
-            <pre class="prettyprint linenums">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDRdz+KsRwD2jgojGESZzVQNtFT0uWLGZAieKRNMy4ytav//ABgEB5eAWFTU/YfjQn2apnt+YgXC7aWfjk8Ta5/AQblQ2r/randomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekey+rEk6OvIq5F46sKZclXdCLFbj4b9CP5wlFVWm/vq/tgeEbc701587xVCSq/7Ssqv5GNbipbq8eGElKiM4J7h1xlEJmSb06uuqk7PswQjDhV2RFHTl6sNM45qJw30y9O3WkfddFmW5nQ8roP880ef0rvvWK51nvUpmm37rIrHa+rdFpPc9U0bRZ5BhYpp/wMnVHLmZB8W/9Wf2TN0TD/H1AWjvQ1O2EJxKn7GStVGUzopCcIwt+jEjcMZRC/pRZnvEjH30FAFv5F+kYQwmsKcNuZz+qLWF8D5sjVySHSdERLJ3Y7h4ObCJt0ll5+NJ7syf1S7gCotvT910Evorq1f2jb4l6Lt1gJz7uXA03va0HhaBGTKTB0mF7NRJusotyhGWncXgNTkZOkfFQ5Ps1xAcLRmB0uMt0/3MnS7ONu/TfJVuSqYqUuuUtz9hqbke4I4JsD+X7e1a4gAvsFK/nv6Usf0m8aQ== your_email@domain.com</pre>
 
-            <li>because my key is not default I need to let the SSH agent know where it is typing:</li>
-            <pre class="prettyprint linenums">$ eval $(ssh-agent -s)
-Agent pid 9284
-
-$ ssh-add ~/.ssh/id_rsafab
-Identity added: /Users/someone/.ssh/id_rsafab (/Users/someone/.ssh/id_rsafab)
-
-</pre>
-
-            <li>Next is to load the public key to gitlab and copy your repo ssh key address, in case you do not know it. Go to <a href="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs">gitlab.fabcloud.org</a></li>
-            <li>Login with the <a href="fablabs.io">fablabs.io</a></li>
-            <li>Locate you lab and then your student name;</li>
-            <li>There you can copy your repo ssh address by switching html to ssh.</li>
-            <p class="pic"><img src="media/week02/img3.jpg"></p>
-            <li>Next add your key to your user profile</li>
-            <p class="pic"><img src="media/week02/img4.jpg"> </p>
-            <li>Now its time to clone you repo and start with the "mantra"... so with your prior copied ssh address type the following</li>
-
-            <pre class="prettyprint linenums">git clone git@gitlab.fabcloud.org:academany/fabacademy/2018/labs/yourlab/students/yourname.git</pre>
-            <li>Now that your repo is cloned locally you can either start editing you html right there or paste your already edited website or template in the directory created.</li>
-            <li> Now the "MANTRA"</li>
-            <pre class="prettyprint linenums">git pull
-git add --all
-git commit -m yourmessagehere
-git push</pre>
-            <p> this series of commands will make sure:</p>
-            <ol>
-                <li>first (git pull) you are updated with your origin</li>
-                <li>second you add all new alteration to your local branch (git add--alls)</li>
-                <li>third you committed all changes (git commit -m yourmessagehere)</li>
-                <li>and last you sent the commits to your origin (git push)</li>
-            </ol>
         </ol>
         <hr>
-        <h4>Git and Bash Notes:</h4>
-        <p>(notes here are to be added along the course as a cheatlist of git commands)</p>
+        <h3>The review of Solidworks 2019</h3>
+        <p>Solid works has been my software of choice for the last years when it comes to mechanical design. I am verry happy with it as its powerfull and alow quite complex assemblies at the same time been intuitive enought for me to learn by using it. </p>
+
+        <p class="pic"><img src="media/week03/solidworks/solid01.jpg">Image of my <a href="project_update.html"> possible final project</a></p>
+
         <ul>
-            <li>When I want to know info about the origin of a repo</li>
-            <pre class="prettyprint linenums">git remote show origin</pre>
-            <li>copy a ssh key to a server</li>
-            <pre class="prettyprint linenums">ssh-copy-id -i ~/.ssh/mykey.pub user@host</pre>
+            <li>The egg<p class="pic"><img src="media/week03/solidworks/solid02.jpg">In other to design my final project I started with designing an egg.</p>
+            </li>
+            <li>I took a picture of a real egg with the caliper for reference later in solid works<p class="pic"><img src="media/week03/solidworks/egg.jpg"></p>
+            </li>
+            <li>To use the feature start a new skecth the in the menu go to: Tools > Sketch Tools > Sketch Picture.<p class="pic"><img src="media/week03/solidworks/solid03.jpg"></p>
+            </li>
+            <li>After inserting the picture scale it using the caliper reference as well as the blue ruller provided by solidworks.<p class="pic"><img src="media/week03/solidworks/solid04.jpg"></p>
+            </li>
+
+            <li>With the picture calibrated to scale its time to sketch around. For this I used spline tool and closed the spline with a construction line<p class="pic"><img src="media/week03/solidworks/solid05.jpg"></p>
+            </li>
+            <li>Voila the virtual egg is made!<p class="pic"><img src="media/week03/solidworks/solid06.jpg"></p>
+            </li>
         </ul>
-        <br>
+
+        <hr>
+        <h3>Extra Credits - Milling stuff</h3>
+        <p>Remember the Fusion360 review, well I decided to post photos only of the final result with the mill. I know CNC milling is not this week but I couldn't resist. So not a proper documentation, just some hero photos of the final result.</p>
+        <ul>
+            <li>This toolpath was made with fusion 360 and it is rendered here in the software BCNC. BCNC is a grbl controler I use with our fablab made CNC<p class="pic"><img src="media/week03/millingextra/mill01.jpg"></p>
+            </li>
+            <li>The CNC mill' spindle here is displayed creating a pocket in the wooden door frame<p class="pic"><img src="media/week03/millingextra/mill02.jpg"></p>
+            </li>
+            <li>Both pieces here right before assembly.<p class="pic"><img src="media/week03/millingextra/mill03.jpg"></p>
+            </li>
+            <li>The pieces did not fit perfectely. We had to file a litle. So this shows we will need to do some calibration of the CNC mill in the following weeks. Also I don't like that the veneer was raized from the plywood where the cnc went against the grain.<p class="pic"><img src="media/week03/millingextra/mill04.jpg"></p>
+            </li>
+            <li>Here the pieces are glued toguether but not yet stained with lineseed oil.<p class="pic"><img src="media/week03/millingextra/mill05.jpg"></p>
+            </li>
+            <li>After and Before photo<p class="pic"><img src="media/week03/millingextra/millfinal.jpg"></p>
+            </li>
+        </ul>
+        <hr>
+
+        <p>Solid works have been my choise of 3D design software already for sometime. I learned to use it with videos and tutorials online</p>
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            .tg td {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: black;
+            }
+
+            .tg th {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: black;
+            }
+
+            .tg .tg-s268 {
+                text-align: left
+            }
+
+            .tg .tg-0lax {
+                text-align: left;
+                vertical-align: top
+            }
+
+        </style>
+        <table class="tg">
+            <tr>
+                <th class="tg-s268"></th>
+                <th class="tg-s268">SolidWorks</th>
+                <th class="tg-s268">Fusion360</th>
+                <th class="tg-s268">Inkscape</th>
+            </tr>
+            <tr>
+                <td class="tg-s268">3d Design<br></td>
+                <td class="tg-s268">yes</td>
+                <td class="tg-s268">yes<br></td>
+                <td class="tg-s268">no</td>
+            </tr>
+            <tr>
+                <td class="tg-s268">2D Design</td>
+                <td class="tg-s268">yes</td>
+                <td class="tg-s268">yes</td>
+                <td class="tg-s268">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">CAM</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">2D only yes with plug in</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Parametric</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">run locally</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">cloud based</td>
+                <td class="tg-0lax">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Price</td>
+                <td class="tg-0lax">$$$$</td>
+                <td class="tg-0lax">$</td>
+                <td class="tg-0lax">free</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Windows</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Macos</td>
+                <td class="tg-0lax">no</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">assembly-driven</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">no</td>
+                <td class="tg-0lax">no</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">large assemblies</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">has trouble</td>
+                <td class="tg-0lax">no</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">simulation solutions</td>
+                <td class="tg-0lax">depends on package</td>
+                <td class="tg-0lax">begginer plug-ins</td>
+                <td class="tg-0lax">no</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">mesh modeling</td>
+                <td class="tg-0lax">not intuitive</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">no</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+            </tr>
+            <tr>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+            </tr>
+        </table>
+
+
+
+
+
+
         <!-- End of your content -->
+
     </div> <!-- /container -->
+
     <!-- footer -->
+
     <footer id="footer">
         <p id="cclicense">
         </p>
@@ -334,11 +428,14 @@ git push</pre>
             Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
+
+
     <!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
-================================================== -->
+    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="media/jquery-1.9.1.min.js"></script>
+
     <!-- Syntax Highlighter -->
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
     </script>
@@ -352,9 +449,11 @@ git push</pre>
         }(window.jQuery)
 
     </script>
+
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 
 </html>

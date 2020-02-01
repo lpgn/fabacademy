@@ -8,7 +8,7 @@
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2018 - Lucio Pentagna</title>
+    <title>Fab Academy 2020 - Lucio Pentagna</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -79,616 +79,719 @@
     <div class="container">
 
     <!-- Insert your content here below! -->
+
         <div class="jumbotron" style="width: 100%">
-            <h1>Week 06</h1>
-            <h3>3D Scanning and Printing</h3>
+            <h1>Week 6</h1>
+            <h3>Electronics Design</h3>
             <hr>
+            <h4>Group assignment</h4>
+            <ul><li>Use the test equipment in your lab to observe the operation of a microcontroller circuit board</li></ul>
             <h4>Individual assignment</h4>
-            <ul>
-                <li>Test the design rules for your printer(s) (group project)</li>
-                <li>Design and 3D print an object (small, few cm) that could not be made subtractively</li>
-                <li>3D scan an object (and optionally print it)</li>
-            </ul>
+            <ul><li>Redraw the echo hello-world board, add (at least) a button and LED (with current-limiting resistor), check the design rules, make it, test it.</li></ul>
             <h4>Learning outcomes:</h4>
             <ul>
-                <li>Identify the advantages and limitations of 3D printing and scanning technology</li>
-                <li>Apply design methods and production processes to show your understanding.</li>
+                <li>Select and use software for circuit board design</li>
+                <li>Demonstrate workflows used in circuit board design</li>
             </ul>
             <h4>Have you:</h4>
             <ul>
-                <li>Described what you learned by testing the 3D printers</li>
-                <li>Shown how you designed and made your object and explained why it could not be made subtractively</li>
-                <li>Scanned an object</li>
-                <li>Outlined problems and how you fixed them</li>
-                <li>Included your design files and ‘hero shot’ photos of the scan and the final object</li>
+                <li>Shown your process using words/images/screenshots</li>
+                <li>Explained problems and how you fixed them, including how you worked with design rules for milling (DRC in EagleCad and KiCad)</li>
+                <li>Included original design files (Eagle, KiCad, Inkscape, .cad - whatever)</li>
             </ul>
         </div>
-
         <h3>
             Week workflow
         </h3>
-
         <p>
-            Weekly assignment → Test Printer → design as object → Print object → Scan object → print scanned object (optional)
+            weekly assignment → introduction to eagle → Edit Schematic/Boad → Mill the board→ solder components → debug → edit and publish website
         </p>
         <hr>
         <h3>
             Tools used
         </h3>
         <ul style="list-style-type:disc">
-            <li>
-                Delta 3D Printer
 
-            </li>
             <li>
-                Mini 3D Printer
+                Solder Station
             </li>
+
             <li>
-                Caliper
+                TaoBao CNC
             </li>
+
             <li>
-                0.4 mm needle
+                test equipment: digital voltmeter, oscilloscope, regulated power supply
             </li>
-            <li>
-                Uhu glue
-            </li>
+
         </ul>
         <hr>
+
+
+
         <h3>
             Software Used
         </h3>
+
         <ul style="list-style-type:disc">
 
             <li>
-                Repetier Host
+                Eagle
             </li>
+
             <li>
-                Solid Works
+                Fab Modules
             </li>
-            <li>
-                Autodesk Recap
+
+            <li>Gimp
             </li>
+
         </ul>
         <hr>
-        <h3>
-            Files Generated/used
-        </h3>
-        <ul style="list-style-type:disc">
-
+        <h3>Design files of hello board</h3>
+        <ul style="list-style-type: disc">
             <li>
-                Test's stl file:
-                <a href="media/week06/3d_test.stl">
-                    3D Printer test model
-                </a>from <a href="https://www.thingiverse.com/thing:1363023/comments">thingiverse</a>
-
+                <a href="media/boards/helloboard.zip">zip</a> of eagle source files
             </li>
             <li>
-                Gcode file:
-                <a href="media/week06/generatedgcode.zip">
-                    all week's generated Gcode from STL files
-                </a>
-
+                <a href="media/week07/neilhelloboard.jpg">internal jpeg</a> to cnc
             </li>
             <li>
-                Solid Works file:
-                <a href="https://gitlab.fabcloud.org/Lucio/wire_organiser">
-                    Project page of the 3D model for a wire organiser used on a CNC I built
-                </a>
-
-            </li>
-            <li>
-                Chain's stl file:
-                <a href="media/week06/wire_organiser_chain.stl">
-                     Generated stl file from the solidworks archive
-                </a>
-
+                <a href="media/week07/neilhelloboardoutline.jpg">external jpeg</a> to cnc
             </li>
         </ul>
 
         <hr>
-
         <ol type="1">
             <li>
-            Printers preparation
+            Using the test equipment in our lab
             </li>
 
             <br>
 
-            <ol type="i">
+
                 <li>
-                    In order to start the test I prepared the printers by cleaning the nozzles and spreading new glue into the platforms
-                </li>
-                <p class="pic">
-                    <img src="media/week06/image5.jpg">
-                    <legend>
-                        Glue used on the platform
-                    </legend>
-                    <img src="media/week06/image6.jpg">
-                    <legend>
-                    0.4 mm needle used to clean nozzle
-                    </legend>
-                </p>
-                <li>
-                    I tested the extrusion on both printers and it looks good ;
+                    I started by watching a sparkfun's <a href="https://www.youtube.com/watch?time_continue=279&v=u4zyptPLlJI">youtube video</a> on an oscilloscope
+
+                    <br>
+                    <br>
+
+                    I learned:
                 </li>
 
+            <ul style="list-style-type:disc">
+
+
+
+                <li>
+                    that an oscilloscope measures voltage over time: getting amplitude, frequency, transient signals;
+                </li>
+
+                <li>The important buttons...
+                    <p class="pic">
+                    <img src="media/week07/ociloscope.jpg">
+                    <legend>
+                        Our Lab oscilloscope
+                    </legend>
+                </p>
+                </li>
+                <li>
+                    Calibrating the probe/Adjusting compensation capacitor
+                </li>
+
                 <p class="pic">
-                    <img src="media/week06/image7.jpg">
-                    <legend>
-                        PLA being extruded
-                    </legend>
-                    <img src="media/week06/image8.jpg">
-                    <legend>
-                        PLA being extruded
-                    </legend>
+                    <img src="media/week07/probe.jpg">
+                        <legend>
+                            Oscilloscope's probe
+                        </legend>
 
                 </p>
 
-            </ol>
+                <ol type="a">
+
+                    <li>
+
+                        on the probe select to X10;
+                    </li>
+
+                    <li>
+
+                        connect the probe to channel one plug;
+                    </li>
+                    <li>
+                        connect the probe to the 1kHz 5V square wave generator
+                    </li>
+                    <li>
+                        turn on oscilloscope
+                    </li>
+                    <li>
+
+                        make sure only channel one is on, click on CH2 button until its off and the other way around on CH1 button;
+                    </li>
+                    <li>
+
+                        select DC coupling with the F1 key;
+                    </li>
+                    <li>
+
+                        press button F4 to select 10X on probe mode;
+                    </li>
+                    <li>
+
+                        press trig/menu button and select type as "edge" and source CH1
+                    </li>
+                    <li>
+
+                        Select slope as "Rise"
+                    </li>
+                    <li>
+
+                        Adjust the Vertical and horizontal knobs until you see the wave
+                    </li>
+                    <li>
+
+                        if wave is moving adjust trig knob until it stops
+                    </li>
+                    <li>
+
+                        to calibrate the probe adjust the screw on the base of the probe until the wave is square.
+                    </li>
+
+
+                    <p class="pic">
+                    <img src="media/week07/beforeafter.jpg">
+                        <legend>
+                            Picture of the wave before and after adjustment
+                        </legend>
+
+
+                    </p>
+
+                </ol>
+
+            </ul>
 
             <br>
 
             <li>
-                The limits of our printers
+                Eagle introduction:
             </li>
 
-            <br>
-
             <ol type="i">
-
                 <li>
-                    I started this week's assignment by looking for a test pattern on the website
-                    <a href="www.thingiverse.com">
-                        Thingiverse
+                    I started by watching the video tutorials below I had a look through the
+                    <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html">
+                        eagle tutorial
                     </a>
-                    . Simply by using its search engine with the keywords,
+            for the week 6. Following it I downloaded and installed the Fab library for eagle.
+                </li>
+            </ol>
+                    <p class="pic">
+            <iframe  src="https://www.youtube.com/embed/1AXwjZoyNno" frameborder="0" allowfullscreen="">
+            </iframe>
+        </p>
 
-                    <a href="https://www.thingiverse.com/search?q=test+3d+printer&sa=">
-                        "test 3d print"
+        <p class="pic">
+            <iframe  src="https://www.youtube.com/embed/CCTs0mNXY24" frameborder="0" allowfullscreen="">
+            </iframe>
+
+            <legend>
+                Printed Circuit Board Layout
+            </legend>
+
+        </p>
+
+
+            <li>
+
+                Reverse engineering Neil's Board
+                <p class="pic">
+
+                    <img src="media/week07/hello.ftdi.44.jpg">
+
+                    <legend>
+
+                        Neil's Hello Board
+
+                    </legend>
+                </p>
+            </li>
+
+
+            <ol type="i">
+
+                <li>I started by having a look at the
+
+                    <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step5">
+                Electronics Design - Eagle tutorial
+
                     </a>
-                    it show various results with the purpose of testing the printers.
-                        <p class="pic">
-                            <img src="media/week06/image1.jpg">
 
-                            <legend>
-                                Print from the search at
-                                <a href="https://www.thingiverse.com/search?q=test+3d+printer&sa=">
-                                    Thingiverse
-                                </a>
-                            </legend>
-                        </p>
+
+                    With the above schematics in hand I started redrawing it at Eagle
+
                 </li>
 
-                <li>
-                    Then I selected one of the designs. It tests different capabilities of the printers.
-                </li>
-
-                        <p class="pic">
-                            <img src="media/week06/image2.jpg">
-
-                            <legend>
-                                Print from the test pattern page at
-                                <a href="https://www.thingiverse.com/thing:1363023">
-                                    Thingiverse
-                                </a>
-                            </legend>
-                        </p>
-
-                <p>
-                    While on the 3D printer test model's page I downloaded the design and took note of all the parameters it intends to test such as:
-                </p>
-                <ul style="list-style-type:disc">
-
-                    <li>
-                        Nut, Size M4 Nut should fit perfectly
-                    </li>
-                    <li>
-                        Wave, rounded print
-                    </li>
-                    <li>
-                        Star, Sharp Edges
-                    </li>
-                    <li>
-                        Name, Complex Shapes
-                    </li>
-                    <li>
-                        Holes, Size 3, 4, 5 mm
-                    </li>
-                    <li>
-                        minimal Distance: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm
-                    </li>
-                    <li>
-                        Z height: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1 mm
-                    </li>
-                    <li>
-                        Wall Thickness: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm
-                    </li>
-                    <li>
-                        Bridge Print: 2, 4, 8, 16 mm
-                    </li>
-                    <li>
-                        Sphere, Rounded Print 4.8mm height
-                    </li>
-                    <li>
-                        Sphere Mix, 7 mm height
-                    </li>
-                    <li>
-                        Pyramid 7 mm height
-                    </li>
-                    <li>
-                        Overhang: 25, 30, 35, 40, 45, 50, 55, 60, 65, 70°
-                    </li>
-                    <li>
-                        Warp, does it bend?
-                    </li>
-                    <li>
-                        3D Print Font, optimized for 3D printing
-                    </li>
-                    <li>
-                        Surface, Flatness
-                    </li>
-                    <li>
-                        Size, 100 x 100mm x 23.83 (10mm width)
-                    </li>
-                    <li>
-                        Spike, minimum Layer Time, 21 mm height from Bottom (include Baseplate)
-                    </li>
-                    <li>
-                        Hole in Wall, 4 mm diameter, check for proper print
-                    </li>
-                    <li>
-                        Raft Test, raft should be just under the model
-                    </li>
-                    <li>
-                        Retract Travel, check retract settings for longer travel
-                    </li>
-                </ul>
                 <br>
 
-                <p>
-                    Bellow is the 3D print test model:
-                </p>
-
-                <p>
-                    <canvas id="testmodel1" width=640 height=480>
-
-                        It seems you are using an outdated browser that does not support canvas :-(
-
-                    </canvas>
-
-                    <script type="text/javascript">
-                        var canvas = document.getElementById('testmodel1');
-                        var viewer = new JSC3D.Viewer(canvas);
-                        viewer.setParameter('SceneUrl','media/week06/3d_test.stl');
-                        viewer.setParameter('ModelColor','#1826ca');
-                        viewer.setParameter('BackgroundColor1','#E5D7BA');
-                        viewer.setParameter('BackgroundColor2','#383840');
-                        viewer.setParameter('RenderMode','flat');
-                        viewer.setParameter('MipMapping','on');
-                        viewer.setParameter('Definition','high');
-                        viewer.setParameter('Renderer','webgl');
-                        viewer.init();
-                        viewer.update();
-
-                    </script>
-                    <legend>
-                    rendered 3D model of the STL file
-                    </legend>
-
-                </p>
-
-                <p>
-                    The author also supplies an image for reference when checking the print
-                </p>
-
-                <p class="pic">
-                    <img src="media/week06/testIII.jpg">
-                    <legend>
-                        Infographic from the forum
-                        <a href="http://www.whoote.com/viewtopic.php?f=13&t=13">
-                            phpBB
-                        </a>
-                    </legend>
-                </p>
-
-                <br>
-                <li>
-                    On the software Repetier Host I loaded the stl file and sliced for each printer. Naming the Gcode with the printer designation in front.
-                </li>
-                <p class="pic">
-                            <img src="media/week06/image3.jpg">
-                            <legend>
-                                Generating Gcode on Repetier Host for the Mini
-                            </legend>
-                </p>
-                <p class="pic">
-                            <img src="media/week06/image4.jpg">
-                            <legend>
-                                Generating Gcode on Repetier Host for the Delta
-                            </legend>
-                </p>
-
-                <li>
-                    Next I took the Gcode I had save on the SD card and placed on the 3D printers and started the print.
-                </li>
-
-                <p class="pic">
-
-                    <video controls>
-
-                        <source src="media/week06/video1.mp4">
-
-                        Your browser does not support HTML5 video.
-
-                    </video>
-
-                    <legend>
-
-                        Video of mini starting the test print
-
-                    </legend>
-
-                </p>
-
-                <li>
-                    The prints were not bad but there was a lot of oozing (spider web). So I increased the retraction by .5 mm and then by 1 mm the improvements were very noticeable in both printers.
-                    <p class="pic"> <img src="media/week06/minibeforeaftercollage2.jpg"><legend>photo of prints with 1.5(left) and 2.5mm(right) retraction settings</legend></p>
-                </li>
-
-                <li>
-                    The results
-                </li>
-                <br>
-                <style type="text/css">
-                    table.tableizer-table {
-                        font-size: 12px;
-                        border: 1px solid #CCC;
-                        font-family: Arial, Helvetica, sans-serif;
-                    }
-                    .tableizer-table td {
-                        padding: 4px;
-                        margin: 3px;
-                        border: 1px solid #CCC;
-                    }
-                    .tableizer-table th {
-                        background-color: #104E8B;
-                        color: #FFF;
-                        font-weight: bold;
-                </style>
-
-                <table class="tableizer-table">
-
-                    <thead><tr class="tableizer-firstrow"><th></th><th>Parameter</th><th>Results</th><th>&nbsp;</th></tr></thead><tbody>
-                    <tr><td>&nbsp;</td><td>&nbsp;</td><td>Mini</td><td>Delta</td></tr>
-                    <tr><td>1</td><td>Nut, Size M4 Nut should fit perfectly</td><td>Yes</td><td>No</td></tr>
-                    <tr><td>2</td><td>Wave, rounded print</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>3</td><td>Star, Sharp Edges</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>4</td><td>Name, Complex Shapes</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>5</td><td>Holes, Size 3, 4, 5 mm</td><td>2.9, 3.9, 4.9</td><td>3, 4, 5 mm oval</td></tr>
-                    <tr><td>6</td><td>minimal Distance: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td><td> 0.1mm not good</td><td>0.1, 0.2, 0.3 not good scale wrong 6.5mm instead of 7mm</td></tr>
-                    <tr><td>7</td><td>Z height: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1 mm</td><td>0.1mm printed with 0.2 and 1.1 with 1</td><td>Yes</td></tr>
-                    <tr><td>8</td><td>Wall Thickness: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td><td>did't print 0.1, 0.2 next walls printed as 0.5 until last as 1mm</td><td>Yes</td></tr>
-                    <tr><td>9</td><td>Bridge Print: 2, 4, 8, 16 mm</td><td>Printed as 2.85, 3.9, 7.9, 15.8</td><td>Yes</td></tr>
-                    <tr><td>10</td><td>Sphere, Rounded Print 4.8mm height</td><td>5.1</td><td>Yes</td></tr>
-                    <tr><td>11</td><td>Sphere Mix, 7 mm height</td><td>7.15</td><td>Yes</td></tr>
-                    <tr><td>12</td><td>Pyramide, 7 mm height</td><td>6.95</td><td>Yes</td></tr>
-                    <tr><td>13</td><td>Overhang: 25, 30, 35, 40, 45, 50, 55, 60, 65, 70°</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>14</td><td>Warp, does it bend?</td><td>no</td><td>Yes</td></tr>
-                    <tr><td>15</td><td>3D Print Font, optimized for 3D printing</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>16</td><td>Surface, Flatness</td><td>a bit rough </td><td>Yes</td></tr>
-                    <tr><td>17</td><td>Size, 100 x 100mm x 23.83 (10mm width)</td><td>99.45 x 99.8 x 23.2 (10.2 with)</td><td>Yes</td></tr>
-                    <tr><td>18</td><td>Spike, minimum Layer Time, 21 mm height from Bottom (include Baseplate)</td><td>15mm</td><td>Yes</td></tr>
-                    <tr><td>19</td><td>Hole in Wall, 4 mm diameter, check for proper print</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>20</td><td>Raft Test, raft should be just under the model</td><td>didn't test</td><td>Yes</td></tr>
-                    <tr><td>21</td><td>Retract Travel, check retract settings for longer travel</td><td>almost no ozzing</td><td>Yes</td></tr>
-                    <tr><td>&nbsp;</td><td>Conclusion</td><td>For a FDM printer I belive the result is very good. The sizes differences are probably due to a PLA shirincage</td><td></td></tr>
-                    </tbody>
-                </table>
             </ol>
-            <br>
+
             <li>
-                Designing and printing an object
+            Schematics Step by Step:
+
             </li>
 
-            <br>
-
-            <ol type="i">
-                <li>
-                        I decided to create a necessary part of my final project. It's a wire organiser that when connected together works as a chain.
-                </li>
-
-                <li>
-                        The design is parametric so I can easily change the size as needed
-                </li>
-                <p class="pic">
-                    <img src="media/week06/designingcollage.jpg">
-                    <legend>
-                        parametric design on Solid Works from beginning to gcode generation
-                    </legend>
-                </p>
-                <p class="pic">
-                    <img src="media/week06/image11.jpg">
-                    <legend>
-                        model finished
-                    </legend>
-                </p>
-                <li>
-                    As I finished the Solid Works model I then export the file as stl
-                </li>
-                <br>
-                <p>
-                    <canvas id="wireorganiser" width=640 height=480>
-                        It seems you are using an outdated browser that does not support canvas :-(
-                    </canvas>
-                    <legend>
-                    render of my 3D model of the wire organiser
-                    </legend>
-
-                    <script type="text/javascript">
-                        var canvas = document.getElementById('wireorganiser');
-                        var viewer = new JSC3D.Viewer(canvas);
-                        viewer.setParameter('SceneUrl','media/week06/wire_organiser_chain.stl');
-                        viewer.setParameter('ModelColor','#1826ca');
-                        viewer.setParameter('BackgroundColor1','#E5D7BA');
-                        viewer.setParameter('BackgroundColor2','#383840');
-                        viewer.setParameter('RenderMode','flat');
-                        viewer.setParameter('MipMapping','on');
-                        viewer.setParameter('Definition','high');
-                        viewer.setParameter('Renderer','webgl');
-                        viewer.init();
-                        viewer.update();
-                    </script>
 
 
-                </p>
+            <ol type="a">
 
-                <p class="pic">
-                    <img src="media/week06/image13.jpg">
-                    <legend>
-                        printer almost finished printing chain organiser
-                    </legend>
-                </p>
-
-                <p class="pic">
-
-                    <video controls>
-
-                        <source src="media/week06/videoplayback.webm">
-
-                        Your browser does not support HTML5 video.
-
-                    </video>
-
-                    <legend>
-
-                        Video of printers printing the organiser and the organised assembled in a chain.
-
-                    </legend>
-
-                </p>
-
-            </ol>
-            <li>
-            3D Scanning
+            <li>under projects → right-click on eagle → click on new project → name project
             </li>
-            <br>
 
-            <ol type="i">
+            <p class="pic">
+                <img src="media/week07/image02.jpg">
+            </p>
 
-                <li>
-                    For that part of the assignment I used Autodesk Remake. It relies on <a href="https://www.engineering.com/DesignSoftware/DesignSoftwareArticles/ArticleID/13313/Photogrammetry-Explained-The-State-of-Reality-Capture.aspx">Photogrammetry</a>.
-                </li>
-                <p class="pic">
-                    <img src="media/week06/remake.jpg">
-                    <legend>
+            <li>
+                right-click on project name → new→ Schematic
+            </li>
 
-                    </legend>
-                </p>
-                <li>
-                    luckily I was at the beach and I saw a model that would be interesting. Someone had but a large rock equilibrated.
-                </li>
-                 <p class="pic">
-                    <img src="media/week06/rock.jpg">
-                    <legend>
-                    equilibrated rock at the Figueira beach near Lagos, Portugal
-                    </legend>
-                </p>
-                <li>
-                    Next step was to take around 40 photos from all angles and in preference without moving background like people or clouds.
-                </li>
-                <p class="pic">
-                    <img src="media/week06/rockcollage.jpg">
-                    <legend>
-                        sample of the 90+ images taken to make the model
-                    </legend>
-                </p>
-                <li>
-                    Next I uploaded the files to Remake. Its important to select only good images and restrict background moving objects. After upload is done press create model. It can take a while during your model generation.
-                </li>
-                <p class="pic">
-                    <img src="media/week06/image14.jpg">
-                    <legend>
-                        print from remake uploading images
-                    </legend>
-                </p>
-                <li>
-                    After upload chose option on the generation process. I chose standard as its free.
-                </li>
-                <p class="pic">
-                    <img src="media/week06/image14b.jpg">
-                    <legend>
-                        print from options on remake
-                    </legend>
-                </p>
-                <li>
-                    On the lower part of the screen ReMake shows models being generated and on queue. The top part shows models al ready done.
-                </li>
-                <p class="pic">
-                    <img src="media/week06/image16.jpg">
-                    <legend>
-                        print from Autodesk ReMake
-                    </legend>
-                </p>
+            <p class="pic">
+                <img src="media/week07/image06.jpg">
+            </p>
 
-                <li>
-                    With the model ready you can click on it and entering the edit mode of ReMake.
-                </li>
-                <p class="pic">
+            <li>
+                type "add" → search for each part
+            </li>
 
-                    <video controls>
+            <p class="pic">
+                <img src="media/week07/image07.jpg">
+            </p>
 
-                        <source src="media/week06/rotatestonemodel.mp4">
+            <li>
+                place part with let click → repeat procedure until all the same part is added → press ESC to add next part → search for next part or press ESC to go back to schematics
+            </li>
 
-                        Your browser does not support HTML5 video.
+            <p class="pic">
+                <img src="media/week07/image04.jpg">
+            </p>
 
-                    </video>
-                    <legend>
-                        model generate showing problems with opened faces. no ready for printing.
-                    </legend>
-                </p>
+            <li>
+                Type "rotate" and left click on part origin to turn part around to desired position
+            </li>
 
-                <li>
-                I compile the editing sequence on the following mosaic, in synthesis. I selected the undesired parts deleted it and filled the holes left. finally I generated a stl file that should be ready to print.
-                </li>
-                               <p class="pic">
-                    <img src="media/week06/editthescan.jpg">
-                    <legend>
-                        collage from screen prints editing sequence of Autodesk ReMake
-                    </legend>
-                </p>
-                <br>
-                <p>The result!</p>
-                <p>
-                    <canvas id="stone" width=640 height=480>
-                        It seems you are using an outdated browser that does not support canvas :-(
-                    </canvas>
-                    <legend>
-                    render of my 3D model from Photogrammetry scanning on ReMake
-                    </legend>
+            <li>
+                Type "net" to connect part to each other;
+            </li>
 
-                    <script type="text/javascript">
-                        var canvas = document.getElementById('stone');
-                        var viewer = new JSC3D.Viewer(canvas);
-                        viewer.setParameter('SceneUrl','media/week06/stonemodel.stl');
-                        viewer.setParameter('ModelColor','#1826ca');
-                        viewer.setParameter('BackgroundColor1','#E5D7BA');
-                        viewer.setParameter('BackgroundColor2','#383840');
-                        viewer.setParameter('RenderMode','flat');
-                        viewer.setParameter('MipMapping','on');
-                        viewer.setParameter('Definition','high');
-                        viewer.setParameter('Renderer','webgl');
-                        viewer.init();
-                        viewer.update();
-                    </script>
-                </p>
+            <li>
+                type "name" and left click on top of part to name part;
+            </li>
 
-            </ol>
+            <li>
+                type "label" and left click on wire to connect one to the other without having to net;
+            </li>
+
+            <li>
+                type value and left click on part origin to designate part "value";
+            </li>
+
+            <li>
+                type "move" to position the part as needed
+            </li>
+
+            <li>save the file
+            </li>
+
+
+        </ol>
+
+        <hr>
+
+
+        <li>
+            Drawing the Board
+        </li>
+        <br>
+
+        <h4>
+            To position the components on the PCB use commands as done on the schematics:
+        </h4>
+
+
+        <ol type="a">
+
+
+            <li>
+                Left click on file → type "board" → accept warning and left click yes to create start designing the PCB from previously created schematics
+            </li>
+
+
+            <p class="pic">
+                <img src="media/week07/image01.jpg">
+            </p>
+
+
+            <li>
+                all components will be displayed to the left of the board → Drag them one by one with command "move"+left click drag to position inside the board
+            </li>
+
+
+            <li>
+                type "rotate" to turn the components the same way as in the schematics
+            </li>
+
+            <li>
+                after all is positioned → resize board size dragging the sides of the original board with the command "move"
+            </li>
+
+            <li>
+                type "polygon" and select top layer and draw a square around the board limits in order to creat he top layer of the PCB
+            </li>
+
+            <li>
+                type "ratsnest" → start autorouter type "auto", this command is very convenient as it gives initial idea on how you can route the board, but it doesn't replace manual routing
+            </li>
+
+            <p class="pic">
+                <img src="media/week07/image13.jpg">
+            </p>
+
+            <li>
+                select start
+            </li>
+
+            <p class="pic">
+                <img src="media/week07/image11.jpg">
+            </p>
+
+            <li>
+                adjust traces if needed with command "ripup" to remove positioned paths
+            </li>
+
+            <li>
+                place new paths with command "route" and "move" to better position
+            </li>
+
+            <li>
+                type command "info"+left click in order to fine tune position of paths as well as thickness
+            </li>
+
+
         </ol>
 
 
+            <br>
+        <p>
+            You can watch how I did it here, pump up the volume for some Cash!
+
+        </p>
+
+
+        <p class="pic">
+            <video controls>
+                <source src="media/week07/hello.mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </p>
+
+        <p>
+            in case it doesn't play watch it on youtube!
+        </p>
+
+        <p class="pic">
+            <iframe src="https://www.youtube.com/embed/7-cdfKUBsu8" frameborder="0" allowfullscreen>
+            </iframe>
+        </p>
+
+<!--<div class="table-responsive">
+<p style="pic"><video controls><source src="/media/week07/hello.3gp"></video></p><legend>video of my computer screen while I make the schematics and board</legend></div>-->
+
+
+        <hr>
+
+
+
+
+            <li>
+
+                Adding the LED and Button
+
+            </li>
+
+
+        <ol type="a">
+
+
+            <li>
+                In order to add the LED and the Button I went back to the Schematics.
+
+            </li>
+
+
+            <li>
+
+                In the schematics type "add" to add two resistors, one LED and the button
+            </li>
+
+
+            <li>
+                The fist resistor works to limit the current that goes to the LED. It should be placed in the positive side of it. In other to dimension the LED I checked first the LED data sheet. There I looked for, Dc forward current, in this case 30 and forward voltage, in this case 2.1.
+            </li>
+
+            <li>
+                with those two values plus my input voltage "5" in hand I input the values to the website <a href="http://led.linear1.org/1led.wiz">
+                LED center
+                </a>
+                in other to calculate the correct resistor, in this case 100Ohms
+            </li>
+
+            <p class="pic">
+                <img src="media/week07/image14.jpg">
+            </p>
+
+            <li>
+                as for the switch I used a 10K resistor as a pull-up resistor
+            </li>
+
+            <li>
+
+                like before I used the commands move rotate and label name copy to position all components on its place
+            </li>
+        </ol>
+
+
+<!--<div class="table-responsive">
+<p style="pic"><video controls><source src="/media/week07/hello.m4v"></video></p><legend>video of my computer screen while I add button and LED to the schematics and board</legend>
+</div>-->
+
+
+        <hr>
+
+
+        <li>
+            Make BOM (Bill of Materials)
+        </li>
+
+
+
+        <ol type="a">
+
+            <li>
+                Left click on design link → left click on Schematic
+            </li>
+
+            <p class="pic">
+                <img src="media/week07/image08.jpg">
+            </p>
+
+            <li>
+                wait for program to display part → type new search string in case desired part does not appear → left click manual search → choose desired part → left click select
+            </li>
+
+            <p class="pic">
+                <img src="media/week07/image09.jpg">
+            </p>
+
+            <li>
+                repeat previous process until all parts are found
+            </li>
+
+            <li>
+                left click export and save BOM File
+            </li>
+
+            <p class="pic">
+                <img src="media/week07/image10.jpg">
+            </p>
+        </ol>
+
+
+        <p>
+            After some editing here it is:
+        </p>
+
+
+        <div class="tg-wrap">
+            <table class="table" border>
+
+                <tr>
+
+                    <th>
+                        qty
+                    </th>
+
+
+                    <th>
+                        Location
+                    </th>
+
+                    <th>
+                        Digikey or Mouser Part number
+                    </th>
+
+                    <th>
+                        Manufacture Part #
+                    </th>
+
+                    <th>
+                        Description
+                    </th>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        1
+                    </td>
+
+                    <td>
+                        U1
+                    </td>
+
+                    <td>
+                        ATTINY45V-10SU-ND
+                    </td>
+
+                    <td>
+                        ATTINY45V-10SUR
+                    </td>
+
+                    <td>
+                        IC MCU 8BIT 4KB FLASH 8SOIC
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        2
+                    </td>
+
+                    <td>
+                        R1
+                    </td>
+
+                    <td>
+                        311-10.0KFRCT-ND
+                    </td>
+
+                    <td>
+                        RC1206FR-0710KL
+                    </td>
+
+                    <td>
+                        RES SMD 10K OHM 1% 1/4W 1206
+                    </td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>R2</td>
+    <td>311-100FRCT-ND</td>
+    <td>RC1206FR-07100RL</td>
+    <td>RES SMD 100 OHM 1% 1/4W 1206</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>D3</td>
+    <td>160-1169-1-ND</td>
+    <td>LTST-C150GKT</td>
+    <td>LED GREEN CLEAR 1206 SMD</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>C1</td>
+    <td>445-1423-1-ND</td>
+    <td>C3216X7R1H105K160AB</td>
+    <td>CAP CER 1UF 50V X7R 1206</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>FTDI</td>
+    <td></td>
+    <td></td>
+    <td>6 pin header</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>RESONATOR</td>
+    <td>XC1109CT-ND</td>
+    <td>ECS-CR2-20.00-B-TR</td>
+    <td>CER RES 20.0000MHZ 15PF SMD</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>450-2058-1-ND</td>
+    <td>FSM6JSMATR</td>
+    <td>SWITCH TACTILE SPST-NO 0.05A 24V</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ISP</td>
+    <td>649-95278-101A06LF</td>
+    <td>71600-006LF</td>
+    <td>Headers &amp; Wire Housings 2X3P UNSHRD HDR 30 micro inch gold</td>
+  </tr>
+</table></div>
+            <hr>
+
+
+<li>Exporting the image for fabmodules</li>
+
+<ol type="i">
+    <li>Go to Options, Set, Misc and deselect Display Pad names, signal and via lengths. This will prevent undesired text from appearing on the exported image.</li>
+    <li>On layers toolbar select only the top layer</li>
+<p class="pic"><img src="media/week07/image05.jpg"></p>
+<li>next type "export"→ select image nd monocromatic→and in resolution type 500</li>
+<li>save to desired location</li>
+<p class="pic"><img src="media/week07/image00.jpg"></p>
+
+<li>the result is a black and white image</li>
+
+
+</ol>
+<br>
+<li>Edit in gimp</li>
+
+<ol type="i">
+    <li>With the exported eagle file in hand open in gimp.</li>
+    <li>in gimp I decided to add some wording, this was easy by selecting the text tool, then font size and rotating the wording to an ideal location.</li><li>I also removed unnecessary black areas with the bucket tool </li>
+    <li>to create the outline I selected the area I wanted to keep and covered it with the bucket tool</li>
+
+<li>in the end you should have two images, one for the PCB and one for the outline</li>
+</ol>
+
+<p class="pic"><img src="media/week07/neilhelloboard.jpg"><legend>PCB image ready for fabmodules</legend></p>
+
+<p class="pic"><img src="media/week07/neilhelloboardoutline.jpg"><legend>pcb outline ready for fabmodules</legend></p>
+
+<hr>
+<li> Fab modules and Milling</li>
+
+<p>The process in Fab modules and Milling is already outlined by the <a href="exercise04.html">week 4 </a>assignment so I will only keep here an image of the result </p>
+  <p class="pic"><img src="media/week07/image15.jpg"><legend>milled pcb, polished with tothpaste for best apearance</legend></p>
+<hr>
+
+<li>Soldering/Populating the PCB and Debuging</li>
+    <h4> The result</h4>
+    <p>As before the populating and debugging is already outlined by the <a href="exercise05.html">week 5 </a>assignment so I will only keep here an image of the result </p>
+  <p class="pic"><img src="media/week07/image16.jpg"><legend>populated PCB ready for burning firmware</legend></p>
+<hr>
+
+<li>Conclusion</li>
+
+<p>I really enjoyed learning this new tool. I have used eagle before to view pcb's but never actually designed one. I feel it opens my mind to a lot of new things to come!</p>
+
+
+
+        </ol>
+
     <!-- End of your content -->
-    </div>
-    <!-- /container -->
+
+    </div> <!-- /container -->
 
     <!-- footer -->
 
@@ -724,5 +827,6 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-        </body>
+
+  </body>
 </html>

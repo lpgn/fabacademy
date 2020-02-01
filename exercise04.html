@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2019 - Lucio Pentagna</title>
+    <title>Fab Academy 2020 - Lucio Pentagna</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -36,11 +35,10 @@
     <!-- Load the menu file -->
     <script>
         function menu() {
-            $('#exercises').load("exercises-menu.html");
-            $('#project').load("project-menu.html");
-            $('#cclicense').load("license.html");
-        }
-
+                      $('#exercises').load("exercises-menu.html");
+                      $('#project').load("project-menu.html");
+                      $('#cclicense').load("license.html");
+                      }
     </script>
 
 </head>
@@ -82,275 +80,523 @@
     <div class="container">
 
         <!-- Insert your content here below! -->
+
         <div class="jumbotron" style="width: 100%">
             <h1>Week 04</h1>
-            <h3>Computer-Controlled Cutting</h3>
+            <h3>Electronics Production</h3>
             <hr>
-            <h3>Laser Cutting</h3>
             <h4>Group Assignment</h4>
             <ul>
-                <li>
-                    Characterize your lasercutter, making lasercutter test part(s), making test part(s) that vary cutting settings and dimensions(group project)
+                <li>Characterize the specifications of your PCB production process</li>
+            </ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Make an in-circuit programmer by milling the PCB, then optionally, trying other processes.</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Describe the process of milling, stuffing, de-bugging and programming
                 </li>
-            </ul>
-            <h4>Individual assignment</h4>
-            <ul>
-                <li>Cut something on the vinylcutter</li>
-                <li>Design, lasercut, and document a parametric press-fit construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways</li>
-            </ul>
-            <h4>Learning outcomes:</h4>
-            <ul>
-                <li>Demonstrate and describe parametric 2D modelling processes</li>
-                <li>Identify and explain processes involved in using the laser cutter.</li>
-                <li>Develop, evaluate and construct the final prototype</li>
+                <li>Demonstrate correct workflows and identify areas for improvement if required</li>
             </ul>
             <h4>Have you:</h4>
             <ul>
-                <li>Explained how you parametrically designed your files</li>
-                <li>Shown how you made your press-fit kit</li>
-                <li>Included your design files and photos of your finished project</li>
-            </ul>
-            <h3>Vinyl Cutting</h3>
-            <h4>Individual assignment</h4>
-            <ul>
-                <li>Cut something on the vinylcutter</li>
-            </ul>
-            <h4>Learning outcomes:</h4>
-            <ul>
-                <li>Identify and explain processes involved in using this machine.</li>
-                <li>Design and create the final object</li>
-
-            </ul>
-            <h4>Have you:</h4>
-            <ul>
-                <li>Explained how you drew your files</li>
-                <li>Shown how you made your vinyl project</li>
-                <li>Included your design files and photos of your finished project</li>
+                <li>Shown how you made and programmed the board</li>
+                <li>Explained any problems and how you fixed them</li>
+                <li>Included a ‘hero shot’ of your board</li>
             </ul>
         </div>
-
-        <hr>
-        <h3>
-            Week workflow
-        </h3>
-        <p class="pic">
-            <img src="media/week04/diagram.jpg">
-            <legend>
-                Chart made at
-                <a href="https://www.draw.io/">
-                    Draw.io
-                </a>
-            </legend>
-        </p>
-
-        <h3>
-            Tools used
-        </h3>
-
-        <ul style="list-style-type:disc">
-
-            <li>
-                laser cutter
-            </li>
-            <li><a href="https://wiki.imal.org/resource/silhouette-cameo-3">Silhouette Cameo</a>
-            </li>
-        </ul>
-
         <hr>
 
-        <h3>
-            Software Used
-        </h3>
+        <p>This week I will be making a ISP <a href="https://en.wikipedia.org/wiki/In-system_programming">(In-system programming)</a> or in-circuit programmer.</p>
 
-        <ul style="list-style-type:disc">
+        <p>I chose to do <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP</a>. I chose it for its simplicity and cost as it is striped down to a bare minimum of components.</p>
 
-            <li>
-                Solidworks
-            </li>
+        <p class="pic"><img src="media/week05/image001.jpg">
+            <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
+        </p>
 
-            <li>
-                Ink Scape
-            </li>
-
-            <li>
-                Repetier host
-            </li>
-
-            <li>
-                Sublime text 3
-            </li>
-            <li>
-                Silhouette Studio
-            </li>
-
-        </ul>
-
-
-        <hr>
-
-
-        <h2>
-            Introduction
-        </h2>
-
-
-        <p>
-            On this assignment I will be using a diode laser cutter manly. I have designed and made a 3D printer and then I upgraded it with a 2 wats diode laser cutter. I will be testing its capabilities and testing it to its limits in other to have a better understand of its capabilities and limitations. I expect to be able to use the patterns created to test other machines. On the Vinyl I will try to use the same machine and document its results.
+        <p class="pic"><img src="media/week05/image003.jpg">
+            <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
 
 
-        <p class="pic">
-            <img src="media/week04/3dprinter.jpg">
-            <legend>
-                3D printer I designed and made with a carbon fiber milled body
-            </legend>
-        </p>
+        <p>The process will be split in phases, Milling, Stuffing/Populating, De-buging, Programing:</p>
 
+        <h4>Milling</h4>
+        <p>On this phase I will be using the following:</p>
 
-        <p class="pic">
-            <img src="media/week04/laserdetail.jpg">
-            <legend>
-                the printer now with a 2 watts diode laser head attached to it
-            </legend>
-        </p>
-
-
-        <h3>
-            Making test patterns
-        </h3>
-
-        <p>
-            deciding what to test...
-        </p>
-
-        <lo>
-
-            <li>
-                ideal focus hight
-            </li>
-
-            <li>
-                ideal cutting speed
-            </li>
-
-            <li>
-                cutting depth capacity
-            </li>
-
-            <li>
-                kerf
-            </li>
-
-        </lo>
-
-        <h3>Vinyl Cutting</h3>
-
-        <p>
-            The Vinyl cutter we have in the Lab is the Silhouette Cameo 3. It's a nice affordable easy to use Vinyl Cutter.</p>
-        <p class="pic">
-            <img src="media/week04/cameo3.jpg">
-            <legend>
-                Lab's Silhouette Cameo 3
-            </legend>
-        </p>
-        <p>It comes with the software Silhouette Studio.</p>
-        <p class="pic">
-            <img src="media/week04/silhouettestudio.jpg">
-            <legend>Print from the first screen when you open Silhouette Studio</legend>
-        </p>
-        <h4>Learning outcomes:</h4>
         <ul>
-            <li>Identify and explain processes involved in using this machine.</li>
+            <li>Fab Modules <a href="http://fabmodules.org"></a></li>
+            <li>Mach3</li>
+            <li>The CNC</li>
         </ul>
 
-        <ol type="1">
-            <li>
-                Creating the file
-            </li>
-            <ol type="i">
-                <li>
-                    Selecting a file from Library
-                </li>
-                <p>As a warm up and because we are near the Halloween I decided to cut something my kids could use</p>
-                <p class="pic">
-                    <img src="media/week04/library.jpg">
-                    <legend>
-                        image of Studio Library
-                    </legend>
-                </p>
-                <p>I chose the bat from the library.</p>
-                <p>
-                    <img src="media/week04/bat.jpg">
-                    <legend>
-                        outline of the bat chosen from the Studio's library
-                    </legend>
-                </p>
-                <p></p>
-                <p>
-                    <img src="media/week04/batresize.jpg">
-                    <legend>
-                        outline of the bat chosen from the Studio's library. Once clicking twice the bat getis inserted in the middle of the work area.
-                    </legend>
-                </p>
-                <p>Then using ctrl+c Ctrl+v I copied and pasted the bat several times.</p>
-                <p>
-                    <img src="media/week04/batcopypaste.jpg">
-                    <legend>
-                        outline of the bat chosen from the Studio's library
-                    </legend>
-                </p>
-                <p>I chose the bat from the library</p>
-                <p>
-                    <img src="media/week04/batselection.jpg">
-                    <legend>
-                        outline of the bat chosen from the Studio's library
-                    </legend>
-                </p>
-                <p>I chose the bat from the library</p>
-                <p>
-                    <img src="media/week04/batalign.jpg">
-                    <legend>
-                        outline of the bat chosen from the Studio's library
-                    </legend>
-                </p>
-                <p>I chose the bat from the library</p>
-                <p>
-                    <img src="media/week04/mediasize.jpg">
-                    <legend>
-                        outline of the bat chosen from the Studio's library
-                    </legend>
-                </p>
-                <p>I chose the bat from the library</p>
-                <p>
-                    <img src="media/week04/batusingthemostofthevinyl.jpg">
-                    <legend>
-                        outline of the bat chosen from the Studio's library
-                    </legend>
-                </p>
-                <p>I chose the bat from the library</p>
-                <p>
-                    <img src="media/week04/batchecksetingsandsendagain.jpg">
-                    <legend>
-                        outline of the bat chosen from the Studio's library
-                    </legend>
-                </p>
-            </ol>
-        </ol>
-        <ul>
-            <li>Design and create the final object</li>
+        <h4>Fab Modules</h4>
 
-        </ul>
-        <h4>Have you:</h4>
-        <ul>
-            <li>Explained how you drew your files</li>
-            <li>Shown how you made your vinyl project</li>
-            <li>Included your design files and photos of your finished project</li>
-        </ul>
+        <p>- I started by downloading the Traces (1000 dpi) and Outline Cutout (1000 dpi) of the circuit provided at Brian's tutorial.</p>
 
+        <p class="pic"><img src="media/week05/image005.png">
+            <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
+        </p>
+
+        <p class="pic"><img src="media/week05/image007.png">
+            <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
+        </p>
+
+        <h4>- At Fab modules</h4>
+
+        <p>I selected the option "image (.jpg)"</p>
+
+        <p class="pic"><img src="media/week05/image009.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>I choose the image file</p>
+        <p class="pic"><img src="media/week05/image011.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>Once image is loaded I selected "output format" and then "G-codes (.nc)"</p>
+
+        <p class="pic"><img src="media/week05/image013.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>On Process I selected "PCB traces (1/64)"</p>
+
+        <p class="pic"><img src="media/week05/image015.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>Before calculating I changed the cut depth to 0.05, half of the default value as I was being a bit cautious on it.</p>
+        <p class="pic"><img src="media/week05/image017.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>Then pressed calculate</p>
+
+        <p class="pic"><img src="media/week05/image019.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>After calculation I proceed with an inspection of the tool path to make sure that all traces were covered. By holding left mouse key I was able to move the image and with the wheel button I could zoom the image to better check the tool path.</p>
+
+        <p class="pic"><img src="media/week05/image021.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>By holding right mouse key I was able to even see it with a different perspective.</p>
+
+        <p class="pic"><img src="media/week05/image023.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>Last I saved the file for the milling process.</p>
+
+        <p class="pic"><img src="media/week05/image025.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p class="pic"><img src="media/week05/image027.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>To outline I followed the same steps as before except I chose to "PCB outline (1/32)" instead of traces.</p>
+
+        <p class="pic"><img src="media/week05/image029.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <h4>2. Mach3</h4>
+
+        <p>I started the preparation of the cnc by milling a pocket the size of the blank PCB (76x50x1.5mm)</p>
+
+        <p class="pic"><img src="media/week05/image031.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>Milling the pocket</p>
+
+        <p class="pic"><img src="media/week05/image033.jpg">
+            <legend>photo of my cnc making a pocket for the blank pcb</legend>
+        </p>
+
+        <p>Finished pocket</p>
+
+        <p class="pic"><img src="media/week05/image035.jpg">
+            <legend>photo of my cnc finishing pocket</legend>
+        </p>
+
+        <p>Gluing double face tape on the FR1 board
+        </p>
+
+        <p class="pic"><img src="media/week05/image037.jpg">
+            <legend>back of blank pcb</legend>
+        </p>
+
+        <p>The end result is this.</p>
+
+        <p class="pic"><img src="media/week05/image039.jpg">
+            <legend>finishing the outside of the ISP</legend>
+        </p>
+
+        <p>Milling the cutout of one of the ISP's </p>
+
+        <p class="pic"><img src="media/week05/image041.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>Removing the PCB from the pocket.</p>
+
+        <p class="pic"><img src="media/week05/image043.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>I used a blade and sandpaper to remove shavings left from the milling process.</p>
+
+        <p class="pic"><img src="media/week05/image045.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p>Removed the double face tape from behind the pcb.</p>
+
+        <p class="pic"><img src="media/week05/image047.jpg">
+            <legend> capture from my computer</legend>
+        </p>
+
+        <h4>3. Stuffing</h4>
+
+        <p>Basing on Brian's ISP's page tutorial I started by creating a spreadsheet with the components and its positions.</p>
+
+        <p class="pic"><img src="media/week05/image049.jpg">
+            <legend>image capture from my computer</legend>
+        </p>
+
+        <p class="pic"><img src="media/week05/image051.jpg">
+            <legend>image from Brian's ISP's page</legend>
+        </p>
+
+        <h4>BOM</h4>
+        <div class="table-responsive">
+            <table class="table" border with="800">
+                <tr>
+                    <td width="300">
+                        <p>Components</p>
+                    </td>
+                    <td width="100">
+                        <p>Location</p>
+                    </td>
+                    <td width="200">
+                        <p><span>Digikey</span>
+                            or Mouser</p>
+                        <p>Part number </p>
+                    </td>
+                    <td width="200">
+                        <p>Manufacture Part #</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span><a href="http://www.atmel.com/devices/attiny45.aspx"><span>ATtiny45</span></a>
+                            or ATtiny85</p>
+                    </td>
+                    <td width="100">
+                        <p>U1</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.digikey.com/product-detail/en/atmel/ATTINY45V-10SUR/ATTINY45V-10SURCT-ND/3789329"><span>ATTINY45V-10SU-ND</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>ATTINY45V-10SUR</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span>2x
+                            1kΩ resistors</p>
+                    </td>
+                    <td width="100">
+                        <p>R1, R6</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.digikey.com/product-detail/en/yageo/RC1206FR-071KL/311-1.00KFRCT-ND/731334"><span>311-1.00KFRCT-ND</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>RC1206FR-071KL </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span>2x
+                            499Ω resistors</p>
+                    </td>
+                    <td width="100">
+                        <p>R2, R5</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.digikey.com/product-detail/en/yageo/RC1206FR-07499RL/311-499FRCT-ND/731891"><span>311-499FRCT-ND</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>RC1206FR-07499RL </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span>2x
+                            49Ω resistors</p>
+                    </td>
+                    <td width="100">
+                        <p>R3, R4</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.digikey.com/product-detail/en/yageo/RC1206FR-0749R9L/311-49.9FRCT-ND/731889"><span>311-49.9FRCT-ND</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>RC1206FR-0749R9L</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span>2x
+                            3.3v <span>zener</span> diodes</p>
+                    </td>
+                    <td width="100">
+                        <p>D1, D2</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.digikey.com/product-detail/en/diodes-incorporated/BZT52C3V3-7-F/BZT52C3V3-FDICT-ND/717854"><span>BZT52C3V3-FDICT-ND</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>BZT52C3V3-7-F</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span>1x
+                            red LED</p>
+                    </td>
+                    <td width="100">
+                        <p>D4</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.digikey.com/product-detail/en/lite-on-inc/LTST-C150CKT/160-1167-1-ND/269239"><span>160-1167-1-ND</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>LTST-C150CKT</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span>1x
+                            green LED</p>
+                    </td>
+                    <td width="100">
+                        <p>D3</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.digikey.com/product-detail/en/lite-on-inc/LTST-C230TBKT/160-1889-1-ND/3306146"><span>160-1889-1-ND</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>LTST-C230TBKT</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span>1x 100nF/0.1uF capacitor</p>
+                    </td>
+                    <td width="100">
+                        <p>C1</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.digikey.com/product-detail/en/kemet/C1206C104KARACTU/399-4674-1-ND/992199"><span>399-4674-1-ND</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>C1206C104KARACTU</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="300">
+                        <p><span><span><span>- </span></span></span>1x
+                            2x3 pin header</p>
+                    </td>
+                    <td width="100">
+                        <p>ISP</p>
+                    </td>
+                    <td width="200">
+                        <p><a href="http://www.mouser.com/ProductDetail/Amphenol-FCI/95278-101A06LF/?qs=AwD%252bQufC0y6awc4Pvf%2Fc%252bg%3D%3D"><span>649-95278-101A06LF</span></a></p>
+                    </td>
+                    <td width="200">
+                        <p>71600-006LF</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <p>After that I proceed soldering all components in place.</p>
+
+
+        <p class="pic"><video controls>
+                <source src="media/week05/soldering.m4v">
+                Your browser does not support HTML5 video.</video></p>
+
+        <h4>-3 Pre-Debugging</h4>
+
+        <p>I started with a visual inspection.</p>
+
+        <p class="pic"><img src="media/week05/image053.jpg">
+            <legend>photo of my semi-finished ISP</legend>
+        </p>
+
+        <p>OK I need to clean a bit more</p>
+
+        <p>That's when I realised I forgot to solder the jumper wire. That made me remove the shrink tube I had installed prior.</p>
+
+        <p class="pic"><img src="media/week05/image055.jpg">
+            <legend>photo of my semi-finished ISP</legend>
+        </p>
+
+        <p>With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.</p>
+
+        <p>Overall the board seemed fine so I proceed with the programing. And now programing...</p>
+
+        <h4>Programming</h4>
+
+        <p>Under Ubuntu for Windows 10.
+            Started by installing the programing environment</p>
+
+        <p class="pic"><img src="media/week05/image057.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>With the prior command the programs got downloaded.</p>
+
+        <p class="pic"><img src="media/week05/image059.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>I then downloaded the firmware source to a directory. Following that I run the command </p>
+        <pre class="prettyprint linenums">make</pre>
+
+        <p class="pic"><img src="media/week05/image061.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>Using Sublime-text I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".</p>
+
+        <p class="pic"><img src="media/week05/image063.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>I then run</p>
+        <pre class="prettyprint linenums">make flash</pre>
+
+        <p class="pic"><img src="media/week05/image065.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>But not success. So I run </p>
+        <pre class="prettyprint linenums">lsusb</pre>
+        <p>and I get a message “unable to initialize libusb: -99</p>
+
+        <p class="pic"><img src="media/week05/image067.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shel yet! Argh!</p>
+
+        <p class="pic"><img src="media/week05/image069.jpg">
+            <legend>capture of my computer screen on <a href="http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10">stackoverflow</a> </legend>
+        </p>
+
+        <p>Then I gave up on Ubuntu bash for windows 10 and run a copy of Ubuntu under VMware player.
+            At ubuntu I run:</p>
+
+        <pre class="prettyprint linenums">sudo apt install avrdude gcc-avr avr-libc make</pre>
+
+        <p class="pic"><img src="media/week05/image071.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+
+        <p>This time after running lsusb I can see that device is present.</p>
+
+        <p>I run </p>
+
+        <pre class="prettyprint linenums">make</pre>
+
+        <p>in order to compile the firmware.</p>
+
+        <p class="pic"><img src="media/week05/image073.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+
+        <p>I then run</p>
+        <pre class="prettyprint linenums">make flash
+</pre>
+        <p>But again I got an error message.
+        </p>
+
+        <p>I end up finding out that my ISP has to have a jumper installed in order to program the Attiny45. So I do it! </p>
+
+        <p>And it works!</p>
+
+        <p class="pic"><img src="media/week05/image075.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>Next I run </p>
+        <pre class="prettyprint linenums">make fuses</pre>
+
+        <p class="pic"><img src="media/week05/image077.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>After having the firmware uploaded and fuses burnt my new ASP would not be recognised.</p>
+        <p>So back to debugging…</p>
+        <p>I end up measuring each resistor value, and replacing the attiny with a new one. With a multimeter I found out that the R1 1K resistor was not working, replaced and voila. Board detected!!! Oh also I decided to install a usb connector I cutted from an old cable and after some washing that's how it looks.</p>
+
+        <p class="pic"><img src="media/week05/image079.jpg">
+            <legend>photo of my tiny ISP without cover</legend>
+        </p>
+        <p class="pic"><img src="media/week05/ispworking.jpg">
+            <legend>photo of my tiny ISP with cover and programing</legend>
+        </p>
+        <p>Final command make rstdisbl and this tiny can't be programmed again.</p>
+
+        <p class="pic"><img src="media/week05/image081.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>It worked now I remove jumper!</p>
+
+        <p class="pic"><img src="media/week05/image083.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>It works!</p>
+
+        <h4>-4 Final Test</h4>
+
+        <p>Loading the driver on windows I use the tool "Zadig_2.2.exe"</p>
+
+        <p class="pic"><img src="media/week05/image085.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>After the driver installation I tested under windows the burning of my 3D printer board's firmware.</p>
+
+        <p class="pic"><video controls>
+                <source src="media/week05/ispworks.m4v">
+                Your browser does not support HTML5 video.</video></p>
+
+        <p class="pic"><img src="media/week05/image087.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>All working!</p>
 
         <!-- End of your content -->
-
-    </div> <!-- /container -->
+    </div>
+    <!-- /container -->
 
     <!-- footer -->
 
@@ -361,8 +607,8 @@
             Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
             Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
-    </footer>
 
+    </footer>
 
     <!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
@@ -381,7 +627,6 @@
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
-
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
