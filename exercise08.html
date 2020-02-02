@@ -107,7 +107,7 @@
 
 <h3>Week workflow</h3>
 
-<p class="pic"><img src="media/week09/week8diagram.jpg"></p>
+<p class="pic"><img src="media/week08/week8diagram.jpg"></p>
 
         <hr>
 
@@ -154,7 +154,7 @@
             Will jump to programing and use it to consult only. While I do will detach important sections bellow:
         </p>
         <p class="pic">
-            <img src="media/week09/01.jpg">
+            <img src="media/week08/01.jpg">
             <legend>
                 ATTINY44A pin configurations
             </legend>
@@ -255,21 +255,21 @@
         <p>- with all files prior downloaded on one directory, in linux I rename the file to makefile and run the script to create the firmware (this step I will repeat every time I want to modify the code: </p>
 <pre class="prettyprint linenums">mv hello.ftdi.44.echo.c.make makefile
 make</pre>
-        <p class="pic"><img src="media/week09/lsmake.jpg"><legend>renaming to makefile and compiling</legend></p>
+        <p class="pic"><img src="media/week08/lsmake.jpg"><legend>renaming to makefile and compiling</legend></p>
         <li>compile source code</li>
         <p>- done in previous step</p>
         <li>Adapting makefile to work with my programer</li>
-                <p class="pic"><img src="media/week09/makefile.jpg"><legend>I had to edit the makefile file to work with my programmer. That was done by replacing the entry usbtiny with usbasp 2 times, one when burning the firmware the other when burning the fuses</legend></p>
+                <p class="pic"><img src="media/week08/makefile.jpg"><legend>I had to edit the makefile file to work with my programmer. That was done by replacing the entry usbtiny with usbasp 2 times, one when burning the firmware the other when burning the fuses</legend></p>
         <li>burn firmware</li>
         <p>run:</p>
         <pre class="prettyprint linenums">make program-usbtiny</pre>
-                <p class="pic"><img src="media/week09/burn.jpg"><legend>renaming to makefile and compiling</legend></p>
+                <p class="pic"><img src="media/week08/burn.jpg"><legend>renaming to makefile and compiling</legend></p>
         <li>identify what fuses to burn</li>
         <p>- that was done already in the makefile</p>
         <li>burn fuses</li>
         <p>run:</p>
         <pre class="prettyprint linenums">make program-usbasp-fuses</pre>
-        <p class="pic"><img src="media/week09/fuses.jpg"><legend>burning fuses</legend></p>
+        <p class="pic"><img src="media/week08/fuses.jpg"><legend>burning fuses</legend></p>
     </ol>
 </ol>
 <hr>
@@ -280,17 +280,17 @@ make</pre>
     Add additional board to the boards manager:</li>
 <p>Paste the following into (Preferences)-(Additional Boards Manage URLs:)</p>
 <pre class="prettyprint linenums">https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json</pre>
-<p class="pic"><img src="media/week09/step1.jpg"></p>
+<p class="pic"><img src="media/week08/step1.jpg"></p>
 <li>Chose your new added board, in my case ATtiny44</li>
-    <p class="pic"><img src="media/week09/step2.jpg"></p>
+    <p class="pic"><img src="media/week08/step2.jpg"></p>
 <li>Chose your processor, same as before</li>
-    <p class="pic"><img src="media/week09/step3.jpg"></p>
+    <p class="pic"><img src="media/week08/step3.jpg"></p>
 <li>select clock, because I am using an external 20Mhz oscillator, I chose "External 20 MHZ"</li>
-    <p class="pic"><img src="media/week09/step4.jpg"></p>
+    <p class="pic"><img src="media/week08/step4.jpg"></p>
 <li>Because I want to do some serial monitoring on this board I chose the best mach for my FTDI wich is "/dev/cu.usbserial-A7032T9C</li>
-    <p class="pic"><img src="media/week09/step5.jpg"></p>
+    <p class="pic"><img src="media/week08/step5.jpg"></p>
 <li>The last step before compiling and burning was to select the programmer, in my case "USBasp"</li>
-    <p class="pic"><img src="media/week09/step6.jpg"></p>
+    <p class="pic"><img src="media/week08/step6.jpg"></p>
 </ol>
 <hr>
 <h2>First test</h2>
@@ -298,14 +298,14 @@ make</pre>
 
         <p>Here instead of using terminal and avrdude, I used the Arduino IDE as it has a built-in serial monitor.</p>
         <p>The results are as follows in the video</p>
-        <p class="pic"><video controls><source src="media/week09/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.</video></p>
+        <p class="pic"><video controls><source src="media/week08/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.</video></p>
 
 <hr>
 <h2>Program something else</h2>
 <p>Now I will try to program it to blink as I press the button.</p>
 <ol>
 <li>determine the pin where switch is connected</li>
-    <p class="pic"><img src="media/week09/schematics.jpg"></p>
+    <p class="pic"><img src="media/week08/schematics.jpg"></p>
     <p>after looking into the PCB schematics I determined the button is connected to pin 10</p>
 <li>determine the pin where LED is connected</li>
     <p>after looking into the PCB schematics I determined the LED is connected to pin 6</p>
@@ -327,17 +327,17 @@ make</pre>
 
 <p>Next I wanted the LED to react when pressing the button, so I searched for attiny44 arduino pin. With the right pin number in hand I replaced the pins in the code and it worked!</p>
 
-<p class="pic"><video controls><source src="media/week09/hello1.mp4">Your browser does not support HTML5 video.</video></p>
+<p class="pic"><video controls><source src="media/week08/hello1.mp4">Your browser does not support HTML5 video.</video></p>
 <p>now I inverted when the LED turns on and off.</p>
-<p class="pic"><video controls><source src="media/week09/hello2.mp4">Your browser does not support HTML5 video.</video></p>
+<p class="pic"><video controls><source src="media/week08/hello2.mp4">Your browser does not support HTML5 video.</video></p>
 <hr>
 <h2> Side activity</h2>
 
         <p>I was a bit annoyed my board would not advise me when powered so I decide to solder a red LED and a 22 Ohms resistor and a resistor so if I got the connections wrong I would know and switch it.</p>
         <p>Thats the before and after</p>
-        <p class="pic"><img src="media/week09/pcb01.jpg"><legend>Before</legend></p>
-        <p class="pic"><img src="media/week09/pcb02.jpg"><legend>After</legend></p>
-        <p class="pic"><img src="media/week09/pcb03.jpg"><legend>After</legend></p>
+        <p class="pic"><img src="media/week08/pcb01.jpg"><legend>Before</legend></p>
+        <p class="pic"><img src="media/week08/pcb02.jpg"><legend>After</legend></p>
+        <p class="pic"><img src="media/week08/pcb03.jpg"><legend>After</legend></p>
 
 <!-- End of your content -->
 
