@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,51 +35,53 @@
 
     <!-- Load the menu file -->
     <script>
-    function menu() {
-                      $('#exercises').load("exercises-menu.html");
-                      $('#project').load("project-menu.html");
-                      $('#cclicense').load("license.html");
-                      }
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
     </script>
 
-  </head>
+</head>
 
-  <body onload="menu()">
+<body onload="menu()">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
-              <ul id="exercises" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container">
 
-    <!-- Insert your content here below! -->
+        <!-- Insert your content here below! -->
         <div class="jumbotron" style="width: 100%">
             <h1>Week 01 A</h1>
             <h3>Principles and Practices</h3>
@@ -98,9 +101,9 @@
             </ul>
         </div>
         <h2>Electronic Components Vending Machine:</h2>
-         <p> For my final project I decided on developing a very necessary Fab Machine. A vending machine of electronics components. I hope this machine will take some of the burden of fab Managers free from doing inventory and sale of components, as everything will happen automatically.</p>
+        <p> For my final project I decided on developing a very necessary Fab Machine. A vending machine of electronics components. I hope this machine will take some of the burden of fab Managers free from doing inventory and sale of components, as everything will happen automatically.</p>
 
-         <p class="pic">
+        <p class="pic">
             <img src="media/week01a/electronicsvendingmachine.jpg">
             <legend>Electronics vending machine</legend>
         </p>
@@ -118,14 +121,16 @@
 
         <p class="pic">
             <img src="media/week01a/wechat.jpg">
-            <legend>Wechat payment System with QR code</legend></p>
+            <legend>Wechat payment System with QR code</legend>
+        </p>
 
         <h4>Machine Description:</h4>
-        <p>The machine will use current electronic reels used for electronics packaging to be feed on pick and place machines. The DIY Pic and place bellow illustrates the reel system I would like to incorporate.</p>
+        <p>The machine will use current electronic reels used for electronics packaging to be feed on pick and place machines. The DIY Pic and place bellow illustrates the reel tapes system I would like to incorporate.</p>
 
         <p class="pic">
             <img src="media/week01a/diypickandplace.jpg">
-            <legend>PIC.01: DIY pick and place</legend></p>
+            <legend>PIC.01: DIY pick and place</legend>
+        </p>
 
         <p>Because sometimes it's not possible to stock such quantities of electronics on a Fab Lab the machine should also be able to use already cut electronics packaging strips stored in the machine itself.</p>
 
@@ -133,7 +138,8 @@
 
         <p class="pic">
             <img src="media/week01a/reelfeeder.jpg">
-            <legend>PIC. 02 Stripe guide</legend></p>
+            <legend>PIC. 02 Stripe guide</legend>
+        </p>
 
         <h4>Scketch:</h4>
 
@@ -174,11 +180,11 @@
 
         <h5>Manager Steps:</h5>
         <ol>
-                <li>manager feeds machine with new components</li>
-                <li>manager updates inventory thru software, with price, quantity and type</li>
+            <li>manager feeds machine with new components</li>
+            <li>manager updates inventory thru software, with price, quantity and type</li>
         </ol>
 
-    <!-- End of your content -->
+        <!-- End of your content -->
 
     </div> <!-- /container -->
 
@@ -187,10 +193,10 @@
     <footer id="footer">
 
         <p id="cclicense">
-                </p>
+        </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
 
@@ -207,17 +213,18 @@
     <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
-      !function ($) {
-        $(function(){
-          window.prettyPrint && prettyPrint()
-        })
-      }(window.jQuery)
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 
-  </body>
+</body>
 
 </html>
