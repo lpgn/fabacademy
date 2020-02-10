@@ -93,16 +93,21 @@
         <h3>Software Used</h3>
         <ul style="list-style-type:disc">
             <li>git</li>
+            <li>ncdu</li>
+            <li>gimp</li>
+            <li>bimp</li>
             <li>cmd</li>
             <li>brackets</li>
             <li>sublime_text3</li>
+            <li>ffmpeg</li>
         </ul>
         <h3>Useful Links</h3>
 
         <ul>
             <li><a href="http://fab.academany.org/2020/">Fab Academy Archieve</a></li>
-            <li><a href="http://fabacademy.org/2020/docs/FabAcademy-Assessment/">Fab Academy Assignments and Assessment</a></li>
+            <li><a href="http://fabacademy.org/2020/docs/fabacademy-assessment/">Fab Academy Assignments and Assessment</a></li>
             <li><a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs">Gitlab 2020</a></li>
+            <li><a href="http://academy.cba.mit.edu/classes/">Neil's Classes Archieve</a></li>
             <li><a href="http://fabmodules.org/">Fab Modules</a></li>
             <li><a href="http://mods.cba.mit.edu/">Mods</a></li>
             <li><a href="http://nueval.fabacademy.org">Student Dashboard</a> </li>
@@ -203,6 +208,82 @@
             <li>All the CSS files are in the <code>/bootstrap</code> folder</li>
         </ul>
         <p class="pic"><img src="media/week01b/img8.jpg">current folder structure</p>
+        
+        <h4>Instaling ncdu and using it in orther to check for big files</h4>
+        <br>
+        <p>In orther to save space in the server as well as have a faster loading website we need to constately make sure we don't miss big uncompressed image and video files</p>
+        
+        <ol>
+            <li>on a Linux terminal type:</li>
+            <pre class="prettyprint linenums">sudo apt install ncdu</pre>
+            <p class="pic">
+            <img src="media/week01b/installing_ncdu.jpg"></p>
+            <li>start ncdu on a linux terminal by typing:</li>
+            <pre class="prettyprint linenums">ncdu</pre>
+            <p>ncdu will open and with the up and down arrows and enter key you will be able to navigate your directories.</p>
+
+            <p class="pic">
+            <img src="media/week01b/navigating_with_ncdu.jpg"></p>
+            <p>Ncdu will classify the bigest files first and show the more hash tag caracters "#" for the biggest folders or files.</p>
+            <p class="pic">
+            <img src="media/week01b/finding_the_bigest_file_with_ncdu.jpg"></p>
+            <p>In this case the biggest file is a video file for my final project skech.</p>
+        </ol>
+        <br>
+        <h4>Compressing the bigest files</h4>
+            <br>
+        <p>For the video file we will use ffmpeg</p>
+        <ol>
+        <li>Start by installing ffmpeg on a linux terminal:</li>
+            <br>
+        
+        <pre class="prettyprint linenums">sudo apt install ffmpeg</pre>
+                        
+        <li>Next run ffmpeg on the big video file as per my example:</li>
+            <pre class="prettyprint linenums">ffmpeg -i input_video -vcodec libx264 -b:v 1000k -vf scale=-2:720 -an output_video.mp4</pre>
+        </ol>
+        <p>The code above should give you a 720p video without audio for more examples check <a href="http://academy.cba.mit.edu/classes/computer_design/video.html">Neil's ffmpeg cheatsheet</a></p>
+        
+        <br>
+        
+        <h4>For the images you can use a software called Gimp and a plugin called bimp.</h4>
+        
+        <ol>
+            <p>I use a package managing software called Chocolatey in orther to install some windows software.</p>
+            <p>It works similarly to apt but for windows.</p>
+            
+        <li>On a windows administrative shell run:</li>
+        <pre class="prettyprint linenums">choco install gimp</pre>
+            <li>Then download bimp from its <a href="https://alessandrofrancesconi.it/projects/bimp/">website</a> and then install it so you can run it under gimp.</li>
+            <li>After instalation is finished run gimp and select the batch image Manipulation plugin</li>
+            <p class="pic">
+            <img src="media/week01b/bimp_01_start.jpg"></p>
+            <li>In other to load a previous set or to save odely you have to press the Add button then select the desired operation</li>
+                        <p class="pic">
+            <img src="media/week01b/bimp_02_adding.jpg"></p>
+                        <li>In my case since I had the set saved alrealy I selected "load set"</li>
+                        <p class="pic">
+            <img src="media/week01b/bimp_03_load_set.jpg"></p>
+                        <li>then select the set, in my case "readyforweb.bimp"</li>
+                        <p class="pic">
+            <img src="media/week01b/bimp_04_selecting_set_made_prior.jpg"></p>
+                        <li>In other to create or modify the behaviour of the plugin click on the add to add a process or click in one of the ones you hacve saved prior</li>
+                        <p class="pic">
+            <img src="media/week01b/bimp_05_edditing_properity.jpg"></p>
+                        <li>Inside the resize set I selected the options I wanted specifically the with to 800px</li>
+                        <p class="pic">
+            <img src="media/week01b/bimp_06_edditing_file_size_properity.jpg"></p>
+                        <li>than I went to the other process and and opted for 75 compression ratio as well as convert the format to jpeg</li>
+                        <p class="pic">
+            <img src="media/week01b/bimp_07_edditing_compression_and_file_type%20properity.jpg"></p>
+                        <li>Than I selected all images I needed to convert at once and aplyed the changes</li>
+                        <p class="pic">
+            <img src="media/week01b/bimp_08_selecting_image_files_for_convertion.jpg"></p>
+            <li>next copy converted images to your folder if you did not specify it before.</li>            
+        
+        </ol>
+        
+        <br>
 
         <h4>Installing and using git</h4>
         <br>
