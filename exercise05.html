@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,51 +35,53 @@
 
     <!-- Load the menu file -->
     <script>
-    function menu() {
-                      $('#exercises').load("exercises-menu.html");
-                      $('#project').load("project-menu.html");
-                      $('#cclicense').load("license.html");
-                      }
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
     </script>
 
-  </head>
+</head>
 
-  <body onload="menu()">
+<body onload="menu()">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
-              <ul id="exercises" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container">
 
-    <!-- Insert your content here below! -->
+        <!-- Insert your content here below! -->
         <div class="jumbotron" style="width: 100%">
             <h1>Week 05</h1>
             <h3>3D Scanning and Printing</h3>
@@ -179,7 +182,7 @@
             <li>
                 Chain's stl file:
                 <a href="media/week05/wire_organiser_chain.stl">
-                     Generated stl file from the solidworks archive
+                    Generated stl file from the solidworks archive
                 </a>
 
             </li>
@@ -189,7 +192,7 @@
 
         <ol type="1">
             <li>
-            Printers preparation
+                Printers preparation
             </li>
 
             <br>
@@ -205,7 +208,7 @@
                     </legend>
                     <img src="media/week05/image6.jpg">
                     <legend>
-                    0.4 mm needle used to clean nozzle
+                        0.4 mm needle used to clean nozzle
                     </legend>
                 </p>
                 <li>
@@ -247,32 +250,32 @@
                         "test 3d print"
                     </a>
                     it show various results with the purpose of testing the printers.
-                        <p class="pic">
-                            <img src="media/week05/image1.jpg">
+                    <p class="pic">
+                        <img src="media/week05/image1.jpg">
 
-                            <legend>
-                                Print from the search at
-                                <a href="https://www.thingiverse.com/search?q=test+3d+printer&sa=">
-                                    Thingiverse
-                                </a>
-                            </legend>
-                        </p>
+                        <legend>
+                            Print from the search at
+                            <a href="https://www.thingiverse.com/search?q=test+3d+printer&sa=">
+                                Thingiverse
+                            </a>
+                        </legend>
+                    </p>
                 </li>
 
                 <li>
                     Then I selected one of the designs. It tests different capabilities of the printers.
                 </li>
 
-                        <p class="pic">
-                            <img src="media/week05/image2.jpg">
+                <p class="pic">
+                    <img src="media/week05/image2.jpg">
 
-                            <legend>
-                                Print from the test pattern page at
-                                <a href="https://www.thingiverse.com/thing:1363023">
-                                    Thingiverse
-                                </a>
-                            </legend>
-                        </p>
+                    <legend>
+                        Print from the test pattern page at
+                        <a href="https://www.thingiverse.com/thing:1363023">
+                            Thingiverse
+                        </a>
+                    </legend>
+                </p>
 
                 <p>
                     While on the 3D printer test model's page I downloaded the design and took note of all the parameters it intends to test such as:
@@ -359,20 +362,20 @@
                     <script type="text/javascript">
                         var canvas = document.getElementById('testmodel1');
                         var viewer = new JSC3D.Viewer(canvas);
-                        viewer.setParameter('SceneUrl','media/week05/3d_test.stl');
-                        viewer.setParameter('ModelColor','#1826ca');
-                        viewer.setParameter('BackgroundColor1','#E5D7BA');
-                        viewer.setParameter('BackgroundColor2','#383840');
-                        viewer.setParameter('RenderMode','flat');
-                        viewer.setParameter('MipMapping','on');
-                        viewer.setParameter('Definition','high');
-                        viewer.setParameter('Renderer','webgl');
+                        viewer.setParameter('SceneUrl', 'media/week05/3d_test.stl');
+                        viewer.setParameter('ModelColor', '#1826ca');
+                        viewer.setParameter('BackgroundColor1', '#E5D7BA');
+                        viewer.setParameter('BackgroundColor2', '#383840');
+                        viewer.setParameter('RenderMode', 'flat');
+                        viewer.setParameter('MipMapping', 'on');
+                        viewer.setParameter('Definition', 'high');
+                        viewer.setParameter('Renderer', 'webgl');
                         viewer.init();
                         viewer.update();
 
                     </script>
                     <legend>
-                    rendered 3D model of the STL file
+                        rendered 3D model of the STL file
                     </legend>
 
                 </p>
@@ -396,16 +399,16 @@
                     On the software Repetier Host I loaded the stl file and sliced for each printer. Naming the Gcode with the printer designation in front.
                 </li>
                 <p class="pic">
-                            <img src="media/week05/image3.jpg">
-                            <legend>
-                                Generating Gcode on Repetier Host for the Mini
-                            </legend>
+                    <img src="media/week05/image3.jpg">
+                    <legend>
+                        Generating Gcode on Repetier Host for the Mini
+                    </legend>
                 </p>
                 <p class="pic">
-                            <img src="media/week05/image4.jpg">
-                            <legend>
-                                Generating Gcode on Repetier Host for the Delta
-                            </legend>
+                    <img src="media/week05/image4.jpg">
+                    <legend>
+                        Generating Gcode on Repetier Host for the Delta
+                    </legend>
                 </p>
 
                 <li>
@@ -432,7 +435,9 @@
 
                 <li>
                     The prints were not bad but there was a lot of oozing (spider web). So I increased the retraction by .5 mm and then by 1 mm the improvements were very noticeable in both printers.
-                    <p class="pic"> <img src="media/week05/minibeforeaftercollage2.jpg"><legend>photo of prints with 1.5(left) and 2.5mm(right) retraction settings</legend></p>
+                    <p class="pic"> <img src="media/week05/minibeforeaftercollage2.jpg">
+                        <legend>photo of prints with 1.5(left) and 2.5mm(right) retraction settings</legend>
+                    </p>
                 </li>
 
                 <li>
@@ -445,43 +450,169 @@
                         border: 1px solid #CCC;
                         font-family: Arial, Helvetica, sans-serif;
                     }
+
                     .tableizer-table td {
                         padding: 4px;
                         margin: 3px;
                         border: 1px solid #CCC;
                     }
+
                     .tableizer-table th {
                         background-color: #104E8B;
                         color: #FFF;
                         font-weight: bold;
+
                 </style>
 
                 <table class="tableizer-table">
 
-                    <thead><tr class="tableizer-firstrow"><th></th><th>Parameter</th><th>Results</th><th>&nbsp;</th></tr></thead><tbody>
-                    <tr><td>&nbsp;</td><td>&nbsp;</td><td>Mini</td><td>Delta</td></tr>
-                    <tr><td>1</td><td>Nut, Size M4 Nut should fit perfectly</td><td>Yes</td><td>No</td></tr>
-                    <tr><td>2</td><td>Wave, rounded print</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>3</td><td>Star, Sharp Edges</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>4</td><td>Name, Complex Shapes</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>5</td><td>Holes, Size 3, 4, 5 mm</td><td>2.9, 3.9, 4.9</td><td>3, 4, 5 mm oval</td></tr>
-                    <tr><td>6</td><td>minimal Distance: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td><td> 0.1mm not good</td><td>0.1, 0.2, 0.3 not good scale wrong 6.5mm instead of 7mm</td></tr>
-                    <tr><td>7</td><td>Z height: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1 mm</td><td>0.1mm printed with 0.2 and 1.1 with 1</td><td>Yes</td></tr>
-                    <tr><td>8</td><td>Wall Thickness: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td><td>did't print 0.1, 0.2 next walls printed as 0.5 until last as 1mm</td><td>Yes</td></tr>
-                    <tr><td>9</td><td>Bridge Print: 2, 4, 8, 16 mm</td><td>Printed as 2.85, 3.9, 7.9, 15.8</td><td>Yes</td></tr>
-                    <tr><td>10</td><td>Sphere, Rounded Print 4.8mm height</td><td>5.1</td><td>Yes</td></tr>
-                    <tr><td>11</td><td>Sphere Mix, 7 mm height</td><td>7.15</td><td>Yes</td></tr>
-                    <tr><td>12</td><td>Pyramide, 7 mm height</td><td>6.95</td><td>Yes</td></tr>
-                    <tr><td>13</td><td>Overhang: 25, 30, 35, 40, 45, 50, 55, 60, 65, 70°</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>14</td><td>Warp, does it bend?</td><td>no</td><td>Yes</td></tr>
-                    <tr><td>15</td><td>3D Print Font, optimized for 3D printing</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>16</td><td>Surface, Flatness</td><td>a bit rough </td><td>Yes</td></tr>
-                    <tr><td>17</td><td>Size, 100 x 100mm x 23.83 (10mm width)</td><td>99.45 x 99.8 x 23.2 (10.2 with)</td><td>Yes</td></tr>
-                    <tr><td>18</td><td>Spike, minimum Layer Time, 21 mm height from Bottom (include Baseplate)</td><td>15mm</td><td>Yes</td></tr>
-                    <tr><td>19</td><td>Hole in Wall, 4 mm diameter, check for proper print</td><td>Yes</td><td>Yes</td></tr>
-                    <tr><td>20</td><td>Raft Test, raft should be just under the model</td><td>didn't test</td><td>Yes</td></tr>
-                    <tr><td>21</td><td>Retract Travel, check retract settings for longer travel</td><td>almost no ozzing</td><td>Yes</td></tr>
-                    <tr><td>&nbsp;</td><td>Conclusion</td><td>For a FDM printer I belive the result is very good. The sizes differences are probably due to a PLA shirincage</td><td></td></tr>
+                    <thead>
+                        <tr class="tableizer-firstrow">
+                            <th></th>
+                            <th>Parameter</th>
+                            <th>Results</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Mini</td>
+                            <td>Delta</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Nut, Size M4 Nut should fit perfectly</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Wave, rounded print</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Star, Sharp Edges</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Name, Complex Shapes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Holes, Size 3, 4, 5 mm</td>
+                            <td>2.9, 3.9, 4.9</td>
+                            <td>3, 4, 5 mm oval</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>minimal Distance: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td>
+                            <td> 0.1mm not good</td>
+                            <td>0.1, 0.2, 0.3 not good scale wrong 6.5mm instead of 7mm</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Z height: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1 mm</td>
+                            <td>0.1mm printed with 0.2 and 1.1 with 1</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Wall Thickness: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td>
+                            <td>did't print 0.1, 0.2 next walls printed as 0.5 until last as 1mm</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Bridge Print: 2, 4, 8, 16 mm</td>
+                            <td>Printed as 2.85, 3.9, 7.9, 15.8</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Sphere, Rounded Print 4.8mm height</td>
+                            <td>5.1</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Sphere Mix, 7 mm height</td>
+                            <td>7.15</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Pyramide, 7 mm height</td>
+                            <td>6.95</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Overhang: 25, 30, 35, 40, 45, 50, 55, 60, 65, 70°</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Warp, does it bend?</td>
+                            <td>no</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>3D Print Font, optimized for 3D printing</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Surface, Flatness</td>
+                            <td>a bit rough </td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Size, 100 x 100mm x 23.83 (10mm width)</td>
+                            <td>99.45 x 99.8 x 23.2 (10.2 with)</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Spike, minimum Layer Time, 21 mm height from Bottom (include Baseplate)</td>
+                            <td>15mm</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Hole in Wall, 4 mm diameter, check for proper print</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Raft Test, raft should be just under the model</td>
+                            <td>didn't test</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Retract Travel, check retract settings for longer travel</td>
+                            <td>almost no ozzing</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Conclusion</td>
+                            <td>For a FDM printer I belive the result is very good. The sizes differences are probably due to a PLA shirincage</td>
+                            <td></td>
+                        </tr>
                     </tbody>
                 </table>
             </ol>
@@ -494,11 +625,11 @@
 
             <ol type="i">
                 <li>
-                        I decided to create a necessary part of my final project. It's a wire organiser that when connected together works as a chain.
+                    I decided to create a necessary part of my final project. It's a wire organiser that when connected together works as a chain.
                 </li>
 
                 <li>
-                        The design is parametric so I can easily change the size as needed
+                    The design is parametric so I can easily change the size as needed
                 </li>
                 <p class="pic">
                     <img src="media/week05/designingcollage.jpg">
@@ -506,10 +637,137 @@
                         parametric design on Solid Works from beginning to gcode generation
                     </legend>
                 </p>
+
+
+
+
+
                 <p class="pic">
                     <img src="media/week05/image11.jpg">
                     <legend>
                         model finished
+                    </legend>
+                </p>
+                <li>The steps to design
+                </li>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step00.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step00_plane_chose_sketch.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step01_extrude.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step03.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step04_sketchcut.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step05_cut.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step06.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step07.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step08.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step09.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step10.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step11_filet.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step12_equation.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step13.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step14.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step15_chose_stl_name.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step16_chosing_format.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step17_chosing_location_saving.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/step18_you_get_statistics.jpg">
+                    <legend>
+                        ......
+                    </legend>
+                </p>
+                <p class="pic">
+                    <img src="media/week05/solidworks_modeling/equationcharts.jpg">
+                    <legend>
+                        ......
                     </legend>
                 </p>
                 <li>
@@ -521,22 +779,23 @@
                         It seems you are using an outdated browser that does not support canvas :-(
                     </canvas>
                     <legend>
-                    render of my 3D model of the wire organiser
+                        render of my 3D model of the wire organiser
                     </legend>
 
                     <script type="text/javascript">
                         var canvas = document.getElementById('wireorganiser');
                         var viewer = new JSC3D.Viewer(canvas);
-                        viewer.setParameter('SceneUrl','media/week05/wire_organiser_chain.stl');
-                        viewer.setParameter('ModelColor','#1826ca');
-                        viewer.setParameter('BackgroundColor1','#E5D7BA');
-                        viewer.setParameter('BackgroundColor2','#383840');
-                        viewer.setParameter('RenderMode','flat');
-                        viewer.setParameter('MipMapping','on');
-                        viewer.setParameter('Definition','high');
-                        viewer.setParameter('Renderer','webgl');
+                        viewer.setParameter('SceneUrl', 'media/week05/wire_organiser_chain.stl');
+                        viewer.setParameter('ModelColor', '#1826ca');
+                        viewer.setParameter('BackgroundColor1', '#E5D7BA');
+                        viewer.setParameter('BackgroundColor2', '#383840');
+                        viewer.setParameter('RenderMode', 'flat');
+                        viewer.setParameter('MipMapping', 'on');
+                        viewer.setParameter('Definition', 'high');
+                        viewer.setParameter('Renderer', 'webgl');
                         viewer.init();
                         viewer.update();
+
                     </script>
 
 
@@ -553,7 +812,7 @@
 
                     <video controls>
 
-                        <source src="media/week05/videoplayback.webm">
+                        <source src="media/week05/video2.mp4">
 
                         Your browser does not support HTML5 video.
 
@@ -569,7 +828,7 @@
 
             </ol>
             <li>
-            3D Scanning
+                3D Scanning
             </li>
             <br>
 
@@ -587,10 +846,10 @@
                 <li>
                     luckily I was at the beach and I saw a model that would be interesting. Someone had but a large rock equilibrated.
                 </li>
-                 <p class="pic">
+                <p class="pic">
                     <img src="media/week05/rock.jpg">
                     <legend>
-                    equilibrated rock at the Figueira beach near Lagos, Portugal
+                        equilibrated rock at the Figueira beach near Lagos, Portugal
                     </legend>
                 </p>
                 <li>
@@ -648,9 +907,9 @@
                 </p>
 
                 <li>
-                I compile the editing sequence on the following mosaic, in synthesis. I selected the undesired parts deleted it and filled the holes left. finally I generated a stl file that should be ready to print.
+                    I compile the editing sequence on the following mosaic, in synthesis. I selected the undesired parts deleted it and filled the holes left. finally I generated a stl file that should be ready to print.
                 </li>
-                               <p class="pic">
+                <p class="pic">
                     <img src="media/week05/editthescan.jpg">
                     <legend>
                         collage from screen prints editing sequence of Autodesk ReMake
@@ -663,22 +922,23 @@
                         It seems you are using an outdated browser that does not support canvas :-(
                     </canvas>
                     <legend>
-                    render of my 3D model from Photogrammetry scanning on ReMake
+                        render of my 3D model from Photogrammetry scanning on ReMake
                     </legend>
 
                     <script type="text/javascript">
                         var canvas = document.getElementById('stone');
                         var viewer = new JSC3D.Viewer(canvas);
-                        viewer.setParameter('SceneUrl','media/week05/stonemodel.stl');
-                        viewer.setParameter('ModelColor','#1826ca');
-                        viewer.setParameter('BackgroundColor1','#E5D7BA');
-                        viewer.setParameter('BackgroundColor2','#383840');
-                        viewer.setParameter('RenderMode','flat');
-                        viewer.setParameter('MipMapping','on');
-                        viewer.setParameter('Definition','high');
-                        viewer.setParameter('Renderer','webgl');
+                        viewer.setParameter('SceneUrl', 'media/week05/stonemodel.stl');
+                        viewer.setParameter('ModelColor', '#1826ca');
+                        viewer.setParameter('BackgroundColor1', '#E5D7BA');
+                        viewer.setParameter('BackgroundColor2', '#383840');
+                        viewer.setParameter('RenderMode', 'flat');
+                        viewer.setParameter('MipMapping', 'on');
+                        viewer.setParameter('Definition', 'high');
+                        viewer.setParameter('Renderer', 'webgl');
                         viewer.init();
                         viewer.update();
+
                     </script>
                 </p>
 
@@ -686,7 +946,7 @@
         </ol>
 
 
-    <!-- End of your content -->
+        <!-- End of your content -->
     </div>
     <!-- /container -->
 
@@ -694,10 +954,10 @@
 
     <footer id="footer">
         <p id="cclicense">
-                </p>
+        </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
 
@@ -714,15 +974,17 @@
     <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
-      !function ($) {
-        $(function(){
-          window.prettyPrint && prettyPrint()
-        })
-      }(window.jQuery)
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-        </body>
+</body>
+
 </html>
