@@ -300,26 +300,7 @@
             <img src="media/week01b/github.jpg">
             <legend>Github Snapshot</legend>
         </p>
-        <h4>Creating a new Repo</h4>
-        <p>I wanted to include instructions on how to create a new repo and upload it to github for future reference even it was not how I did</p>
-        <ol>
-            <li>First its necessary to be on the working directory and then make it a git directory with:</li>
-            <pre class="prettyprint linenums">git init</pre>
-            <li>next add all files to the local repo and stages them for commit</li>
-            <pre class="prettyprint linenums">git add .</pre>
-            <li>Next needs to be committed with:</li>
-            <pre class="prettyprint linenums">git commit -m "First commit"</pre>
-            <li>now create a new repository on github</li>
-            <p class="pic"><img src="media/week01b/img5.jpg"></p>
-            <p class="pic"><img src="media/week01b/img6.jpg"></p>
-            <li>Then copy the remote repository address</li>
-            <p class="pic"><img src="media/week01b/img7.jpg"></p>
-            <li>now add a remote with the copied address</li>
-            <pre class="prettyprint linenums">git remote add origin copied_adress_here </pre>
-            <li>Finally push everything with:</li>
-            <pre class="prettyprint linenums">git push -u origin master</pre>
-            <p>and its done</p>
-        </ol>
+        
         <br>
 
         <h4>Working with your Repository</h4>
@@ -395,6 +376,7 @@ git push</pre>
                 <li>and last you sent the commits to your origin (git push)</li>
             </ol>
         </ol>
+        
         <hr>
         <h4>Git and Bash Notes:</h4>
         <p>(notes here are to be added along the course as a cheatlist of git commands)</p>
@@ -404,6 +386,26 @@ git push</pre>
             <li>copy a ssh key to a server</li>
             <pre class="prettyprint linenums">ssh-copy-id -i ~/.ssh/mykey.pub user@host</pre>
         </ul>
+        <h4>Creating a new Repo</h4>
+        <p>I wanted to include instructions on how to create a new repo and upload it to github for future reference even it was not how I did</p>
+        <ol>
+            <li>First its necessary to be on the working directory and then make it a git directory with:</li>
+            <pre class="prettyprint linenums">git init</pre>
+            <li>next add all files to the local repo and stages them for commit</li>
+            <pre class="prettyprint linenums">git add .</pre>
+            <li>Next needs to be committed with:</li>
+            <pre class="prettyprint linenums">git commit -m "First commit"</pre>
+            <li>now create a new repository on github</li>
+            <p class="pic"><img src="media/week01b/img5.jpg"></p>
+            <p class="pic"><img src="media/week01b/img6.jpg"></p>
+            <li>Then copy the remote repository address</li>
+            <p class="pic"><img src="media/week01b/img7.jpg"></p>
+            <li>now add a remote with the copied address</li>
+            <pre class="prettyprint linenums">git remote add origin copied_adress_here </pre>
+            <li>Finally push everything with:</li>
+            <pre class="prettyprint linenums">git push -u origin master</pre>
+            <p>and its done</p>
+        </ol>
         <br>
         <!-- End of your content -->
     </div> <!-- /container -->
