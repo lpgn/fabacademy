@@ -34,60 +34,65 @@
 
     <!-- Load the menu file -->
     <script>
-    function menu() {
-                      $('#exercises').load("exercises-menu.html");
-                      $('#project').load("project-menu.html");
-                      $('#cclicense').load("license.html");
-                      }
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
     </script>
 
-  </head>
+</head>
 
-  <body onload="menu()">
+<body onload="menu()">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
-              <ul id="exercises" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container">
 
-    <!-- Insert your content here below! -->
+        <!-- Insert your content here below! -->
 
         <div class="jumbotron" style="width: 100%">
             <h2>Week 09</h2>
             <h3>Input Devices </h3>
             <hr>
             <h4>Group Project</h4>
-            <ul><li>Measure the analog levels and digital signals in an input device.</li></ul>
+            <ul>
+                <li>Measure the analog levels and digital signals in an input device.</li>
+            </ul>
             <h4>Individual Project</h4>
-            <ul><li>Measure something: add a sensor to a microcontroller board that you have designed and read it.</li></ul>
+            <ul>
+                <li>Measure something: add a sensor to a microcontroller board that you have designed and read it.</li>
+            </ul>
             <br>
             <h4>Learning outcomes:</h4>
             <ul>
@@ -107,7 +112,7 @@
             Week workflow
         </h4>
         <p>
-             Study Neil's <a href="http://academy.cba.mit.edu/classes/input_devices/index.html">input boards</a> → Decide what type of imput → Design Schematic/Boad → Mill the board→ solder components → debug → edit and publish website
+            Study Neil's <a href="http://academy.cba.mit.edu/classes/input_devices/index.html">input boards</a> → Decide what type of imput → Design Schematic/Boad → Mill the board→ solder components → debug → edit and publish website
         </p>
         <hr>
 
@@ -159,199 +164,223 @@
         </h3>
 
         <p>
-        As I am making a large CNC for my final project I decided to make an optical encoder. The Optical encoder would assure that the CNC movements are where they should be.
-        </p>
+            This week I will be testing a thermistor. Since I am building an incubator I will be needing to measure and control temperature.</p>
+        
+        <p> The thermistor I chose is the B57560G0104, after reading its datasheet I learned that at 25 degrees celcius it has an resistance of 100K.</p>
+        <p> The way the thermistor works is by decreasing its resistance as the temperature increases. Because the IC on its ADC pin reads voltage not resistance  we need to set a voltage divider in orther to derive its resistance.</p>
+        <p> I will connect the Thermistor inseries qith the resistor that will be connected to VCC. One end of the thermistor will be conected to ground and the other that is in series </p>
 
-        <p class="pic"><img src="media/week09/sketch.JPG"><legend>My encoder sketch</legend></p>
+        <p class="pic"><img src="media/week02/solidworks/solid01.jpg">
+            <legend>My encoder sketch</legend>
+        </p>
         <hr>
         <h4>
-        What is an Optical Encoder
+            What is an Optical Encoder
         </h4>
         <p>The Optical Encoders is an electromechanical device that monitors movement, speed and or direction.</p>
         <p> <a href="https://www.youtube.com/watch?v=6KBOLXrw94c">video explaining what is an encoder</a></p>
         <p> <a href="https://www.youtube.com/watch?v=CHE1imH9tdg">video explaining what is an absolute encoder</a></p>
 
-        <p class="pic"><img src="media/week09/encoderworking.jpg"><legend>image extracted from this <a href="https://rekadayaupaya.wordpress.com/2013/06/13/8-4-the-mcu-and-other-components-of-the-nc-system/">website (no sources given)</a> </legend></p>
+        <p class="pic"><img src="media/week09/encoderworking.jpg">
+            <legend>image extracted from this <a href="https://rekadayaupaya.wordpress.com/2013/06/13/8-4-the-mcu-and-other-components-of-the-nc-system/">website (no sources given)</a> </legend>
+        </p>
 
 
         <hr>
         <h4>References</h4>
 
         <p>As done on <a href="exercise07.html">week 7</a> I started by reviewing Neil's boards. The one I would be redesigning is the <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png"> visible light input board</a>.</p>
-        <p class="pic"><img src="media/week09/hello.temp.45.jpg"><legend>Professor Neil's light board</legend></p>
+        <p class="pic"><img src="media/week09/hello.temp.45.jpg">
+            <legend>Professor Neil's light board</legend>
+        </p>
         <p>I checked this <a href="http://fab.cba.mit.edu/classes/863.10/people/dimitris.papanikolaou/Assignment_8.html">website</a>
-            <p class="pic"><img src="media/week09/websitereference.jpg"><legend>Assignment website under CBA</legend></p>
-        <hr>
-        <h4>Designing the PCB</h4>
-        <p>The first step was creating the schematics. I based my schematics on the design of professor Neil's <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png"> visible light input board</a> and adapted it with consideration of what a <a href="http://fab.cba.mit.edu/classes/863.10/people/dimitris.papanikolaou/Assignment_8.html">previous Professor Neil's Student</a> did on his assignment. The difference is I want to have extra 2 led as light source and also an extra 2x6 header for being able to repurpose this prototype board.</p>
-        <h4>The Datasheets and resistor calculations</h4>
-        <p>
-            In order to calculate the resistor values and other, I examined the following Datahsets and the calculations/observations I made:
-        </p>
-        <ol>
-            <li>
-                <a href="http://www.everlight.com/file/ProductFile/PT15-21C-TR8.pdf">Phototransistor</a>
-            </li>
-
-            <p>
-                Neil on his light input devices uses a 10K resistor on the collector side of the phototransistor, as I am using the same phototransistor as him It would be safe to use the same value, but I wanted to understand a bit more of its inner workings so I extracted some parts of its datasheet:
+            <p class="pic"><img src="media/week09/websitereference.jpg">
+                <legend>Assignment website under CBA</legend>
             </p>
-            <li>
-                <a href="https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTST-C230TBKT.pdf">Blue LED</a>
-            </li>
+            <hr>
+            <h4>Designing the PCB</h4>
+            <p>The first step was creating the schematics. I based my schematics on the design of professor Neil's <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png"> visible light input board</a> and adapted it with consideration of what a <a href="http://fab.cba.mit.edu/classes/863.10/people/dimitris.papanikolaou/Assignment_8.html">previous Professor Neil's Student</a> did on his assignment. The difference is I want to have extra 2 led as light source and also an extra 2x6 header for being able to repurpose this prototype board.</p>
+            <h4>The Datasheets and resistor calculations</h4>
+            <p>
+                In order to calculate the resistor values and other, I examined the following Datahsets and the calculations/observations I made:
+            </p>
+            <ol>
+                <li>
+                    <a href="http://www.everlight.com/file/ProductFile/PT15-21C-TR8.pdf">Phototransistor</a>
+                </li>
 
-            <p class="pic"><img src="media/week09/leddatasheetextraction.jpg"><legend>datasheet extraction</legend></p>
-            <p class="pic"><img src="media/week09/ledresistorcalculation.jpg"><legend>resistor calculation</legend></p>
+                <p>
+                    Neil on his light input devices uses a 10K resistor on the collector side of the phototransistor, as I am using the same phototransistor as him It would be safe to use the same value, but I wanted to understand a bit more of its inner workings so I extracted some parts of its datasheet:
+                </p>
+                <li>
+                    <a href="https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTST-C230TBKT.pdf">Blue LED</a>
+                </li>
 
-            <li>
-                <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf">ATTINY45</a>
-            </li>
-        </ol>
-        <p>
+                <p class="pic"><img src="media/week09/leddatasheetextraction.jpg">
+                    <legend>datasheet extraction</legend>
+                </p>
+                <p class="pic"><img src="media/week09/ledresistorcalculation.jpg">
+                    <legend>resistor calculation</legend>
+                </p>
 
-        </p>
-        <p>
-        Bellow is how my schematics looks like:</p>
-        <p class="pic left"><img src="media/week09/encodermodule.sch.jpg"><legend>....</legend></p>
-        <p class="pic left"><img src="media/week09/encodermodule.brd.jpg"><legend>....</legend></p>
-        <p class="pic left"><img src="media/week09/tiny.sch.jpg"><legend>....</legend></p>
-        <p class="pic left"><img src="media/week09/tiny.brd.jpg"><legend>....</legend></p>
+                <li>
+                    <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf">ATTINY45</a>
+                </li>
+            </ol>
+            <p>
 
-        <div class="tg-wrap">
-            <table class="table" border>
+            </p>
+            <p>
+                Bellow is how my schematics looks like:</p>
+            <p class="pic left"><img src="media/week09/encodermodule.sch.jpg">
+                <legend>....</legend>
+            </p>
+            <p class="pic left"><img src="media/week09/encodermodule.brd.jpg">
+                <legend>....</legend>
+            </p>
+            <p class="pic left"><img src="media/week09/tiny.sch.jpg">
+                <legend>....</legend>
+            </p>
+            <p class="pic left"><img src="media/week09/tiny.brd.jpg">
+                <legend>....</legend>
+            </p>
 
-                <tr>
+            <div class="tg-wrap">
+                <table class="table" border>
 
-                    <th>
-                        qty
-                    </th>
+                    <tr>
+
+                        <th>
+                            qty
+                        </th>
 
 
-                    <th>
-                        Location
-                    </th>
+                        <th>
+                            Location
+                        </th>
 
-                    <th>
-                        Digikey or MouserPart number
-                    </th>
+                        <th>
+                            Digikey or MouserPart number
+                        </th>
 
-                    <th>
-                        Manufacture Part #
-                    </th>
+                        <th>
+                            Manufacture Part #
+                        </th>
 
-                    <th>
-                        Description
-                    </th>
+                        <th>
+                            Description
+                        </th>
 
-                </tr>
+                    </tr>
 
-                <tr>
+                    <tr>
 
-                    <td>
-                        1
-                    </td>
+                        <td>
+                            1
+                        </td>
 
-                    <td>
-                        U1
-                    </td>
+                        <td>
+                            U1
+                        </td>
 
-                    <td>
-                        ATTINY45V-10SU-ND
-                    </td>
+                        <td>
+                            ATTINY45V-10SU-ND
+                        </td>
 
-                    <td>
-                        ATTINY45V-10SUR
-                    </td>
+                        <td>
+                            ATTINY45V-10SUR
+                        </td>
 
-                    <td>
-                        IC MCU 8BIT 4KB FLASH 8SOIC
-                    </td>
+                        <td>
+                            IC MCU 8BIT 4KB FLASH 8SOIC
+                        </td>
 
-                </tr>
+                    </tr>
 
-                <tr>
+                    <tr>
 
-                    <td>
-                        2
-                    </td>
+                        <td>
+                            2
+                        </td>
 
-                    <td>
-                        R1
-                    </td>
+                        <td>
+                            R1
+                        </td>
 
-                    <td>
-                        311-10.0KFRCT-ND
-                    </td>
+                        <td>
+                            311-10.0KFRCT-ND
+                        </td>
 
-                    <td>
-                        RC1206FR-0710KL
-                    </td>
+                        <td>
+                            RC1206FR-0710KL
+                        </td>
 
-                    <td>
-                        RES SMD 10K OHM 1% 1/4W 1206
-                    </td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>R2</td>
-    <td>311-100FRCT-ND</td>
-    <td>RC1206FR-07100RL</td>
-    <td>RES SMD 100 OHM 1% 1/4W 1206</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>D3</td>
-    <td>160-1169-1-ND</td>
-    <td>LTST-C150GKT</td>
-    <td>LED GREEN CLEAR 1206 SMD</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>C1</td>
-    <td>445-1423-1-ND</td>
-    <td>C3216X7R1H105K160AB</td>
-    <td>CAP CER 1UF 50V X7R 1206</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>FTDI</td>
-    <td></td>
-    <td></td>
-    <td>6 pin header</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>RESONATOR</td>
-    <td>XC1109CT-ND</td>
-    <td>ECS-CR2-20.00-B-TR</td>
-    <td>CER RES 20.0000MHZ 15PF SMD</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td></td>
-    <td>450-2058-1-ND</td>
-    <td>FSM6JSMATR</td>
-    <td>SWITCH TACTILE SPST-NO 0.05A 24V</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>ISP</td>
-    <td>649-95278-101A06LF</td>
-    <td>71600-006LF</td>
-    <td>Headers &amp; Wire Housings 2X3P UNSHRD HDR 30 microinch gold</td>
-  </tr>
-</table></div>
+                        <td>
+                            RES SMD 10K OHM 1% 1/4W 1206
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>R2</td>
+                        <td>311-100FRCT-ND</td>
+                        <td>RC1206FR-07100RL</td>
+                        <td>RES SMD 100 OHM 1% 1/4W 1206</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>D3</td>
+                        <td>160-1169-1-ND</td>
+                        <td>LTST-C150GKT</td>
+                        <td>LED GREEN CLEAR 1206 SMD</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>C1</td>
+                        <td>445-1423-1-ND</td>
+                        <td>C3216X7R1H105K160AB</td>
+                        <td>CAP CER 1UF 50V X7R 1206</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>FTDI</td>
+                        <td></td>
+                        <td></td>
+                        <td>6 pin header</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>RESONATOR</td>
+                        <td>XC1109CT-ND</td>
+                        <td>ECS-CR2-20.00-B-TR</td>
+                        <td>CER RES 20.0000MHZ 15PF SMD</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>450-2058-1-ND</td>
+                        <td>FSM6JSMATR</td>
+                        <td>SWITCH TACTILE SPST-NO 0.05A 24V</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ISP</td>
+                        <td>649-95278-101A06LF</td>
+                        <td>71600-006LF</td>
+                        <td>Headers &amp; Wire Housings 2X3P UNSHRD HDR 30 microinch gold</td>
+                    </tr>
+                </table>
+            </div>
 
-        <p>Now I need to design the board around a stepper motor. I will need a hole for the axis and also holes to screw the pcb to the motor. To achieve this I will export a dxf file from solid works with a stteper design that I am using and try to design the pcb around it.
-        </p>
-        <p class="pic"></p>
+            <p>Now I need to design the board around a stepper motor. I will need a hole for the axis and also holes to screw the pcb to the motor. To achieve this I will export a dxf file from solid works with a stteper design that I am using and try to design the pcb around it.
+            </p>
+            <p class="pic"></p>
 
-        <p> One thing I was worried was how to tell direction and what would be the ideal position for the phototransistors.</p>
-        <p>
-        http://www.machinedesign.com/sensors/basics-rotary-encoders-overview-and-new-technologies-0
-        </p>
+            <p> One thing I was worried was how to tell direction and what would be the ideal position for the phototransistors.</p>
+            <p>
+                http://www.machinedesign.com/sensors/basics-rotary-encoders-overview-and-new-technologies-0
+            </p>
 
-    <!-- End of your content -->
+            <!-- End of your content -->
 
     </div> <!-- /container -->
 
@@ -359,10 +388,10 @@
 
     <footer id="footer">
         <p id="cclicense">
-                </p>
+        </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
 
@@ -379,16 +408,15 @@
     <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
-      !function ($) {
-        $(function(){
-          window.prettyPrint && prettyPrint()
-        })
-      }(window.jQuery)
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 
-  </body>
-</html>
+</body></html>

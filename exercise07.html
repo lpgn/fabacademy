@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -87,7 +88,7 @@
             <hr>
             <h4>Group assignment</h4>
             <ul>
-                <li>test runout, alignment, speeds, feeds, and toolpaths for your machine</li>
+                <li>test run-out alignment, speeds, feeds, and tool-paths for your machine</li>
             </ul>
             <h4>Individual assignment</h4>
             <ul>
@@ -122,7 +123,7 @@
             <li>ArtCAM</li>
             <li>Mach3</li>
             <li>Fusion360</li>
-            <li>Dogbone Plugin for Fusion</li>
+            <li><a href="http://tapnair.github.io/Dogbone/">Dogbone Plugin for Fusion</a> </li>
 
         </ul>
 
@@ -140,7 +141,7 @@
                 <br>
                 <br>
                 I will be designing and cutting a table for the treehouse.
-                I based my work from a sketch of table done by Anaig a volunteer in the Fabfarm.
+                I based my work from a sketch of table done by Anaig a volunteer in the FabFarm.
             </li>
             <p class="pic">
                 <img src="media/week07/tablerender.jpg">
@@ -155,36 +156,184 @@
                     <li>Mill bit used: 3.175 diamond shape</li>
                 </ul>
             </li><br>
-            <li>
-                CAD:
-                The software used in the design is Solidworks.
+            <li>In order to manufacture the table, I will be using multiple CAD and CAM software. I will start designing with Solidworks then move to Fusion 360 to create the dog-bones, then with exported dxf file I will move to ArtCAM and create the CAM files, well lets see all these steps bellow:
                 <br>
-<br>
+                <br>
                 <ol type="a">
                     <li>I started by scanning the Anaig's sketches.</li>
                     <p class="pic"><img src="media/week07/sketch1.jpg"></p>
                     <p class="pic"><img src="media/week07/sketch2.jpg"></p>
-                    <li>In solidworks I started a sketch and then Went to tools>>Sketch Tools>>Sketch Picture
-                    <p class="pic"><img src="media/week07/1step.jpg"></p></li>
-                    <li>Mach3</li>
-                    <li>Fusion360</li>
-                    <li>Dogbone Plugin for Fusion</li>
+                    <li>In sSlidworks I started a sketch and then Went to Tools>>Sketch Tools>>Sketch Picture
+                        <p class="pic"><img src="media/week07/step1.jpg"></p>
+                    </li>
+                    <li>Next I scaled the picture by:
+                        <ol>
+                            <li>clicking on the rulerand draggingit to a known dimension</li>
+                            <li>I dragged the tip of the ruler to the limit of the known dimensionon the picture</li>
+                            <li>I inserted the dimension of the know dimension of the picture</li>
+                            <li>I confirmed the input.</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/step2.jpg"></p>
+                        <p>This procedure insures the picture is with the correct scale and alignment.</p>
+                        <p class="pic"><img src="media/week07/sketch_from_drawing.jpg"></p>
+                    </li>
+                    <li>from there I extruded and repeated the steps above for each part then I created an assembly of the table.<p class="pic"><img src="media/week07/tableassembly.jpg"></p>
+                    </li>
+                    <li>After being satisfied with the design I proceededto create dog-bones in Fusion 360. That is done using a plugin called well guess what? Dog-bone! <p class="pic"><img src="media/week07/dogboneaddin.jpg"></p>
+                        <p>The Add-in <a href="http://github.com/caseycrogers/Dogbone">Dogbone</a> can be simply placed on Windows in the folder "~/AppData/Roaming/Autodesk/Autodesk Fusion 360/API/AddIns/" under its own directory and it will be started at every startup of fusion.</p>
+                    </li>
+                    <li>To apply the dog-bone in a design made in Solidworks I first imported the design to Fusion 360 then copied the solid with ctrl+c<p class="pic"><img src="media/week07/adddogbonestep3.jpg"></li>
+                    <li>Next I created a new design <ol>
+                            <li>by clicking in the plus sign </li>
+                            <li>right click the workspace</li>
+                            <li>click paste new</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/adddogbonestep4.jpg">
+                    </li>
+                    <li>That automatically opens a dialog box that I just clicked ok.<p class="pic"><img src="media/week07/adddogbonestep5.jpg"></li>
+                    <li>Last is to use the Dogbone add-in itself.
+                        <ol>
+                            <li>click the home icon</li>
+                            <li>chose the view</li>
+                            <li>click on the Dog-bone add-in icon</li>
+                            <li>click on the face selector</li>
+                            <li>click on the face you want to add dogbones</li>
+                            <li>fill in the dimension of the dog-bone, in my case 3.175mm or 0.125 inches which is the size of the mill bit I am going to use</li>
+                            <li>chose the style of the dobone</li>
+                            <li>press ok.</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/adddogbonestep6.jpg">
+                    </li>
+                    <li>The result is are several dog-ones created at once. Very practical. <p class="pic"><img src="media/week07/detail_of_dogbone.jpg"></li>
+                    <li>I need to export a dxf in Fusion360 in other to create a CAM file in ArtCAM.
+                        <ol>
+                            <li>Click on the surface</li>
+                            <li>Click on create skecth</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/dxfexportstep1.jpg">
+                    </li>
+                    <li>click finish sketch
+                        <p class="pic"><img src="media/week07/dxfexportstep2.jpg">
+                    </li>
+                    <li>
+                        <ol>
+                            <li>right click on the skecth</li>
+                            <li>Click on save as DXF</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/dxfexportstep3.jpg">
+                    </li>
+                    <li>Finally chose a name and save and I am ready to move to ArtCAM
+                        <p class="pic"><img src="media/week07/dxfexportstep4.jpg">
+                    </li>
+                    <li>Open Autodesk ArtCAM and then:
+                        <ol>
+                            <li>Click New Model</li>
+                            <li>Chose the size of the stock</li>
+                            <li>chose the unit</li>
+                            <li>click ok</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMstep1.jpg">
+                    </li>
+                    <li>Next it's importing the previously created vector:
+                        <ol>
+                            <li>Click Vector</li>
+                            <li>Import</li>
+                            <li>Chose the file</li>
+                            <li>press open</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMstep2b.jpg">
+                    </li>>
+                    <li>The previous steps will show a preview of the import then do:
+                        <ol>
+                            <li>Confirm unit</li>
+                            <li>chose automatically rejoin vectors</li>
+                            <li>press ok</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMstep3.jpg">
+                    </li>>
+                    <li>Do the steps above as many times as needed so you import all the vectors you want to create the CAM for.
+                        <p class="pic"><img src="media/week07/ArtCAMstep4.jpg">
+                    </li>
+                    <li>Next I like sometimes to organise the vector wasting as little stock as possible. That can be automatically done with the nesting tool:
+                        <ol>
+                            <li>On the vector menu click nest, this will open a dialog</li>
+                            <li>you can inform here the milling tool to be used, in my case 3.175</li>
+                            <li>also inform the angle increments in witch you will alow the software to rotate the parts, in my case I chose 45 degrees.</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMstep5.jpg">
+                    </li>>
+                    <li>I like to organise the vectors into layers, in this case I will create an outside layer and an inside layer so when creating the tool-path this will be easier.
+                        <ol>
+                            <li>With the vectors ungrouped select the vector you want first, in my case I selected the vector to be cuted outside</li>
+                            <li>click move vectors to</li>
+                            <li>newlayer or to a layer previously created.</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMstep6.jpg">
+                    </li>>
+                    <li>Here I rename the layers to Outside and inside.
+                        <p class="pic"><img src="media/week07/ArtCAMstep7.jpg">
+                    </li>
+                    <li>In the following steps we are creating the toolpath:
+                        <ol>
+                            <li>Click on the tool-path in the menu</li>
+                            <li>NEw 2D Toolpath</li>
+                            <li>Profile</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMtoolpath1.jpg">
+                    </li>
+                    <li>Since we already have separated the vector in different layers now this will come handy.
+                        <ol>
+                            <li>Select inside operation</li>
+                            <li>select inside layer</li>
+                            <li>select the depth, in my case thew stock is 19mm</li>
+                            <li>Under profiling tool click in click to Select, this will open a dialog where you can choose the milling bit to be used.</li>
+                            <li>Chose the tool, in my case I chose a 3.176 diamond mill bit</li>
+                            <li>click select</li>
+                            <li>you can then add the type of ramp to be used, I want to try the smooth one.</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMtoolpath2.jpg">
+                    </li>
+                    <li>Next Step is to finalize the tool-path, scrool down to show more options and:
+                        <ol>
+                            <li>Chose Material thickness, in my case 19mm</li>
+                            <li>Define the Material Z Zero, I like to define it on the top of the stock</li>
+                            <li>Confirm the bottom offset that should be 19mm</li>
+                            <li>click ok</li>
+                            <li>Do the same procedure over and over for each toolpath</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMtoolpath3.jpg">
+                    </li>
+                    <li>Now we are saving the tool-path, start by clicking in the blue floppy-disk icon this will open a dialog.
+                        <ol>
+                            <li>You can the view the tool paths you created calculated earlier:</li>
+                            <li>move the tool-paths to the windows on the right to include them in one file</li>
+                            <li>here you can confirm all files on the right side</li>
+                            <li>Chose the folder location</li>
+                            <li>Chose here the post processor to be used, in my case I choosed the Macth 3 post processor.</li>
+                            <li>Click on save.</li>
+                            
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMtoolpath4.jpg">
+                    </li>
+                    <li>.....
+                        <ol>
+                            <li>....</li>
+                            <li>....</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMtoolpath5.jpg">
+                    </li>
+                    <li>.....
+                        <ol>
+                            <li>....</li>
+                            <li>....</li>
+                        </ol>
+                        <p class="pic"><img src="media/week07/ArtCAMtoolpath6.jpg">
+                    </li>
+
 
                 </ol>
 
 
-
-
-            </li>
-
-
-
-            <li>
-                CAM:
-                <br>
-                <br>
-                The CAM software used is ArtCAM
-            </li>
 
 
 
