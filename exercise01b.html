@@ -33,7 +33,6 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
-
     </script>
 </head>
 
@@ -300,7 +299,7 @@
             <img src="media/week01b/github.jpg">
             <legend>Github Snapshot</legend>
         </p>
-        
+
         <br>
 
         <h4>Working with your Repository</h4>
@@ -376,7 +375,7 @@ git push</pre>
                 <li>and last you sent the commits to your origin (git push)</li>
             </ol>
         </ol>
-        
+
         <hr>
         <h4>Git and Bash Notes:</h4>
         <p>(notes here are to be added along the course as a cheatlist of git commands)</p>
@@ -405,8 +404,34 @@ git push</pre>
             <li>Finally push everything with:</li>
             <pre class="prettyprint linenums">git push -u origin master</pre>
             <p>and its done</p>
+            <li>
+                Notes on ffmpeg:
+            </li>
+            <ul>
+                <li>cut from ??:??:?? time to ??:??:??
+                    <pre class="prettyprint linenums">ffmpeg -i videoinput.mp4 -ss 00:00:11 -t 00:00:22 -async 1 videooutput.mp4</pre>
+                </li>
+
+                <li>same result to cut can be obtained with similar code
+                    <pre class="prettyprint linenums">ffmpeg -ss 00:00:00 -to 00:00:37 -i videoinput.mp4 -c copy videooutput.mp4</pre>
+                </li>
+                <li>create a gif and cut video
+                    <pre class="prettyprint linenums">ffmpeg -i input.mp4 -ss 00:00:00.000 -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 output.gif</pre>
+                </li>                
+                <li>compress video
+                    <pre class="prettyprint linenums">ffmpeg -i input.mp4  -vcodec libx264 -crf 25 -preset medium -vf scale=-2:360 -acodec
+libmp3lame -q:a 4 -ar 48000 -ac 2 output.mp4</pre>
+                </li>
+
+
+
+
+                
+            </ul>
+
         </ol>
         <br>
+
         <!-- End of your content -->
     </div> <!-- /container -->
     <!-- footer -->
@@ -434,11 +459,8 @@ git push</pre>
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
-
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body>
-
-</html>
+</body></html>
