@@ -417,16 +417,15 @@ git push</pre>
                 </li>
                 <li>create a gif and cut video
                     <pre class="prettyprint linenums">ffmpeg -i input.mp4 -ss 00:00:00.000 -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 output.gif</pre>
-                </li>                
-                <li>compress video
-                    <pre class="prettyprint linenums">ffmpeg -i input.mp4  -vcodec libx264 -crf 25 -preset medium -vf scale=-2:360 -acodec
-libmp3lame -q:a 4 -ar 48000 -ac 2 output.mp4</pre>
                 </li>
 
+                <li>compress audio and video
+                    <pre class="prettyprint linenums">ffmpeg -i input.mp4  -vcodec libx264 -crf 25 -preset medium -vf scale=-2:360 -acodec
+libmp3lame -q:a 4 -ar 48000 -ac 2 output.mp4</pre>
+                <li>compress video and remove audio with -an
+                    <pre class="prettyprint linenums">ffmpeg -i input.mp4  -vcodec libx264 -crf 25 -preset medium -vf scale=-2:360 -an -q:a 4 -ar 48000 -ac 2 output.mp4</pre>
+                </li>
 
-
-
-                
             </ul>
 
         </ol>
