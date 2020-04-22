@@ -329,13 +329,13 @@
                             <li>move the tool-paths to the windows on the right to include them in one file</li>
                             <li>here you can confirm all files on the right side</li>
                             <li>Chose the folder location</li>
-                            <li>Chose here the post processor to be used, in my case I choosed the Mach3 post processor.</li>
+                            <li>Chose here the post processor to be used, in my case I choose the Mach3 post processor.</li>
                             <li>Click on save.</li>
                         </ol>
                         <p class="pic"><img src="media/week07/artcamtoolpath4.jpg">
                         </p>
 
-                    <li>One thing I almost forgot is to create holes in the Gcode. I do that by placing these circles around where the the toolpath in various parts of the job in oder to later screw and fix the stock on the bed, the advantage is I am sure the tool=path is not going to collide with the fixtures of the stock, in this case the screws.</li>
+                    <li>One thing I almost forgot is to create holes in the G-code. I do that by placing these circles around where the the tool-path in various parts of the job in oder to later screw and fix the stock on the bed, the advantage is I am sure the tool=path is not going to collide with the fixtures of the stock, in this case the screws.</li>
                     <p class="pic"><img src="media/week07/artcamholes.jpg">
                     </p>
                 </ol>
@@ -344,48 +344,44 @@
             <li>
                 Now lets Manufacture it with Mach3 on windows XP :-) with the CNC I build while in the Fabacademy.
                 Although its operational I decided not to document it as a final project but thats another story.
-                <br>
-                <br>
+                <br><br>
                 <ol type="I">
-                    <li>
+                    <li>With Mach3 opened:
+                        <ol>
+                            <li>Click on File</li>
+                            <li>Then load G-code</li>
+                        </ol>
                         <p class="pic"><img src="media/week07/mach3step1.jpg"></p>
                     </li>
-                    <li>
+                    <li>Chose your g-code file and open it
                         <p class="pic"><img src="media/week07/mach3step2.jpg"></p>
                     </li>
-                    <li>
+                    <li>The previous step will load the G-code
+                        <ol>
+                            <li>G code will be shown on the left window</li>
+                            <li>next I like to click on jog follow this will allow you to visualize where your tool is in relation to the G-code, this way you can safely check and simulate the paths before actually running the code. Use arrows to move within X and Y axis and PgUp and PgDn to move the Z axis</li>
+                            <li>by clicking on Zero X, Y and Z when you are over the place in the stock you want to be 0,0,0 will set the soft 0 to where the tool has been moved.</li>
+                        </ol>
                         <p class="pic"><img src="media/week07/mach3step3.jpg"></p>
                     </li>
-                    <li>
-                        <p class="pic"><img src="media/week07/mach3step4.jpg"></p>
-                    </li>
-                    <li>I started the job first securing the stock, for that I have the cnc make holes around the design with the following <a href="media/week07/tableprojectfiles.zip">Gcode</a>
+                    <li>I started the job first securing the stock, for that I have the cnc make holes around the design with the g-code "holes.tap" contained in this <a href="media/week07/tableprojectfiles.zip">zip file.</a>
 
                         <p class="pic">
-
                             <video controls>
-
                                 <source src="media/week07/holescut.mp4">
-
                                 Your browser does not support HTML5 video.
-
                             </video>
-
                             <legend>
-
-                                Video Holes to hold stock is being made.
-
+                                Holes being made for the stock to be screwed down into to the sacrificial bed.
                             </legend>
-
-
                         </p>
                     <li>
-
+                        Here you can see the screwing of the stock. I like to use a torx screw, the can be reused several times and are always reliable. Thanks for Jarek from <a href="https://www.facebook.com/fablabnomads/">FabLab Nomads</a> for the tip.
                     </li>
 
                     <p class="pic"><img src="media/week07/fixingstocktosacrificialtable.jpg">
                     </p>
-                    <li>I started
+                    <li>After the holes are made and the stock is secure, the internal holes are cut.
 
                         <p class="pic">
 
@@ -398,12 +394,10 @@
                             </video>
 
                             <legend>
-
-                                ffff
                             </legend>
 
                         </p>
-                    <li>I started
+                    <li>After internal cuts are done then the external cuts are done. the step down is 4mm on all cuts.
 
                         <p class="pic">
 
@@ -416,52 +410,56 @@
                             </video>
 
                             <legend>
-                                fff
-
                             </legend>
 
                         </p>
-                    <li>
+                    <li>I believe the quality of the cuts are quite ok for this birch plywood. The dog-bones are visible and with little finishing the parts are going to be ready for assembly.
                         <p class="pic"><img src="media/week07/detail_cut.jpg">
                         </p>
 
-
-
                     </li>
-                    <li>
+                    <li>Here you can see the quality control, a team of four including me is filing the finger joints so they smoothly attach one another.
                         <p class="pic"><img src="media/week07/kidshelp.jpg">
                         </p>
                     </li>
 
-                    <li>
+                    <li>I use here an orbital sander. I started with sandpaper 100 grit and moved to 220 and then 500, after that I spayed some water to lift the fibers and sanded again before applying beeswax mixed with isopropil alcohol .
                         <p class="pic"><img src="media/week07/sanding.jpg">
                         </p>
                     </li>
-                    <li>
+                    <li>Here I test the assembly, everything fits, I fit and then remove the pieces hammering with a white rubber mallet. 
                         <p class="pic"><img src="media/week07/pre_assembly.jpg">
                         </p>
                     </li>
-                    <li>I started
+                    <li>Now with all pieces sanded and waxed I fit one to another.
                         <p class="pic">
                             <video controls>
                                 <source src="media/week07/assemblyok.mp4">
                                 Your browser does not support HTML5 video.
                             </video>
                             <legend>
-                                fffff
+                                
                             </legend>
 
                         </p>
                     </li>
-                    <li><p class="pic"><img src="media/week07/detail1.jpg">
-                    </p></li>
-                    
-                    <li><p class="pic"><img src="media/week07/detail2.jpg">
-                    </p></li>
-                    <li><p class="pic"><img src="media/week07/detail3.jpg">
-                    </p></li>
-                    <li><p class="pic"><img src="media/week07/final_result.jpg">
-                    </p></li>
+                    <li>Here you can see the tight tolerances of this finger joint, the reduce even more the gaps I used a mixture of glue and saw dust I generated while sanding the surfaces.
+                        <p class="pic"><img src="media/week07/detail1.jpg">
+                        </p>
+                    </li>
+
+                    <li>Detail of the curves
+                        <p class="pic"><img src="media/week07/detail2.jpg">
+                        </p>
+                    </li>
+                    <li>Another detail of the filleted sides. The fillet was done manually with a router tool.
+                        <p class="pic"><img src="media/week07/detail3.jpg">
+                        </p>
+                    </li>
+                    <li>And Voile, the final result! 
+                        <p class="pic"><img src="media/week07/final_result.jpg">
+                        </p>
+                    </li>
                 </ol>
             </li>
         </ol>
