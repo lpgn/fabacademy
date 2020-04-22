@@ -34,58 +34,61 @@
 
     <!-- Load the menu file -->
     <script>
-    function menu() {
-                      $('#exercises').load("exercises-menu.html");
-                      $('#project').load("project-menu.html");
-                      $('#cclicense').load("license.html");
-                      }
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
     </script>
 
-  </head>
+</head>
 
-  <body onload="menu()">
+<body onload="menu()">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
-              <ul id="exercises" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container">
 
-    <!-- Insert your content here below! -->
+        <!-- Insert your content here below! -->
 
         <div class="jumbotron" style="width: 100%">
             <h1>Week 08</h1>
             <h3>Embedded Programming</h3>
             <hr>
             <h4>Group assignment</h4>
-                <ul><li>compare the performance and development workflows for other architectures</li></ul>
+            <ul>
+                <li>compare the performance and development workflows for other architectures</li>
+            </ul>
             <h4>Individual assignment</h4>
             <ul>
                 <li>Read a microcontroller data sheet. Program your board to do something, with as many different programming languages and programming environments as possible.</li>
@@ -105,49 +108,54 @@
             </ul>
         </div>
 
-<h3>Week workflow</h3>
+        <h3>Week workflow</h3>
 
-<p class="pic"><img src="media/week08/week8diagram.jpg"></p>
+        <p class="pic"><img src="media/week08/week8diagram.jpg"></p>
 
         <hr>
 
-<h3>Tools used</h3>
+        <h3>Tools used</h3>
 
 
-<ul style="list-style-type:disc">
+        <ul style="list-style-type:disc">
 
-    <li>soldering station</li>
-    <li>usbtiny ISP</li>
+            <li>soldering station</li>
+            <li>usbtiny ISP</li>
 
-</ul>
+        </ul>
 
-<hr>
+        <hr>
 
 
-<h3>Software Used</h3>
+        <h3>Software Used</h3>
 
-<ul style="list-style-type:disc">
-    <li>AVRdude</li>
-    <li>Arduino IDE</li>
-</ul>
+        <ul style="list-style-type:disc">
+            <li>AVRdude</li>
+            <li>Arduino IDE</li>
+        </ul>
 
-<hr>
+        <hr>
 
-<h2>Introduction</h2>
+        <h3>
+            Group Assignment
+        </h3>
+        <p>Go to <a href="http://fabacademy.org/2018/labs/farmlabalgarve/">group assignment page</a></p>
 
-<h2> Read the Datasheet</h2>
+        <h2>Introduction</h2>
 
-<h4>A few thoughts about it:</h4>
+        <h2> Read the Datasheet</h2>
 
-<ul>
+        <h4>A few thoughts about it:</h4>
 
-    <li>are you joking? 200 plus pages of very technical stuff!</li>
-    <li>slept on the first pages</li>
-    <li>is there a movie version?</li>
+        <ul>
 
-</ul>
+            <li>are you joking? 200 plus pages of very technical stuff!</li>
+            <li>slept on the first pages</li>
+            <li>is there a movie version?</li>
 
-<p> One a more serious note, I really think this assignment is one of the hardest I m stuck because of this datasheet.</p>
+        </ul>
+
+        <p> One a more serious note, I really think this assignment is one of the hardest I m stuck because of this datasheet.</p>
 
 
         <p>
@@ -250,107 +258,125 @@
             <ol type="i">
                 <li>
                     identify example code:</li>
-        <p>- There is this <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c">code</a> from Prof. Neil</p>
-        <li>identify commands to compile and burn firmware</li>
-        <p>- with all files prior downloaded on one directory, in linux I rename the file to makefile and run the script to create the firmware (this step I will repeat every time I want to modify the code: </p>
-<pre class="prettyprint linenums">mv hello.ftdi.44.echo.c.make makefile
+                <p>- There is this <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c">code</a> from Prof. Neil</p>
+                <li>identify commands to compile and burn firmware</li>
+                <p>- with all files prior downloaded on one directory, in linux I rename the file to makefile and run the script to create the firmware (this step I will repeat every time I want to modify the code: </p>
+                <pre class="prettyprint linenums">mv hello.ftdi.44.echo.c.make makefile
 make</pre>
-        <p class="pic"><img src="media/week08/lsmake.jpg"><legend>renaming to makefile and compiling</legend></p>
-        <li>compile source code</li>
-        <p>- done in previous step</p>
-        <li>Adapting makefile to work with my programer</li>
-                <p class="pic"><img src="media/week08/makefile.jpg"><legend>I had to edit the makefile file to work with my programmer. That was done by replacing the entry usbtiny with usbasp 2 times, one when burning the firmware the other when burning the fuses</legend></p>
-        <li>burn firmware</li>
-        <p>run:</p>
-        <pre class="prettyprint linenums">make program-usbtiny</pre>
-                <p class="pic"><img src="media/week08/burn.jpg"><legend>renaming to makefile and compiling</legend></p>
-        <li>identify what fuses to burn</li>
-        <p>- that was done already in the makefile</p>
-        <li>burn fuses</li>
-        <p>run:</p>
-        <pre class="prettyprint linenums">make program-usbasp-fuses</pre>
-        <p class="pic"><img src="media/week08/fuses.jpg"><legend>burning fuses</legend></p>
-    </ol>
-</ol>
-<hr>
-<h2>Programing with Arduino IDE</h2>
-<p>I decided to try Arduino IDE as well to program my board.</p>
-<p>In order to do it there are a few steps that should work regardless of the os</p>
-<ol><li>
-    Add additional board to the boards manager:</li>
-<p>Paste the following into (Preferences)-(Additional Boards Manage URLs:)</p>
-<pre class="prettyprint linenums">https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json</pre>
-<p class="pic"><img src="media/week08/step1.jpg"></p>
-<li>Chose your new added board, in my case ATtiny44</li>
-    <p class="pic"><img src="media/week08/step2.jpg"></p>
-<li>Chose your processor, same as before</li>
-    <p class="pic"><img src="media/week08/step3.jpg"></p>
-<li>select clock, because I am using an external 20Mhz oscillator, I chose "External 20 MHZ"</li>
-    <p class="pic"><img src="media/week08/step4.jpg"></p>
-<li>Because I want to do some serial monitoring on this board I chose the best mach for my FTDI wich is "/dev/cu.usbserial-A7032T9C</li>
-    <p class="pic"><img src="media/week08/step5.jpg"></p>
-<li>The last step before compiling and burning was to select the programmer, in my case "USBasp"</li>
-    <p class="pic"><img src="media/week08/step6.jpg"></p>
-</ol>
-<hr>
-<h2>First test</h2>
-<h3>Burning Neil's code "hello.ftdi.44.echo.c"</h3>
+                <p class="pic"><img src="media/week08/lsmake.jpg">
+                    <legend>renaming to makefile and compiling</legend>
+                </p>
+                <li>compile source code</li>
+                <p>- done in previous step</p>
+                <li>Adapting makefile to work with my programer</li>
+                <p class="pic"><img src="media/week08/makefile.jpg">
+                    <legend>I had to edit the makefile file to work with my programmer. That was done by replacing the entry usbtiny with usbasp 2 times, one when burning the firmware the other when burning the fuses</legend>
+                </p>
+                <li>burn firmware</li>
+                <p>run:</p>
+                <pre class="prettyprint linenums">make program-usbtiny</pre>
+                <p class="pic"><img src="media/week08/burn.jpg">
+                    <legend>renaming to makefile and compiling</legend>
+                </p>
+                <li>identify what fuses to burn</li>
+                <p>- that was done already in the makefile</p>
+                <li>burn fuses</li>
+                <p>run:</p>
+                <pre class="prettyprint linenums">make program-usbasp-fuses</pre>
+                <p class="pic"><img src="media/week08/fuses.jpg">
+                    <legend>burning fuses</legend>
+                </p>
+            </ol>
+        </ol>
+        <hr>
+        <h2>Programing with Arduino IDE</h2>
+        <p>I decided to try Arduino IDE as well to program my board.</p>
+        <p>In order to do it there are a few steps that should work regardless of the os</p>
+        <ol>
+            <li>
+                Add additional board to the boards manager:</li>
+            <p>Paste the following into (Preferences)-(Additional Boards Manage URLs:)</p>
+            <pre class="prettyprint linenums">https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json</pre>
+            <p class="pic"><img src="media/week08/step1.jpg"></p>
+            <li>Chose your new added board, in my case ATtiny44</li>
+            <p class="pic"><img src="media/week08/step2.jpg"></p>
+            <li>Chose your processor, same as before</li>
+            <p class="pic"><img src="media/week08/step3.jpg"></p>
+            <li>select clock, because I am using an external 20Mhz oscillator, I chose "External 20 MHZ"</li>
+            <p class="pic"><img src="media/week08/step4.jpg"></p>
+            <li>Because I want to do some serial monitoring on this board I chose the best mach for my FTDI wich is "/dev/cu.usbserial-A7032T9C</li>
+            <p class="pic"><img src="media/week08/step5.jpg"></p>
+            <li>The last step before compiling and burning was to select the programmer, in my case "USBasp"</li>
+            <p class="pic"><img src="media/week08/step6.jpg"></p>
+        </ol>
+        <hr>
+        <h2>First test</h2>
+        <h3>Burning Neil's code "hello.ftdi.44.echo.c"</h3>
 
         <p>Here instead of using terminal and avrdude, I used the Arduino IDE as it has a built-in serial monitor.</p>
         <p>The results are as follows in the video</p>
-        <p class="pic"><video controls><source src="media/week08/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.</video></p>
+        <p class="pic"><video controls>
+                <source src="media/week08/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.</video></p>
 
-<hr>
-<h2>Program something else</h2>
-<p>Now I will try to program it to blink as I press the button.</p>
-<ol>
-<li>determine the pin where switch is connected</li>
-    <p class="pic"><img src="media/week08/schematics.jpg"></p>
-    <p>after looking into the PCB schematics I determined the button is connected to pin 10</p>
-<li>determine the pin where LED is connected</li>
-    <p>after looking into the PCB schematics I determined the LED is connected to pin 6</p>
-<li>Code</li>
-    <p>In human language I want something like this:</p>
-    <ol type="i">
-    <li>wait for button</li>
-    <li>if button pressed blink LED 3 times</li>
-    <li>if not go back to begining</li>
-    </ol>
-</ol>
-<p> the problem is I never really coded from scratch only changed code, so that will be a challenge...</p>
         <hr>
-<h3>1st iteration</h3>
-<h4>how did I do it</h4>
-<p>I Tried first to customise the blink code from Arduino IDE with my pin numbers, That did not work</p>
-<p>I realise after trial and error that the pin number on the data sheet does not correspond to the arduino pin number.</p>
-<p>So after empirically finding the right pin number I programmed the board and got it to blink!</p>
+        <h2>Program something else</h2>
+        <p>Now I will try to program it to blink as I press the button.</p>
+        <ol>
+            <li>determine the pin where switch is connected</li>
+            <p class="pic"><img src="media/week08/schematics.jpg"></p>
+            <p>after looking into the PCB schematics I determined the button is connected to pin 10</p>
+            <li>determine the pin where LED is connected</li>
+            <p>after looking into the PCB schematics I determined the LED is connected to pin 6</p>
+            <li>Code</li>
+            <p>In human language I want something like this:</p>
+            <ol type="i">
+                <li>wait for button</li>
+                <li>if button pressed blink LED 3 times</li>
+                <li>if not go back to begining</li>
+            </ol>
+        </ol>
+        <p> the problem is I never really coded from scratch only changed code, so that will be a challenge...</p>
+        <hr>
+        <h3>1st iteration</h3>
+        <h4>how did I do it</h4>
+        <p>I Tried first to customise the blink code from Arduino IDE with my pin numbers, That did not work</p>
+        <p>I realise after trial and error that the pin number on the data sheet does not correspond to the arduino pin number.</p>
+        <p>So after empirically finding the right pin number I programmed the board and got it to blink!</p>
 
-<p>Next I wanted the LED to react when pressing the button, so I searched for attiny44 arduino pin. With the right pin number in hand I replaced the pins in the code and it worked!</p>
+        <p>Next I wanted the LED to react when pressing the button, so I searched for attiny44 arduino pin. With the right pin number in hand I replaced the pins in the code and it worked!</p>
 
-<p class="pic"><video controls><source src="media/week08/hello1.mp4">Your browser does not support HTML5 video.</video></p>
-<p>now I inverted when the LED turns on and off.</p>
-<p class="pic"><video controls><source src="media/week08/hello2.mp4">Your browser does not support HTML5 video.</video></p>
-<hr>
-<h2> Side activity</h2>
+        <p class="pic"><video controls>
+                <source src="media/week08/hello1.mp4">Your browser does not support HTML5 video.</video></p>
+        <p>now I inverted when the LED turns on and off.</p>
+        <p class="pic"><video controls>
+                <source src="media/week08/hello2.mp4">Your browser does not support HTML5 video.</video></p>
+        <hr>
+        <h2> Side activity</h2>
 
         <p>I was a bit annoyed my board would not advise me when powered so I decide to solder a red LED and a 22 Ohms resistor and a resistor so if I got the connections wrong I would know and switch it.</p>
         <p>Thats the before and after</p>
-        <p class="pic"><img src="media/week08/pcb01.jpg"><legend>Before</legend></p>
-        <p class="pic"><img src="media/week08/pcb02.jpg"><legend>After</legend></p>
-        <p class="pic"><img src="media/week08/pcb03.jpg"><legend>After</legend></p>
+        <p class="pic"><img src="media/week08/pcb01.jpg">
+            <legend>Before</legend>
+        </p>
+        <p class="pic"><img src="media/week08/pcb02.jpg">
+            <legend>After</legend>
+        </p>
+        <p class="pic"><img src="media/week08/pcb03.jpg">
+            <legend>After</legend>
+        </p>
 
-<!-- End of your content -->
+        <!-- End of your content -->
 
-</div> <!-- /container -->
+    </div> <!-- /container -->
 
     <!-- footer -->
 
     <footer id="footer">
         <p id="cclicense">
-                </p>
+        </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
 
@@ -367,16 +393,15 @@ make</pre>
     <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
-      !function ($) {
-        $(function(){
-          window.prettyPrint && prettyPrint()
-        })
-      }(window.jQuery)
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 
-  </body>
-</html>
+</body></html>
