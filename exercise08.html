@@ -332,22 +332,24 @@ make</pre>
             <ol type="i">
                 <li>wait for button</li>
                 <li>if button pressed blink LED 3 times</li>
-                <li>if not go back to begining</li>
+                <li>if not go back to beginning</li>
             </ol>
         </ol>
         <p> the problem is I never really coded from scratch only changed code, so that will be a challenge...</p>
         <hr>
         <h3>1st iteration</h3>
         <h4>how did I do it</h4>
-        <p>I Tried first to customise the blink code from Arduino IDE with my pin numbers, That did not work</p>
-        <p>I realise after trial and error that the pin number on the data sheet does not correspond to the arduino pin number.</p>
+        <p>I Tried first to customize the <a href="media/code/week08/blink/blink.ino">Blink code</a> from Arduino IDE with my pin numbers, That did not work</p>
+        <p>I realize after trial and error that the pin number on the data sheet does not correspond to the arduino pin number.</p>
         <p>So after empirically finding the right pin number I programmed the board and got it to blink!</p>
+        <p>Here is the customized <a href="media/code/week08/blinkcustomised/blinkcustomised.ino">code</a></p>
 
-        <p>Next I wanted the LED to react when pressing the button, so I searched for attiny44 arduino pin. With the right pin number in hand I replaced the pins in the code and it worked!</p>
+        <p>Next I wanted the LED to react when pressing the button, so I searched for attiny44 arduino pin. With the right pin number in hand I replaced the pins in the code and it worked! Here is the <a href="media/code/week08/buttonblink/buttonblink.ino">code</a></p>
+
 
         <p class="pic"><video controls>
                 <source src="media/week08/hello1.mp4">Your browser does not support HTML5 video.</video></p>
-        <p>now I inverted when the LED turns on and off.</p>
+        <p>now I inverted when the LED turns on and off. Here is the <a href="media/code/week08/buttonblink2/buttonblink2.ino">code</a></p>
         <p class="pic"><video controls>
                 <source src="media/week08/hello2.mp4">Your browser does not support HTML5 video.</video></p>
         <hr>
