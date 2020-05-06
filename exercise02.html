@@ -40,6 +40,7 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
+
     </script>
 
 </head>
@@ -243,10 +244,10 @@
         <ol>
 
             <h4>Design files of final project proposal</h4>
-        <ul style="list-style-type: disc">
-            <li><a href="https://gitlab.fabcloud.org/Lucio/incubator">incubator</a> Solidworks source files on Fabacademy Gitlab</li>
-        </ul>
-                        <h4>Designed Parts</h4>
+            <ul style="list-style-type: disc">
+                <li><a href="https://gitlab.fabcloud.org/Lucio/incubator">incubator</a> Solidworks source files on Fabacademy Gitlab</li>
+            </ul>
+            <h4>Designed Parts</h4>
             <li>Egg</li>
             <li>Case (top)</li>
             <li>Case (bottom)</li>
@@ -280,7 +281,9 @@
             </li>
             <li>If the axis of rotation is not selected automatically, select the line that is in the center of the future egg. Press the green check mark.<p class="pic"><img src="media/week02/solidworks/solid08.jpg"></p>
             </li>
-            <li>Voila the virtual egg is made!<p class="pic"><img src="media/week02/solidworks/solid09.jpg"></p>
+            <li>Voila the virtual egg is made!
+                <p class="pic"><img src="media/week02/solidworks/solid09.jpg"></p>
+            </li>
         </ol>
         <hr>
         <h3>3. Bottom Case</h3>
@@ -342,15 +345,18 @@
             </ol>
             <p class="pic"><img src="media/week02/solidworks/thecrate04.jpg"></p>
             <li>Linear Pattern is a feature used to replicate in various directions a feature so it saves time instead of designing the pattern feature again and again:</li>
-            <ol><li>I started by selecting the pattern.</li>
-            <li>then I selected the distance between the patterns</li>
-            <li>then I specified it to replicate it 3 times.</li><li>next I confirm</li></ol>
+            <ol>
+                <li>I started by selecting the pattern.</li>
+                <li>then I selected the distance between the patterns</li>
+                <li>then I specified it to replicate it 3 times.</li>
+                <li>next I confirm</li>
+            </ol>
             <p class="pic"><img src="media/week02/solidworks/thecrate05.jpg"></p>
             <li>Here I used the shell feature as I wanted to keep the contours but I wanted the interior to become empty. This was done simply specifying the thickness, in my case 3mm and I did not have to select the body as it was already selected before initiating the feature</li>
             <p class="pic"><img src="media/week02/solidworks/thecrate06.jpg"></p>
             <li>Now in other to expose the previous feature I cut the lower shell by sketching around the lower shell of the body.</li>
             <p class="pic"><img src="media/week02/solidworks/thecrate07.jpg"></p>
-            <li>This was a simples cut feature with a complex sketch. The sketch was created by off setting inwards the outer contour, drawing lines towards the center and last trimming all the lines in other to form closed perimeters that  were used to cut the shape.</li>
+            <li>This was a simples cut feature with a complex sketch. The sketch was created by off setting inwards the outer contour, drawing lines towards the center and last trimming all the lines in other to form closed perimeters that were used to cut the shape.</li>
             <p class="pic"><img src="media/week02/solidworks/thecrate08.jpg"></p>
             <li>The cut feature is trivial and was done simply selecting the previous sketch and cutting it through all.</li>
             <p class="pic"><img src="media/week02/solidworks/thecrate09.jpg"></p>
@@ -422,6 +428,7 @@
                 text-align: left;
                 vertical-align: top
             }
+
         </style>
         <table class="tg">
             <tr>
@@ -554,10 +561,13 @@
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
+
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 
-</body></html>
+</body>
+
+</html>
