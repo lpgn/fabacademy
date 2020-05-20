@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,51 +35,53 @@
 
     <!-- Load the menu file -->
     <script>
-    function menu() {
-                      $('#exercises').load("exercises-menu.html");
-                      $('#project').load("project-menu.html");
-                      $('#cclicense').load("license.html");
-                      }
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
     </script>
 
-  </head>
+</head>
 
-  <body onload="menu()">
+<body onload="menu()">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
-              <ul id="exercises" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container">
 
-    <!-- Insert your content here below! -->
+        <!-- Insert your content here below! -->
 
 
         <div class="jumbotron" style="width: 100%">
@@ -86,9 +89,13 @@
             <h3>Moulding and Casting</h3>
             <hr>
             <h4>Group assignment</h4>
-            <ul><li>Review the safety data sheets for each of your molding and casting materials, then make and compare test casts with each of them</li></ul>
+            <ul>
+                <li>Review the safety data sheets for each of your molding and casting materials, then make and compare test casts with each of them</li>
+            </ul>
             <h4>Individual assignment</h4>
-            <ul><li>Design a 3D mould around the stock and tooling that you'll be using, machine it, and use it to cast parts.</li></ul>
+            <ul>
+                <li>Design a 3D mould around the stock and tooling that you'll be using, machine it, and use it to cast parts.</li>
+            </ul>
             <br>
             <h4>Learning outcomes:</h4>
             <ul>
@@ -104,38 +111,79 @@
             </ul>
         </div>
 
- <hr>
+        <hr>
 
-<h3>Tools used</h3>
-
-
-<ul style="list-style-type:disc">
-
-    <li>cnc</li>
-    <li>laser cutter</li>
-
-</ul>
-
-<hr>
+        <h3>Tools used</h3>
 
 
-<h3>Software Used</h3>
+        <ul style="list-style-type:disc">
 
-<ul style="list-style-type:disc">
-    <li>onshape</li>
-    <li>Solidworks</li>
-    <li>hangouts</li>
-    <li>whatsapp</li>
-</ul>
+            <li>cnc</li>
+            <li>laser cutter</li>
 
-<hr>
+        </ul>
 
-<h2>Introduction</h2>
+        <hr>
+
+
+        <h3>Software Used</h3>
+
+        <ul style="list-style-type:disc">
+            <li>Solidworks</li>
+        </ul>
+
+        <hr>
+
+        <h2>Introduction</h2>
 
 
         <p> I started this assignment with an add geographic difficulty as </p>
 
-    <!-- End of your content -->
+        <p>https://www.homebrewtalk.com.br/threads/resist%C3%AAncias-el%C3%A9tricas-quase-tudo-que-voc%C3%AA-quer-saber.403630/</p>
+
+
+        <!--      <p>R = Resistência (Ohms)
+V = Tensão (voltagem)
+I = Corrente (amperagem)
+P = Potência (watts)
+
+I = P / V
+I = 2000 / 220
+I =~ 9,09 Amperes (corrente que a resistência puxa a 220)
+
+R = V / I
+R = 220 / 9,09
+R = 24,2 Ohms
+
+A resistência em Ohms da resistência de 2000 watts é constante, ou seja, continua a mesma se tu ligar em 127 ou 220, então, ligando a 127 volts:
+
+P = V² / R
+P = 127*127 / 24,2
+P =~ 669 watts
+
+Ou seja, uma resistência de 2000 watts cai pra 669 watts se ligado em 127 volts, mais ou menos 1/3.</p> -->
+
+        <p class="pic left"><img src="media/week12/tiny45withsensor.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice01.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice02.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice03.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice04.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice05.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice06.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice07.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice08.jpg"></p>
+                <p class="pic"><video controls>
+                <source src="media/week12/smurfjuice.mp4">Your browser does not support HTML5 video.</video></p>
+
+        <p class="pic left"><img src="media/week12/smurfjuice09.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice10.jpg"></p>
+        <p class="pic left"><img src="media/week12/smurfjuice11.jpg"></p>
+        <p class="pic left"><img src="media/week12/assembly14.jpg"></p>
+        <p class="pic left"><img src="media/week12/cnc01.jpg"></p>
+
+
+
+        <!-- End of your content -->
 
     </div> <!-- /container -->
 
@@ -143,10 +191,10 @@
 
     <footer id="footer">
         <p id="cclicense">
-                </p>
+        </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
 
@@ -163,16 +211,18 @@
     <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
-      !function ($) {
-        $(function(){
-          window.prettyPrint && prettyPrint()
-        })
-      }(window.jQuery)
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 
-  </body>
+</body>
+
 </html>
