@@ -179,21 +179,9 @@
         <p> The way the thermistor works is by decreasing its resistance as the temperature increases. Because the IC on its ADC pin reads voltage not resistance we need to set a voltage divider in other to derive its resistance.</p>
         <p> I will connect the Thermistor in series with the resistor that will be connected to VCC. One end of the thermistor will be connected to ground and the other that is in series.</p>
 
-        <p class="pic"><img src="media/week02/solidworks/solid01.jpg">
-            <legend>My encoder sketch</legend>
+        <p class="pic"><img src="media/week12/tiny45withsensor.jpg">
+            <legend>Hero shot of my board and temperature sensor</legend>
         </p>
-        <hr>
-        <h4>
-            What is an Optical Encoder
-        </h4>
-        <p>The Optical Encoders is an electromechanical device that monitors movement, speed and or direction.</p>
-        <p> <a href="https://www.youtube.com/watch?v=6KBOLXrw94c">video explaining what is an encoder</a></p>
-        <p> <a href="https://www.youtube.com/watch?v=CHE1imH9tdg">video explaining what is an absolute encoder</a></p>
-
-        <p class="pic"><img src="media/week09/encoderworking.jpg">
-            <legend>image extracted from this <a href="https://rekadayaupaya.wordpress.com/2013/06/13/8-4-the-mcu-and-other-components-of-the-nc-system/">website (no sources given)</a> </legend>
-        </p>
-
         <hr>
         <h4>References</h4>
 
@@ -201,59 +189,213 @@
         <p class="pic"><img src="media/week09/hello.temp.45.jpg">
             <legend>Professor Neil's light board</legend>
         </p>
-        <p>I checked this <a href="http://fab.cba.mit.edu/classes/863.10/people/dimitris.papanikolaou/Assignment_8.html">website</a>
-            <p class="pic"><img src="media/week09/websitereference.jpg">
-                <legend>Assignment website under CBA</legend>
-            </p>
+        <hr>
+        <h4>Experimenting with an Arduino</h4>
+        <p> My objective with this experiment was to understand and test the thermistor and the code. I got it working but the temperature was not really accurate. Off course I am not using accurate instruments to calibrate the thermistor so I never know what is not correct so I ended up boiling water so I would know at least the temperature needed to be around 100 degrees Celsius.</p>
+
+        <p class="pic"><video controls>
+                <source src="media/week09/experimentwaterboilingcomp.mp4">Your browser does not support HTML5 video.</video></p>
+        <legend>Boiling water with soldering iron. thermistor inserted on the liquid.</legend>
+        <p class="pic"><img src="media/week09/experiment03.jpg"></p>
+        <legend>detail of thermistor and temperature probe together.</legend>
+        <hr>
+        <h4>Experiment with the board I designed</h4>
+        <p class="pic"><video controls>
+                <source src="media/week09/experiment_with_boardcomp.mp4">Your browser does not support HTML5 video.</video></p>
+        <p class="pic"><img src="media/week12/tiny45withsensor.jpg">
+            <legend>Hero shot of my board and temperature sensor</legend>
+
             <hr>
             <h4>Designing the PCB</h4>
-            <p>The first step was creating the schematics. I based my schematics on the design of professor Neil's <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png"> visible light input board</a> and adapted it with consideration of what a <a href="http://fab.cba.mit.edu/classes/863.10/people/dimitris.papanikolaou/Assignment_8.html">previous Professor Neil's Student</a> did on his assignment. The difference is I want to have extra 2 led as light source and also an extra 2x6 header for being able to repurpose this prototype board.</p>
-            <h4>The Datasheets and resistor calculations</h4>
+            <p class="pic"><img src="media/week09/pinout_x5.jpg"></p>
+            <legend>The <a href="media/week09/datasheet/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf">attiny45 datashet here</a></legend>
+
+            <p>Because I normally program with Arduino IDE it's quite useful to have not only the data-sheet but also a diagram that converts the pins from one programing platform to the other.</p>
+            <p> On a quick look we can determine that there are 4 Arduino analog pins. They all have a analog to digital converter (ADC0, ADC1 ADC2, ADC3), so they could also be used as digital pins together with pins 1, 0 and 2. </p>
+            <p> For this assignment I will need 1 analog pin and 2 digital pins. The analog pin I will connect the thermistor and the digital pins are for the serial communication.</p>
+            <p> The board will have a header for the ISP programmer, 2 headers in the sides so all pins can be used and tested as needed as well as a led just to show there is power coming in.</p>
+            <p>Autodesk Eagle is the weapon of choice. but I will be creating the gcode with PCBtoGcode addin.</p>
+
+            <h4>Resistor calculations</h4>
             <p>
-                In order to calculate the resistor values and other, I examined the following Datahsets and the calculations/observations I made:
+                In order to calculate the resistor values, I examined the following Datasheets and the calculations/observations I made:
             </p>
-            <ol>
-                <li>
-                    <a href="http://www.everlight.com/file/ProductFile/PT15-21C-TR8.pdf">Phototransistor</a>
-                </li>
-
-                <p>
-                    Neil on his light input devices uses a 10K resistor on the collector side of the phototransistor, as I am using the same phototransistor as him It would be safe to use the same value, but I wanted to understand a bit more of its inner workings so I extracted some parts of its datasheet:
-                </p>
-
-                <li>
-                    <a href="https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTST-C230TBKT.pdf">Blue LED</a>
-                </li>
-
-                <p class="pic"><img src="media/week09/leddatasheetextraction.jpg">
-                    <legend>datasheet extraction</legend>
-                </p>
-                <p class="pic"><img src="media/week09/ledresistorcalculation.jpg">
-                    <legend>resistor calculation</legend>
-                </p>
-
-                <li>
-                    <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf">ATTINY45</a>
-                </li>
-            </ol>
             <p>
-
+                <a href="https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTST-C230TBKT.pdf">Green LED</a>
             </p>
+
+            <p class="pic"><img src="media/week09/leddatasheetextraction.jpg">
+                <legend>datasheet extraction</legend>
+            </p>
+            <p class="pic"><img src="media/week09/ledresistorcalculation.jpg">
+                <legend>resistor calculation</legend>
+            </p>
+
             <p>
                 Bellow is how my schematics looks like:</p>
-            <p class="pic left"><img src="media/week09/encodermodule.sch.jpg">
-                <legend>....</legend>
+            <p class="pic left"><img src="media/week09/schematics.jpg">
             </p>
-            <p class="pic left"><img src="media/week09/encodermodule.brd.jpg">
-                <legend>....</legend>
+            <legend>Schematics of <a href="media/week09/tiny/tiny.bot.mill.zip"></a> with Attiny45</legend>
+            <p class="pic left"><img src="media/week09/tinyboard.jpg">
             </p>
-            <p class="pic left"><img src="media/week09/tiny.sch.jpg">
-                <legend>....</legend>
+            <legend>Attiny45 input devices board</legend>
+            <p class="pic left"><img src="media/week09/thermistorsch.jpg">
             </p>
-            <p class="pic left"><img src="media/week09/tiny.brd.jpg">
-                <legend>....</legend>
+            <legend>Schematics of thermistor board</legend>
+            <p class="pic left"><img src="media/week09/thermistor.jpg">
             </p>
+            <legend>Thermistor board design</legend>
 
+            <hr>
+            <h4>Code for the attiny45</h4>
+            <p>I used 3 sets of code for this assignment.</p>
+            <ol>
+                <li>software serial sources: <a href="https://www.hackster.io/porrey/easy-serial-on-the-attiny-2676e6">source1</a> <a href="            https://arduino.stackexchange.com/questions/6712/is-softwareserial-left-out-for-the-attiny85-84">source2</a></li> Because I could not use regular hardware serial on the attiny it was necessary to include a library to make this function available:
+                <pre class="prettyprint linenums">
+                #include "SoftwareSerial.h"
+                SoftwareSerial Monitor(1, 0);
+
+                void setup() 
+                {
+
+                Monitor.begin(9600);
+
+                pinMode(0, OUTPUT);
+                pinMode(1, INPUT);
+                }
+                </pre>
+                <p>also when you whant to print something you need to do it in a different way:</p>
+                <pre class="prettyprint linenums">
+                Monitor.println(whatever you what to print here);
+                </pre>
+
+
+                <li>temperature collection with Arduino</li>
+                <p>The code I used for the experiments with Arduino I found on the Arduino's project hub <a href="https://create.arduino.cc/projecthub/Marcazzan_M/how-easy-is-it-to-use-a-thermistor-e39321">How Easy Is It to Use a Thermistor?!</a> authored by <a href="https://create.arduino.cc/projecthub/Marcazzan_M">Marcazzan_M</a>:</p>
+                <pre class="prettyprint linenums">
+//Thermometer with thermistor
+
+/*thermistor parameters:
+ * RT0: 10 000 Ω
+ * B: 3977 K +- 0.75%
+ * T0:  25 C
+ * +- 5%
+ */
+
+//These values are in the datasheet
+#define RT0 10000   // Ω
+#define B 3977      // K
+//--------------------------------------
+
+
+#define VCC 5    //Supply voltage
+#define R 10000  //R=10KΩ
+
+//Variables
+float RT, VR, ln, TX, T0, VRT;
+
+void setup() {
+  Serial.begin(9600);
+  T0 = 25 + 273.15;                 //Temperature T0 from datasheet, conversion from Celsius to kelvin
+}
+
+void loop() {
+  VRT = analogRead(A0);              //Acquisition analog value of VRT
+  VRT = (5.00 / 1023.00) * VRT;      //Conversion to voltage
+  VR = VCC - VRT;
+  RT = VRT / (VR / R);               //Resistance of RT
+
+  ln = log(RT / RT0);
+  TX = (1 / ((ln / B) + (1 / T0))); //Temperature from thermistor
+
+  TX = TX - 273.15;                 //Conversion to Celsius
+
+  Serial.print("Temperature:");
+  Serial.print("\t");
+  Serial.print(TX);
+  Serial.print("C\t\t");
+  Serial.print(TX + 273.15);        //Conversion to Kelvin
+  Serial.print("K\t\t");
+  Serial.print((TX * 1.8) + 32);    //Conversion to Fahrenheit
+  Serial.println("F");
+  delay(500);
+
+}
+                </pre>
+                <li>My version on the code contains both the software serial and also part of Marcazzan's code as the attiny would not compile with both the software serial and the log calculations. The code had to then be limited to only 4k after compilation.</li>
+                <p> the <a href="media/week09/code/tinytempcode.ino">code here</a></p>
+                <pre class="prettyprint linenums">
+#include "SoftwareSerial.h"
+#define VCC 5    //Supply voltage
+#define R 100000  //R=100KΩ
+
+float RT,VRT,VR;
+
+SoftwareSerial Monitor(1, 0);
+
+void setup() {
+
+Monitor.begin(9600);
+
+pinMode(0, OUTPUT);
+pinMode(1, INPUT);
+}
+
+void loop() {
+VRT = analogRead(3);              //Acquisition analog value of VRT
+VRT = (5.00 / 1023.00) * VRT;      //Conversion to voltage
+VR = VCC - VRT;
+RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
+
+   // Monitor.println("Voltage Read:");
+   // Monitor.print(VRT,10);
+   // Monitor.println("Voltage drop:");
+   // Monitor.print(VR,10);
+   Monitor.print("Resistance:");
+   Monitor.println(RT);
+   
+  delay(1000);
+}
+                </pre>
+                <p> Aso his way of finding the resistance did not work so I had to modify the formula and it looks like this now:</p>
+                <pre class="prettyprint linenums">
+                RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
+
+                </pre>
+            </ol>
+            <hr>
+            <h3>Designing and making the PCB</h3>
+            <p> Since I modified my work-flow I decided to update it. Now It contains the usage of PCBtoGCODE addin and Autoleveller software usage.</p>
+            <h4>Autodesk Eagle Design</h4>
+
+            <p class="pic"><img src="media/week09/eagle05.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle06.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle07.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle08.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle09.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle10.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle11.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle12.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle13.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle13b.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle14.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle15.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle16.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle17.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle18.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle19.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle20.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle22.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle23.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle24.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle25.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle26.jpg"></p>
+            <hr>
+            <h4>Ratsnest dilema</h4>
+            <p class="pic"><img src="media/week09/board_ratsnest.jpg"></p>
+            <p class="pic"><img src="media/week09/board_without_ratsnest.jpg"></p>
+            <hr>
+            <p>Board BOM</p>
             <div class="tg-wrap">
                 <table class="table" border>
 
@@ -357,37 +499,77 @@
                         <td>6 pin header</td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>RESONATOR</td>
-                        <td>XC1109CT-ND</td>
-                        <td>ECS-CR2-20.00-B-TR</td>
-                        <td>CER RES 20.0000MHZ 15PF SMD</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
+                        <td>2</td>
                         <td></td>
-                        <td>450-2058-1-ND</td>
-                        <td>FSM6JSMATR</td>
-                        <td>SWITCH TACTILE SPST-NO 0.05A 24V</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>ISP</td>
-                        <td>649-95278-101A06LF</td>
-                        <td>71600-006LF</td>
-                        <td>Headers &amp; Wire Housings 2X3P UNSHRD HDR 30 microinch gold</td>
+                        <td></td>
+                        <td></td>
+                        <td>Headers 1X4P </td>
                     </tr>
                 </table>
             </div>
+            <hr>
+            <h4>PCB-Gcode</h4>
+            <p class="pic"><img src="media/week09/eagle27.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle28.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle29.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle30.jpg"></p>
+            <p class="pic"><img src="media/week09/eagle30.jpg"></p>
+            <p class="pic"><img src="media/week09/pcb_gcode01.jpg"></p>
+            <p class="pic"><img src="media/week09/pcb_gcode02.jpg"></p>
+            <p class="pic"><img src="media/week09/pcb_gcode03.jpg"></p>
+            <p class="pic"><img src="media/week09/pcb_gcode04.jpg"></p>
+            <p class="pic"><img src="media/week09/pcb_gcode05.jpg"></p>
+            <p class="pic"><img src="media/week09/thermistorpath.jpg"></p>
+            <hr>
+            <h4>Autoleveller</h4>
+            <p class="pic"><img src="media/week09/autoleveller01.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller02.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller03.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller04.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller04b.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller05.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller06.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller07.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller08.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller09.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller09b.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller10.jpg"></p>
+            <p class="pic"><img src="media/week09/autoleveller11.jpg"></p>
 
-            <p>Now I need to design the board around a stepper motor. I will need a hole for the axis and also holes to screw the pcb to the motor. To achieve this I will export a dxf file from solid works with a stteper design that I am using and try to design the pcb around it.
-            </p>
-            <p class="pic"></p>
 
-            <p> One thing I was worried was how to tell direction and what would be the ideal position for the phototransistors.</p>
-            <p>
-                http://www.machinedesign.com/sensors/basics-rotary-encoders-overview-and-new-technologies-0
-            </p>
+            <h4>Machining process</h4>
+
+            <p class="pic"><img src="media/week09/mach3.jpg"></p>
+            <p class="pic"><img src="media/week09/mach3_02.jpg"></p>
+            <p class="pic"><img src="media/week09/mach3_03.jpg"></p>
+
+            <p class="pic"><img src="media/week09/machining01.jpg"></p>
+            <p class="pic"><img src="media/week09/machining02.jpg"></p>
+            <p class="pic"><img src="media/week09/machining03.jpg"></p>
+            <p class="pic"><video controls>
+                    <source src="media/week09/autocalibration2.mp4">Your browser does not support HTML5 video.</video></p>
+            <p class="pic"><video controls>
+                    <legend>Collecting Raw data points for auto calibration calculations</legend>
+                    <source src="media/week09/machining03acomp.mp4">Your browser does not support HTML5 video.
+                </video></p>
+            <p class="pic"><img src="media/week09/machining04.jpg"></p>
+            <p class="pic"><img src="media/week09/machining05.jpg"></p>
+
+            <p class="pic"><video controls>
+                    <source src="media/week09/millingtheboardboarderscomp.mp4">Your browser does not support HTML5 video.</video></p>
+            <legend>Milling the board boarders</legend>
+
+
+            <h4>Foot notes</h4>
+
+            <p> avrdude -Cavrdude.conf -v -pattiny45 -cusbasp -Pusb -e -Uefuse:w:0xff:m -Uhfuse:w:0xdf:m -Ulfuse:w:0xe2:m</p>
+            <p>serial motor : https://www.youtube.com/watch?v=9CX4i6rMXS8</p>
+            <p>attiny fan controler project: http://www.robotroom.com/DualFan.html</p>
+            <p>reads temp with arduino and ntc thermistor https://circuitdigest.com/microcontroller-projects/arduino-thermistor-interfacing-code-circuit</p>
+            <p>setup arduino 022: http://highlowtech.org/?p=1229</p>
+            <p>reflow oven project: http://pleasantsoftware.com/developer/3d/reflow/</p>
+            <p>pul up resistor (RES SMD 10K OHM 1% 1/4W 1206) from RST to VCC</p>
+            <p>decoupling capacitor (CAP CER 1UF 50V X7R 1206) from VCC to GND to reduce noise</p>
 
             <!-- End of your content -->
 
