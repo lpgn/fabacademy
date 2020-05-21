@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +40,7 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
+
     </script>
 
 </head>
@@ -340,20 +342,125 @@ make</pre>
         <h3>1st iteration</h3>
         <h4>how did I do it</h4>
         <p>I Tried first to customize the <a href="media/code/week08/blink/blink.ino">Blink code</a> from Arduino IDE with my pin numbers, That did not work</p>
-        <p>I realize after trial and error that the pin number on the data sheet does not correspond to the arduino pin number.</p>
+        <p>code without comments bellow:</p>
+
+        <pre class="prettyprint linenums">
+void setup() {
+
+  pinMode(LED_BUILTIN, OUTPUT);
+  
+}
+
+void loop() {
+
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(1000);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(1000); 
+  
+}
+
+</pre>
+
+
+        <p> The reason the first code did not work is because I was using a code built in for the Arduino platform but building my own board. Arduino board usually have a built in LED connected to pin 13, not my board! The constant for the arduino platform to deal with the builtin LED is:</p>
+        <pre class="prettyprint linenums">LED_BUILTIN </pre>
+        <p>In the first code I tried to use that constant and failed. In the second code I found enpirically by setting a number instead of the constant would make the
+            LED on.</p>
+        <p>The right code for the Attiny44 would need to have the pin declared in the begining with the following code:</p>
+        <pre class="prettyprint linenums">const int ledPin =  07;</pre>
+        <p>I realize that after trial and error. Now I understand it different that the pin number on the data sheet does not correspond to the arduino pin number that is not the same as in the arduino platform constant. Of course after all this is a customized board but thats the price you pay for being a noob!</p>
         <p>So after empirically finding the right pin number I programmed the board and got it to blink!</p>
-        <p>Here is the customized <a href="media/code/week08/blinkcustomised/blinkcustomised.ino">code</a></p>
+        <p>Here is the customized <a href="media/code/week08/blinkcustomised/blinkcustomised.ino">code</a> without comments:</p>
+        <pre class="prettyprint linenums">
+const int ledPin =  07;
 
-        <p>Next I wanted the LED to react when pressing the button, so I searched for attiny44 arduino pin. With the right pin number in hand I replaced the pins in the code and it worked! Here is the <a href="media/code/week08/buttonblink/buttonblink.ino">code</a></p>
+void setup()    {
 
+  pinMode(ledPin, OUTPUT);
+  
+}
 
+void loop()     {
+
+  digitalWrite(ledPin, HIGH);
+  delay(1000);
+  digitalWrite(ledPin, LOW);
+  delay(1000);
+
+}
+        </pre>
+        <p>No more empirically finding pins. Here is the ATtiny44 Arduino pinout diagram</p>
+        <p class="pic">
+            <img src="media/week08/pinsetup.jpeg"></p>
+        <p> In order to have the button recognized by the board I needed to initialize it too with the following code in the beginning of the sketch:</p>
+        <pre class="prettyprint linenums">const int buttonPin = "the pin number here"</pre>
+        <p>Next I had to set the state of the pin with the following code:</p>
+        <pre class="prettyprint linenums">int buttonState = 0; </pre>
+        <p>The <code>&lt;0&gt;</code> in the above code could also be defined as <code>&lt;LOW&gt;</code> another constant in Arduino programing. <a href="https://www.arduino.cc/reference/en/language/variables/constants/constants/">Arduino website</a> on constants.</p>
+        <p>After searching for attiny44 Arduino pin. With the right pin number in hand I replaced the pins in the code and it worked! Here is the <a href="media/code/week08/buttonblink/buttonblink.ino">code.</a></p>
+        <pre class="prettyprint linenums">
+const int buttonPin = 3;
+const int ledPin =  7;
+
+int buttonState = 0; 
+
+void setup() {
+
+  pinMode(ledPin, OUTPUT);
+
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState, LOW) {
+
+  digitalWrite(ledPin, HIGH);
+  else {
+
+    digitalWrite(ledPin, LOW);
+     }
+     }
+}</pre>
         <p class="pic"><video controls>
                 <source src="media/week08/hello1.mp4">Your browser does not support HTML5 video.</video></p>
-        <p>now I inverted when the LED turns on and off. Here is the <a href="media/code/week08/buttonblink2/buttonblink2.ino">code</a></p>
+        <p> In order to change the behavior of the button I simply replaced the constant <code>&lt;HIGH&gt;</code>  for the constant <code>&lt;LOW&gt;</code> here:</p>
+        <pre class="prettyprint linenums">if (buttonState == LOW) {</pre>
+        <p>This way the logic of the code is inverted meaning that when the button is depressed the LED is off.</p>
+        <p>now I inverted when the LED turns on and off. Here is the <a href="media/code/week08/buttonblink2/buttonblink2.ino">code without comments:</a></p>
+        <pre class="prettyprint linenums">const int buttonPin = 3;
+const int ledPin =  7;
+
+int buttonState = 0;
+
+void setup() {
+
+  pinMode(ledPin, OUTPUT);
+
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState == LOW) {
+
+    digitalWrite(ledPin, HIGH);   
+  }else {
+
+    digitalWrite(ledPin, LOW);
+    }
+    }
+</pre>
+        <p>Let's see some proof...</p>
         <p class="pic"><video controls>
                 <source src="media/week08/hello2.mp4">Your browser does not support HTML5 video.</video></p>
         <hr>
-        <h2> Side activity</h2>
+        <h2>Hacking the board</h2>
 
         <p>I was a bit annoyed my board would not advise me when powered so I decide to solder a red LED and a 22 Ohms resistor and a resistor so if I got the connections wrong I would know and switch it.</p>
         <p>Thats the before and after</p>
@@ -400,10 +507,13 @@ make</pre>
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
+
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 
-</body></html>
+</body>
+
+</html>
