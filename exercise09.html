@@ -357,17 +357,19 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
   delay(1000);
 }
                 </pre>
-                <p> Aso his way of finding the resistance did not work so I had to modify the formula and it looks like this now:</p>
+                <p> Aso his formula of finding the resistance did not work for me I suspect it is because I use a NTC thermistor, so I had to modify the formula and it looks like this now:</p>
                 <pre class="prettyprint linenums">
                 RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
-
                 </pre>
             </ol>
             <hr>
             <h3>Designing and making the PCB</h3>
-            <p> Since I modified my work-flow I decided to update it. Now It contains the usage of PCBtoGCODE addin and Autoleveller software usage.</p>
+            <p> Since I modified my work-flow I decided to update it. Now It contains the usage of PCB-Gcode ULP and Autoleveller software usage.</p>
+            <hr>
             <h4>Autodesk Eagle Design</h4>
-
+        <p>With the schematics ready click on:</p>
+        <ol><li>SCH/BRD this will open a dialog</li>
+        <li>On the dialog click on yes in other to place the components next to what will be the board space.</li></ol>
             <p class="pic"><img src="media/week09/eagle05.jpg"></p>
             <p class="pic"><img src="media/week09/eagle06.jpg"></p>
             <p class="pic"><img src="media/week09/eagle07.jpg"></p>
