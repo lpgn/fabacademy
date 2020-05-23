@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,256 +35,236 @@
 
     <!-- Load the menu file -->
     <script>
-    function menu() {
-                      $('#exercises').load("exercises-menu.html");
-                      $('#project').load("project-menu.html");
-                      $('#cclicense').load("license.html");
-                      }
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
     </script>
 
-  </head>
-  <body onload="menu()">
+</head>
+
+<body onload="menu()">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
-              <ul id="exercises" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container">
 
-    <!-- Insert your content here below! -->
+        <!-- Insert your content here below! -->
         <div class="jumbotron" style="width: 100%">
             <h1>Week 11</h1>
             <h3>Title</h3>
             <hr>
             <h4>Group assignment</h4>
-            <li>blablabla</li>
+            <li>Measure the power consumption of an output device</li>
+            <li>Document your work (in a group or individually)</li>
             <h4>Individual assignment</h4>
-            <li>blabla</li>
+            <li>Add an output device to a microcontroller board you've designed and program it to do something</li>
             <h4>Learning outcomes:</h4>
             <ul>
-                <li>ffff</li>
-                <li>ffffffff</li>
+                <li>Demonstrate workflows used in controlling an output device(s) with MCU board you have designed</li>
             </ul>
             <h4>Have you:</h4>
             <ul>
-                <li>fffffff</li>
-                <li>fffffffffff</li>
-                <li>fffffff</li>
-                <li>fff</li>
+                <li>Linked to the group assignment page</li>
+                <li>Documented how you determined power consumption of an output device with your group</li>
+                <li>Documented what you learned from interfacing output device(s) to microcontroller and controlling the device(s)</li>
+                <li>Described your design and fabrication process or linked to previous examples.</li>
+                <li>Explained the programming process/es you used</li>
+                <li>Outlined problems and how you fixed them</li>
+                <li>Included original design files and code</li>
+                <li>Included a ‘hero shot/video’ of your board</li>
             </ul>
-            <h4>Assignment</h4>
-            <section class="todo">
-                <ul class="todo-list" style="list-style-type:none">
-                    <li> <label class="tasks-list-item">
-                        <input type="checkbox" name="task_1" value="1" class="tasks-list-cb" checked="">
-                        <span class="tasks-list-mark">ggggggggggrrrrrggggg</span>
-                        <span class="tasks-list-desc"> hhhhhhhhhhhhh </span>
-                        </label> </li>
-                    <li> <label class="tasks-list-item">
-                        <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
-                        <span class="tasks-list-mark">dfdrrrreerre</span>
-                        <span class="tasks-list-desc"> hhhhhhhhhhhh</span>
-                        </label> </li>
-                    <li> <label class="tasks-list-item">
-                        <input type="checkbox" name="task_3" value="1" class="tasks-list-cb" checked="">
-                        <span class="tasks-list-mark">rreerer</span>
-                        <span class="tasks-list-desc"> hhhhhhhhhhhh</span>
-                        </label> </li>
-                    <li> <label class="tasks-list-item">
-                        <input type="checkbox" name="task_4" value="1" class="tasks-list-cb" checked="">
-                        <span class="tasks-list-mark">reerererer</span>
-                        <span class="tasks-list-desc"> hhhhhhhhhhhhhhhhhhhhhh</span>
-                        </label> </li>
-                </ul>
-            </section>
         </div>
-        <hr>
-        <h3>Week workflow</h3>
-        <p class="pic"><img src="media/week8/week8diagram.png"></p>
         <hr>
         <h3>Tools used</h3>
         <ul style="list-style-type:disc">
-            <li>hhhhhh</li>
-            <li>hhhhhhh</li>
+            <li>Soldering station</li>
+            <li>Small CNC</li>
         </ul>
         <hr>
         <h3>Software Used</h3>
         <ul style="list-style-type:disc">
-            <li>hhhhh</li>
-            <li>rrrrr</li>
-            <li>rrrrrrrrrrrrrr</li>
+            <li>Autodesk Eagle</li>
+            <li>Arduino IDE</li>
         </ul>
         <hr>
-        <h2>Introduction</h2>
-        <p> I started this assigment gggggggggggggggggggggggggggggggggggg</p>
+        <h4>Introduction</h4>
+        <p> I started this assignment with the intention to improve the farm irrigation automation. We already have an ESP8266 controlling a pump and 4 relays and monitoring the pump's current draw. The problem is that the ESP8266 on its program is not responsive and makes setting up the times time consuming. This is due to a limitation on the quantity of ADC pins. It was explained to me by the Shakeel one volunteer that we had in the farm that the ESP8266 uses the only ADC pin to monitor its wifi connection so he created a program that reduces the samples taken by the amp meter in other to share the pin with the wifi. Well this works but makes the wifi connection unreliable, so my challenge will be trying to understand the ESP32 so I can port his program and complete the assignment at the same time. Lets try!</p>
+        <p>The other thing I would like to point is that I will focus more on the code as I already demonstrated the PCB manufacturing process In the other week and also as a major change in the way I complete the assignment is that I will document as I learn and do things so the assignment will feel more like a log than a tutorial.</p>
+        <hr>
+        <h4>Objectives</h4>
+        <p>My initial objective will be to understand more the ESP32 and then as a second objective have it replacing the current irrigation control a third objective will be applying all this knowledge to my incubator final project.</p>
+        <hr>
+        <h4>Pinout</h4>
+        <p class="pic"><img src="media/week11/ESP32-Pinout.jpg"></p>
+        <hr>
+        <h4>Code plan</h4>
+        <ol>
+            <li>check time</li>
+            <li>turn on pump if in time range</li>
+            <li>read amp meter looking for under and over current if detected it will stop pump operation</li>
+        </ol>
+        <hr>
+        <h4>Code research</h4>
+        <p>I started by checking the website <a href="https://techtutorialsx.com/2018/02/17/esp32-arduino-controlling-a-relay/">techtutorialsx.com</a></p>
+        <p>As it is explained by the page the code to turn on a relay is pretty similar to other arduino codes I have seen so let's see</p>
+        <p> I will be using <code>int pumprelayPin1 = 20;</code> to define the variable pumprelayPin1 as the pin 20 and will store the value as an <a href="https://www.arduino.cc/reference/en/language/variables/data-types/int/">integer</a>.</p>
+        <p><code>pinMode(pumprelayPin1, OUTPUT);</code> sets the pin mode for pumprelayPin1 as an output pin meaning it will be active as opposed to input that passively monitors for a signal.</p>
+        <p><code>digitalWrite(pumprelayPin1, LOW);</code> will set the pin to an off state with the <code>LOW </code></p>
+        <p><code> delay(4000);</code> will tell the program to wait 4 seconds or 4000 milliseconds</p>
+        <p> Thats how my code looks so far:</p>
+        <pre class="prettyprint linenums">
+int pumprelayPin1 = 20;
 
-    <h3>Menu</h3>
-    <p>
-    You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-    </p>
+void setup() {
+  
+  pinMode(pumprelayPin1, OUTPUT);
+  digitalWrite(pumprelayPin1, LOW);
 
+}
 
-    <h3>Text</h3>
-    <p>
-    You can set it up with:
-    <pre class="prettyprint linenums">
-    &ltp&gt;
-    Your text here
-    &lt/p&gt;</pre>
-    </p>
-    Result:
-    <p>
-    Your text here
-    </p>
+void loop() {
 
-    <h3>Images</h3>
-    <p>
-    You can set it up with:
-    <pre class="prettyprint linenums">
-    &ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-    &ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-    &lt/p&gt;</pre>
-    </p>
-    Result:
-    <p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-    <legend>Here's the legend of the picture.</legend>
-    </p>
+  digitalWrite(pumprelayPin1, HIGH);
+  delay(4000);
+  digitalWrite(pumprelayPin1, LOW);
+  delay(4000);
 
-    <h3>Code</h3>
-    <p>
-    You can set it up with:
-    <pre class="prettyprint linenums">
-    &ltpre class="prettyprint linenums"&gt;
-    Your code here
-    &lt/pre&gt;</pre>
+}
+</pre>
+        <p> This code so far will start and then turn on and off the relay with 4 seconds between each operation.</p>
+        <p>Now for the second part I want to get time from a real time clock in oder to activate the pump on certain times. So first I need to include the RTC clock library. I am using a DS1302 RTC clock chip so this library should do the trick with this code <code>#include &#60virtuabotixRTC.h&#62</code> according to library documentation <a href="https://github.com/chrisfryer78/ArduinoRTClibrary/blob/master/examples/virtuabotixRTC_version1/virtuabotixRTC_version1.ino">here.</a></p>
+        <p>Second we need to declare the pins of the rtc clock with this code <code>virtuabotixRTC myRTC(5, 18, 19);</code> and <code>RtcDS1302&#60ThreeWire&#62 Rtc(myWire);</code> this means when the ESP32 communicates with the real time clock chip it will be using the pins 5 to CLK 18 to DAT and 19 to RST.</p>
+        <p>Now in other to show the time from the real time clock I include this either in the <code>void setup() {}</code> area or in the <code>void loop() {}</code> area. The first will print it once the second will print it until I have it running. Of course we need to add a delay of at least of a minute with <code>delay(60000);</code> the unit in the variable is milliseconds so 1000 means 1 second and 60000 means 60 seconds.</p>
+        <pre class="prettyprint linenums">
+    Serial.begin(115200);
 
-    Result:
-    <pre class="prettyprint linenums">
-    for i in members:
-        print ""
-        print "USER:",members[i]
-        print "Loading connections..."
-        followers = load_connections([i], "followers")
-        friends = load_connections([i], "friends")
+ myRTC.updateTime();
+    Serial.println();</pre>
+        <p>If the RTC was never used before you can set the time running once the following code: <code> myRTC.setDS1302Time(00, 28, 16, 6, 23, 5, 2020);</code> being the first characters seconds then minutes, hours (24h mode), day of the week, day of the month, month, year)</p>
+        <p>This is how the code is looking so far:</p>
 
-        # Add edges...
-        print "Building the graph..."
+        <pre class="prettyprint linenums">
+#include &#60virtuabotixRTC.h&#62
 
-        for f in followers:
-            for k in followers[f]:
-                graph.add_edge(k,f)
+virtuabotixRTC myRTC(5, 18, 19);// (CLK,DAT,RST)
 
-        for f in friends:
-            for k in friends[f]:
-                graph.add_edge(f,k)</pre>
-    </p>
+int pumprelayPin1 = 22;
 
-    <h3>3D Model</h3>
-    <p>
-    The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-    <pre class="prettyprint linenums">
-    &ltcanvas id="cv" width=640 height=480&gt;
-    It seems you are using an outdated browser that does not support canvas :-(
-    &lt/canvas&gt;
-    &ltscript type="text/javascript"&gt;
-        var canvas = document.getElementById('cv');
-        var viewer = new JSC3D.Viewer(canvas);
-        viewer.setParameter('SceneUrl','media/2018week6/3D_test_V3_0.4mm.stl');
-        viewer.setParameter('ModelColor','#CAA618');
-        viewer.setParameter('BackgroundColor1','#E5D7BA');
-        viewer.setParameter('BackgroundColor2','#383840');
-        viewer.setParameter('RenderMode','flat');
-        viewer.setParameter('MipMapping','on');
-        viewer.setParameter('Definition','high');
-        viewer.setParameter('Renderer','webgl');
-        viewer.init();
-        viewer.update();
-    &lt/script&gt;</pre>
+void setup() {
 
-    You can set up the path to the 3D model (.stl/.obj) within this line:
-    <pre class="prettyprint linenums">
-    viewer.setParameter('SceneUrl','media/2018week6/3D_test_V3_0.4mm.stl');</pre>
+    Serial.begin(115200);
+    pinMode(pumprelayPin1, OUTPUT);
+}
+void loop() {
 
-    Result:
-    <canvas id="cv" width=640 height=480>
-    It seems you are using an outdated browser that does not support canvas :-(
-    </canvas>
-    <script type="text/javascript">
-        var canvas = document.getElementById('cv');
-        var viewer = new JSC3D.Viewer(canvas);
-        viewer.setParameter('SceneUrl','media/2018week6/3D_test_V3_0.4mm.stl');
-        viewer.setParameter('ModelColor','#CAA618');
-        viewer.setParameter('BackgroundColor1','#E5D7BA');
-        viewer.setParameter('BackgroundColor2','#383840');
-        viewer.setParameter('RenderMode','flat');
-        viewer.setParameter('MipMapping','on');
-        viewer.setParameter('Definition','high');
-        viewer.setParameter('Renderer','webgl');
-        viewer.init();
-        viewer.update();
-    </script>
-    </p>
+    myRTC.updateTime();
+  
+    Serial.print(myRTC.hours);
+    Serial.print(":");
+    Serial.print(myRTC.minutes);
+    delay(58000);
+  
+    digitalWrite(pumprelayPin1, HIGH);
+    delay(1000);
+    digitalWrite(pumprelayPin1, LOW);
+    delay(1000);
 
-    <h3>Download</h3>
-    <p>
-    You can set up a button for files to be downloaded with:
-    <pre class="prettyprint linenums">
-    &lta href="#"&gt;
-    &ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-    &lt/a&gt;</pre>
-    </p>
+}</pre>
+        <p>So far there is no logic test the code shows the time every minute and turns on and off the relay. So in other to add a logic test we need the <code>if</code> statement. It will check if something is true and then execute whatever next in the program.</p>
+        <p>Extracted from the <a href="https://www.arduino.cc/reference/en/language/structure/control-structure/if/">Arduino references</a>: </p>
+        <pre><code><code>
+if (condition) {
+    //statement(s)
+}</code></code></pre>
+        <p>So In other to check the time and turn on my relay I will try something like this: <code>if ((myRTC.hours) == 15 || (myRTC.minutes) == 0) {digitalWrite(pumprelayPin1, HIGH)}</code></p>
+        <p>To turn of the code will be like this: <code>if ((myRTC.hours) >= 15 || (myRTC.minutes) >= 1) {digitalWrite(pumprelayPin1, LOW)}</code></p>
+        <p>My code now looks like this:</p>
+        <pre class="prettyprint linenums">
+#include &#60virtuabotixRTC.h&#62
 
-    <p>
-    Result:
-    </p>
-    <p>
-    <a href="#">
-    <button type="button" class="btn btn-primary btn-lg">Download the file</button>
-    </a>
-    </p>
+virtuabotixRTC myRTC(5, 18, 19);// (CLK,DAT,RST)
 
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
-    <!-- End of your content -->
+int pumprelayPin1 = 22;
+
+void setup() {
+
+   Serial.begin(115200);
+   
+  // myRTC.setDS1302Time(00, 28, 16, 6, 23, 5, 2020); // sets seconds, minutes, hours (24h mode), day of the week, day, month, year) comment after first compile
+  
+  pinMode(pumprelayPin1, OUTPUT);
+
+}
+
+void loop() {
+  myRTC.updateTime();//updates time
+  Serial.print("Current Time: ");
+  Serial.print(myRTC.hours);
+  Serial.print(":");
+  Serial.print(myRTC.minutes)
+  delay (60000);
+  if ((myRTC.hours) == 15 || (myRTC.minutes) == 0) {digitalWrite(pumprelayPin1, HIGH)}
+  if ((myRTC.hours) >= 15 || (myRTC.minutes) >= 1) {digitalWrite(pumprelayPin1, LOW)}
+}</pre>
+        <p>here is how it runs on the ESP32 development board</p>
+        <p class="pic"><video controls>
+                <source src="media/week11/esp32testrun.mp4">Your browser does not support HTML5 video.</video></p>
+        <hr>
+        <h4>Board design</h4>
+        <p>For this board I will need at least 4 digital pins and one analog pin if I want to measure the current of the pump in the future. So I believe the ATtiny44 will be suitable enough. I will leave the ESP32 for the Network week ;-). Also my esp32 smd component haven't arrived yet, I believe it is because of COVID19 break of supply chains. Thats why I experimented with the ESP32 development board I had in hand. </p>
+        <h5>Pinout of ATtiny44</h5>
+        <p class="pic"><img src="media/week11/attiny44pinout.jpg"></p>
+        <p>With that in hand I will modify the tiny45 I did in the input devices week by adding another header for a more comfortable programing and serial monitoring as well as all the pins to have this board as modular as possible.</p>
+        <p>I wont be covering the eagle design or milling in detail as I already did in the <a href="exercise09.html">Input devices week</a>. Instead I will only cover the comands I might not have used like replace and then a few hero shots and tests.</p>
+        <p>So lets start with the redesign!</p>
+        <ol>
+            <li>I start by opening the old eagle file <a href="media/week09/eagle/eaglefilestinyboard.zip">here.</a></li>
+            <li>I tried the command replace but it did not work o to replace the Attiny45 for the attiny44 they are too different I guess. So I will have to add the new component remap the conections with net than name and then reroute everything on the board. Lets see.</li>
+        </ol>
+        <!-- End of your content -->
     </div> <!-- /container -->
 
     <!-- footer -->
 
     <footer id="footer">
         <p id="cclicense">
-                </p>
+        </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
 
@@ -300,16 +281,18 @@
     <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
-      !function ($) {
-        $(function(){
-          window.prettyPrint && prettyPrint()
-        })
-      }(window.jQuery)
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 
-  </body>
+</body>
+
 </html>
