@@ -251,7 +251,9 @@ if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
 </pre>
         <p>here is how it runs on the ESP32 development board</p>
         <p class="pic"><video controls>
-                <source src="media/week11/programexperiment.mp4">Your browser does not support HTML5 video.</video><legend>You can see a higher resolution on <a href="https://www.youtube.com/watch?v=cW_LQhQiVxQ">Youtube</a></legend></p>
+                <source src="media/week11/programexperiment.mp4">Your browser does not support HTML5 video.</video>
+            <legend>You can see a higher resolution on <a href="https://www.youtube.com/watch?v=cW_LQhQiVxQ">Youtube</a></legend>
+        </p>
         <hr>
         <h4>Board design</h4>
         <p>For this board I will need at least 4 digital pins and one analog pin if I want to measure the current of the pump in the future. So I believe the ATtiny44 will be suitable enough. I will leave the ESP32 for the Network week ;-). Also my esp32 smd component haven't arrived yet, I believe it is because of COVID19 break of supply chains. Thats why I experimented with the ESP32 development board I had in hand. </p>
@@ -265,14 +267,64 @@ if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
             <li>I tried the command replace but it did not work to replace the Attiny45 for the attiny44 they are too different I guess. So I will have to add the new component remap the connections with net than name and then reroute everything on the board. Lets see.</li>
         </ol>
         <p>This is the Board Schematics and Layout</p>
-        <p class="pic"><img src="media/week11/tiny44schematics.jpg"><legend>Schematics</legend></p>
+        <p class="pic"><img src="media/week11/tiny44schematics.jpg">
+            <legend>Schematics</legend>
+        </p>
         <p class="pic"><img src="media/week11/tiny44board.jpg">Board Layout</p>
         <p>Next I run the ULP PCBtoGcode just like explained on <a href="exercise09.html">Output Devices</a></p>
         <p class="pic"><img src="media/week11/pcbtogcode.jpg">Gcode isolation visualization</p>
         <p>Next I use the program Autoleveller also explained on <a href="exercise09.html">Output Devices</a> and I obtain a gcode that is adjusted to the imperfections of the blank pcb.</p>
         <p class="pic"><img src="media/week11/tiny44autoleveller.jpg">Board Layout</p>
+        <p>Milling the PCB</p>
+        <p class="pic"><video controls>
+                <source src="media/week11/attiny44finalmillingcomp.mp4">Your browser does not support HTML5 video.</video></p>
+        <p>The milled pcb</p>
+        <p class="pic"><img src="media/week11/attiny44milled.jpg">blank pcb</p>
         <p>The Attiny44 board with the soldered components looks like this.</p>
-        
+        <p class="pic"><img src="media/week11/attiny44populated.jpg">Board Layout</p>
+        <p>Now that I have the pcb done I changed the code to run on the attiny44. One remarcable thing is that the attiny44 needs a software serial library that I invoked with this code <code>#include &#60SoftwareSerial.h&#62</code> two more things for the serial to work: the library needs to know the pins TX and RX are going to be <code>SoftwareSerial Monitor(1, 0);</code> in <code>void setup{}</code> I included the serial monitor initialization with <code>Monitor.begin(115200);</code> intead of the usual <code>Serial.begin(115200);</code> and finally in <code> void loop {}</code> every time I wanted serial to print something I needed to use the code <code>Monitor.print();</code> instead of the usual <code>Serial print ();</code> </p>
+        <p>In the end my test code looks like this:</p>
+        <pre class="prettyprint linenums">
+//libraries
+#include &#60virtuabotixRTC.h&#62
+#include &#60SoftwareSerial.h&#62
+
+//Settings
+virtuabotixRTC myRTC(3, 8, 7);// (CLK,DAT,RST)
+int pumprelayPin1 = 2;
+SoftwareSerial Monitor(1, 0);
+
+//run once
+void setup() {
+
+   Monitor.begin(115200);
+   
+myRTC.setDS1302Time(50, 15, 16, 6, 24, 5, 2020); // sets seconds, minutes, hours (24h mode), day of the week, day, month, year) comment after first compile
+  
+  pinMode(pumprelayPin1, OUTPUT);
+  
+}
+
+//run in loop
+void loop() {
+  myRTC.updateTime();//updates time
+  Monitor.print("Current Time: ");
+  Monitor.print(myRTC.hours);
+  Monitor.print(":");
+  Monitor.print(myRTC.minutes);
+  Monitor.print(":");
+  Monitor.print(myRTC.seconds);
+  Monitor.println();
+  delay (1000);
+//condition (logic test)
+if ((myRTC.minutes) == 16) digitalWrite(pumprelayPin1, HIGH);  
+if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
+
+}</pre>
+        <p>With the firmware burned as already shown in <a href="exercise08.html">Embedded Programing</a> I can show the Attiny44 controling a relay to turn on a compressor on a specific time set in the program.</p>
+                <p class="pic"><video controls>
+                <source src="media/week11/outputdevicestest.mp4">Your browser does not support HTML5 video.</video>For a full resolution video check <a href="https://www.youtube.com/watch?v=wcq0y42teHU">Youtube</a></p>
+
         <!-- End of your content -->
     </div> <!-- /container -->
 
@@ -285,6 +337,7 @@ if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
             Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
             Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
+        <p>Now lets see the code running on the new board controlling a relay that will turn on a  </p>
     </footer>
 
 
