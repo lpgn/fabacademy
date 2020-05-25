@@ -84,7 +84,7 @@
         <!-- Insert your content here below! -->
         <div class="jumbotron" style="width: 100%">
             <h1>Week 11</h1>
-            <h3>Title</h3>
+            <h3>Output Devices</h3>
             <hr>
             <h4>Group assignment</h4>
             <li>Measure the power consumption of an output device</li>
@@ -213,35 +213,45 @@ if (condition) {
         <p>To turn of the code will be like this: <code>if ((myRTC.hours) >= 15 || (myRTC.minutes) >= 1) {digitalWrite(pumprelayPin1, LOW)}</code></p>
         <p>My code now looks like this:</p>
         <pre class="prettyprint linenums">
+//libraries
 #include &#60virtuabotixRTC.h&#62
 
+//Settings
 virtuabotixRTC myRTC(5, 18, 19);// (CLK,DAT,RST)
-
 int pumprelayPin1 = 22;
 
+
+//run once
 void setup() {
 
    Serial.begin(115200);
    
-  // myRTC.setDS1302Time(00, 28, 16, 6, 23, 5, 2020); // sets seconds, minutes, hours (24h mode), day of the week, day, month, year) comment after first compile
+myRTC.setDS1302Time(50, 15, 16, 6, 24, 5, 2020); // sets seconds, minutes, hours (24h mode), day of the week, day, month, year) comment after first compile
   
   pinMode(pumprelayPin1, OUTPUT);
-
+  
 }
 
+//run in loop
 void loop() {
   myRTC.updateTime();//updates time
   Serial.print("Current Time: ");
   Serial.print(myRTC.hours);
   Serial.print(":");
-  Serial.print(myRTC.minutes)
-  delay (60000);
-  if ((myRTC.hours) == 15 || (myRTC.minutes) == 0) {digitalWrite(pumprelayPin1, HIGH)}
-  if ((myRTC.hours) >= 15 || (myRTC.minutes) >= 1) {digitalWrite(pumprelayPin1, LOW)}
-}</pre>
+  Serial.print(myRTC.minutes);
+  Serial.print(":");
+  Serial.print(myRTC.seconds);
+  Serial.println();
+  delay (1000);
+//condition (logic test)
+if ((myRTC.minutes) == 16) digitalWrite(pumprelayPin1, HIGH);  
+if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
+
+}
+</pre>
         <p>here is how it runs on the ESP32 development board</p>
         <p class="pic"><video controls>
-                <source src="media/week11/esp32testrun.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/week11/programexperiment.mp4">Your browser does not support HTML5 video.</video><legend>You can see a higher resolution on <a href="https://www.youtube.com/watch?v=cW_LQhQiVxQ">Youtube</a></legend></p>
         <hr>
         <h4>Board design</h4>
         <p>For this board I will need at least 4 digital pins and one analog pin if I want to measure the current of the pump in the future. So I believe the ATtiny44 will be suitable enough. I will leave the ESP32 for the Network week ;-). Also my esp32 smd component haven't arrived yet, I believe it is because of COVID19 break of supply chains. Thats why I experimented with the ESP32 development board I had in hand. </p>
@@ -252,8 +262,17 @@ void loop() {
         <p>So lets start with the redesign!</p>
         <ol>
             <li>I start by opening the old eagle file <a href="media/week09/eagle/eaglefilestinyboard.zip">here.</a></li>
-            <li>I tried the command replace but it did not work o to replace the Attiny45 for the attiny44 they are too different I guess. So I will have to add the new component remap the conections with net than name and then reroute everything on the board. Lets see.</li>
+            <li>I tried the command replace but it did not work to replace the Attiny45 for the attiny44 they are too different I guess. So I will have to add the new component remap the connections with net than name and then reroute everything on the board. Lets see.</li>
         </ol>
+        <p>This is the Board Schematics and Layout</p>
+        <p class="pic"><img src="media/week11/tiny44schematics.jpg"><legend>Schematics</legend></p>
+        <p class="pic"><img src="media/week11/tiny44board.jpg">Board Layout</p>
+        <p>Next I run the ULP PCBtoGcode just like explained on <a href="exercise09.html">Output Devices</a></p>
+        <p class="pic"><img src="media/week11/pcbtogcode.jpg">Gcode isolation visualization</p>
+        <p>Next I use the program Autoleveller also explained on <a href="exercise09.html">Output Devices</a> and I obtain a gcode that is adjusted to the imperfections of the blank pcb.</p>
+        <p class="pic"><img src="media/week11/tiny44autoleveller.jpg">Board Layout</p>
+        <p>The Attiny44 board with the soldered components looks like this.</p>
+        
         <!-- End of your content -->
     </div> <!-- /container -->
 

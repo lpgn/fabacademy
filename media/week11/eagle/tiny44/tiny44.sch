@@ -875,59 +875,83 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <description>&lt;b&gt;Molex Connectors&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="22-23-2041" library_version="2">
-<description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 4 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232041_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<wire x1="-5.08" y1="3.175" x2="5.08" y2="3.175" width="0.254" layer="21"/>
-<wire x1="5.08" y1="3.175" x2="5.08" y2="1.27" width="0.254" layer="21"/>
-<wire x1="5.08" y1="1.27" x2="5.08" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="5.08" y1="-3.175" x2="-5.08" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-5.08" y1="-3.175" x2="-5.08" y2="1.27" width="0.254" layer="21"/>
-<wire x1="-5.08" y1="1.27" x2="-5.08" y2="3.175" width="0.254" layer="21"/>
-<wire x1="-5.08" y1="1.27" x2="5.08" y2="1.27" width="0.254" layer="21"/>
-<pad name="1" x="-3.81" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="2" x="-1.27" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="3" x="1.27" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="4" x="3.81" y="0" drill="1" shape="long" rot="R90"/>
-<text x="-5.08" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.08" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
+<package name="KK-156-7" urn="urn:adsk.eagle:footprint:8078407/1" library_version="5">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 7 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604070_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="13.71" y1="4.95" x2="11.91" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="11.91" y1="4.95" x2="-11.885" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-11.885" y1="4.95" x2="-13.685" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-13.685" y1="4.95" x2="-13.685" y2="-4.825" width="0.2032" layer="21"/>
+<wire x1="-13.685" y1="-4.825" x2="13.71" y2="-4.825" width="0.2032" layer="21"/>
+<wire x1="13.71" y1="-4.825" x2="13.71" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-11.885" y1="2.525" x2="11.91" y2="2.525" width="0.2032" layer="21"/>
+<wire x1="11.91" y1="2.525" x2="11.91" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-11.885" y1="2.525" x2="-11.885" y2="4.95" width="0.2032" layer="21"/>
+<pad name="1" x="-11.88" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="2" x="-7.92" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="3" x="-3.96" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="4" x="0" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="5" x="3.96" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="6" x="7.92" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="7" x="11.88" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<text x="-14.38" y="-4.445" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="15.65" y="-4.445" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 </packages>
+<packages3d>
+<package3d name="KK-156-7" urn="urn:adsk.eagle:package:8078811/1" type="box" library_version="5">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 7 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604070_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="KK-156-7"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
-<symbol name="MV" library_version="2">
+<symbol name="MV" urn="urn:adsk.eagle:symbol:6783/2" library_version="5">
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
-<symbol name="M" library_version="2">
+<symbol name="M" urn="urn:adsk.eagle:symbol:6785/2" library_version="5">
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="22-23-2041" prefix="X" library_version="2">
-<description>.100" (2.54mm) Center Header - 4 Pin</description>
+<deviceset name="KK-156-7" urn="urn:adsk.eagle:component:8079133/3" prefix="X" uservalue="yes" library_version="5">
+<description>&lt;b&gt;KK 156 HEADER&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
 <gates>
-<gate name="-1" symbol="MV" x="0" y="2.54" addlevel="always" swaplevel="1"/>
-<gate name="-2" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
-<gate name="-3" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
-<gate name="-4" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+<gate name="-1" symbol="MV" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+<gate name="-4" symbol="M" x="0" y="-7.62" addlevel="always" swaplevel="1"/>
+<gate name="-5" symbol="M" x="0" y="-10.16" addlevel="always" swaplevel="1"/>
+<gate name="-6" symbol="M" x="0" y="-12.7" addlevel="always" swaplevel="1"/>
+<gate name="-7" symbol="M" x="0" y="-15.24" addlevel="always" swaplevel="1"/>
 </gates>
 <devices>
-<device name="" package="22-23-2041">
+<device name="" package="KK-156-7">
 <connects>
 <connect gate="-1" pin="S" pad="1"/>
 <connect gate="-2" pin="S" pad="2"/>
 <connect gate="-3" pin="S" pad="3"/>
 <connect gate="-4" pin="S" pad="4"/>
+<connect gate="-5" pin="S" pad="5"/>
+<connect gate="-6" pin="S" pad="6"/>
+<connect gate="-7" pin="S" pad="7"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8078811/1"/>
+</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="MF" value="MOLEX" constant="no"/>
-<attribute name="MPN" value="22-23-2041" constant="no"/>
-<attribute name="OC_FARNELL" value="1462920" constant="no"/>
-<attribute name="OC_NEWARK" value="38C0355" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+<attribute name="POPULARITY" value="0" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -980,11 +1004,9 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <parts>
 <part name="R2" library="fab" deviceset="RES-US" device="1206FAB" value="RES SMD 10K OHM 1% 1/4W 1206"/>
 <part name="C1" library="fab" deviceset="CAP-UNPOLARIZED" device="FAB" value="CAP CER 1UF 50V X7R 1206"/>
-<part name="U$3" library="fab" deviceset="AVRISP" device="SMD"/>
+<part name="U$3" library="fab" deviceset="AVRISP" device="SMD" value="AVRISPSMD"/>
 <part name="U$6" library="fab" deviceset="LED" device="FAB1206" value="LEDFAB1206"/>
 <part name="R4" library="fab" deviceset="RES-US" device="1206FAB" value="RES SMD 100 OHM 1% 1/4W 1206"/>
-<part name="X1" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2041" device=""/>
-<part name="X3" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2041" device=""/>
 <part name="IC1" library="fab" deviceset="ATTINY44" device="-SSU"/>
 <part name="U$2" library="fab" deviceset="FTDI-SMD-HEADER" device=""/>
 <part name="U$1" library="fab" deviceset="RESONATOR" device="">
@@ -993,6 +1015,8 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <attribute name="OC_NEWARK" value="13J2006"/>
 </part>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="X2" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="KK-156-7" device="" package3d_urn="urn:adsk.eagle:package:8078811/1"/>
+<part name="X4" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="KK-156-7" device="" package3d_urn="urn:adsk.eagle:package:8078811/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -1011,39 +1035,13 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <attribute name="NAME" x="34.29" y="117.475" size="1.778" layer="95"/>
 <attribute name="VALUE" x="34.29" y="104.14" size="1.778" layer="96"/>
 </instance>
-<instance part="U$6" gate="G$1" x="137.16" y="93.98" smashed="yes">
-<attribute name="NAME" x="140.716" y="91.948" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="142.875" y="91.948" size="1.778" layer="96" rot="R90"/>
+<instance part="U$6" gate="G$1" x="114.3" y="96.52" smashed="yes">
+<attribute name="NAME" x="117.856" y="94.488" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="120.015" y="94.488" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R4" gate="G$1" x="137.16" y="109.22" smashed="yes" rot="R90">
-<attribute name="NAME" x="135.6614" y="105.41" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="140.462" y="105.41" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="X1" gate="-1" x="111.76" y="142.24" smashed="yes">
-<attribute name="NAME" x="114.3" y="141.478" size="1.524" layer="95"/>
-<attribute name="VALUE" x="110.998" y="143.637" size="1.778" layer="96"/>
-</instance>
-<instance part="X1" gate="-2" x="111.76" y="139.7" smashed="yes">
-<attribute name="NAME" x="114.3" y="138.938" size="1.524" layer="95"/>
-</instance>
-<instance part="X1" gate="-3" x="111.76" y="137.16" smashed="yes">
-<attribute name="NAME" x="114.3" y="136.398" size="1.524" layer="95"/>
-</instance>
-<instance part="X1" gate="-4" x="111.76" y="134.62" smashed="yes">
-<attribute name="NAME" x="114.3" y="133.858" size="1.524" layer="95"/>
-</instance>
-<instance part="X3" gate="-1" x="111.76" y="121.92" smashed="yes">
-<attribute name="NAME" x="114.3" y="121.158" size="1.524" layer="95"/>
-<attribute name="VALUE" x="110.998" y="123.317" size="1.778" layer="96"/>
-</instance>
-<instance part="X3" gate="-2" x="111.76" y="119.38" smashed="yes">
-<attribute name="NAME" x="114.3" y="118.618" size="1.524" layer="95"/>
-</instance>
-<instance part="X3" gate="-3" x="111.76" y="116.84" smashed="yes">
-<attribute name="NAME" x="114.3" y="116.078" size="1.524" layer="95"/>
-</instance>
-<instance part="X3" gate="-4" x="111.76" y="114.3" smashed="yes">
-<attribute name="NAME" x="114.3" y="113.538" size="1.524" layer="95"/>
+<instance part="R4" gate="G$1" x="114.3" y="111.76" smashed="yes" rot="R90">
+<attribute name="NAME" x="112.8014" y="107.95" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="117.602" y="107.95" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="IC1" gate="1" x="38.1" y="60.96" smashed="yes">
 <attribute name="VALUE" x="35.56" y="40.64" size="1.778" layer="96"/>
@@ -1059,6 +1057,50 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </instance>
 <instance part="GND5" gate="1" x="111.76" y="55.88" smashed="yes">
 <attribute name="VALUE" x="109.22" y="53.34" size="1.778" layer="96"/>
+</instance>
+<instance part="X2" gate="-1" x="63.5" y="99.06" smashed="yes">
+<attribute name="NAME" x="66.04" y="98.298" size="1.524" layer="95"/>
+<attribute name="VALUE" x="62.738" y="100.457" size="1.778" layer="96"/>
+</instance>
+<instance part="X2" gate="-2" x="63.5" y="96.52" smashed="yes">
+<attribute name="NAME" x="66.04" y="95.758" size="1.524" layer="95"/>
+</instance>
+<instance part="X2" gate="-3" x="63.5" y="93.98" smashed="yes">
+<attribute name="NAME" x="66.04" y="93.218" size="1.524" layer="95"/>
+</instance>
+<instance part="X2" gate="-4" x="63.5" y="91.44" smashed="yes">
+<attribute name="NAME" x="66.04" y="90.678" size="1.524" layer="95"/>
+</instance>
+<instance part="X2" gate="-5" x="63.5" y="88.9" smashed="yes">
+<attribute name="NAME" x="66.04" y="88.138" size="1.524" layer="95"/>
+</instance>
+<instance part="X2" gate="-6" x="63.5" y="86.36" smashed="yes">
+<attribute name="NAME" x="66.04" y="85.598" size="1.524" layer="95"/>
+</instance>
+<instance part="X2" gate="-7" x="63.5" y="83.82" smashed="yes">
+<attribute name="NAME" x="66.04" y="83.058" size="1.524" layer="95"/>
+</instance>
+<instance part="X4" gate="-1" x="35.56" y="83.82" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.02" y="84.582" size="1.524" layer="95" rot="R180"/>
+<attribute name="VALUE" x="36.322" y="82.423" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="X4" gate="-2" x="35.56" y="86.36" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.02" y="87.122" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="X4" gate="-3" x="35.56" y="88.9" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.02" y="89.662" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="X4" gate="-4" x="35.56" y="91.44" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.02" y="92.202" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="X4" gate="-5" x="35.56" y="93.98" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.02" y="94.742" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="X4" gate="-6" x="35.56" y="96.52" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.02" y="97.282" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="X4" gate="-7" x="35.56" y="99.06" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.02" y="99.822" size="1.524" layer="95" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -1077,13 +1119,8 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </segment>
 <segment>
 <pinref part="U$6" gate="G$1" pin="C"/>
-<wire x1="137.16" y1="91.44" x2="137.16" y2="81.28" width="0.1524" layer="91"/>
-<label x="139.7" y="81.28" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X3" gate="-4" pin="S"/>
-<wire x1="109.22" y1="114.3" x2="104.14" y2="114.3" width="0.1524" layer="91"/>
-<label x="101.6" y="114.3" size="1.778" layer="95"/>
+<wire x1="114.3" y1="93.98" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
+<label x="116.84" y="83.82" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="1" pin="GND"/>
@@ -1099,6 +1136,11 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <pinref part="U$1" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="60.96" x2="111.76" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-1" pin="S"/>
+<wire x1="60.96" y1="99.06" x2="58.42" y2="99.06" width="0.1524" layer="91"/>
+<label x="55.88" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -1119,13 +1161,8 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="137.16" y1="114.3" x2="137.16" y2="116.84" width="0.1524" layer="91"/>
-<label x="137.16" y="116.84" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="-1" pin="S"/>
-<wire x1="109.22" y1="142.24" x2="104.14" y2="142.24" width="0.1524" layer="91"/>
-<label x="101.6" y="142.24" size="1.778" layer="95"/>
+<wire x1="114.3" y1="116.84" x2="114.3" y2="119.38" width="0.1524" layer="91"/>
+<label x="114.3" y="119.38" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="1" pin="VCC"/>
@@ -1137,12 +1174,10 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="33.02" y1="137.16" x2="27.94" y2="137.16" width="0.1524" layer="91"/>
 <label x="27.94" y="137.16" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="PT2" class="0">
 <segment>
-<pinref part="X3" gate="-2" pin="S"/>
-<wire x1="109.22" y1="119.38" x2="104.14" y2="119.38" width="0.1524" layer="91"/>
-<label x="101.6" y="119.38" size="1.778" layer="95"/>
+<pinref part="X4" gate="-7" pin="S"/>
+<wire x1="38.1" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
+<label x="38.1" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -1152,14 +1187,14 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <label x="53.34" y="111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-4" pin="S"/>
-<wire x1="109.22" y1="134.62" x2="104.14" y2="134.62" width="0.1524" layer="91"/>
-<label x="101.6" y="134.62" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="1" pin="(PCINT6/OC1A/SDA/MOSI/ADC6)PA6"/>
 <wire x1="88.9" y1="60.96" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
 <label x="91.44" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X4" gate="-1" pin="S"/>
+<wire x1="38.1" y1="83.82" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
+<label x="38.1" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -1169,14 +1204,14 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <label x="27.94" y="114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-3" pin="S"/>
-<wire x1="109.22" y1="137.16" x2="104.14" y2="137.16" width="0.1524" layer="91"/>
-<label x="101.6" y="137.16" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="1" pin="(PCINT5/OC1B/MISO/DO/ADC5)PA5"/>
 <wire x1="88.9" y1="58.42" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
 <label x="91.44" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-7" pin="S"/>
+<wire x1="60.96" y1="83.82" x2="58.42" y2="83.82" width="0.1524" layer="91"/>
+<label x="55.88" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -1186,14 +1221,14 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <label x="27.94" y="111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-2" pin="S"/>
-<wire x1="109.22" y1="139.7" x2="104.14" y2="139.7" width="0.1524" layer="91"/>
-<label x="101.6" y="139.7" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="1" pin="(PCINT4/T1/SCL/USCK/ADC4)PA4"/>
 <wire x1="88.9" y1="55.88" x2="93.98" y2="55.88" width="0.1524" layer="91"/>
 <label x="91.44" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-6" pin="S"/>
+<wire x1="60.96" y1="86.36" x2="58.42" y2="86.36" width="0.1524" layer="91"/>
+<label x="55.88" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RST" class="0">
@@ -1208,70 +1243,21 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <label x="63.5" y="129.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="X3" gate="-1" pin="S"/>
-<wire x1="109.22" y1="121.92" x2="104.14" y2="121.92" width="0.1524" layer="91"/>
-<label x="101.6" y="121.92" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="1" pin="(PCINT11/RESET/DW)PB3"/>
 <wire x1="88.9" y1="76.2" x2="93.98" y2="76.2" width="0.1524" layer="91"/>
 <label x="91.44" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X4" gate="-4" pin="S"/>
+<wire x1="38.1" y1="91.44" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
+<label x="38.1" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PB2" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="A"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="137.16" y1="99.06" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PT1" class="0">
-<segment>
-<pinref part="X3" gate="-3" pin="S"/>
-<wire x1="109.22" y1="116.84" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
-<label x="101.6" y="116.84" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="(PCINT10/INT0/OC0A/CKOUT)PB2"/>
-<wire x1="88.9" y1="73.66" x2="93.98" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="(PCINT9/XTAL2)PB1"/>
-<wire x1="88.9" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="71.12" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="76.2" x2="121.92" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="76.2" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="3"/>
-<wire x1="121.92" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="(PCINT8/XTAL1/CLKI)PB0"/>
-<pinref part="U$1" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="68.58" x2="88.9" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="(PCINT7/ICP/OC0B/ADC7)PA7"/>
-<wire x1="88.9" y1="63.5" x2="93.98" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="(PCINT3/T0/ADC3)PA3"/>
-<wire x1="88.9" y1="53.34" x2="93.98" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="(PCINT2/AIN1/ADC2)PA2"/>
-<wire x1="88.9" y1="50.8" x2="93.98" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="101.6" x2="114.3" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RTS" class="0">
@@ -1292,6 +1278,11 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="88.9" y1="48.26" x2="93.98" y2="48.26" width="0.1524" layer="91"/>
 <label x="91.44" y="48.26" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="X2" gate="-3" pin="S"/>
+<wire x1="60.96" y1="93.98" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
+<label x="55.88" y="93.98" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="TX" class="0">
 <segment>
@@ -1304,12 +1295,95 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="88.9" y1="45.72" x2="93.98" y2="45.72" width="0.1524" layer="91"/>
 <label x="91.44" y="45.72" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="X2" gate="-2" pin="S"/>
+<wire x1="60.96" y1="96.52" x2="58.42" y2="96.52" width="0.1524" layer="91"/>
+<label x="55.88" y="96.52" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="CTS" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="CTS"/>
 <wire x1="33.02" y1="139.7" x2="27.94" y2="139.7" width="0.1524" layer="91"/>
 <label x="27.94" y="139.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="10" class="0">
+<segment>
+<pinref part="X4" gate="-6" pin="S"/>
+<wire x1="38.1" y1="96.52" x2="40.64" y2="96.52" width="0.1524" layer="91"/>
+<label x="38.1" y="96.52" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="(PCINT8/XTAL1/CLKI)PB0"/>
+<pinref part="U$1" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="68.58" x2="88.9" y2="68.58" width="0.1524" layer="91"/>
+<label x="91.44" y="68.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="9" class="0">
+<segment>
+<pinref part="X4" gate="-5" pin="S"/>
+<wire x1="38.1" y1="93.98" x2="40.64" y2="93.98" width="0.1524" layer="91"/>
+<label x="38.1" y="93.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="(PCINT9/XTAL2)PB1"/>
+<wire x1="88.9" y1="71.12" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="71.12" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="76.2" x2="121.92" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="76.2" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="3"/>
+<wire x1="121.92" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
+<label x="91.44" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="8" class="0">
+<segment>
+<pinref part="X4" gate="-3" pin="S"/>
+<wire x1="38.1" y1="88.9" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
+<label x="38.1" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="(PCINT10/INT0/OC0A/CKOUT)PB2"/>
+<wire x1="88.9" y1="73.66" x2="93.98" y2="73.66" width="0.1524" layer="91"/>
+<label x="91.44" y="73.66" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="A7" class="0">
+<segment>
+<pinref part="X4" gate="-2" pin="S"/>
+<wire x1="38.1" y1="86.36" x2="40.64" y2="86.36" width="0.1524" layer="91"/>
+<label x="38.1" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="(PCINT7/ICP/OC0B/ADC7)PA7"/>
+<wire x1="88.9" y1="63.5" x2="93.98" y2="63.5" width="0.1524" layer="91"/>
+<label x="91.44" y="63.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="A2" class="0">
+<segment>
+<pinref part="X2" gate="-4" pin="S"/>
+<wire x1="60.96" y1="91.44" x2="58.42" y2="91.44" width="0.1524" layer="91"/>
+<label x="55.88" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="(PCINT2/AIN1/ADC2)PA2"/>
+<wire x1="88.9" y1="50.8" x2="93.98" y2="50.8" width="0.1524" layer="91"/>
+<label x="91.44" y="50.8" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="A3" class="0">
+<segment>
+<pinref part="X2" gate="-5" pin="S"/>
+<wire x1="60.96" y1="88.9" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
+<label x="55.88" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="(PCINT3/T0/ADC3)PA3"/>
+<wire x1="88.9" y1="53.34" x2="93.98" y2="53.34" width="0.1524" layer="91"/>
+<label x="91.44" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -1322,6 +1396,16 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
 with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>

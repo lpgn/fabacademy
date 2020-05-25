@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,256 +35,116 @@
 
     <!-- Load the menu file -->
     <script>
-    function menu() {
-                      $('#exercises').load("exercises-menu.html");
-                      $('#project').load("project-menu.html");
-                      $('#cclicense').load("license.html");
-                      }
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
     </script>
 
-  </head>
-  <body onload="menu()">
+</head>
+
+<body onload="menu()">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
-              <ul id="exercises" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-              <ul id="project" class="dropdown-menu" role="menu">
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container">
 
-    <!-- Insert your content here below! -->
+        <!-- Insert your content here below! -->
         <div class="jumbotron" style="width: 100%">
             <h1>Week 16</h1>
-            <h3>Title</h3>
+            <h3>Wildcard Week</h3>
             <hr>
-            <h4>Group assignment</h4>
-            <li>blablabla</li>
             <h4>Individual assignment</h4>
-            <li>blabla</li>
+            <li>Design and produce something with a digital fabrication process (incorporating computer-aided design and manufacturing) not covered in another assignment, documenting the requirements that your assignment meets, and including everything necessary to reproduce it. Possibilities include but are not limited to wildcard week examples.</li>
             <h4>Learning outcomes:</h4>
             <ul>
-                <li>ffff</li>
-                <li>ffffffff</li>
+                <li>Demonstrate workflows used in the chosen process</li>
+                <li>Select and apply suitable materials and processes to do your assignment.</li>
             </ul>
             <h4>Have you:</h4>
             <ul>
-                <li>fffffff</li>
-                <li>fffffffffff</li>
-                <li>fffffff</li>
-                <li>fff</li>
+                <li>Documented how you made your creation</li>
+                <li>Described problems and how you fixed them</li>
+                <li>Included your design files and ‘hero shot’ of the result</li>
             </ul>
-            <h4>Assignment</h4>
-            <section class="todo">
-                <ul class="todo-list" style="list-style-type:none">
-                    <li> <label class="tasks-list-item">
-                        <input type="checkbox" name="task_1" value="1" class="tasks-list-cb" checked="">
-                        <span class="tasks-list-mark">ggggggggggrrrrrggggg</span>
-                        <span class="tasks-list-desc"> hhhhhhhhhhhhh </span>
-                        </label> </li>
-                    <li> <label class="tasks-list-item">
-                        <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
-                        <span class="tasks-list-mark">dfdrrrreerre</span>
-                        <span class="tasks-list-desc"> hhhhhhhhhhhh</span>
-                        </label> </li>
-                    <li> <label class="tasks-list-item">
-                        <input type="checkbox" name="task_3" value="1" class="tasks-list-cb" checked="">
-                        <span class="tasks-list-mark">rreerer</span>
-                        <span class="tasks-list-desc"> hhhhhhhhhhhh</span>
-                        </label> </li>
-                    <li> <label class="tasks-list-item">
-                        <input type="checkbox" name="task_4" value="1" class="tasks-list-cb" checked="">
-                        <span class="tasks-list-mark">reerererer</span>
-                        <span class="tasks-list-desc"> hhhhhhhhhhhhhhhhhhhhhh</span>
-                        </label> </li>
-                </ul>
-            </section>
         </div>
-        <hr>
-        <h3>Week workflow</h3>
-        <p class="pic"><img src="media/week8/week8diagram.png"></p>
         <hr>
         <h3>Tools used</h3>
         <ul style="list-style-type:disc">
-            <li>hhhhhh</li>
-            <li>hhhhhhh</li>
+            <li>Large CNC</li>
+            <li>Clamps</li>
         </ul>
         <hr>
         <h3>Software Used</h3>
         <ul style="list-style-type:disc">
-            <li>hhhhh</li>
-            <li>rrrrr</li>
-            <li>rrrrrrrrrrrrrr</li>
+            <li>Autodesk Artcam</li>
+            <li>Solidworks</li>
         </ul>
         <hr>
-        <h2>Introduction</h2>
-        <p> I started this assigment gggggggggggggggggggggggggggggggggggg</p>
-
-    <h3>Menu</h3>
-    <p>
-    You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-    </p>
-
-
-    <h3>Text</h3>
-    <p>
-    You can set it up with:
-    <pre class="prettyprint linenums">
-    &ltp&gt;
-    Your text here
-    &lt/p&gt;</pre>
-    </p>
-    Result:
-    <p>
-    Your text here
-    </p>
-
-    <h3>Images</h3>
-    <p>
-    You can set it up with:
-    <pre class="prettyprint linenums">
-    &ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-    &ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-    &lt/p&gt;</pre>
-    </p>
-    Result:
-    <p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-    <legend>Here's the legend of the picture.</legend>
-    </p>
-
-    <h3>Code</h3>
-    <p>
-    You can set it up with:
-    <pre class="prettyprint linenums">
-    &ltpre class="prettyprint linenums"&gt;
-    Your code here
-    &lt/pre&gt;</pre>
-
-    Result:
-    <pre class="prettyprint linenums">
-    for i in members:
-        print ""
-        print "USER:",members[i]
-        print "Loading connections..."
-        followers = load_connections([i], "followers")
-        friends = load_connections([i], "friends")
-
-        # Add edges...
-        print "Building the graph..."
-
-        for f in followers:
-            for k in followers[f]:
-                graph.add_edge(k,f)
-
-        for f in friends:
-            for k in friends[f]:
-                graph.add_edge(f,k)</pre>
-    </p>
-
-    <h3>3D Model</h3>
-    <p>
-    The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-    <pre class="prettyprint linenums">
-    &ltcanvas id="cv" width=640 height=480&gt;
-    It seems you are using an outdated browser that does not support canvas :-(
-    &lt/canvas&gt;
-    &ltscript type="text/javascript"&gt;
-        var canvas = document.getElementById('cv');
-        var viewer = new JSC3D.Viewer(canvas);
-        viewer.setParameter('SceneUrl','media/2018week6/3D_test_V3_0.4mm.stl');
-        viewer.setParameter('ModelColor','#CAA618');
-        viewer.setParameter('BackgroundColor1','#E5D7BA');
-        viewer.setParameter('BackgroundColor2','#383840');
-        viewer.setParameter('RenderMode','flat');
-        viewer.setParameter('MipMapping','on');
-        viewer.setParameter('Definition','high');
-        viewer.setParameter('Renderer','webgl');
-        viewer.init();
-        viewer.update();
-    &lt/script&gt;</pre>
-
-    You can set up the path to the 3D model (.stl/.obj) within this line:
-    <pre class="prettyprint linenums">
-    viewer.setParameter('SceneUrl','media/2018week6/3D_test_V3_0.4mm.stl');</pre>
-
-    Result:
-    <canvas id="cv" width=640 height=480>
-    It seems you are using an outdated browser that does not support canvas :-(
-    </canvas>
-    <script type="text/javascript">
-        var canvas = document.getElementById('cv');
-        var viewer = new JSC3D.Viewer(canvas);
-        viewer.setParameter('SceneUrl','media/2018week6/3D_test_V3_0.4mm.stl');
-        viewer.setParameter('ModelColor','#CAA618');
-        viewer.setParameter('BackgroundColor1','#E5D7BA');
-        viewer.setParameter('BackgroundColor2','#383840');
-        viewer.setParameter('RenderMode','flat');
-        viewer.setParameter('MipMapping','on');
-        viewer.setParameter('Definition','high');
-        viewer.setParameter('Renderer','webgl');
-        viewer.init();
-        viewer.update();
-    </script>
-    </p>
-
-    <h3>Download</h3>
-    <p>
-    You can set up a button for files to be downloaded with:
-    <pre class="prettyprint linenums">
-    &lta href="#"&gt;
-    &ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-    &lt/a&gt;</pre>
-    </p>
-
-    <p>
-    Result:
-    </p>
-    <p>
-    <a href="#">
-    <button type="button" class="btn btn-primary btn-lg">Download the file</button>
-    </a>
-    </p>
-
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
-    <!-- End of your content -->
+        <h4>Introduction</h4>
+        <p>hhhhhh</p>
+        <hr>
+        <h4>Objectives</h4>
+        <p>jhyjrtyjrtyjhery</p>
+        <hr>
+        <h4>HeroShot</h4>
+        <p class="pic"><img src="media/week16/wildcardheroshot.jpg"></p>
+        <hr>
+        <h4>Plan</h4>
+        <ol>
+            <li>Design Slingshot based on stl files and youtube video</li>
+            <li>Create Gcode</li>
+            <li>mill in the CNC</li>
+            <li>Assemble the many layers creating a laminated version of Jurgen's Slingshot</li>
+        </ol>
+        <hr>
+        <h4>Research</h4>
+        <p>I started by whatching the youtube channel <a href="youtube.com.........">Sligshot Channel by Jurgen ...f.f.....</a></p>
+        <p>kkfldgjslgkhj</p>
+        <p>So lets start with the designing!</p>
+        <!-- End of your content -->
     </div> <!-- /container -->
 
     <!-- footer -->
 
     <footer id="footer">
         <p id="cclicense">
-                </p>
+        </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
 
@@ -300,16 +161,18 @@
     <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
-      !function ($) {
-        $(function(){
-          window.prettyPrint && prettyPrint()
-        })
-      }(window.jQuery)
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
     </script>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 
-  </body>
+</body>
+
 </html>
