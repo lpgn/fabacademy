@@ -422,12 +422,16 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             <p class="pic"><img src="media/week09/eagle23.jpg"></p>
             <p>Here ratsnest is applied.</p>
             <p class="pic"><img src="media/week09/eagle24.jpg"></p>
-        <p>In here I moved the components around in oder to shrink the board a bit. This is basically done with the command "move" If you what to move numerous components select them and type group then type "move"and right click them to move the hole group.</p>
+            <p>In here I moved the components around in oder to shrink the board a bit. This is basically done with the command "move" If you what to move numerous components select them and type group then type "move"and right click them to move the hole group.</p>
             <p class="pic"><img src="media/week09/eagle26.jpg"></p>
             <hr>
             <h4>Ratsnest dilemma</h4>
-<p>Bellow you can see a board with and without ratsnest.</p> 
-        <p>The second board looks more clean and also has a thick contour made with the layer "milling"then is used by the ULP GcodetoPCB to create a milling contour that can be used to detach the board from the copper. The thickness of the polygon will define the milling bit size.</p><p class="pic"><img src="media/week09/board_ratsnest.jpg"></p>I currently prefer making boards without ratsnest, because manual soldering can be imprecise and short circuits are easy o happen and the ratsneat feature can potentialise that.
+            <p>Bellow you can see a board with and without ratsnest.</p>
+            <p>The first board has ratsnest on. Its a bit more cluttered. One advantage is thermal, having a greater copper surface glows for cooling of the board as well as larger conductivity specially in 2 sided boards as one side can be ground and the other side can be for VCC making almost all surfaces for power transfer. The second board looks cleaner.</p>
+            <p class="pic"><img src="media/week09/board_ratsnest.jpg"></p>
+            <p>I currently prefer making boards without ratsnest, because manual soldering can be imprecise and short circuits are easy to happen and the ratsneat feature can increase that.</p>
+            <p>The thick light blue contour drawn with the layer "milling" is used by the ULP GcodetoPCB to create a gcode milling contour, the software will use that to create the limits and the cut can be used to detach the board from the copper stock. The thickness of the polygon will define the milling bit size.
+            </p>
             <p class="pic"><img src="media/week09/board_without_ratsnest.jpg"></p>
             <hr>
             <p>Board BOM</p>
@@ -544,16 +548,43 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             </div>
             <hr>
             <h4>PCB-Gcode</h4>
+            <p> A while back I started using the <a href="http://eagle.autodesk.com/eagle/ulp">User Language Programs(ULP)</a> called <a href="https://github.com/McNugget6750/pcb-gcode">PCB-Gcode</a> its a great program alows many settings that I discovered in part reading the documentation and in part with trial and error.</p>
+            <p>Bellow I show how I setup it for a smooth gcode creation.</p>
+            <ol>
+                <li>Click file</li>
+                <li>then Run ULP</li>
+                <li>then click pcb-gcode-setup</li>
+            </ol>
             <p class="pic"><img src="media/week09/eagle27.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle28.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle29.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle30.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle30.jpg"></p>
+            <p>The settings that I customized are:</p>
+            <ol>
+                <li>I chose to generate only top outlines and top drills: -the first is the generation of the board gcode to cut off the board from the stock. -the second is the holes the board might have. the thickness of the mill bit or drill is chosen in the machine tab</li>
+                <li>here we can set the board thickness, my boards are separated well with 1.72mm cut. and the "num Slices" I chose to do 6, these will mean the board will be cut off in 6 passes. </li>
+                <li>Spot drill holes are light markings made while eching the via and all features of the board design, it serves the purpose of alignment of the drill bit that can be used to drill the hole and prevent the bit heat from sliding on the board. My choice is 0.055mm the same I have for etching.</li>
+                <li>Isolation was one of the most important settings. This settings might make your computer slow down a lot if the maximum is set to hight, what works for me is: -minimum 0.0254mm (default); maximum 1.5mm; step size 0.05mm. The last one together with maximum will ensure 30 passes that will make sure there is no coper in between the traces and they are sufficiently isolated reducing the risks of shorts.These numbers could be an exaggeration but it is working very well and I am obtaining gorgeous boards. In the future I might reduce it or increase the step size. </li>
+            </ol>
             <p class="pic"><img src="media/week09/pcb_gcode01.jpg"></p>
+            <p>In the Machine tab there are settings like: depth of cuts, unit, feed rates and tool diameter are chosen.</p>
+            <ol>
+                <li>- Z high is set to 12.7 (default), this setting should allow clearance for fixtures that could be in the way; -Z up is the clearance from the board when moving from location to location; -Z down is the depth of the cut. This number is very important in my case because I use a 10 degree V bit if I go too deep I cut more than I should and if to shallow I cut less. Of course 10 degrees is not too steep and is more forgiving than a depth mistake with a more steep etching bit; - the drill depth is the depth of the thought hole s, and it should be generally a bit higher than the thickness of the blank pcb to account for imperfections; Drill dwell is the pause between each hole, it allows for cool down of the drill bit, I leave it default.</li>
+                <li>Here I set the unit as mm</li>
+                <li>All my etching feedrates are default</li>
+                <li>The tool diameter I use is 0.1 mm</li>
+            </ol>
             <p class="pic"><img src="media/week09/pcb_gcode02.jpg"></p>
+            <p>The Gcode style tab is used to chose the post processor. I use Mach3.</p>
             <p class="pic"><img src="media/week09/pcb_gcode03.jpg"></p>
+            <p>Here is the visualization of the Gcode provided by the ULP, arrow can be used to move around the image as well as plus minus signs.</p>
             <p class="pic"><img src="media/week09/pcb_gcode04.jpg"></p>
+            <p>4 files get generated</p>
+            <ol>
+                <li>*.bot.mill.gcode: it is the bottom milling (contour), I do not use this file.</li>
+                <li>*.top.drill.gcode: is the gcode for the holes</li>
+                <li>*.top.mill.gcode: is the file for the top layer contour, these file will allow detaching the pcb.</li>
+                <li>Finally *.top.etch.gcode is the gcode of the etching of the pcb containing all the features designed.</li>
+            </ol>
             <p class="pic"><img src="media/week09/pcb_gcode05.jpg"></p>
+            <p>Bellow is the thermistor board isolation visualization.</p>
             <p class="pic"><img src="media/week09/thermistorpath.jpg"></p>
             <hr>
             <h4>Autoleveller</h4>

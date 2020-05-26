@@ -120,6 +120,14 @@
             <li>Arduino IDE</li>
         </ul>
         <hr>
+        <h4>Files</h4>
+        <ol>
+            <li>Eagle <a href="media/week09/eagle/">files</a></li>
+            <li>Gcode <a href="media/week09/gcode/">files</a></li>
+            <li>Code <a href="media/week09/code/">files</a></li>
+            <li>Datasheet <a href="media/week09/datasheet/">files</a></li>
+        </ol>
+        <hr>
         <h4>Introduction</h4>
         <p> I started this assignment with the intention to improve the farm irrigation automation. We already have an ESP8266 controlling a pump and 4 relays and monitoring the pump's current draw. The problem is that the ESP8266 on its program is not responsive and makes setting up the times time consuming. This is due to a limitation on the quantity of ADC pins. It was explained to me by the Shakeel one volunteer that we had in the farm that the ESP8266 uses the only ADC pin to monitor its wifi connection so he created a program that reduces the samples taken by the amp meter in other to share the pin with the wifi. Well this works but makes the wifi connection unreliable, so my challenge will be trying to understand the ESP32 so I can port his program and complete the assignment at the same time. Lets try!</p>
         <p>The other thing I would like to point is that I will focus more on the code as I already demonstrated the PCB manufacturing process In the other week and also as a major change in the way I complete the assignment is that I will document as I learn and do things so the assignment will feel more like a log than a tutorial.</p>
@@ -322,7 +330,7 @@ if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
 
 }</pre>
         <p>With the firmware burned as already shown in <a href="exercise08.html">Embedded Programing</a> I can show the Attiny44 controling a relay to turn on a compressor on a specific time set in the program.</p>
-                <p class="pic"><video controls>
+        <p class="pic"><video controls>
                 <source src="media/week11/outputdevicestest.mp4">Your browser does not support HTML5 video.</video>For a full resolution video check <a href="https://www.youtube.com/watch?v=wcq0y42teHU">Youtube</a></p>
 
         <!-- End of your content -->
@@ -337,7 +345,7 @@ if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
             Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
             Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
-        <p>Now lets see the code running on the new board controlling a relay that will turn on a  </p>
+        <p>Now lets see the code running on the new board controlling a relay that will turn on a </p>
     </footer>
 
 
