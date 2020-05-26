@@ -164,8 +164,9 @@
 
         <hr>
         <h4>Files</h4>
-        <ol><li>Eagle <a href="media/week09/eagle/">files</a></li>
-        <li>Gcode <a href="media/week09/gcode/">files</a></li>
+        <ol>
+            <li>Eagle <a href="media/week09/eagle/">files</a></li>
+            <li>Gcode <a href="media/week09/gcode/">files</a></li>
             <li>Code <a href="media/week09/code/">files</a></li>
         </ol>
         <hr>
@@ -381,30 +382,52 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
                 <li>On the dialog click on yes in other to place the components next to what will be the board space.</li>
             </ol>
             <p class="pic"><img src="media/week09/eagle05.jpg"></p>
+            <p> With the components placed next to the square that represents the board, the board will be resized later.</p>
             <p class="pic"><img src="media/week09/eagle06.jpg"></p>
+            <p>Typing "move" then "pressing enter" alows you to click on each component and drag it to insid the board.</p>
             <p class="pic"><img src="media/week09/eagle07.jpg"></p>
+            <p>Here I started dragging the attiny45 inside the board limits. Again, clicking each component won't require typing "move" again, unless "esc" is pressed or another command.</p>
             <p class="pic"><img src="media/week09/eagle08.jpg"></p>
+            <p>Here all components are dragged and the superior limits are being dragged and resized with the command "move" ass well. Another way of moving components is typing "info" and then left clicking the component, this will allow typing the coordinates of the element instead of dragging.</p>
             <p class="pic"><img src="media/week09/eagle09.jpg"></p>
+            <p>The command "rotate" will alow you to turn the component to the ideal orientation routing the wires is more eficient. The yellow lines represent the connections created in the schematics part.</p>
             <p class="pic"><img src="media/week09/eagle10.jpg"></p>
+            <p>Here I am creating a contour with the command polygon, when its closed it will open a dialog box.</p>
             <p class="pic"><img src="media/week09/eagle11.jpg"></p>
+            <p>After the polygon is finished the dialog will open typing "GND" connects the polygon to ground.</p>
             <p class="pic"><img src="media/week09/eagle12.jpg"></p>
+            <p>Typing ratsnest of clicking its icon will fill up the hole board area with the ground layer so now either by typing autoroute or the net command the components can be connected.</p>
             <p class="pic"><img src="media/week09/eagle13.jpg"></p>
+            <p>Now before routing the components go to edit --&#62 design rules and there the distances between each element can be defined.</p>
             <p class="pic"><img src="media/week09/eagle13b.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle14.jpg"></p>
+            <p>In the tab sizes define the minimum with of wire. On my experience 0.2mm works great.</p>
             <p class="pic"><img src="media/week09/eagle15.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle16.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle17.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle18.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle19.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle20.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle22.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle23.jpg"></p>
-            <p class="pic"><img src="media/week09/eagle24.jpg"></p>
+            <p>The tab clearance sets the distance between each element of the pcb I am sing currently 0.3mm on all Signals.</p>
             <p class="pic"><img src="media/week09/eagle25.jpg"></p>
+            <p>Now with all design rules set typing autorouter or clicking its icon will start the process of connecting each component.</p>
+            <p class="pic"><img src="media/week09/eagle16.jpg"></p>
+            <p>An important setting is clicking on the dialog box labeled bottom and selecting N/A if not desired two sides. Then pressing willl start the process.</p>
+            <p class="pic"><img src="media/week09/eagle17.jpg"></p>
+            <p>Next chose one of the option and then click on evaluate or end job in order to go back to the board layout.</p>
+            <p>I circled in yellow to show the bottom layer of the board in blue. I do not want this so I will reset the board in the next step.</p>
+            <p class="pic"><img src="media/week09/eagle18.jpg"></p>
+            <p>Here you can see the effect of the command "ratsnest". This command will basically fill up all the spaces not occupied by a via with the ground element.</p>
+            <p class="pic"><img src="media/week09/eagle19.jpg"></p>
+            <p>Because I want autorouter do it over I typed "ripup" and then I selected all so all routes are undone.</p>
+            <p class="pic"><img src="media/week09/eagle20.jpg"></p>
+            <p>And redo the autoroute process.</p>
+            <p class="pic"><img src="media/week09/eagle22.jpg"></p>
+            <p></p>
+            <p>Here the route is done but not yet with ratsnet.</p>
+            <p class="pic"><img src="media/week09/eagle23.jpg"></p>
+            <p>Here ratsnest is applied.</p>
+            <p class="pic"><img src="media/week09/eagle24.jpg"></p>
+        <p>In here I moved the components around in oder to shrink the board a bit. This is basically done with the command "move" If you what to move numerous components select them and type group then type "move"and right click them to move the hole group.</p>
             <p class="pic"><img src="media/week09/eagle26.jpg"></p>
             <hr>
-            <h4>Ratsnest dilema</h4>
-            <p class="pic"><img src="media/week09/board_ratsnest.jpg"></p>
+            <h4>Ratsnest dilemma</h4>
+<p>Bellow you can see a board with and without ratsnest.</p> 
+        <p>The second board looks more clean and also has a thick contour made with the layer "milling"then is used by the ULP GcodetoPCB to create a milling contour that can be used to detach the board from the copper. The thickness of the polygon will define the milling bit size.</p><p class="pic"><img src="media/week09/board_ratsnest.jpg"></p>I currently prefer making boards without ratsnest, because manual soldering can be imprecise and short circuits are easy o happen and the ratsneat feature can potentialise that.
             <p class="pic"><img src="media/week09/board_without_ratsnest.jpg"></p>
             <hr>
             <p>Board BOM</p>
@@ -570,7 +593,8 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             <legend>Milling the board boarders</legend>
             <h4>The results</h4>
             <p class="pic"><img src="media/week09/thermistorboardnosolder.jpg"></p>
-            <p class="pic"><img src="media/week09/thermistorboardwithsolder.jpg"></p>            <p class="pic"><img src="media/week09/finalresult.jpg"></p>
+            <p class="pic"><img src="media/week09/thermistorboardwithsolder.jpg"></p>
+            <p class="pic"><img src="media/week09/finalresult.jpg"></p>
             <h4>Foot notes</h4>
             <p> avrdude -Cavrdude.conf -v -pattiny45 -cusbasp -Pusb -e -Uefuse:w:0xff:m -Uhfuse:w:0xdf:m -Ulfuse:w:0xe2:m</p>
             <p>serial motor : https://www.youtube.com/watch?v=9CX4i6rMXS8</p>
