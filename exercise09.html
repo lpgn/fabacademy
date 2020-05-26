@@ -588,47 +588,53 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             <p class="pic"><img src="media/week09/thermistorpath.jpg"></p>
             <hr>
             <h4>Autoleveller</h4>
+            <p>Autoleveller is a great software. By probing the blank pcb and then using the file generated to adjust the depth of cut of the gcode, it ensures the milling machine will follow the relief of the blank pcb. I start Autoleveller runing its executable, there is no instalation needed on linux. Next click File and then Original Gcode File (OFG): this will alow loading the original Gcode in the program.</p>
             <p class="pic"><img src="media/week09/autoleveller01.jpg"></p>
+            <p>Click in the original gcode.</p>
             <p class="pic"><img src="media/week09/autoleveller02.jpg"></p>
+            <p>Click yes so the settings will be based on the file loaded</p>
             <p class="pic"><img src="media/week09/autoleveller03.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller04.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller04b.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller05.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller06.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller07.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller08.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller09.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller09b.jpg"></p>
-            <p class="pic"><img src="media/week09/autoleveller10.jpg"></p>
+            <p>Next click on Generate PFG on the botom right of the window, this will create a gcode with a set of instructions, it will: -first probe the Z 0; -second probe several points in the area of the board; - tird it will ask for a location in other to save the raw file, that will later be used to create the autoleveled gcode.</p>
             <p class="pic"><img src="media/week09/autoleveller11.jpg"></p>
-
-
-            <h4>Machining process</h4>
-
-            <p class="pic"><img src="media/week09/mach3.jpg"></p>
-            <p class="pic"><img src="media/week09/mach3_02.jpg"></p>
-            <p class="pic"><img src="media/week09/mach3_03.jpg"></p>
-
+            <p>This is the PFG file being saved. Next load this gcode to the cnc and follow the intructions on the gcode area.</p>
+            <p class="pic"><img src="media/week09/autoleveller05.jpg"></p>
+            <p>Now its the time to attach the blank PCB to the CNC bed. I am no longer using double sided tape as its not as effective as the fixtures, also there is the need to clean up the leftover tape later.</p>
             <p class="pic"><img src="media/week09/machining01.jpg"></p>
+            <p>In my cnc I have machined a pocket prior so the board has a fixed location, that helps immobilizing the blank.</p>
             <p class="pic"><img src="media/week09/machining02.jpg"></p>
+            <p>In the CNC with the PFG loaded follow the instruction on the screen by attaching the probe.</p>
+            <p class="pic"><img src="media/week09/mach3.jpg"></p>
+            <p>Here I am attaching the probe to the surface of the board and the the alligator clip to the mill bit.</p>
             <p class="pic"><img src="media/week09/machining03.jpg"></p>
+            <p>This video shows the probing process.</p>
             <p class="pic"><video controls>
                     <source src="media/week09/autocalibration2.mp4">Your browser does not support HTML5 video.</video></p>
+            <p>With the probing done save the raw file and take it to Autoleveller and load it.</p>
+            <p class="pic"><img src="media/week09/autoleveller06.jpg"></p>
+            <p>Load the raw probe file back into the autoleveller.</p>
+            <p class="pic"><img src="media/week09/autoleveller07.jpg"></p>
+            <p>Last save the adjusted gcode by clicking Autolevel on the bottom right of the screen. Save the file and take it to the CNC for the milling process to begin.</p>
+            <p class="pic"><img src="media/week09/autoleveller10.jpg"></p>
+            <h4>Machining process videos</h4>
             <p class="pic"><video controls>
-                    <legend>Collecting Raw data points for auto calibration calculations</legend>
                     <source src="media/week09/machining03acomp.mp4">Your browser does not support HTML5 video.
-                </video></p>
+                </video><legend>Slow motion video of etching (milling) process.</legend></p>
+        <p> The final result is here, sometimes I use sandpaper 1000 grit to give it a better finishing.</p>
             <p class="pic"><img src="media/week09/machining04.jpg"></p>
-            <p class="pic"><video controls>
-                    <source src="media/week09/millingtheboardboarderscomp.mp4">Your browser does not support HTML5 video.</video></p>
+        <p>Now I am going to show the boarder being cut.</p>
+            <p class="pic">
+                <legend></legend><video controls>
+                    <source src="media/week09/millingtheboardboarderscomp.mp4">Your browser does not support HTML5 video.</video>
+            </p>
             <legend>Milling the board boarders</legend>
+        <hr>
             <h4>The results</h4>
-            <p class="pic"><img src="media/week09/thermistorboardnosolder.jpg"></p>
-            <p class="pic"><img src="media/week09/thermistorboardwithsolder.jpg"></p>
-            <p class="pic"><img src="media/week09/finalresult.jpg"></p>
+            <p class="pic"><img src="media/week09/thermistorboardnosolder.jpg"><legend>Thermistor board just before soldering.</legend></p>
+            <p class="pic"><img src="media/week09/thermistorboardwithsolder.jpg"><legend>thermistor board after soldering and cleaning with isopropil alcohol.</legend></p>
+            <p class="pic"><img src="media/week09/finalresult.jpg"><legend>Attiny45 board plus the thermistor board ready for work.</legend></p>
             <h4>Foot notes</h4>
             <p> avrdude -Cavrdude.conf -v -pattiny45 -cusbasp -Pusb -e -Uefuse:w:0xff:m -Uhfuse:w:0xdf:m -Ulfuse:w:0xe2:m</p>
-            <p>serial motor : https://www.youtube.com/watch?v=9CX4i6rMXS8</p>
+            <p>serial monitor : https://www.youtube.com/watch?v=9CX4i6rMXS8</p>
             <p>attiny fan controler project: http://www.robotroom.com/DualFan.html</p>
             <p>reads temp with arduino and ntc thermistor https://circuitdigest.com/microcontroller-projects/arduino-thermistor-interfacing-code-circuit</p>
             <p>setup arduino 022: http://highlowtech.org/?p=1229</p>
