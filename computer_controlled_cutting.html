@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2020 - Lucio Pentagna</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+
+</head>
+
+<body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu">
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Computer-Controlled Cutting</h3>
+            <hr>
+            <h3>Laser Cutting</h3>
+            <h4>Group Assignment</h4>
+            <ul>
+                <li>
+                    Characterize your lasercutter, making lasercutter test part(s), making test part(s) that vary cutting settings and dimensions(group project)
+                </li>
+            </ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Cut something on the vinylcutter</li>
+                <li>Design, lasercut, and document a parametric press-fit construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Demonstrate and describe parametric 2D modelling processes</li>
+                <li>Identify and explain processes involved in using the laser cutter.</li>
+                <li>Develop, evaluate and construct the final prototype</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Explained how you parametrically designed your files</li>
+                <li>Shown how you made your press-fit kit</li>
+                <li>Included your design files and photos of your finished project</li>
+            </ul>
+            <h3>Vinyl Cutting</h3>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Cut something on the vinylcutter</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Identify and explain processes involved in using this machine.</li>
+                <li>Design and create the final object</li>
+
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Explained how you drew your files</li>
+                <li>Shown how you made your vinyl project</li>
+                <li>Included your design files and photos of your finished project</li>
+            </ul>
+        </div>
+
+        <hr>
+        <h3>
+            Week workflow
+        </h3>
+        <p class="pic">
+            <img src="media/computer_controlled_cutting/diagram.jpg">
+            <legend>
+                Chart made at
+                <a href="https://www.draw.io/">
+                    Draw.io
+                </a>
+            </legend>
+        </p>
+
+        <h3>
+            Tools used
+        </h3>
+
+        <ul style="list-style-type:disc">
+
+            <li>
+                laser cutter
+            </li>
+            <li><a href="https://wiki.imal.org/resource/silhouette-cameo-3">Silhouette Cameo</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h3>
+            Software Used
+        </h3>
+
+        <ul style="list-style-type:disc">
+
+            <li>
+                Solidworks
+            </li>
+
+            <li>
+                Ink Scape
+            </li>
+
+            <li>
+                Repetier host
+            </li>
+
+            <li>
+                Sublime text 3
+            </li>
+            <li>
+                Silhouette Studio
+            </li>
+
+        </ul>
+
+
+        <hr>
+        <h2>
+            Group Assignment
+        </h2>
+        <p>Go to <a href="http://fabacademy.org/2018/labs/farmlabalgarve/">group assignment page</a></p>
+        <h2>
+            Introduction
+        </h2>
+
+
+        <p>
+            On this assignment I will be using a diode laser cutter manly. I have designed and made a 3D printer and then I upgraded it with a 2 watts diode laser cutter. I will be testing its capabilities and testing it to its limits in other to have a better understand of its capabilities and limitations. I expect to be able to use the patterns created to test other machines. On the Vinyl I will try to use the same machine and document its results.
+        </p>
+
+
+        <p class="pic">
+            <img src="media/computer_controlled_cutting/3dprinter.jpg">
+            <legend>
+                3D printer I designed and made with a carbon fiber milled body
+            </legend>
+        </p>
+
+
+        <p class="pic">
+            <img src="media/computer_controlled_cutting/laserdetail.jpg">
+            <legend>
+                the printer now with a 2 watts diode laser head attached to it
+            </legend>
+        </p>
+
+
+        <h3>
+            Making test patterns
+        </h3>
+
+        <p>
+            deciding what to test...
+        </p>
+
+        <lo>
+
+            <li>
+                ideal focus hight
+            </li>
+
+            <li>
+                ideal cutting speed
+            </li>
+
+            <li>
+                cutting depth capacity
+            </li>
+
+            <li>
+                kerf
+            </li>
+
+        </lo>
+
+        <h3>Vinyl Cutting</h3>
+
+        <p>
+            The Vinyl cutter we have in the Lab is the Silhouette Cameo 3. It's a nice affordable easy to use Vinyl Cutter.</p>
+        <p class="pic">
+            <img src="media/computer_controlled_cutting/cameo3.jpg">
+            <legend>
+                Lab's Silhouette Cameo 3
+            </legend>
+        </p>
+        <p>It comes with the software Silhouette Studio.</p>
+        <p class="pic">
+            <img src="media/computer_controlled_cutting/silhouettestudio.jpg">
+            <legend>Print from the first screen when you open Silhouette Studio</legend>
+        </p>
+        <h4>Learning outcomes:</h4>
+        <ul>
+            <li>Identify and explain processes involved in using this machine.</li>
+        </ul>
+
+        <ol type="1">
+            <li>
+                Creating the file
+            </li>
+            <ol type="i">
+                <li>
+                    Selecting a file from Library
+                </li>
+                <p>As a warm up and because we are near the Halloween I decided to cut something my kids could use</p>
+                <p class="pic">
+                    <img src="media/computer_controlled_cutting/library.jpg">
+                    <legend>
+                        image of Studio Library
+                    </legend>
+                </p>
+                <p>I chose the bat from the library.</p>
+                <p>
+                    <img src="media/computer_controlled_cutting/bat.jpg">
+                    <legend>
+                        outline of the bat chosen from the Studio's library
+                    </legend>
+                </p>
+                <p></p>
+                <p>
+                    <img src="media/computer_controlled_cutting/batresize.jpg">
+                    <legend>
+                        outline of the bat chosen from the Studio's library. Once clicking twice the bat getis inserted in the middle of the work area.
+                    </legend>
+                </p>
+                <p>Then using ctrl+c Ctrl+v I copied and pasted the bat several times.</p>
+                <p>
+                    <img src="media/computer_controlled_cutting/batcopypaste.jpg">
+                    <legend>
+                        outline of the bat chosen from the Studio's library
+                    </legend>
+                </p>
+                <p>I chose the bat from the library</p>
+                <p>
+                    <img src="media/computer_controlled_cutting/batselection.jpg">
+                    <legend>
+                        outline of the bat chosen from the Studio's library
+                    </legend>
+                </p>
+                <p>I chose the bat from the library</p>
+                <p>
+                    <img src="media/computer_controlled_cutting/batalign.jpg">
+                    <legend>
+                        outline of the bat chosen from the Studio's library
+                    </legend>
+                </p>
+                <p>I chose the bat from the library</p>
+                <p>
+                    <img src="media/computer_controlled_cutting/mediasize.jpg">
+                    <legend>
+                        outline of the bat chosen from the Studio's library
+                    </legend>
+                </p>
+                <p>I chose the bat from the library</p>
+                <p>
+                    <img src="media/computer_controlled_cutting/batusingthemostofthevinyl.jpg">
+                    <legend>
+                        outline of the bat chosen from the Studio's library
+                    </legend>
+                </p>
+                <p>I chose the bat from the library</p>
+                <p>
+                    <img src="media/computer_controlled_cutting/batchecksetingsandsendagain.jpg">
+                    <legend>
+                        outline of the bat chosen from the Studio's library
+                    </legend>
+                </p>
+            </ol>
+        </ol>
+        <ul>
+            <li>Design and create the final object</li>
+
+        </ul>
+        <h4>Have you:</h4>
+        <ul>
+            <li>Explained how you drew your files</li>
+            <li>Shown how you made your vinyl project</li>
+            <li>Included your design files and photos of your finished project</li>
+        </ul>
+
+
+        <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+    <!-- footer -->
+
+    <footer id="footer">
+        <p id="cclicense">
+        </p>
+        <p class="license">
+            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+</body></html>
