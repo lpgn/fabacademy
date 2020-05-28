@@ -78,9 +78,7 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
-
     <div class="container">
-
         <!-- Insert your content here below! -->
         <div class="jumbotron" style="width: 100%">
             <h3>Wildcard Week</h3>
@@ -102,63 +100,118 @@
         <hr>
         <h3>Tools used</h3>
         <ul style="list-style-type:disc">
-            <li>Large CNC</li>
-            <li>Clamps</li>
+            <li>Old Electric fryer</li>
+            <li>Wire cutter</li>
         </ul>
         <hr>
         <h3>Software Used</h3>
         <ul style="list-style-type:disc">
-            <li>Autodesk Artcam</li>
-            <li>Solidworks</li>
+            <li>Arduino IDE</li>
+            <li></li>
         </ul>
         <hr>
         <h4>Introduction</h4>
         <p> On Molding and casting week I had a problem. I needed machinable wax quickly. I had not ordered it ahead and and judging by other consumables delivery time I would not receive in time at a reasonable cost.</p>
+        <p>So my decision was easy, on this week's assignment I will be making a machine that helps me make my own machinable wax.</p>
+        <p class="pic left"><img src="media/wildcard_week/scared_smiley_surprised-512.jpg" width="10%"></p>
+        <p>So yes I will be using the knowledge aquired in the previous weeks and even some of the hardware to achieve a digitally manufactured machinable wax.</p>
+        <hr>
+        <h3>Safety first</h3>
+        <p>Read this first!! Extracted from <a href="http://shamrockaffiliations.ws/Paraffin_Wax_Flash_Points.php#.Xs-_czpKjOg">Shamrock Candles website</a> and lightly modified.</p>
+        <p></p>
+        <p>Can paraffin wax catch fire? Yes, highly-flammable paraffin wax generally ignites at the following temperatures, depending upon its melting point, and the hardeners you mix into it:</p>
+        <ol>
+            <li>Paraffin wax without additives: 199°C (390.2°F).
+            </li>
+            <li>Paraffin wax with additives: 249°C (480.2°F).</li>
+        </ol>
+        <p class="pic left"><img src="media/wildcard_week/fire-safety-icon-0.jpg"></p>
 
-
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice11.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/tiny45withsensor.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice01.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice02.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice03.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice04.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice05.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice06.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice07.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice08.jpg"></p>
-        <p class="pic"><video controls>
-                <source src="media/molding_and_casting/smurfjuice.mp4">Your browser does not support HTML5 video.</video></p>
-
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice09.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice10.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/smurfjuice11.jpg"></p>
-
-        <h4>Foot notes</h4>
+        <p>Because of additives used in the process we are doing, the mix will exceed 100 degrees, using a double-boiler, which prevents wax from exceeding the temperature of boiling water, becomes impossible.</p>
+        <p>So in my project I don't want to use open flame (gas stove, etc...). The flammability of paraffin causes a problem, when melting wax directly on the stove. Watch for signs of overheating: candle wax turns brown, smells bitter, smokes and sizzles, some time before it approaches the point of auto ignition.</p>
+        <h4>How to Put out a Paraffin Wax Fire</h4>
+        <p>So, if parafin (or candle wax) combusts, how do you extinguish the fire? Do not pour water over burning wax. This impulsive action might be the first thing one thinks of, but this simply accelerates the fire, and causes an explosion. Instead, switch your electricity mains off. Stick a lid onto the pot with the flaming wax. This smothers the flames, and causes the fire to die down naturally.</p>
+        <hr>
+        <h4>The process of building the machine and making the Machinable Wax:</h4>
+        <h4>1-What I learned from input devices</h4>
+        <p>On <a href="input_devices.html">Input Devices</a> I made a thermometer so I wanted to use it to take the temperature reading and order to activate deactivate the heater resistance and obtain controlled temperature</p>
+        <p class="pic left"><img src="media/wildcard_week/tiny45withsensor.jpg"></p>
+        <h4>2- The code used</h4>
+        <p>The <a href="https://github.com/zaggo/ReflowController">code</a> I used is for a reflow soldering oven and it required minimum changes to perform the test.</p>
+        <p>The problem was the size it was too big and in other to use it on the attiny44 it loses software serial so I had to use an Arduino instead. Luckily <a href="https://github.com/zaggo">Zaggo</a> the author had a debug mode and all went flawlessly.</p>
+        <p>I could then use his debug mode to view the changes in temperature.</p>
+        <p>The project of the <a href="http://pleasantsoftware.com/developer/3d/reflow/">reflow oven</a> can be found on github.</p>
+        <h4>3- The build process</h4>
+        <p>You will be amazed what you can find in the trash.</p>
+        <p>Of course my dumpster diving impulses are much contained now on times of a pandemic but hopefully one day I will be able to go back to one of my preferred activities.</p>
+        <p>So some time ago I found this fryer</p>
+        <p>The brand is UFESA and I couldn't find much information outline except some 2nd hand websites from south Asia</p>
+        <p>In malasya it sells used for around <a href="https://my.carousell.com/p/deep-fryer-ufesa-84127728/">20 Euros</a> :)</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice01.jpg"></p>
+        <p>Tuning it upside down I opened the first cover, there athe mains cable could be reattached as the original was cut.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02.jpg"></p>
+        <p>The second cover revealed much more interesting stuff, lets see:</p>
+        <ol>
+            <li>a lever that is connected to some type of current adjusting mechanism I couldn't identify.</li>
+            <li>a temperature fuse</li>
+            <li>the resistance</li>
+            <li>a light bulb</li>
+        </ol>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02b.jpg"></p>
+        <p>I believe in the future I could have a servo atached to the lever or another way to adjust the max current.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02c.jpg"></p>
+        <p>The temperature fuse is rated at 228 degrees ading another level of safety to the project. Nice!</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02d.jpg"></p>
+        <p>I couldn't find its datasheet but its part# is DNKD226P</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02e.jpg"></p>
+        <p>The Heater resistance reads 30 amps so it was working as it matches its label (1600w 220V~)</p>
+        <p>I calculated it with the following <a href="https://www.homebrewtalk.com.br/threads/resist%C3%AAncias-el%C3%A9tricas-quase-tudo-que-voc%C3%AA-quer-saber.403630/">formula</a>:</p>
         <pre><code>
-https://www.homebrewtalk.com.br/threads/resist%C3%AAncias-el%C3%A9tricas-quase-tudo-que-voc%C3%AA-quer-saber.403630/
-
-
-R = Resistência (Ohms)
-V = Tensão (voltagem)
-I = Corrente (amperagem)
-P = Potência (watts)
+R = Resistance (Ohms)
+V = Tension (Volts)
+I = Current (amps)
+P = Power (watts)
 
 I = P / V
-I = 2000 / 220
-I =~ 9,09 Amperes (corrente que a resistência puxa a 220)
+I = 1600 / 220
+I =~ 7.27 Amps (Thats the current drawn at 220 Volts)
 
 R = V / I
-R = 220 / 9,09
-R = 24,2 Ohms
-
-A resistência em Ohms da resistência de 2000 watts é constante, ou seja, continua a mesma se tu ligar em 127 ou 220, então, ligando a 127 volts:
-
-P = V² / R
-P = 127*127 / 24,2
-P =~ 669 watts
-
-Ou seja, uma resistência de 2000 watts cai pra 669 watts se ligado em 127 volts, mais ou menos 1/3.
+R = 220 / 7.27
+R = ~30.26 Ohms
 </code></pre>
+        <p>This result matches the reading of the ammeter almost perfectly.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice03.jpg">
+        </p>
+        <p>So with the previous information checked I could continue with the project without the fear of doing it for nothing if the resistance was broken. After all I found it in the trash.</p>
+        <p>Next I attached a thermistor with processor thermal paste and kapton tape.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice04.jpg"></p>
+        <p>The thermistor 100k was then soldered to my thermistor board replacing the smd thermistor I had done in <a href="input_devices.html">Input devices</a>.</p>
+        <p>In the below photo you can see:</p>
+        <ol>
+            <li>Mains plug;</li>
+            <li><a href="input_devices.html">Thermistor board</a>;</li>
+            <li>Amp meter for future additional safety with current reading;</li>
+            <li>Relay</li>
+            <li>Arduino Uno</li>
+        </ol>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice05.jpg"></p>
+        <h4>3- Making the wax</h4>
+        <p>As a reference I read the following pages on how to make machinable wax</p>
+        <ol>
+            <li><a href="https://www.instructables.com/id/Machinable-Wax/">Instructables</a></li>
+            <li><a href="https://hackaday.com/2016/06/11/new-cnc-machine-diy-machinable-wax/">Hackaday</a></li>
+            <li>And this <a href="https://www.youtube.com/watch?v=e1tU4tLypBU">video</a></li>
+        </ol>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice06.jpg"></p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice07.jpg"></p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice08.jpg"></p>
+        <p class="pic"><video controls>
+                <source src="media/wildcard_week/smurfjuice.mp4">Your browser does not support HTML5 video.</video></p>
+
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice09.jpg"></p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice10.jpg"></p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice11.jpg"></p>
 
         <!-- End of your content -->
     </div> <!-- /container -->
