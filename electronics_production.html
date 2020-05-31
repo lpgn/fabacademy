@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
@@ -81,7 +82,6 @@
     <div class="container">
 
         <!-- Insert your content here below! -->
-
         <div class="jumbotron" style="width: 100%">
             <h3>Electronics Production</h3>
             <hr>
@@ -107,181 +107,125 @@
             </ul>
         </div>
         <hr>
-        <h2>
-            Group Assignment
+        <h2> Group Assignment
         </h2>
         <p>Go to <a href="http://fabacademy.org/2018/labs/farmlabalgarve/">group assignment page</a></p>
-
         <h2>Individual Assignment</h2><br>
         <p>This week I will be making a ISP <a href="https://en.wikipedia.org/wiki/In-system_programming">(In-system programming)</a> or in-circuit programmer.</p>
-
         <p>I chose to do <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP</a>. I chose it for its simplicity and cost as it is striped down to a bare minimum of components.</p>
-
         <p class="pic"><img src="media/electronics_production/image001.jpg">
             <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
-
         <p class="pic"><img src="media/electronics_production/image003.jpg">
             <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
 
-
         <p>The process will be split in phases, Milling, Stuffing/Populating, De-buging, Programing:</p>
-
         <h4>Milling</h4>
         <p>On this phase I will be using the following:</p>
-
         <ul>
             <li>Fab Modules <a href="http://fabmodules.org"></a></li>
             <li>Mach3</li>
             <li>The CNC</li>
         </ul>
-
         <h4>Fab Modules</h4>
-
         <p>- I started by downloading the Traces (1000 dpi) and Outline Cutout (1000 dpi) of the circuit provided at Brian's tutorial.</p>
-
         <p class="pic"><img src="media/electronics_production/image005.png">
             <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
-
         <p class="pic"><img src="media/electronics_production/image007.png">
             <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
-
         <h4>- At Fab modules</h4>
-
         <p>I selected the option "image (.jpg)"</p>
-
         <p class="pic"><img src="media/electronics_production/image009.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>I choose the image file</p>
         <p class="pic"><img src="media/electronics_production/image011.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>Once image is loaded I selected "output format" and then "G-codes (.nc)"</p>
-
         <p class="pic"><img src="media/electronics_production/image013.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>On Process I selected "PCB traces (1/64)"</p>
-
         <p class="pic"><img src="media/electronics_production/image015.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>Before calculating I changed the cut depth to 0.05, half of the default value as I was being a bit cautious on it.</p>
         <p class="pic"><img src="media/electronics_production/image017.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>Then pressed calculate</p>
-
         <p class="pic"><img src="media/electronics_production/image019.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>After calculation I proceed with an inspection of the tool path to make sure that all traces were covered. By holding left mouse key I was able to move the image and with the wheel button I could zoom the image to better check the tool path.</p>
-
         <p class="pic"><img src="media/electronics_production/image021.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>By holding right mouse key I was able to even see it with a different perspective.</p>
-
         <p class="pic"><img src="media/electronics_production/image023.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>Last I saved the file for the milling process.</p>
-
         <p class="pic"><img src="media/electronics_production/image025.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p class="pic"><img src="media/electronics_production/image027.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>To outline I followed the same steps as before except I chose to "PCB outline (1/32)" instead of traces.</p>
-
         <p class="pic"><img src="media/electronics_production/image029.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
-        <h4>2. Mach3</h4>
-
+        <h4>2- Mach3</h4>
         <p>I started the preparation of the cnc by milling a pocket the size of the blank PCB (76x50x1.5mm)</p>
-
         <p class="pic"><img src="media/electronics_production/image031.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>Milling the pocket</p>
-
         <p class="pic"><img src="media/electronics_production/image033.jpg">
             <legend>photo of my cnc making a pocket for the blank pcb</legend>
         </p>
-
         <p>Finished pocket</p>
-
         <p class="pic"><img src="media/electronics_production/image035.jpg">
             <legend>photo of my cnc finishing pocket</legend>
         </p>
-
         <p>Gluing double face tape on the FR1 board
         </p>
-
         <p class="pic"><img src="media/electronics_production/image037.jpg">
             <legend>back of blank pcb</legend>
         </p>
-
         <p>The end result is this.</p>
-
         <p class="pic"><img src="media/electronics_production/image039.jpg">
             <legend>finishing the outside of the ISP</legend>
         </p>
-
         <p>Milling the cutout of one of the ISP's </p>
-
         <p class="pic"><img src="media/electronics_production/image041.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>Removing the PCB from the pocket.</p>
-
         <p class="pic"><img src="media/electronics_production/image043.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>I used a blade and sandpaper to remove shavings left from the milling process.</p>
-
         <p class="pic"><img src="media/electronics_production/image045.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p>Removed the double face tape from behind the pcb.</p>
-
         <p class="pic"><img src="media/electronics_production/image047.jpg">
             <legend> capture from my computer</legend>
         </p>
-
         <h4>3. Stuffing</h4>
-
         <p>Basing on Brian's ISP's page tutorial I started by creating a spreadsheet with the components and its positions.</p>
-
         <p class="pic"><img src="media/electronics_production/image049.jpg">
             <legend>image capture from my computer</legend>
         </p>
-
         <p class="pic"><img src="media/electronics_production/image051.jpg">
             <legend>image from Brian's ISP's page</legend>
         </p>
-
         <h4>BOM</h4>
         <div class="table-responsive">
             <table class="table" border with="800">
@@ -293,8 +237,7 @@
                         <p>Location</p>
                     </td>
                     <td width="200">
-                        <p><span>Digikey</span>
-                            or Mouser</p>
+                        <p><span>Digikey</span> or Mouser</p>
                         <p>Part number </p>
                     </td>
                     <td width="200">
@@ -303,8 +246,7 @@
                 </tr>
                 <tr>
                     <td width="300">
-                        <p><span><span><span>- </span></span></span><a href="http://www.atmel.com/devices/attiny45.aspx"><span>ATtiny45</span></a>
-                            or ATtiny85</p>
+                        <p><span><span><span>- </span></span></span><a href="http://www.atmel.com/devices/attiny45.aspx"><span>ATtiny45</span></a> or ATtiny85</p>
                     </td>
                     <td width="100">
                         <p>U1</p>
@@ -437,21 +379,74 @@
                 </tr>
             </table>
         </div>
-
         <p>After that I proceed soldering all components in place.</p>
 
-
         <p class="pic"><video controls>
-                <source src="media/electronics_production/soldering.mp4">
-                Your browser does not support HTML5 video.</video></p>
-
-        <h4>-3 Pre-Debugging</h4>
-
+                <source src="media/electronics_production/soldering.mp4"> Your browser does not support HTML5 video.</video></p>
+        <h4>3- Pre-Debugging</h4>
         <p>I started with a visual inspection.</p>
         <p class="pic"><img src="media/electronics_production/image053.jpg">
             <legend>photo of my semi-finished ISP</legend>
         </p>
         <p>OK I need to clean a bit more</p>
+        <p>With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.</p>
+        <p>Overall the board seemed fine so I proceed with the programing. And now programing...</p>
+        <h4>Programming</h4>
+        <p>Under Ubuntu for Windows 10.
+            Started by installing the programing environment</p>
+        <p class="pic"><img src="media/electronics_production/image057.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>With the prior command the programs got downloaded.</p>
+        <p class="pic"><img src="media/electronics_production/image059.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>I then downloaded the firmware source to a directory. Following that I run the command </p>
+        <pre class="prettyprint linenums">make</pre>
+        <p class="pic"><img src="media/electronics_production/image061.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>Using Sublime-text I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".</p>
+        <p class="pic"><img src="media/electronics_production/image063.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>I then run</p>
+        <pre class="prettyprint linenums">make flash</pre>
+        <p class="pic"><img src="media/electronics_production/image065.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>But not success. So I run </p>
+        <pre class="prettyprint linenums">lsusb</pre>
+        <p>and I get a message “unable to initialize libusb: -99</p>
+        <p class="pic"><img src="media/electronics_production/image067.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <p>After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shell yet! Argh!</p>
+        <p class="pic"><img src="media/electronics_production/image069.jpg">
+            <legend>capture of my computer screen on <a href="http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10">stackoverflow</a> </legend>
+        </p>
+        <p>Then I gave up on Ubuntu bash for windows 10 and run a copy of Ubuntu under VMware player.
+            At ubuntu I run:</p>
+        <pre class="prettyprint linenums">sudo apt install avrdude gcc-avr avr-libc make</pre>
+        <p class="pic"><img src="media/electronics_production/image071.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>This time after running lsusb I can see that device is present.</p>
+        <p>I run </p>
+        <pre class="prettyprint linenums">make</pre>
+        <p>in order to compile the firmware.</p>
+        <p class="pic"><img src="media/electronics_production/image073.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+
+        <p>I then run</p>
+        <pre class="prettyprint linenums">make flash
+</pre>
+        <p>But again I got an error message.
+        </p>
+        <p>I end up finding out that my ISP has to have a jumper installed in order to program the Attiny45.
+        </p>
         <p>That's when I realized I forgot to solder the jumper wire.</p>
         <p class="pic"><img src="media/electronics_production/needsolderinghere.jpg">
             <legend>The Programmer needs to have the jumper soldered while programing and them have it removed afterwards.</legend>
@@ -460,171 +455,61 @@
         <p class="pic"><img src="media/electronics_production/image055.jpg">
             <legend>photo of my semi-finished ISP</legend>
         </p>
-
-        <p>With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.</p>
-
-        <p>Overall the board seemed fine so I proceed with the programing. And now programing...</p>
-
-        <h4>Programming</h4>
-
-        <p>Under Ubuntu for Windows 10.
-            Started by installing the programing environment</p>
-
-        <p class="pic"><img src="media/electronics_production/image057.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
-
-        <p>With the prior command the programs got downloaded.</p>
-
-        <p class="pic"><img src="media/electronics_production/image059.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
-
-        <p>I then downloaded the firmware source to a directory. Following that I run the command </p>
-        <pre class="prettyprint linenums">make</pre>
-
-        <p class="pic"><img src="media/electronics_production/image061.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
-
-        <p>Using Sublime-text I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".</p>
-
-        <p class="pic"><img src="media/electronics_production/image063.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
-        <p>I then run</p>
-        <pre class="prettyprint linenums">make flash</pre>
-
-        <p class="pic"><img src="media/electronics_production/image065.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
-        <p>But not success. So I run </p>
-        <pre class="prettyprint linenums">lsusb</pre>
-        <p>and I get a message “unable to initialize libusb: -99</p>
-
-        <p class="pic"><img src="media/electronics_production/image067.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
-
-        <p>After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shell yet! Argh!</p>
-
-        <p class="pic"><img src="media/electronics_production/image069.jpg">
-            <legend>capture of my computer screen on <a href="http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10">stackoverflow</a> </legend>
-        </p>
-
-        <p>Then I gave up on Ubuntu bash for windows 10 and run a copy of Ubuntu under VMware player.
-            At ubuntu I run:</p>
-
-        <pre class="prettyprint linenums">sudo apt install avrdude gcc-avr avr-libc make</pre>
-
-        <p class="pic"><img src="media/electronics_production/image071.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
-
-
-        <p>This time after running lsusb I can see that device is present.</p>
-
-        <p>I run </p>
-
-        <pre class="prettyprint linenums">make</pre>
-
-        <p>in order to compile the firmware.</p>
-
-        <p class="pic"><img src="media/electronics_production/image073.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
-
-
-        <p>I then run</p>
-        <pre class="prettyprint linenums">make flash
-</pre>
-        <p>But again I got an error message.
-        </p>
-
-        <p>I end up finding out that my ISP has to have a jumper installed in order to program the Attiny45. So I do it! </p>
-
+        <p>So I do it! </p>
         <p>And it works!</p>
-
         <p class="pic"><img src="media/electronics_production/image075.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-
         <p>Next I run </p>
         <pre class="prettyprint linenums">make fuses</pre>
-
         <p class="pic"><img src="media/electronics_production/image077.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-
         <p>After having the firmware uploaded and fuses burnt my new ASP would not be recognised.</p>
         <p>So back to debugging…</p>
         <p>I end up measuring each resistor value, and replacing the attiny with a new one. With a multimeter I found out that the R1 1K resistor was not working, replaced and voila. Board detected!!! Oh also I decided to install a usb connector I cut from an old cable and after some washing that's how it looks.</p>
-
         <p class="pic"><img src="media/electronics_production/image079.jpg">
             <legend>photo of my tiny ISP without cover</legend>
         </p>
         <p class="pic"><img src="media/electronics_production/ispworking.jpg">
             <legend>photo of my tiny ISP with cover and programing</legend>
         </p>
-        <p>Final command make rstdisbl and this tiny can't be programmed again.</p>
-
+        <p>Final command <code>make rstdisbl</code></p>
         <p class="pic"><img src="media/electronics_production/image081.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-        <p>It worked now I remove jumper!</p>
-
+        <p>It worked! Now I remove jumper!</p>
         <p class="pic"><img src="media/electronics_production/image083.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-
         <p>It works!</p>
-
-        <h4>-4 Final Test</h4>
-
+        <h4>4- Final Test</h4>
         <p>Loading the driver on windows I use the tool "Zadig_2.2.exe"</p>
-
         <p class="pic"><img src="media/electronics_production/image085.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-
         <p>After the driver installation I tested under windows the burning of my 3D printer board's firmware.</p>
-
         <p class="pic"><video controls>
-                <source src="media/electronics_production/ispworks.mp4">
-                Your browser does not support HTML5 video.</video></p>
-
+                <source src="media/electronics_production/ispworks.mp4"> Your browser does not support HTML5 video.</video></p>
         <p class="pic"><img src="media/electronics_production/image087.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-
         <p>All working!</p>
-
         <!-- End of your content -->
-    </div>
-    <!-- /container -->
-
+    </div> <!-- /container -->
     <!-- footer -->
-
     <footer id="footer">
-        <p id="cclicense">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
-        <p class="license">
-            Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-            Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
-
     </footer>
-
     <!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="media/jquery-1.9.1.min.js"></script>
-
     <!-- Syntax Highlighter -->
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
-    </script>
-    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         ! function($) {
@@ -634,11 +519,8 @@
         }(window.jQuery)
 
     </script>
-
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-
 </body>
 
 </html>
