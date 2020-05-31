@@ -1,22 +1,8 @@
 .env
 _site
 .DS_Store
-media/week12/solidworks/smalltocnc.SLDASM
-media/week12/solidworks/small_negative_mold.SLDASM
-media/week12/solidworks/small_Mold_b^negative_mold.SLDPRT
-media/week12/solidworks/small_mold_a.SLDPRT
-media/week12/solidworks/Plucker_small_positive.SLDPRT
-media/week12/solidworks/Positive.SLDPRT
-media/week12/solidworks/smalltocnc.SLDASM
-media/week12/solidworks/small_negative_mold.SLDASM
-media/week12/solidworks/small_Mold_b^negative_mold.SLDPRT
-media/week12/solidworks/small_mold_a.SLDPRT
-media/week12/solidworks/Plucker_small_positive.SLDPRT
-media/week12/solidworks/Positive.SLDPRT
-media/week09/eagle/eaglefilestinyboard/tiny.brd
-media/week09/eagle/eaglefilestinyboard/tiny.sch
-media/week11/16.png
-media/week11/4.png
+/small_Mold_b^negative_mold.SLDPRT
+/small_Mold_b^negative_mold.SLDPRT
 *.b#1
 *.s#1
 *.brd
@@ -25,11 +11,6 @@ media/week11/4.png
 *.pro
 *.txt
 *.epf
-media/week11/16.jpg
-media/week11/4.jpg
 *.brd
-media/week11/gcode/PFG~30x34.nc
-media/week11/programexperimentold.mp4
-media/week11/Inked2020-05-25 23-17-12.mp4
 *.b##
 exercise16 - Copy.html
