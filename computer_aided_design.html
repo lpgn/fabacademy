@@ -88,10 +88,12 @@
             <li><a href="https://www.solidworks.com/">Solidworks</a></li>
             <li><a href="https://www.autodesk.com/products/fusion-360/free-trial">Fusion 360</a></li>
             <li><a href="https://bcnc.org/">BCNC</a></li>
+            <li>Inkscape</li>
         </ul>
         <hr>
         <h3>Design files</h3>
         <ul style="list-style-type: disc">
+            <li>Inkscape <a href="media/computer_aided_design/inkscape/casa.zip">file</a></li>
             <li><a href="https://gitlab.fabcloud.org/Lucio/incubator">incubator</a> Solidworks source files on Fabacademy Gitlab</li>
             <li>Egg <a href="media/computer_aided_design/files/eggsolidworks.zip">original file</a> and <a href="media/computer_aided_design/files/eggstl.zip">STL file</a>.</li>
             <li>Crate <a href="https://gitlab.fabcloud.org/Lucio/incubator/-/blob/master/eggcrate.sldprt">original file</a> and <a href="media/computer_aided_design/files/eggcratestl.zip">STL file</a>.</li>
@@ -105,7 +107,36 @@
         <legend>Egg Incubator</legend>
         <hr>
         <h2>Introduction</h2>
-        <p> In this assignment I will review 3 softwares, Solidworks, 360Fusion. Second I will model a possible final project with Solidworks.</p>
+        <p> In this assignment I will review 3 softwares, Inkscape, Solidworks, 360Fusion. Second I will model a possible final project with Solidworks.</p>
+        <hr>
+        <h3>Inkscape</h3>
+        <p>I used a lot Inkscape in the past, specially with a diode laser cutter add on, but not so much recently.</p>
+        <p>My most used feature of Inkscape was the capacity it has to transform an raster image into vector, so lets see it.</p>
+        <p>Initially I go to File -&#62 Document properties and change the paper size. It will serve as a size reference for me as its possible to edit out of this boundaries. In my case Chose A4 Landscape mode</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape01.jpg"></p>
+        <p>Next I import the file with Ctrl+I but also clicking on File -&#62 Import, then chose the file I want to import then open.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape01b.jpg"></p>
+        <p>Next this dialog open and I click OK</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape01c.jpg"></p>
+        <p>Here the image is opened. One can then click on the Layers area and the plus sign to add a layer. Thats useful to split the edition in different layers in other to organize the editing of the file. I end up doing it later after the next steps.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape02.jpg"></p>
+        <p>Next step I select Path -&#62 Trace Bitmap or (Shift+Alt+B)</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape03.jpg"></p>
+        <p>This feature will trace the outlines of the raster image and convert it to vector image. I select then Edge detection and threshold (1) then Smooth, remove background, Live Preview. Clicking on live preview gives an idea on how the settings will affect the convention so it can be useful. Finally I click OK</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape05.jpg"></p>
+        <p>As I mentioned earlier I can now create layers and name them next I move the original drawing to one of the layers.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape06.jpg"></p>
+        <p>Now I turn off the original raster image by clicking on the eye symbol next to the vector name. That will allow me to only see the vector. Next I will focus on the old car.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape07.jpg"></p>
+        <p>Here we can see the Raster image to the left and the vector image in the right side.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape08.jpg"></p>
+        <p>I tried to select the car only and then invert the selection but that did not work, maybe its too big file. So I proced to select the vectors and delete them. This makes the image less heavy and the computer less slow.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape09.jpg"></p>
+        <p>Here I show how I select the nodes and then delete it on number 3 I show where I will focus next.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape10.jpg"></p>
+        <p>Here I show the node editing. by moving the center of the node or the lever I change the shape of the image.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape11.jpg"></p>
+        <p> That manipulation allowed me to extract the car from the raster image and now I can use the laser cutter or another digital manufacturing machine to follow the path of the vector but thats for another week.</p>
         <hr>
         <h3>Fusion 360</h3>
         <p>In my review of fusion I will go thru the process of creating 2 solids. One will match the other based on the grain contour of an oak door frame piece I need repairing.</p>
