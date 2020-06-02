@@ -78,9 +78,7 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
-
     <div class="container">
-
         <!-- Insert your content here below! -->
         <div class="jumbotron" style="width: 100%">
             <h3>Electronics Production</h3>
@@ -390,10 +388,17 @@
         </p>
         <p>OK I need to clean a bit more</p>
         <p>With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.</p>
-        <p>Overall the board seemed fine so I proceed with the programing. And now programing...</p>
-        <h4>Programming</h4>
-        <p>Under Ubuntu for Windows 10.
-            Started by installing the programing environment</p>
+        <p>Overall the board seemed fine so I proceed with the programing.</p>
+        <hr>
+        <h4>4- Programming</h4>
+        <p>In order to program the programmer fabricated, I make use of a hardware called <a href="https://www.fischl.de/usbasp/">UsbASP</a>. Extracted from Thomas Fischl's website he describes it as:</p>
+        <p><i>"USBasp is a USB in-circuit programmer for Atmel AVR controllers. It simply consists of an ATMega88 or an ATMega8 and a couple of passive components. The programmer uses a firmware-only USB driver, no special USB controller is needed."</i></p>
+        <p class="pic"><img src="media/electronics_production/usbasp.jpg">
+            <legend>My old and faithful USBasp</legend>
+        </p>
+        <p>You use it just like the tinyUSB.</p>
+        <p>The header poking out of the transparent plastic cover is to program at 8 or 16 Mhz, the USBasp I have does not detect speeds automatically speeds so simply install a jumper to change speed modes. This is necessary for example when programing the ATTINY44 or 45 (slower speeds) while with an IC like the AT90USB1286 can be programed at 16 Mhz. The new firmware on this programmers usually can detect the speed of the chip automatically like the ones sold today at <a href="aliexpress.com">Aliexpress</a> for less than 2 dolars.</p>
+        <p>So going back to the software, under Ubuntu for Windows 10 (Linux windows subsystem). I Started by installing the programing environment with the code <code>sudo apt-get install avrdude gcc-avr avr-libc make</code></p>
         <p class="pic"><img src="media/electronics_production/image057.jpg">
             <legend>capture of my computer screen</legend>
         </p>
@@ -401,12 +406,12 @@
         <p class="pic"><img src="media/electronics_production/image059.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-        <p>I then downloaded the firmware source to a directory. Following that I run the command </p>
-        <pre class="prettyprint linenums">make</pre>
+        <p>I then downloaded the firmware source to a directory. Following that I run the command <code>make</code></p>
         <p class="pic"><img src="media/electronics_production/image061.jpg">
             <legend>capture of my computer screen</legend>
         </p>
         <p>Using Sublime-text I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".</p>
+        <p>As explained before making a USBtiny I did not have a programmer other than the USBasp so thats why I replaced the code with the one compatible to my device.</p>
         <p class="pic"><img src="media/electronics_production/image063.jpg">
             <legend>capture of my computer screen</legend>
         </p>
@@ -415,13 +420,13 @@
         <p class="pic"><img src="media/electronics_production/image065.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-        <p>But not success. So I run </p>
-        <pre class="prettyprint linenums">lsusb</pre>
-        <p>and I get a message “unable to initialize libusb: -99</p>
+        <p>But no success. So I run <code>lsusb</code> to get the list of avaiable usb devices.</p>
+        <p>and I get a message <code>“unable to initialize libusb: -99</code></p>
         <p class="pic"><img src="media/electronics_production/image067.jpg">
             <legend>capture of my computer screen</legend>
         </p>
         <p>After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shell yet! Argh!</p>
+        <p>note: I haven't confirmed yet but aparentelly in 2020 the usb is suported in Windows linux subsystem OS but not at the time of making this exercises.</p>
         <p class="pic"><img src="media/electronics_production/image069.jpg">
             <legend>capture of my computer screen on <a href="http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10">stackoverflow</a> </legend>
         </p>
@@ -445,9 +450,7 @@
 </pre>
         <p>But again I got an error message.
         </p>
-        <p>I end up finding out that my ISP has to have a jumper installed in order to program the Attiny45.
-        </p>
-        <p>That's when I realized I forgot to solder the jumper wire.</p>
+        <p>I realize that Brian's ISP has to have a jumper installed in order to program the Attiny45 and yes I forgot to solder the jumper.</p>
         <p class="pic"><img src="media/electronics_production/needsolderinghere.jpg">
             <legend>The Programmer needs to have the jumper soldered while programing and them have it removed afterwards.</legend>
         </p>
@@ -482,18 +485,34 @@
         <p class="pic"><img src="media/electronics_production/image083.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-        <p>It works!</p>
-        <h4>4- Final Test</h4>
+        <p>It works! That is proved by the detection of the USBtiny by the linux command <code>lsusb</code> as its shown in the picture above and zommed bellow:</p>
+        <p class="pic"><img src="media/electronics_production/zoomdetection.jpg">
+            <legend>capture of my computer screen</legend>
+        </p>
+        <h4>5- Final Test</h4>
+        <p>Not tired of changing platforms I decided to test Windows. here I print how I load the driver for my USBasp. I use this very usefull software that makes installing drivers on windows 10 less traumatic.</p>
         <p>Loading the driver on windows I use the tool "Zadig_2.2.exe"</p>
         <p class="pic"><img src="media/electronics_production/image085.jpg">
             <legend>capture of my computer screen</legend>
         </p>
-        <p>After the driver installation I tested under windows the burning of my 3D printer board's firmware.</p>
+        <p>Here I show a recent print the proves the USBtiny is detected under windows. Since I have done this exercise years ago I do not have the driver installation procedure outlined for windows but I have showed its detection before on Linux as well as now on Windows.</p>
+        <p class="pic"><img src="media/electronics_production/devicesmanager.jpg">
+            <legend>recent capture of my computer screen</legend>
+        </p>
+        <p>After the driver installation I tested under windows the burning of my 3D printer board's firmware. The firmware I burned as just outlined was the firmware for a <a href="https://reprap.org/wiki/Printrboard">Printrboard</a> I made years ago with the open source plans.</p>
+        <p>In the terrible fotage bellow you can see this happening with the code <code>avrdude -c usbtiny -p at90usb1286 -U flash:w:BootloaderHID.hex:i -U lfuse:w:0xDE:m -U hfuse:w:0xdb:m -U efuse:w:0xF0:m</code></p>
+        <p>To eliminate confusions weather the USBtiny fabricated burns or not, lets dissect the code above:</p>
+        <ol>
+            <li>the first part <code>avrdude</code> is the name of the program.</li>
+            <li>then <code>-c usbtiny</code> defines the programmer name, "usbtiny" is the fabricated programmer name</li>
+            <li>Next <code>-p at90usb1286</code> is the target IC to be programmed, here the at90usb1286 that is installed on my printrboard.</li>
+            <li>
+                <code>-U flash:w:BootloaderHID.hex:i </code>defines the name/location of the firmware to be loaded, in this case "BootloaderHID.hex"</li>
+            <li><code>-U lfuse:w:0xDE:m -U hfuse:w:0xdb:m -U efuse:w:0xF0:m</code> is the part of the command that burn the fuses.</li>
+        </ol>
+        <p>The above mentioned is shown in the terrible footage ;-) bellow</p>
         <p class="pic"><video controls>
                 <source src="media/electronics_production/ispworks.mp4"> Your browser does not support HTML5 video.</video></p>
-        <p class="pic"><img src="media/electronics_production/image087.jpg">
-            <legend>capture of my computer screen</legend>
-        </p>
         <p>All working!</p>
         <!-- End of your content -->
     </div> <!-- /container -->
