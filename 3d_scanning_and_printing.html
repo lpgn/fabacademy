@@ -260,29 +260,29 @@
                         </a> </legend>
                 </p>
                 <br>
-                <li> On the software Repetier Host I loaded the stl file and sliced for each printer. Naming the Gcode with the printer designation in front.
+                <li> On the software<b>Repetier</b> Host I loaded the stl file and sliced for each printer. Naming the Gcode with the printer designation in front.
                 </li>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/image3.jpg">
-                    <legend> Generating Gcode on Repetier Host for the Mini
+                    <legend> Generating Gcode on<b>Repetier</b> Host for the Mini
                     </legend>
                 </p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/image4.jpg">
-                    <legend> Generating Gcode on Repetier Host for the Delta
+                    <legend> Generating Gcode on<b>Repetier</b> Host for the Delta
                     </legend>
                 </p>
-                <a id="settings"></a>
-                <li>3D printers are far from being plug 'n play devices. There is a lot of adjusting and some of it looks like magic. I will highlight the most important points to pay attention in the settings of the software slic3r, that works in conjunction with Repetier.</li>
+                <a id="settings">Slic3r Settings</a>
+                <li>3D printers are far from being plug 'n play devices. There is a lot of adjusting and some of it looks like magic. I will highlight the most important points to pay attention in the settings of the software<b>Slic3r</b>, that works in conjunction with <b>Repetier</b>.</li>
                 <ol>
-                    <li>Still on Repetier Host in the Slicer tab the software presents us with several options of preset configuration. the first is the slicer software itself. That could be Slic3r, Cura or the older software nobody uses...</li>
-                    <li>On Print settings we will have characteristics of the particular model you want to print;</li>
-                    <li>Then we have Printer settings, normally the settings related to a specific printer (machine) goes here, in my presets I have here the different printers of the lab being one a cartesian printer and another a delta printer;</li>
-                    <li>Here on Filament settings are the many filaments one can have each with its different setting like temperature of thickness;</li>
+                    <li>Still on <b>Repetier</b> in the "Slicer" tab the software presents us with several options of preset configuration. The first is the slicer software itself. On the drop-down menu it is possible to chose from <b>Slic3r</b>, <b>Cura</b> or the older software nobody uses...</li>
+                    <li>On Print settings we will have characteristics of the particular model you want to print, my current choice is "coarsewithsupport" later on I will discuss how I chose the settings that make up the presets presented;</li>
+                    <li>Then we have "Printer Settings", normally the settings related to a specific printer (machine) goes here, in my presets I have here the different printers of the lab being one a cartesian printer "Mini_2.5_retraction" and another not shown that is a delta printer;</li>
+                    <li>Here on "Filament Settings" are the many filaments one can have each with its different setting like temperature of thickness;</li>
                     <li>On this item we will dive deeper on the settings. We will actually setup the presets displayed before.</li>
                 </ol>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r01.jpg">
                 </p>
-                <ol>This slide is the Slic3r software itself that is buried deep in the Repetier. Its realms are not for the faint of heard any wrong move here might render catastrophic results in your prints.
-                    <li>So as Slic3r organizes in this column we have the classes: Print settings, Filament and Printer;</li>
+                <ol>This slide is the<b>Slic3r</b> software itself that is buried deep in the<b>Repetier</b>. Its realms are not for the faint of heard any wrong move here might render catastrophic results in your prints.
+                    <li>So as<b>Slic3r</b> organizes in this column we have the classes: Print settings, Filament and Printer;</li>
                     <li>Then we have in this column drop down menus to chose each preset that the user wishes to customize</li>
                     <li>this column we see an icon in shape of a gear typical of configuration, lets click on it to open each class and see its entrains.</li>
                 </ol>
@@ -313,8 +313,8 @@
                 <p>Here in printer settings we find nozzle size, I use 0.4 mm, and my preferred setting on this tests, well practically the only one I messed with The retraction. As being the engineer and technician of my printers its little what I haven't tried before. The retraction yes the retraction will depend on many factors, too much retraction and the filament can get stuck in the nozzle guaranteeing one a lot of fun disassembling a nozzle that the filament froze in higher levels is terrible to fix. Too litle retraction and will will have spider web all around your towers. So This is a setting that needs to be tested and tested until like many others by trial and error mastered to what resembles perfection, if that even exists in FDM of course.</p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r08.jpg">
                 </p>
-                <li> Next I took the Gcode I had save on the SD card and placed on the 3D printers and started the print.
-                </li>
+                <li> Next I took the Gcode I had save on the SD card and placed on the 3D printers and started the print. 
+                </li><p>Click <a href="3d_scanning_and_printing.html#slice_print">here</a> for the process of slicing and creating the file with the g-code to print.</p>
                 <p class="pic">
                     <video controls>
                         <source src="media/3d_scanning_and_printing/video1.mp4">
@@ -624,6 +624,7 @@
 
                 </p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/repetier01.jpg"> </p>
+                <a id="slice_print">Slice and Print</a>
                 <ol>
                     <li>Add the stl file</li>
                     <li>scale if needed</li>
@@ -636,7 +637,7 @@
                     <li>with the preset loaded here you chose print settings</li>
                     <li>here you can select the machine model</li>
                     <li>here is filament settings</li>
-                    <li>finally click on "Slice with Slic3r"</li>
+                    <li>finally click on "Slice with<b>Slic3r</b>"</li>
                 </ol>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/repetier03.jpg"> </p>
                 <ol>
@@ -756,7 +757,7 @@
                 </p>
                 <li>Preparation of Stone Model
                     <ol>
-                        <li>I clicked on load in other to load the stl file into repetier. Stl file <a href="media/3d_scanning_and_printing/3d_test.stl">here</a>.</li>
+                        <li>I clicked on load in other to load the stl file into<b>Repetier</b>. Stl file <a href="media/3d_scanning_and_printing/3d_test.stl">here</a>.</li>
                         <li>Next find the file in its directory and click ok</li>
                         <li>If needed its possible to rotate, scale and etc the model until it fits on the printer area. In my case this was not necessary as the model did fit</li>
                     </ol>
@@ -772,7 +773,7 @@
                         <li>Then the best option according to the previous tests, Mini 2.5 retraction</li>
                         <li>On Extruder there are only one pre-configured in this printer so no choices available.</li>
                         <li>Advanced configuration are available on the option "configuration" but in my case it was not needed as the already tested pre-configuration should work fine.</li>
-                        <li>Finally click on "Slice with Slic3r" in order to start the slicing process.</li>
+                        <li>Finally click on "Slice with<b>Slic3r</b>" in order to start the slicing process.</li>
                     </ol>
                     <p class="pic"> <img src="media/3d_scanning_and_printing/preparestone02.jpg">
                         <legend>
@@ -787,7 +788,7 @@
                 </li>
                 <li> <a href="media/3d_scanning_and_printing/g_code/stonemodel.zip">G-code</a> generated
                     <p>The Gcode Generated can be downloaded with the link above but I extracted here the begining of it in other to show a few of its statistics.</p>
-                    <pre><code>; generated by Slic3r 1.3.1-dev on 2020-05-31 at 20:04:21
+                    <pre><code>; generated by<b>Slic3r</b> 1.3.1-dev on 2020-05-31 at 20:04:21
 
 ; external perimeters extrusion width = 0.44mm (3.38mm^3/s)
 ; perimeters extrusion width = 0.48mm (7.54mm^3/s)
