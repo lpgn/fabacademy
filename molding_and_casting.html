@@ -87,16 +87,16 @@
             <li>cnc</li>
         </ul>
         <hr>
-
         <h3>Software Used</h3>
         <ul style="list-style-type:disc">
             <li>Solidworks</li>
+            <LI>Mach3</LI>
         </ul>
         <hr>
         <h3>Files</h3>
         <ol>
-            <li>Solidworks <a href="media/molding_and_casting/solidworks/">files</a></li>
-            <li>Gcode <a href="media/molding_and_casting/cam/">files</a></li>
+            <li>Solidworks <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/tree/master/media/molding_and_casting/solidworks">files</a></li>
+            <li>Gcode <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/blob/master/media/molding_and_casting/cam/Positive.tap">files</a></li>
         </ol>
         <hr>
         <p class="pic left"><img src="media/wildcard_week/smurfblock.jpg">
@@ -104,48 +104,102 @@
         </p>
         <hr>
         <h4>Designing</h4>
+        <p>I will be describing the workflow necessary to create a positive in wax, a negative mold in Silicone and finally the casting process of the final positive, for that reason we start creating an assembly with the model already done using a simple revolve feature.</p>
+        <ol>
+            <li>With an new assembly opened click in Insert components;</li>
+            <li>Again :-) Click on the second insert components;</li>
+        </ol>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly01.jpg"></p>
+        <p>Confirm the insertion clicking on the green checkmark.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly02.jpg"></p>
+        <p>Now we need to create the negative mold!</p>
+        <ol>
+            <li>Click on the front plane, making sure that this plane is in the exact middle of the part.</li>
+            <li>Click on New part.</li>
+        </ol>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly03.jpg"></p>
+        <p>With the new part opened click on the front plane again and the on sketch.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly04.jpg"></p>
+        <p>I then created a square around the part making sure to leave 10mm around the part so there is silicone structuring the mold.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly05.jpg"></p>
+        <p>Now the magic! Imagine if we had to create all those negative features. No way Jose! We are going to create a negative with the cavity feature.</p>
+        <ol>
+            <li>Click insert;</li>
+            <li>Click then features in the opened menu;</li>
+            <li>Find Cavity and Click on it.</li>
+        </ol>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly06.jpg"></p>
+        <p>Now simply select the model and confirm.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly07.jpg"></p>
+        <p>Thats it! The first part is done! Lets call it mold A, shall we?</p>
+        <p>I exploded the parts for your entertainment, how nice of me! :-)</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly08.jpg"></p>
+        <p>Now because I am very lazy I will make a copy of the mold A in other to create Mold B</p>
+        <ol>
+            <li>Click in Save as copy and open, the reason we chose this option is that the first one will really just rename the part, but we actually want to have a opened copy;</li>
+            <li>Name the part, in my case Mold_b</li>
+            <li>And save.</li>
+        </ol>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly09.jpg"></p>
+        <p>Now we are going to insert the copied part, like before click in insert part again and again... and confirm.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly10.jpg"></p>
+        <p>Now we need to mate the parts., Oh I forgot to mention that after coping the part if so desired you should create some features in other to keep the mold from moving and minimize the parting line.</p>
+        <ol>
+            <li>Do that by clicking on the face</li>
+            <li>and the clicking on the second face of mold A so later they will mate there.</li>
+            <li>Now click on coincident and confirm.</li>
+        </ol>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly11.jpg"></p>
+        <p>The part is not yet completely mated but its getting there.</p>
+        <p>Repeat this in the opposite conner and we are done mating.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly12.jpg"></p>
+        <p>Now with the same procedure as before, click on the corner of the part.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly13.jpg"></p>
+        <p>Again exploded for you! In case you are wondering how I got the features negative in the mold b , just review the first cavity, its done the same way.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/assembly14.jpg"></p>
-        <p>Finally I calculate the volume of the part. This will be useful when casting so so I waste the minimum amount of silicone when casting the part. About 5ml of silicone I guess.</p>
+        <p>Finally I calculate the volume of the part. This will be useful when casting so so I waste the minimum amount of silicone when casting the part. About 5ml of silicone I guess. But I will actually prepare twice that as I have some plans for the leftover. Ah in case you noticed the Positive part is different than the one I used initially its because I decided to reduce its size as it was too big for the machinable wax I created in the <a href="wildcard_week.html">wildcard week</a>.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/design20.jpg"></p>
         <hr>
         <h4>Tool path / Gcode</h4>
         <p class="pic left"><img src="media/molding_and_casting/toolpath/cnc01.jpg"></p>
         <hr>
         <h4>Milling</h4>
+        <p>I started Milling by fitting the stock over a cardboard box so I would waist as little wax as possible. Recycle is in my mind! I drilled clearance holes and attached everything in the sacrificial bed of my large CNC.</p>
         <p class="pic left"><img src="media/molding_and_casting/milling.jpg"></p>
+        <p>The process to start the CNC is the same presented in the <a href="output_devices.html#mach3">input devices week</a>, except there is no auto calibration or finding the 0 automatically, so in case you forgot: Start Mach3 using the arrows move the cnc to the desired location you want the origin to be, than clicking on each axis ) X, Y and Z.</p>
+        <p> The video Shows the CNC doing its initial moves clearing the first steps with a 1/4" mill bit.</p>
         <p class="pic"><video controls>
                 <source src="media/molding_and_casting/smurfjuice02.mp4">Your browser does not support HTML5 video.</video></p>
+        <p>Here we can see more the process with the smaller 1.5mm mill bit witch was the last bit I used.</p>
         <p class="pic"><video controls>
                 <source src="media/molding_and_casting/smurfjuice03.mp4">Your browser does not support HTML5 video.</video></p>
+        <p>The final result of the positive mold is really nice, its smooth and the details are satisfying.</p>
         <p class="pic left"><img src="media/molding_and_casting/milling05result.jpg"></p>
         <hr>
         <h4>Casting the Negative Mold</h4>
+        <p>We started by reading the datasheet aloud! My dear colleague and daughter Bianca did the honors. :-)</p>
         <p class="pic"><video controls>
                 <source src="media/molding_and_casting/castingthemold/datasheetreading.mp4">Your browser does not support HTML5 video.</video></p>
-        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding01.jpg"></p>
+        <p>Here you can see the <a href="http://fab.academany.org/2018/labs/farmlabalgarve/group/moldandcast.html">3030 Slide</a> I used initially.</p>
+        <p>We marked each bamboo stick with a different color tape, with glasses on and gloves we started the process.</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding02.jpg"></p>
+        <p>A lot of stirring is necessary but this product has a long shelf life, 45 minutes before start curing so no hurry here. Its important to mix well each component and then the mix.</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding03.jpg"></p>
-        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding04.jpg"></p>
+        <p>With a one to one ration we had 43 grams of silicone to make our negative mold.</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding05.jpg"></p>
+        <p>Here you can see the pouring, how satisfying!</p>
         <p class="pic"><video controls>
-                <source src="media/molding_and_casting/castingthemold/molding05.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/molding_and_casting/castingthemold/molding05.mp4">Your browser does not support HTML5 video.</video><legend>Ups I forgot the gloves, but I swer no spill and it was a clean pour.</legend></p>
+        <p>The results were not good! After waiting more than 48 hours the mold was still sticky. I believe there is something wrong with my silicone, its been 2 years since I bought it, so that might be it.</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding06.jpg"></p>
+        <p>The second problem was the features I created to prevent the mold from moving they would not fit well against each other so I decided to fill it up with regular paraffin and smooth it with a blade, the results were decent.</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding07.jpg"></p>
+        <p>Here is the positive mold with the features manually filled with paraffin, ready for casting again.</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding07b.jpg"></p>
+        <p>Here you can see the new cast with this Silicone I had in the lab. It is from a Chinese company called OTT the model # of the silicone is OTT-1817, I couldn't find its datasheet as I believe its a product no longer been made. Tried even emailing the company but no return from them.</p>
+        <p>The process was the same, from ratio to stirring the difference is that this product cures in 30-40 minutes so one needs to be fast. :-)</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding08.jpg"></p>
+        <p>The results were really satisfying!</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding09.jpg"></p>
         <hr>
         <h4>Casting the Part</h4>
@@ -176,7 +230,7 @@
         <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting09.jpg"></p>
         <p>And so strong!</p>
         <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting10.jpg"></p>
-        <p>I cant forget to mention that the leftover of the silicone was not wasted. I made a simple cast with the measuring cup and my attiny44 board from <a href="input_devices.html">Input Devices</a></p>
+        <p>I cant forget to mention that the leftover of the silicone was not wasted. I made a simple cast with the measuring cup and my attiny44 board from <a href="input_devices.html#mach3">Input Devices</a>.</p>
         <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting08.jpg"></p>
         <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting12.jpg"></p>
         <!-- End of your content -->
