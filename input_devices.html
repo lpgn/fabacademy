@@ -116,7 +116,7 @@
         <h4>Files</h4>
         <ol>
             <li>Eagle <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/tree/master/media/input_devices/eagle">files</a></li>
-            <li>Gcode <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/tree/master/media/input_devices/gcode">files</a></li>
+            <li>G-code <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/tree/master/media/input_devices/G-code">files</a></li>
             <li>Code <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/tree/master/media/input_devices/code">files</a></li>
         </ol>
         <hr>
@@ -163,7 +163,7 @@
             <p> On a quick look we can determine that there are 4 Arduino analog pins. They all have a analog to digital converter (ADC0, ADC1 ADC2, ADC3), so they could also be used as digital pins together with pins 1, 0 and 2. </p>
             <p> For this assignment I will need 1 analog pin and 2 digital pins. The analog pin I will connect the thermistor and the digital pins are for the serial communication.</p>
             <p> The board will have a header for the ISP programmer, 2 headers in the sides so all pins can be used and tested as needed as well as a led just to show there is power coming in.</p>
-            <p>Autodesk Eagle is the weapon of choice. but I will be creating the gcode with PCBtoGcode addin.</p>
+            <p>Autodesk Eagle is the weapon of choice. but I will be creating the G-code with pcb-gcode addin.</p>
             <h4>Resistor calculations</h4>
             <p> In order to calculate the resistor values, I examined the following Datasheets and the calculations/observations I made:
             </p>
@@ -351,8 +351,8 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             <p>Bellow you can see a board with and without ratsnest.</p>
             <p>The first board has ratsnest on. Its a bit more cluttered. One advantage is thermal, having a greater copper surface glows for cooling of the board as well as larger conductivity specially in 2 sided boards as one side can be ground and the other side can be for VCC making almost all surfaces for power transfer. The second board looks cleaner.</p>
             <p class="pic"><img src="media/input_devices/board_ratsnest.jpg"></p>
-            <p>I currently prefer making boards without ratsnest, because manual soldering can be imprecise and short circuits are easy to happen and the ratsneat feature can increase that.</p>
-            <p>The thick light blue contour drawn with the layer "milling" is used by the ULP GcodetoPCB to create a gcode milling contour, the software will use that to create the limits and the cut can be used to detach the board from the copper stock. The thickness of the polygon will define the milling bit size.
+            <p>I currently prefer making boards without ratsnest, because manual soldering can be imprecise and short circuits are easy to happen and the ratsnest feature can increase that.</p>
+            <p>The thick light blue contour drawn with the layer "milling" is used by the ULP pcb-gcode to create a G-code milling contour, the software will use that to create the limits and the cut can be used to detach the board from the copper stock. The thickness of the polygon will define the milling bit size.
             </p>
             <p class="pic"><img src="media/input_devices/board_without_ratsnest.jpg"></p>
             <hr>
@@ -436,7 +436,7 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             <hr>
             <h4>PCB-Gcode</h4>
             <p> A while back I started using the User Language Programs(ULP) called <a href="https://github.com/McNugget6750/pcb-gcode">PCB-Gcode</a> its a great program alows many settings that I discovered in part reading the documentation and in part with trial and error.</p>
-            <p>Bellow I show how I setup it for a smooth gcode creation.</p>
+            <p>Bellow I show how I setup it for a smooth G-code creation.</p>
             <ol>
                 <li>Click file</li>
                 <li>then Run ULP</li>
@@ -445,7 +445,7 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             <p class="pic"><img src="media/input_devices/eagle27.jpg"></p>
             <p>The settings that I customized are:</p>
             <ol>
-                <li>I chose to generate only top outlines and top drills: -the first is the generation of the board gcode to cut off the board from the stock. -the second is the holes the board might have. the thickness of the mill bit or drill is chosen in the machine tab</li>
+                <li>I chose to generate only top outlines and top drills: -the first is the generation of the board G-code to cut off the board from the stock. -the second is the holes the board might have. the thickness of the mill bit or drill is chosen in the machine tab</li>
                 <li>here we can set the board thickness, my boards are separated well with 1.72mm cut. and the "num Slices" I chose to do 6, these will mean the board will be cut off in 6 passes. </li>
                 <li>Spot drill holes are light markings made while eching the via and all features of the board design, it serves the purpose of alignment of the drill bit that can be used to drill the hole and prevent the bit heat from sliding on the board. My choice is 0.055mm the same I have for etching.</li>
                 <li>Isolation was one of the most important settings. This settings might make your computer slow down a lot if the maximum is set to hight, what works for me is: -minimum 0.0254mm (default); maximum 1.5mm; step size 0.05mm. The last one together with maximum will ensure 30 passes that will make sure there is no coper in between the traces and they are sufficiently isolated reducing the risks of shorts.These numbers could be an exaggeration but it is working very well and I am obtaining gorgeous boards. In the future I might reduce it or increase the step size. </li>
@@ -459,31 +459,31 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
                 <li>The tool diameter I use is 0.1 mm</li>
             </ol>
             <p class="pic"><img src="media/input_devices/pcb_gcode02.jpg"></p>
-            <p>The Gcode style tab is used to chose the post processor. I use Mach3.</p>
+            <p>The G-code style tab is used to chose the post processor. I use Mach3.</p>
             <p class="pic"><img src="media/input_devices/pcb_gcode03.jpg"></p>
-            <p>Here is the visualization of the Gcode provided by the ULP, arrow can be used to move around the image as well as plus minus signs.</p>
+            <p>Here is the visualization of the G-code provided by the ULP, arrow can be used to move around the image as well as plus minus signs.</p>
             <p class="pic"><img src="media/input_devices/pcb_gcode04.jpg"></p>
             <p>4 files get generated</p>
             <ol>
                 <li>*.bot.mill.gcode: it is the bottom milling (contour), I do not use this file.</li>
-                <li>*.top.drill.gcode: is the gcode for the holes</li>
+                <li>*.top.drill.gcode: is the G-code for the holes</li>
                 <li>*.top.mill.gcode: is the file for the top layer contour, these file will allow detaching the pcb.</li>
-                <li>Finally *.top.etch.gcode is the gcode of the etching of the pcb containing all the features designed.</li>
+                <li>Finally *.top.etch.gcode is the G-code of the etching of the pcb containing all the features designed.</li>
             </ol>
             <p class="pic"><img src="media/input_devices/pcb_gcode05.jpg"></p>
             <p>Bellow is the thermistor board isolation visualization.</p>
             <p class="pic"><img src="media/input_devices/thermistorpath.jpg"></p>
             <hr>
             <h4>Autoleveller</h4>
-            <p>Autoleveller is a great software. By probing the blank pcb and then using the file generated to adjust the depth of cut of the gcode, it ensures the milling machine will follow the relief of the blank pcb. I start Autoleveller runing its executable, there is no instalation needed on linux. Next click File and then Original Gcode File (OFG): this will alow loading the original Gcode in the program.</p>
+            <p>Autoleveller is a great software. By probing the blank pcb and then using the file generated to adjust the depth of cut of the G-code, it ensures the milling machine will follow the relief of the blank pcb. I start Autoleveller runing its executable, there is no instalation needed on linux. Next click File and then Original G-code File (OFG): this will alow loading the original G-code in the program.</p>
             <p class="pic"><img src="media/input_devices/autoleveller01.jpg"></p>
-            <p>Click in the original gcode.</p>
+            <p>Click in the original G-code.</p>
             <p class="pic"><img src="media/input_devices/autoleveller02.jpg"></p>
             <p>Click yes so the settings will be based on the file loaded</p>
             <p class="pic"><img src="media/input_devices/autoleveller03.jpg"></p>
-            <p>Next click on Generate PFG on the botom right of the window, this will create a gcode with a set of instructions, it will: -first probe the Z 0; -second probe several points in the area of the board; - tird it will ask for a location in other to save the raw file, that will later be used to create the autoleveled gcode.</p>
+            <p>Next click on Generate PFG on the botom right of the window, this will create a G-code with a set of instructions, it will: -first probe the Z 0; -second probe several points in the area of the board; - tird it will ask for a location in other to save the raw file, that will later be used to create the autoleveled G-code.</p>
             <p class="pic"><img src="media/input_devices/autoleveller11.jpg"></p>
-            <p>This is the PFG file being saved. Next load this gcode to the cnc and follow the intructions on the gcode area.</p>
+            <p>This is the PFG file being saved. Next load this G-code to the cnc and follow the intructions on the G-code area.</p>
             <p class="pic"><img src="media/input_devices/autoleveller05.jpg"></p>
             <p>Now its the time to attach the blank PCB to the CNC bed. I am no longer using double sided tape as its not as effective as the fixtures, also there is the need to clean up the leftover tape later.</p>
             <p class="pic"><img src="media/input_devices/machining01.jpg"></p>
@@ -501,7 +501,7 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             <p class="pic"><img src="media/input_devices/autoleveller06.jpg"></p>
             <p>Load the raw probe file back into the autoleveller.</p>
             <p class="pic"><img src="media/input_devices/autoleveller07.jpg"></p>
-            <p>Last save the adjusted gcode by clicking Autolevel on the bottom right of the screen. Save the file and take it to the CNC for the milling process to begin.</p>
+            <p>Last save the adjusted G-code by clicking Autolevel on the bottom right of the screen. Save the file and take it to the CNC for the milling process to begin.</p>
             <p class="pic"><img src="media/input_devices/autoleveller10.jpg"></p>
             <h4>Machining process videos</h4>
             <p class="pic"><video controls>

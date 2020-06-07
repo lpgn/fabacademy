@@ -119,12 +119,12 @@
                 <a href="media/3d_scanning_and_printing/3d_test.stl"> 3D Printer test model
                 </a>from <a href="https://www.thingiverse.com/thing:1363023">thingiverse</a>
             </li>
-            <li> Gcode file:
-                <a href="media/3d_scanning_and_printing/g_code/generatedgcode.zip"> all week's generated Gcode from STL files
+            <li> G-code file:
+                <a href="media/3d_scanning_and_printing/g_code/generatedgcode.zip"> all week's generated G-code from STL files
                 </a> and scanned <a href="media/3d_scanning_and_printing/g_code/stonemodel.zip">stone model</a>
             </li>
             <li> Solid Works file:
-                <a href="https://gitlab.fabcloud.org/Lucio/wire_organiser"> Project page of the 3D model for a wire organiser used on a CNC I built
+                <a href="https://gitlab.fabcloud.org/Lucio/wire_organiser"> Project page of the 3D model for a wire organizer used on a CNC I built
                 </a>
             </li>
             <li> Chain's stl file:
@@ -137,7 +137,7 @@
             <li> Printers preparation
             </li>
             <p class="pic"> <img src="media/3d_scanning_and_printing/IMG_2836.JPG">
-                <legend> Printer I de sign and bult a few years back.
+                <legend> Printer I design and built a few years back.
                 </legend>
             </p> <br>
             <ol type="i">
@@ -260,14 +260,14 @@
                         </a> </legend>
                 </p>
                 <br>
-                <li> On the software<b>Repetier</b> Host I loaded the stl file and sliced for each printer. Naming the Gcode with the printer designation in front.
+                <li> On the software<b>Repetier</b> Host I loaded the stl file and sliced for each printer. Naming the G-code with the printer designation in front.
                 </li>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/image3.jpg">
-                    <legend> Generating Gcode on<b>Repetier</b> Host for the Mini
+                    <legend> Generating G-code on<b>Repetier</b> Host for the Mini
                     </legend>
                 </p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/image4.jpg">
-                    <legend> Generating Gcode on<b>Repetier</b> Host for the Delta
+                    <legend> Generating G-code on<b>Repetier</b> Host for the Delta
                     </legend>
                 </p>
                 <a id="settings">Slic3r Settings</a>
@@ -275,7 +275,7 @@
                 <ol>
                     <li>Still on <b>Repetier</b> in the "Slicer" tab the software presents us with several options of preset configuration. The first is the slicer software itself. On the drop-down menu it is possible to chose from <b>Slic3r</b>, <b>Cura</b> or the older software nobody uses...</li>
                     <li>On Print settings we will have characteristics of the particular model you want to print, my current choice is "coarsewithsupport" later on I will discuss how I chose the settings that make up the presets presented;</li>
-                    <li>Then we have "Printer Settings", normally the settings related to a specific printer (machine) goes here, in my presets I have here the different printers of the lab being one a cartesian printer "Mini_2.5_retraction" and another not shown that is a delta printer;</li>
+                    <li>Then we have "Printer Settings", normally the settings related to a specific printer (machine) goes here, in my presets I have here the different printers of the lab being one a carteian printer "Mini_2.5_retraction" and another not shown that is a delta printer;</li>
                     <li>Here on "Filament Settings" are the many filaments one can have each with its different setting like color, temperature or thickness;</li>
                     <li>On this item we will dive deeper on the settings. We will actually setup the presets displayed before.</li>
                 </ol>
@@ -307,13 +307,15 @@
                 <p>Raft, how I hate rafts I don't want to even talk about haft, I wonder how much popcorn has been erased from the universe by the usage of raft! Well like the name implies none want to be on, or use a raft. Its for emergencies and should be kept only for that. It creates a waste of material that will compensate poorly the lack of leveling, its for the lazy but in the end promotes more work as the under side of the print will not ever be as smooth as the printed part that was printed directly on glass. Support also does that. Try printing with support and then spend the next hours post processing your prints, super fun stuff.</p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r06.jpg">
                 </p>
-                <p>The class of filament settings deserves not much time as they are straight forward, if your filament supplier cares about you, he will give you the temperature in which to print in a label in the sides of the box or spool. The diameter is and has always been with me 1.75mm, the thinner diameter is easier to push than 3mm the other standard in filament thickness after all we are pushing filament thru a nozzle with 0.4 mm in diameter thats thin so choosing a printer that takes a thin filament is better!</p>
+                <p>The class of filament settings deserves not much time as they are straight forward, if your filament supplier cares about you, he will give you the temperature in which to print in a label in the sides of the box or spool. The diameter is and has always been with me 1.75mm, the thinner diameter is easier to push than 3mm the other standard in filament thickness after all we are pushing filament through a nozzle with 0.4 mm in diameter thats thin so choosing a printer that takes a thin filament is better!</p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r07.jpg">
                 </p>
-                <p>Here in printer settings we find nozzle size, I use 0.4 mm, and my preferred setting on this tests, well practically the only one I messed with i the "retraction". As being the engineer and technician of my printers its little what I haven't tried before. The retraction yes the retraction will depend on many factors, too much retraction and the filament can get stuck in the nozzle guaranteeing one a lot of fun disassembling a nozzle that the filament froze in higher levels is terrible to fix. Too litle retraction and will will have spider web all around your towers. So This is a setting that needs to be tested and tested until like many others by trial and error mastered to what resembles perfection, if that even exists in FDM of course.</p>
+                <p>Here in printer settings we find nozzle size, I use 0.4 mm; -next my preferred setting on this tests, well practically the only one I messed with is the "retraction".</p>
+                <p>As being the designer, engineer and technician of my printers its little what I haven't tried before.</p>
+                <p>The retraction, yes, the retraction will depend on many factors: -too much retraction and the filament can get stuck in the nozzle guaranteeing one a lot of fun fixing/disassembling a nozzle that the filament froze in higher levels. It's always fun for geeks like me to fix that, NOOOT! Too little retraction and you will have spider web all around your towers. So This is a setting that needs to be tested and tested, until like many other settings. Do trial and error until mastered to what resembles perfection, if that even exists in FDM of course.</p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r08.jpg">
                 </p>
-                <li> Next I took the Gcode I had save on the SD card and placed on the 3D printers and started the print.
+                <li> Next I took the G-code I had saved on the SD card and placed on the 3D printers and started the print.
                 </li>
                 <p>Click <a href="3d_scanning_and_printing.html#slice_print">here</a> for the process of slicing and creating the file with the g-code to print.</p>
                 <p class="pic">
@@ -412,7 +414,7 @@
                         <tr>
                             <td>8</td>
                             <td>Wall Thickness: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td>
-                            <td>did't print 0.1, 0.2 next walls printed as 0.5 until last as 1mm</td>
+                            <td>didn't print 0.1, 0.2 next walls printed as 0.5 until last as 1mm</td>
                             <td>Yes</td>
                         </tr>
                         <tr>
@@ -435,7 +437,7 @@
                         </tr>
                         <tr>
                             <td>12</td>
-                            <td>Pyramide, 7 mm height</td>
+                            <td>pyramid, 7 mm height</td>
                             <td>6.95</td>
                             <td>Yes</td>
                         </tr>
@@ -490,13 +492,13 @@
                         <tr>
                             <td>21</td>
                             <td>Retract Travel, check retract settings for longer travel</td>
-                            <td>almost no ozzing</td>
+                            <td>almost no oozing</td>
                             <td>Yes</td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td>Conclusion</td>
-                            <td>For a FDM printer I belive the result is very good. The sizes differences are probably due to a PLA shirincage</td>
+                            <td>For a FDM printer I believe the result is very good. The sizes differences are probably due to a PLA shrinkage</td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -506,19 +508,15 @@
             </li>
             <br>
             <ol type="i">
-                <li> I decided to create a necessary part of my final project. It's a wire organiser that when connected together works as a chain.
+                <li> I decided to create a necessary part of my final project. It's a wire organizer that when connected together works as a chain.
                 </li>
-                <p>This design is either to hard or even impossible to do with subtractive technic due to its shape and details inaccessible to a 2 axis CNC or even to a 3 axis.</p>
+                <p>This design is either to hard or even impossible to do with subtractive technique due to its shape and details inaccessible to a 2 axis CNC or even to a 3 axis.</p>
                 <li> The design is parametric so I can easily change the size as needed
                 </li>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/designingcollage.jpg">
-                    <legend> parametric design on Solid Works from beginning to gcode generation
+                    <legend> parametric design on Solid Works from beginning to G-code generation
                     </legend>
                 </p>
-
-
-
-
                 <p class="pic"> <img src="media/3d_scanning_and_printing/image11.jpg">
                     <legend> model finished
                     </legend>
@@ -542,11 +540,11 @@
                     </legend>
                 </p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step04_sketchcut.jpg">
-                    <legend> after the last extrusion I sketched what will be cuted.
+                    <legend> after the last extrusion I sketched what will be cut.
                     </legend>
                 </p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step05_cut.jpg">
-                    <legend> and finished with the feature chosing to cut all
+                    <legend> and finished with the feature choosing to cut all
                     </legend>
                 </p>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step06.jpg">
@@ -634,7 +632,7 @@
                 </ol>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/repetier02.jpg"> </p>
                 <ol>
-                    <li>In Configuration you can set particular caracteristics of the slicing operation, attached is the <a href="media/3d_scanning_and_printing/Slic3r_config_bundle.ini">config bundle</a> for our printers.</li>
+                    <li>In Configuration you can set particular characteristics of the slicing operation, attached is the <a href="media/3d_scanning_and_printing/Slic3r_config_bundle.ini">config bundle</a> for our printers.</li>
                     <li>with the preset loaded here you chose print settings</li>
                     <li>here you can select the machine model</li>
                     <li>here is filament settings</li>
@@ -642,7 +640,7 @@
                 </ol>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/repetier03.jpg"> </p>
                 <ol>
-                    <li>Click on save to SD card to have your gcode saved to the media you will insert to a 3Dprinter</li>
+                    <li>Click on save to SD card to have your G-code saved to the media you will insert to a 3Dprinter</li>
                     <li>In visualization you can see layer by layer and understand how your settings will affect the print before actually printing.</li>
                 </ol>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/repetier04.jpg"> </p>
@@ -652,7 +650,7 @@
                 </ol>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/printer01.jpg"> </p>
                 <ol>
-                    <li>With the SD card inside check the LCD that will show the nozle temperature, top left</li>
+                    <li>With the SD card inside check the LCD that will show the nozzle temperature, top left</li>
                     <li>press then the rotary encoder to show the menu options</li>
                 </ol>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/printer02.jpg"> </p>
@@ -664,7 +662,7 @@
                     <li>Scroll to the desired file and press the knob and the print will start</li>
                 </ol>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/image13.jpg">
-                    <legend> printer almost finished printing chain organiser
+                    <legend> printer almost finished printing chain organizer
                     </legend>
                 </p>
                 <p class="pic">
@@ -674,7 +672,7 @@
 
                     </video>
                     <legend>
-                        Video of printers printing the organiser and the organised assembled in a chain.
+                        Video of printers printing the organizer and the organized assembled in a chain.
 
                     </legend>
                 </p>
@@ -691,7 +689,7 @@
                 <li> luckily I was at the beach and I saw a model that would be interesting. Someone had but a large rock equilibrated.
                 </li>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/rock.jpg">
-                    <legend> equilibrated rock at the Figueira beach near Lagos, Portugal
+                    <legend> equilibrated rock at the "Figueira beach" near Lagos, Portugal
                     </legend>
                 </p>
                 <li> Next step was to take around 40 photos from all angles and in preference without moving background like people or clouds.
@@ -712,7 +710,7 @@
                     <legend> print from options on remake
                     </legend>
                 </p>
-                <li> On the lower part of the screen ReMake shows models being generated and on queue. The top part shows models al ready done.
+                <li> On the lower part of the screen ReMake shows models being generated and on queue. The top part shows models already done.
                 </li>
                 <p class="pic"> <img src="media/3d_scanning_and_printing/image16.jpg">
                     <legend> print from Autodesk ReMake
@@ -787,10 +785,9 @@
                         </legend>
                     </p>
                 </li>
-                <li> <a href="media/3d_scanning_and_printing/g_code/stonemodel.zip">G-code</a> generated
-                    <p>The Gcode Generated can be downloaded with the link above but I extracted here the begining of it in other to show a few of its statistics.</p>
-                    <pre><code>; generated by<b>Slic3r</b> 1.3.1-dev on 2020-05-31 at 20:04:21
-
+                <li><a href="media/3d_scanning_and_printing/g_code/stonemodel.zip">G-code</a> generated
+                    <p>The G-code Generated can be downloaded with the link above but I extracted here the beginning of it in other to show a few of its statistics.</p>
+                    <pre><code>; generated by <b>Slic3r</b> 1.3.1-dev on 2020-05-31 at 20:04:21
 ; external perimeters extrusion width = 0.44mm (3.38mm^3/s)
 ; perimeters extrusion width = 0.48mm (7.54mm^3/s)
 ; infill extrusion width = 0.48mm (10.05mm^3/s)
@@ -799,7 +796,6 @@
 ; support material extrusion width = 0.44mm (6.76mm^3/s)
 </code></pre>
                 </li>
-
             </ol>
         </ol>
 
