@@ -46,7 +46,7 @@
                         <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
                     </li>
                     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-                        <ul id="project" class="dropdown-menu" role="menu"> </ul>
+                        <ul id="project" class="dropdown-menu" role="menu"> S</ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -57,7 +57,7 @@
     <div class="container">
         <!-- Insert your content here below! -->
 
-        <h3>Final Project Concept Update and design files</h3>
+        <h3>Final Project Diary and Concept Update</h3>
         <p>On the 6th of June of 2020 I decided to change my final project again!</p>
         <p>I needed to have irrigation working in the farm, I did not need more chicken right now, so well I changed again. It doesn't mean I gave up on the Chicken egg incubator. It only means I might have <b>TWO</b> final projects :-). Well maybe not, the reality is that I will focus on the irrigation, my fruit trees need the water, the greenhouse too. I have so much need for it right now and I need it to to work well that it makes it really worth the change.</p>
         <h4>So no Chickens! YES WATER!, maybe also Chickens.</h4>
@@ -79,8 +79,23 @@
         </ol>
         <h4>Design Requirements and situation</h4>
         <ol>
-            <li>Needs to be water proof;</li>
+            <li>Need to be water resistant at least;</li>
         </ol>
+        <hr>
+        <h4>The current state</h4>
+        <p>As of today 07th of June 2020 the development is like this.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial01.jpg">
+            <legend>What I start with is a system that works on a Uno and is a torture on a ESP8266 besides is a shock hazard and because of water damage I need to replace some relays.</legend>
+        </p>
+        <p>The code running on this setup can be found on the Fabfarm Github <a href="https://github.com/fabfarm/autovalve/tree/master/Uno/Irrigation/original/irrigation_system_arduino_code">Autovalve</a></p>
+        <p>Shakeel one of our volunteers managed to create a version that runs on a ESP8266 that can be found in the same repo <a href="https://github.com/fabfarm/autovalve/tree/master/ESP8266_NodeMCU/Irrigation_System_NodeMCU_RTC_ACS712v2">here</a>. Due to the Pandemic situation he left us in a hurry and did not have time to test his code so it worked but not stable due to the fact that he heroically attempted to share the analog pin with the wifi, leading to drops in the wifi that rendered using the system almost impossible. This is the code that I started with.</p>
+        <p>After many hours trying to understand the code I managed to port Shakeels code to a ESP32 and also split the file with each function on a separate file. </p>
+        <p>The code is to big to display on the HTML so I will leave a link for the state of the code as of today 8th of june 2020 <a hre="https://github.com/fabfarm/autovalve/tree/master/ESP32/esp32irrigation_historical_no_change">here</a>.</p>
+        <hr>
+        <h4>Footnote</h4>
+        <p>Links:</p>
+        <p><a href="https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/">Rui Silva's resources on ESP32</a></p>
+        <p><a href="https://lastminuteengineers.com/esp32-arduino-ide-tutorial/">Last Minute Engineer</a></p>
         <!-- End of your content -->
     </div> <!-- /container -->
     <!-- footer -->
