@@ -502,13 +502,57 @@
             <p class="pic"><img src="media/electronics_design/image16.jpg">
                 <legend>populated PCB ready for burning firmware</legend>
             </p>
-            <hr>
-            <li>Conclusion</li>
-            <p>I really enjoyed learning this new tool. I have used eagle before to view pcb's but never actually designed one. I feel it opens my mind to a lot of new things to come!</p>
-            <p>To see how I program this board Check <a href="embedded_programming.html">Embedded Programing week.</a></p>
-
+            <li> Burn firmware
+            </li>
+            <br>
+            <p>Disclaimer</p>
+            <p>I actually did this activity in the embedded programing week. I only place it here to fulfill the Fabacademy requirements.</p>
+            <p>With that here follows the test of my board.</p>
+            <ol type="i">
+                <li> identify example code:</li>
+                <p>- There is this <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c">code</a> from Prof. Neil</p>
+                <li>identify commands to compile and burn firmware</li>
+                <p>- with all files prior downloaded on one directory, in linux I rename the file to makefile and run the script to create the firmware (this step I will repeat every time I want to modify the code: </p>
+                <pre class="prettyprint linenums">mv hello.ftdi.44.echo.c.make makefile
+make</pre>
+                <p class="pic"><img src="media/embedded_programming/lsmake.jpg">
+                    <legend>renaming to makefile and compiling</legend>
+                </p>
+                <li>compile source code</li>
+                <p>- done in previous step</p>
+                <li>Adapting makefile to work with my programer</li>
+                <p class="pic"><img src="media/embedded_programming/makefile.jpg">
+                    <legend>I had to edit the makefile file to work with my programmer. That was done by replacing the entry usbtiny with USBasp 2 times, one when burning the firmware the other when burning the fuses</legend>
+                </p>
+                <li>burn firmware</li>
+                <p>run:</p>
+                <pre class="prettyprint linenums">make program-usbtiny</pre>
+                <p class="pic"><img src="media/embedded_programming/burn.jpg">
+                    <legend>renaming to makefile and compiling</legend>
+                </p>
+                <li>identify what fuses to burn</li>
+                <p>- that was done already in the makefile</p>
+                <li>burn fuses</li>
+                <p>run:</p>
+                <pre class="prettyprint linenums">make program-usbasp-fuses</pre>
+                <p class="pic"><img src="media/embedded_programming/fuses.jpg">
+                    <legend>burning fuses</legend>
+                </p>
+            </ol>
 
         </ol>
+        <hr>
+        <h4>First test</h4>
+        <h4>Burning Neil's code "hello.ftdi.44.echo.c"</h4>
+        <p>Here instead of using terminal and avrdude, I used the Arduino IDE as it has a built-in serial monitor.</p>
+        <p>The results are as follows in the video</p>
+        <p class="pic"><video controls>
+                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.</video></p>
+        <hr>
+        <li>Conclusion</li>
+        <p>I really enjoyed learning this new tool. I have used eagle before to view pcb's but never actually designed one. I feel it opens my mind to a lot of new things to come!</p>
+        <p>To see how I program this board Check <a href="embedded_programming.html">Embedded Programing week.</a></p>
+
         <!-- End of your content -->
     </div> <!-- /container -->
     <!-- footer -->
