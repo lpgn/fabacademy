@@ -30,16 +30,17 @@ float getIRMS()
     delay(3); // pause for 3 ms
   }
   // subtract min from max and convert range to volts
-  VPP = ((maxValue - minValue) * 5.0) / 1024.0; // find peak-to-peak voltage
-  VRMS = ((VPP / 2.0) * 0.707) - VRMSoffset; // divide by 2 to get peak voltage. 1 ÷ √(2) is 0.707
+  VPP = ((maxValue - minValue) * 5.0) / 4095.0; // find peak-to-peak voltage
+  VRMS = ((VPP / 2.0) * 0.707) - VRMSoffset; // divide by 2 to get peak voltage.3.3 ÷ √(2) is 2.333 ---  1 ÷ √(2) is 0.707
   IRMS = (VRMS * 1000.0) / mVperAmp; // first, multiply by 1000 to convert to mV
   
 //  Serial.print("Vpp/V: ");
 //  Serial.print(VPP, 3); // print to 3 decimal places
 //  Serial.print("\tVrms/V: ");
 //  Serial.print(VRMS, 3);
+  Serial.print("\tAnalog raw value: ");
+  Serial.print(readValue);
   Serial.print("\tIrms/A: ");
   Serial.println(IRMS, 3);
-  
   return IRMS;
 }

@@ -54,15 +54,17 @@ unsigned long waitTimeValveOff = 1000; // wait time (ms) from pump deactivation 
 
 // NodeMCU ESP8266 pump and relay GPIO pins 
 
-const int valveRelay1 = 26; // D6
-const int valveRelay2 = 25; // D7
-const int valveRelay3 = 33; // D8
-const int pumpRelay = 32; // D5
+const int valveRelay1 = 26;
+const int valveRelay2 = 25;
+const int valveRelay3 = 33;
+const int pumpRelay = 32;
+
+const int printReadFile = 0 ;
 
 // RCT Pins CLK,DAT,RST
-const int clkPin = 18; // D8
-const int datPin = 19; // D8
-const int rstPin = 21; // D8
+const int clkPin = 18;
+const int datPin = 19;
+const int rstPin = 21;
 
 // set analog pin connected to the ACS712 current sensor
 const int ACS712_sensor = 34; 
@@ -240,7 +242,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 )rawliteral";
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   // Initialize SPIFFS
   #ifdef ESP32
     if(!SPIFFS.begin(true)){
@@ -353,7 +355,7 @@ void setup() {
   });
   server.onNotFound(notFound);
   server.begin();
-    pinMode(valveRelay1, OUTPUT);
+  pinMode(valveRelay1, OUTPUT);
   pinMode(valveRelay2, OUTPUT);
   pinMode(valveRelay3, OUTPUT);
   pinMode(pumpRelay, OUTPUT);
@@ -698,11 +700,11 @@ void loop() {
   // check if low current threshold
   if (AC_current <= LowCurrentLimit)
   {
-    LowCurrentLimit_state = 1;
-    count++; // increment current limit count by 1
-    Serial.print("*** Low current detected! ");
-    Serial.print(count);
-    Serial.println(" out of 3 ***");
+    //LowCurrentLimit_state = 1;
+    //count++; // increment current limit count by 1
+    //Serial.print("*** Low current detected! ");
+    //Serial.print(count);
+    //Serial.println(" out of 3 ***");
     
     //if low current limit detected 3 counts in a row
     if (count == 3) // if current threshold low for about 10s, turn off pump relay
@@ -752,11 +754,11 @@ void loop() {
   // check high current threshold
   if (AC_current >= HighCurrentLimit)
   {
-    HighCurrentLimit_state = 1;
-    count++; // increment current limit count by 1
-    Serial.print("*** High current detected! ");
-    Serial.print(count);
-    Serial.println(" out of 3 ***");
+    //HighCurrentLimit_state = 1;
+    //count++; // increment current limit count by 1
+    //Serial.print("*** High current detected! ");
+    //Serial.print(count);
+    //Serial.println(" out of 3 ***");
     
     //if current limit detected 3 counts in a row
     if (count == 3) // if current threshold exceeded for about 10s, turn off pump relay
