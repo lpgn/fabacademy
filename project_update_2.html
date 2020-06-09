@@ -54,11 +54,16 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
-    <div class="main">
+    <div class="container">
         <p>Diary Dates</p>
         <a href="#06/06/2020">06/06/2020</a>
         <a href="#07/06/2020">07/06/2020</a>
         <a href="#08/06/2020">08/06/2020</a>
+        <a href="#09/06/2020">09/06/2020</a>
+    </div>
+    <div class="side">
+        <p>disable current sensing</p>
+        <p>enable current sensing</p>
     </div>
     <div class="container">
         <!-- Insert your content here below! -->
@@ -100,23 +105,38 @@
         <h4><a id="08/06/2020">8th of June, 2020</a></h4>
         <p>After many hours trying to understand the code I managed to port Shakeel's code to a ESP32 and also split the file with each function on a separate file. </p>
         <p>In this video I show the progress I did so far in the merging the codes and having it work in the ESP32</p>
-        <p class="pic"> <video width="400" controls>
+        <p class="pic"> <video controls>
                 <source src="media/final_project/images/initial_stage/initial03_codediff.mp4"> Your browser does not support HTML5 video.
-            </video><legend>Check hight resolution version on <a href="https://youtu.be/oxlblIs7CC0">Youtube</a></legend></p>
+            </video>
+            <legend>Check hight resolution version on <a href="https://youtu.be/oxlblIs7CC0">Youtube</a></legend>
+        </p>
         <p>To port the code to ESP32 might be simple for a programmer but it took many hours for me.</p>
         <p>Steps:</p>
         <ol>
             <li>separated everything that was a function already to its own file to make it more readable;</li>
             <li>Opened then another session of the Arduino IDE and started copying every part of the code line by line to the new session, in this session I renamed the main file to "esp32irrigation"</li>
-            <li></li>
+            <li>remapped the pins to ESP32 pins</li>
+            <li>run beautify on the HTML on Brackets</li>
+            <li>organized the code so pins are on top</li>
+            <li>created variables for the RTC pins</li>
+            <li>Commented parts of the code that print error to the serial monitor</li>
         </ol>
         <p>The code is to big for displaying on the HTML so I will leave a link for the state of the code as this early morning: <a href="https://github.com/fabfarm/autovalve/tree/master/ESP32/esp32irrigation_historical_no_change"> codehere</a>.</p>
         <p>Here in this video you can see the testing setup of the current irrigation system of the farm</p>
-        <p class="pic"> <video width="400" controls>
+        <p class="pic"> <video controls>
                 <source src="media/final_project/images/initial_stage/initial02_showthesetup.mp4"> Your browser does not support HTML5 video.
             </video>
             <legend>Check hight resolution version on <a href="https://youtu.be/ytQwHZToBWM">Youtube</a></legend>
         </p>
+        <hr>
+        <h4><a id="09/06/2020">9th of June, 2020</a></h4>
+        <p>Today after testing the relays I realized that some relays work some not. After testing on the lab power supply directly with 5volts applied to the signal pin I believe that this is due to low voltage being supplied by the esp32 or the signal voltage.</p>
+        <p>I watched then the Great Scott's video on Youtube about <a href="https://www.youtube.com/watch?v=2BdevOmN-Zk">relays and optocouplers</a>.</p>
+        <p>I will make sure the relays have at least a 5 volts power supply. Wich are their required voltage acording to the <a href="media/final_project/datasheet/SRD-12VDC-xx-x_ETC.pdf">datasheet</a>. The signal should be fine at 3.3. Will be tested in situ.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial04.jpg">
+            <legend></legend>
+        </p>
+        <p>The other point is the current reading that is completely wrong. In other to have the irrigation system working I will have to run it without current sensing until debugged.</p>
         <hr>
         <h4>Footnote</h4>
         <p>Links:</p>
