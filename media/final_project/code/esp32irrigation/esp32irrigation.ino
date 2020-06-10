@@ -47,11 +47,11 @@
 #endif
 #include <ESPAsyncWebServer.h>
 #include <virtuabotixRTC.h> // DS1302 RTC module library
+#include "theHtml.h"
 
 // Set wait times for pump and valve relays activation/deactivation
 unsigned long waitTimePumpOn = 5000; // wait time (ms) from relay activation to pump activation
 unsigned long waitTimeValveOff = 1000; // wait time (ms) from pump deactivation to relay deactivation
-
 // NodeMCU ESP8266 pump and relay GPIO pins 
 
 const int valveRelay1 = 26;
@@ -151,96 +151,7 @@ float HighCurrentLimit = 0; // set the maximum current threshold in Amps
 // (valveRelay1_OnHour, valveRelay1_OnMin, valveRelay1_OffHour, valveRelay1_OffMin)
 // (LowCurrentLimit,HighCurrentLimit)
 
-const char index_html[] PROGMEM = R"rawliteral(
-<!DOCTYPE HTML>
-<html>
 
-<head>
-    <title>NodeMCU v1.0 12-E Input Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-        function submitMessage() {
-            alert("Saved value to NodeMCU SPIFFS");
-            setTimeout(function() {
-                document.location.reload(false);
-            }, 500);
-        }
-
-    </script>
-</head>
-
-<body>
-    <h1>Algarve Fab Farm</h1>
-    <h3>Irrigation System Configuration</h3>
-
-    <p><b>Set Relay 1 Timer (Hours & Minutes):</b></p>
-    <form action="/get" target="hidden-form">
-        ON hour (saved value: %valveRelay1_OnHour%): <input type="number" name="valveRelay1_OnHour" maxlength="2" size="2" min="0" max="23">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        ON mins (saved value: %valveRelay1_OnMin%): <input type="number" name="valveRelay1_OnMin" maxlength="2" size="2" min="0" max="59">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        OFF hour (saved value: %valveRelay1_OffHour%): <input type="number" name="valveRelay1_OffHour" maxlength="2" size="2" min="0" max="23">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        OFF mins (saved value: %valveRelay1_OffMin%): <input type="number" name="valveRelay1_OffMin" maxlength="2" size="2" min="0" max="59">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form>
-
-    <p><b>Set Relay 2 Timer (Hours & Minutes):</b></p>
-    <form action="/get" target="hidden-form">
-        ON hour (saved value: %valveRelay2_OnHour%): <input type="number" name="valveRelay2_OnHour" maxlength="2" size="2" min="0" max="23">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        ON mins (saved value: %valveRelay2_OnMin%): <input type="number" name="valveRelay2_OnMin" maxlength="2" size="2" min="0" max="59">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        OFF hour (saved value: %valveRelay2_OffHour%): <input type="number" name="valveRelay2_OffHour" maxlength="2" size="2" min="0" max="23">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        OFF mins (saved value: %valveRelay2_OffMin%): <input type="number" name="valveRelay2_OffMin" maxlength="2" size="2" min="0" max="59">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form>
-
-    <p><b>Set Relay 3 Timer (Hours & Minutes):</b></p>
-    <form action="/get" target="hidden-form">
-        ON hour (saved value: %valveRelay3_OnHour%): <input type="number" name="valveRelay3_OnHour" maxlength="2" size="2" min="0" max="23">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        ON mins (saved value: %valveRelay3_OnMin%): <input type="number" name="valveRelay3_OnMin" maxlength="2" size="2" min="0" max="59">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        OFF hour (saved value: %valveRelay3_OffHour%): <input type="number" name="valveRelay3_OffHour" maxlength="2" size="2" min="0" max="23">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        OFF mins (saved value: %valveRelay3_OffMin%): <input type="number" name="valveRelay3_OffMin" maxlength="2" size="2" min="0" max="59">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form>
-
-    <p><b>Set Current Thresholds (Amps):</b></p>
-    <form action="/get" target="hidden-form">
-        Low (saved value: %LowCurrentLimit%): <input type="number" name="LowCurrentLimit" maxlength="5" size="5" min="0" max="99" step="0.01">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form><br>
-    <form action="/get" target="hidden-form">
-        High (saved value: %HighCurrentLimit%): <input type="number" name="HighCurrentLimit" maxlength="5" size="5" min="0" max="99" step="0.01">
-        <input type="submit" value="Submit" onclick="submitMessage()">
-    </form>
-    <iframe style="display:none" name="hidden-form"></iframe>
-</body>
-
-</html>
-)rawliteral";
 
 void setup() {
   Serial.begin(9600);
@@ -257,7 +168,7 @@ void setup() {
     }
   #endif
 
-  WiFi.mode(WIFI_STA); 
+  WiFi.mode(WIFI_AP); 
 
 //wifi for overall WiFi configuration
 //wifi.sta for station mode functions
@@ -381,7 +292,7 @@ void setup() {
   
   // Set the current date, and time in the following format:
   // seconds, minutes, hours, day of the week, day of the month, month, year
-  //myRTC.setDS1302Time(0, 2, 01, 4, 0, 6, 2020); // uncomment line, upload to reset RTC and then comment, upload.
+  //myRTC.setDS1302Time(0, 31, 14, 4, 10, 6, 2020); // uncomment line, upload to reset RTC and then comment, upload.
   myRTC.updateTime(); //update of variables for time or accessing the individual elements.
   
   // Start printing elements as individuals                                                                 
@@ -562,14 +473,8 @@ void loop() {
     digitalWrite(pumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
-    // wait then turn valve relay 1 OFF
-    Serial.print("Waiting ");
-    Serial.print(waitTimeValveOff / 1000);
-    Serial.println("s before deactivating Valve Relay 1.");
-    delay(waitTimeValveOff);
-    digitalWrite(valveRelay1, LOW);
-    valve_1_state = 0;
-    Serial.println("*** Valve Relay 1 turned OFF ***");
+    int valveHere = valveRelay1;
+    turnOffRelay (valveHere);
     }
   }
   
@@ -616,14 +521,8 @@ void loop() {
     digitalWrite(pumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
-    // wait then turn valve relay 2 OFF
-    Serial.print("Waiting ");
-    Serial.print(waitTimeValveOff / 1000);
-    Serial.println("s before deactivating Valve Relay 2.");
-    delay(waitTimeValveOff);
-    digitalWrite(valveRelay2, LOW);
-    valve_2_state = 0;
-    Serial.println("*** Valve Relay 2 turned OFF ***");
+        int valveHere = valveRelay2;
+        turnOffRelay (valveHere);
     }
   }
 
@@ -634,6 +533,7 @@ void loop() {
   // check valve status and timer to turn Valve Relay 3 ON
   if (valve_3_state == 0)
   {
+    unsigned long waitTimeValveOff = 1000; // wait time (ms) from pump deactivation to relay deactivation
     if (myRTC.hours == valveRelay3_OnHour && myRTC.minutes == valveRelay3_OnMin && myRTC.seconds < ((waitTimePumpOn + waitTimeValveOff + MinTimePumpOperation) / 1000))
     {
     Serial.print("Valve Relay 3 Activation sequence RTC time: ");
@@ -670,14 +570,8 @@ void loop() {
     digitalWrite(pumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
-    // wait then turn valve relay 3 OFF
-    Serial.print("Waiting ");
-    Serial.print(waitTimeValveOff / 1000);
-    Serial.println("s before deactivating Valve Relay 3.");
-    delay(waitTimeValveOff);
-    digitalWrite(valveRelay3, LOW);
-    valve_3_state = 0;
-    Serial.println("*** Valve Relay 3 turned OFF ***");
+        int valveHere = valveRelay3;
+        turnOffRelay (valveHere);
     }
   }
   
@@ -721,36 +615,18 @@ void loop() {
       // turning off valve relay
       if (valve_1_state == 1)
       {
-        // wait then turn valve relay 1 OFF
-        Serial.print("Waiting ");
-        Serial.print(waitTimeValveOff / 1000);
-        Serial.println("s before deactivating Valve Relay 1.");
-        delay(waitTimeValveOff);
-        digitalWrite(valveRelay1, LOW);
-        valve_1_state = 0;
-        Serial.println("*** Valve Relay 1 turned OFF ***");
+        int valveHere = valveRelay1;
+        turnOffRelay (valveHere);
       }
       if (valve_2_state == 1)
       {
-        // wait then turn valve relay 2 OFF
-        Serial.print("Waiting ");
-        Serial.print(waitTimeValveOff / 1000);
-        Serial.println("s before deactivating Valve Relay 2.");
-        delay(waitTimeValveOff);
-        digitalWrite(valveRelay2, LOW);
-        valve_2_state = 0;
-        Serial.println("*** Valve Relay 2 turned OFF ***");
+        int valveHere = valveRelay2;
+        turnOffRelay (valveHere);
       }
       if (valve_3_state == 1)
       {
-        // wait then turn valve relay 3 OFF
-        Serial.print("Waiting ");
-        Serial.print(waitTimeValveOff / 1000);
-        Serial.println("s before deactivating Valve Relay 3.");
-        delay(waitTimeValveOff);
-        digitalWrite(valveRelay3, LOW);
-        valve_3_state = 0;
-        Serial.println("*** Valve Relay 3 turned OFF ***");
+        int valveHere = valveRelay3;
+        turnOffRelay (valveHere);
       }
     }
   }
@@ -775,36 +651,18 @@ void loop() {
       // turning off valve relay
       if (valve_1_state == 1)
       {
-        // wait then turn valve relay 1 OFF
-        Serial.print("Waiting ");
-        Serial.print(waitTimeValveOff / 1000);
-        Serial.println("s before deactivating Valve Relay 1.");
-        delay(waitTimeValveOff);
-        digitalWrite(valveRelay1, LOW);
-        valve_1_state = 0;
-        Serial.println("*** Valve Relay 1 turned OFF ***");
+        int valveHere = valveRelay1;
+        turnOffRelay (valveHere);
       }
       if (valve_2_state == 1)
       {
-        // wait then turn valve relay 2 OFF
-        Serial.print("Waiting ");
-        Serial.print(waitTimeValveOff / 1000);
-        Serial.println("s before deactivating Valve Relay 2.");
-        delay(waitTimeValveOff);
-        digitalWrite(valveRelay2, LOW);
-        valve_2_state = 0;
-        Serial.println("*** Valve Relay 2 turned OFF ***");
+        int valveHere = valveRelay2;
+        turnOffRelay (valveHere);
       }
       if (valve_3_state == 1)
       {
-        // wait then turn valve relay 3 OFF
-        Serial.print("Waiting ");
-        Serial.print(waitTimeValveOff / 1000);
-        Serial.println("s before deactivating Valve Relay 3.");
-        delay(waitTimeValveOff);
-        digitalWrite(valveRelay3, LOW);
-        valve_3_state = 0;
-        Serial.println("*** Valve Relay 3 turned OFF ***");
+        int valveHere = valveRelay3;
+        turnOffRelay (valveHere);
       }
     }
   }
@@ -825,5 +683,6 @@ void loop() {
     count = 0; // reset current limit count
  }
 }
-
 }
+
+
