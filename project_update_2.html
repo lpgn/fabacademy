@@ -61,10 +61,6 @@
         <a href="#08/06/2020">08/06/2020</a>
         <a href="#09/06/2020">09/06/2020</a>
     </div>
-    <div class="side">
-        <p>disable current sensing</p>
-        <p>enable current sensing</p>
-    </div>
     <div class="container">
         <!-- Insert your content here below! -->
 
@@ -138,10 +134,28 @@
         </p>
         <p>The other point is the current reading that is completely wrong. In other to have the irrigation system working I will have to run it without current sensing until debugged.</p>
         <hr>
+        <h4><a id="10/06/2020">10th of June, 2020</a></h4>
+        <p>After the tests, the conclusion to the voltage problem is that the esp32 should not supply power to the relay, that should be supplied from an external power source, set at 5volts. The signal can come from the esp32 unchanged but the esp 32 should share the same ground.</p>
+        <p>more changes in the code:</p>
+        <ol>
+            <li>increased the interval the time is displayed from 3000 to 5000 ms (5s) in the variable <code>RTCtimeInterval</code></li>
+            <li>increased the interval the setup is displayed from 10000 to 30000 ms (30s) in the variable <code>configTimeInterval</code> </li>
+            <li>Set recognizable names to the relay's html interface</li>
+            <li>Cleaned up a bit more on the serial monitor by removing seconds from the setting display</li>
+        </ol>
+        <p>I will place the setup back to work today in the morning and set times for each irrigation and field test the esp32 irrigation module.</p>
+        <p>Strangely the external RTC clock is not keeping accurate time. I will look into utilizing internal clock with external battery in case of power failure.</p>
+        <p>Acording to <a href="https://github.com/espressif/arduino-esp32/issues/3641">this closed issue discussion at the esp repo at github</a> and this <a href="https://www.esp32.com/viewtopic.php?t=3715#p17038">esp accuracy topic</a> the internal clock will delay "Internal RTC clock frequency error is about 5%", this can be solved with a external crystal of 32.768KHz crystal assembled according to the schematics below:</p>
+        <p>Another solution would be to have the esp always connected to the internet and grabbing the time from the internet updates to compensate for inaccuracy.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/73125119-71fc6c80-3f60-11ea-879e-9a5b5f027982.jpg">
+            <legend></legend>
+        </p>
+        <hr>
         <h4>Footnote</h4>
         <p>Links:</p>
         <p><a href="https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/">Rui Silva's resources on ESP32</a></p>
         <p><a href="https://lastminuteengineers.com/esp32-arduino-ide-tutorial/">Last Minute Engineer</a></p>
+        <p><a href="https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/">Random Nerd Tutorials</a></p>
         <!-- End of your content -->
     </div> <!-- /container -->
     <!-- footer -->

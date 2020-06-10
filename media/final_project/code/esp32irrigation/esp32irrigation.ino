@@ -103,9 +103,9 @@ float VRMSoffset = 0.0; //0.005; // set quiescent Vrms output voltage
 float AC_current; // measured AC current Irms value (Amps)
 int count = 0; // initialise current limit count to zero
 unsigned long MinTimePumpOperation = 0; // minimum time (ms) for pump operation (due to immediate low or high current)
-unsigned long RTCtimeInterval = 3000;  // prints RTC time every interval (ms)
+unsigned long RTCtimeInterval = 5000;  // prints RTC time every interval (ms)
 unsigned long RTCtimeNow;
-unsigned long configTimeInterval = 10000; // set interval in ms
+unsigned long configTimeInterval = 30000; // interval in ms of printed configuration time
 unsigned long configTimeNow = 0; // stores current value from millis()
 
 bool valve_1_state = 0; // valve 1 state initialised to OFF
@@ -150,6 +150,7 @@ float HighCurrentLimit = 0; // set the maximum current threshold in Amps
 // (valveRelay1_OnHour, valveRelay1_OnMin, valveRelay1_OffHour, valveRelay1_OffMin)
 // (valveRelay1_OnHour, valveRelay1_OnMin, valveRelay1_OffHour, valveRelay1_OffMin)
 // (LowCurrentLimit,HighCurrentLimit)
+
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML>
 <html>
@@ -256,7 +257,15 @@ void setup() {
     }
   #endif
 
-  WiFi.mode(WIFI_STA);
+  WiFi.mode(WIFI_STA); 
+
+//wifi for overall WiFi configuration
+//wifi.sta for station mode functions
+//wifi.ap for wireless access point (WAP or simply AP) functions
+//wifi.ap.dhcp for DHCP server control
+//wifi.eventmon for wifi event monitor
+//wifi.monitor for wifi monitor mode
+  
   WiFi.begin(ssid, password);
   if (WiFi.waitForConnectResult() != WL_CONNECTED) {
     Serial.println("WiFi Failed!");
@@ -372,7 +381,7 @@ void setup() {
   
   // Set the current date, and time in the following format:
   // seconds, minutes, hours, day of the week, day of the month, month, year
-  //myRTC.setDS1302Time(10, 7, 20, 1, 5, 2, 2020); // uncomment line, upload to reset RTC and then comment, upload.
+  //myRTC.setDS1302Time(0, 2, 01, 4, 0, 6, 2020); // uncomment line, upload to reset RTC and then comment, upload.
   myRTC.updateTime(); //update of variables for time or accessing the individual elements.
   
   // Start printing elements as individuals                                                                 
@@ -523,8 +532,8 @@ void loop() {
     Serial.print(myRTC.hours);  // display the current hour from RTC module                
     Serial.print(":");                                                                                      
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
-    Serial.print(":");                                                                                           
-    Serial.println(myRTC.seconds);  // display the seconds from RTC module
+    //Serial.print(":");                                                                                           
+    //Serial.println(myRTC.seconds);  // display the seconds from RTC module
     digitalWrite(valveRelay1, HIGH);
     valve_1_state = 1;
     Serial.println("*** Valve Relay 1 turned ON ***");
@@ -548,8 +557,8 @@ void loop() {
     Serial.print(myRTC.hours);  // display the current hour from RTC module                
     Serial.print(":");                                                                                      
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
-    Serial.print(":");                                                                                           
-    Serial.println(myRTC.seconds);  // display the seconds from RTC module
+    //Serial.print(":");                                                                                           
+    //Serial.println(myRTC.seconds);  // display the seconds from RTC module
     digitalWrite(pumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
@@ -577,8 +586,8 @@ void loop() {
     Serial.print(myRTC.hours);  // display the current hour from RTC module                
     Serial.print(":");                                                                                      
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
-    Serial.print(":");                                                                                           
-    Serial.println(myRTC.seconds);  // display the seconds from RTC module  
+    //Serial.print(":");                                                                                           
+    //Serial.println(myRTC.seconds);  // display the seconds from RTC module  
     digitalWrite(valveRelay2, HIGH);
     valve_2_state = 1;
     Serial.println("*** Valve Relay 2 turned ON ***");
@@ -602,8 +611,8 @@ void loop() {
     Serial.print(myRTC.hours);  // display the current hour from RTC module                
     Serial.print(":");                                                                                      
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
-    Serial.print(":");                                                                                           
-    Serial.println(myRTC.seconds);  // display the seconds from RTC module
+    //Serial.print(":");                                                                                           
+    //Serial.println(myRTC.seconds);  // display the seconds from RTC module
     digitalWrite(pumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
@@ -631,8 +640,8 @@ void loop() {
     Serial.print(myRTC.hours);  // display the current hour from RTC module                
     Serial.print(":");                                                                                      
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
-    Serial.print(":");                                                                                           
-    Serial.println(myRTC.seconds);  // display the seconds from RTC module 
+    //Serial.print(":");                                                                                           
+    //Serial.println(myRTC.seconds);  // display the seconds from RTC module 
     digitalWrite(valveRelay3, HIGH);
     valve_3_state = 1;
     Serial.println("*** Valve Relay 3 turned ON ***"); 
@@ -656,8 +665,8 @@ void loop() {
     Serial.print(myRTC.hours);  // display the current hour from RTC module                
     Serial.print(":");                                                                                      
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
-    Serial.print(":");                                                                                           
-    Serial.println(myRTC.seconds);  // display the seconds from RTC module
+    //Serial.print(":");                                                                                           
+    //Serial.println(myRTC.seconds);  // display the seconds from RTC module
     digitalWrite(pumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
@@ -687,12 +696,7 @@ void loop() {
   if (millis() - RTCtimeNow >= RTCtimeInterval)  // non-blocking. prints RTC time every time interval.
   {
     RTCtimeNow = millis();
-    Serial.print("RTC Time: ");                     
-    Serial.print(myRTC.hours);                                                                              
-    Serial.print(":");                                                                                      
-    Serial.print(myRTC.minutes);                                                                            
-    Serial.print(":");                                                                                      
-    Serial.print(myRTC.seconds);
+    printMyTime ();
     AC_current = getIRMS();                                                          
   }
 
