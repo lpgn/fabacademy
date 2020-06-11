@@ -60,6 +60,7 @@
         <a href="#07/06/2020">07/06/2020</a>
         <a href="#08/06/2020">08/06/2020</a>
         <a href="#09/06/2020">09/06/2020</a>
+        <a href="#10/06/2020">10/06/2020</a>
     </div>
     <div class="container">
         <!-- Insert your content here below! -->
@@ -190,6 +191,9 @@
         <p>The reason I use the <code>{}</code> is because I had to declare the local variable <code>valveHere</code> this way I could replace only that piece of code each time I called the function.</p>
         <p>Technically calling that function would be just having this code here <code>turnOffRelay (valveHere);</code> but that would not work alone as I am always replacing the valve relay pin with <code>int valveHere = valveRelay3;</code></p>
         <p>I still haven't tested the behaviour but at least it compiles :-)</p>
+        <hr>
+        <h4><a id="09/06/2020">9th of June, 2020</a></h4>
+        <p> I burned it on the ESP32 and the behavior is unexpected. The function keeps printing again and again I believe I need to send back the sate of one variable and I did not do that. I will try using the code <code>return variable;</code> to do it and then test but before I will watch again the functions video to better understand it.</p>
         <hr>
         <h4>Footnote</h4>
         <p>Links:</p>
