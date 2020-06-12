@@ -54,10 +54,10 @@ unsigned long waitTimePumpOn = 5000; // wait time (ms) from relay activation to 
 unsigned long waitTimeValveOff = 1000; // wait time (ms) from pump deactivation to relay deactivation
 // NodeMCU ESP8266 pump and relay GPIO pins 
 
-const int valveRelay1 = 26;
-const int valveRelay2 = 25;
-const int valveRelay3 = 33;
-const int pumpRelay = 32;
+const int pinValveRelay1 = 26;
+const int pinValveRelay2 = 25;
+const int pinValveRelay3 = 33;
+const int pinPumpRelay = 32;
 
 const int printReadFile = 0 ;
 
@@ -275,16 +275,16 @@ void setup() {
   });
   server.onNotFound(notFound);
   server.begin();
-  pinMode(valveRelay1, OUTPUT);
-  pinMode(valveRelay2, OUTPUT);
-  pinMode(valveRelay3, OUTPUT);
-  pinMode(pumpRelay, OUTPUT);
+  pinMode(pinValveRelay1, OUTPUT);
+  pinMode(pinValveRelay2, OUTPUT);
+  pinMode(pinValveRelay3, OUTPUT);
+  pinMode(pinPumpRelay, OUTPUT);
 
   // set initial state of all valve and pump relays to OFF
-  digitalWrite(valveRelay1, LOW);
-  digitalWrite(valveRelay2, LOW);
-  digitalWrite(valveRelay3, LOW);
-  digitalWrite(pumpRelay, LOW);
+  digitalWrite(pinValveRelay1, LOW);
+  digitalWrite(pinValveRelay2, LOW);
+  digitalWrite(pinValveRelay3, LOW);
+  digitalWrite(pinPumpRelay, LOW);
   
   Serial.println();
   Serial.println("NodeMCU Irrigation Control System");
@@ -445,7 +445,7 @@ void loop() {
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
     //Serial.print(":");                                                                                           
     //Serial.println(myRTC.seconds);  // display the seconds from RTC module
-    digitalWrite(valveRelay1, HIGH);
+    digitalWrite(pinValveRelay1, HIGH);
     valve_1_state = 1;
     Serial.println("*** Valve Relay 1 turned ON ***");
     // wait then turn pump relay ON
@@ -453,7 +453,7 @@ void loop() {
     Serial.print(waitTimePumpOn / 1000);
     Serial.println("s before activating Pump Relay.");
     delay(waitTimePumpOn);
-    digitalWrite(pumpRelay, HIGH);
+    digitalWrite(pinPumpRelay, HIGH);
     pump_state = 1;
     Serial.println("*** Pump Relay turned ON ***");
     }
@@ -470,11 +470,10 @@ void loop() {
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
     //Serial.print(":");                                                                                           
     //Serial.println(myRTC.seconds);  // display the seconds from RTC module
-    digitalWrite(pumpRelay, LOW);
+    digitalWrite(pinPumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
-    int valveHere = valveRelay1;
-    turnOffRelay (valveHere);
+    valve_1_state = turnOffRelay (pinValveRelay1, 1);
     }
   }
   
@@ -493,7 +492,7 @@ void loop() {
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
     //Serial.print(":");                                                                                           
     //Serial.println(myRTC.seconds);  // display the seconds from RTC module  
-    digitalWrite(valveRelay2, HIGH);
+    digitalWrite(pinValveRelay2, HIGH);
     valve_2_state = 1;
     Serial.println("*** Valve Relay 2 turned ON ***");
     // wait then turn pump relay ON
@@ -501,7 +500,7 @@ void loop() {
     Serial.print(waitTimePumpOn / 1000);
     Serial.println("s before activating Pump Relay.");
     delay(waitTimePumpOn);
-    digitalWrite(pumpRelay, HIGH);
+    digitalWrite(pinPumpRelay, HIGH);
     pump_state = 1;
     Serial.println("*** Pump Relay turned ON ***");
     }
@@ -518,11 +517,10 @@ void loop() {
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
     //Serial.print(":");                                                                                           
     //Serial.println(myRTC.seconds);  // display the seconds from RTC module
-    digitalWrite(pumpRelay, LOW);
+    digitalWrite(pinPumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
-        int valveHere = valveRelay2;
-        turnOffRelay (valveHere);
+    valve_2_state = turnOffRelay (pinValveRelay2, 2);;
     }
   }
 
@@ -542,7 +540,7 @@ void loop() {
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
     //Serial.print(":");                                                                                           
     //Serial.println(myRTC.seconds);  // display the seconds from RTC module 
-    digitalWrite(valveRelay3, HIGH);
+    digitalWrite(pinValveRelay3, HIGH);
     valve_3_state = 1;
     Serial.println("*** Valve Relay 3 turned ON ***"); 
     // wait then turn pump relay ON
@@ -550,7 +548,7 @@ void loop() {
     Serial.print(waitTimePumpOn / 1000);
     Serial.println("s before activating Pump Relay.");
     delay(waitTimePumpOn);
-    digitalWrite(pumpRelay, HIGH);
+    digitalWrite(pinPumpRelay, HIGH);
     pump_state = 1;
     Serial.println("*** Pump Relay turned ON ***");
     }
@@ -567,11 +565,10 @@ void loop() {
     Serial.print(myRTC.minutes);  // display the current minutes from RTC module            
     //Serial.print(":");                                                                                           
     //Serial.println(myRTC.seconds);  // display the seconds from RTC module
-    digitalWrite(pumpRelay, LOW);
+    digitalWrite(pinPumpRelay, LOW);
     pump_state = 0;
     Serial.println("*** Pump Relay turned OFF ***");
-        int valveHere = valveRelay3;
-        turnOffRelay (valveHere);
+    valve_3_state = turnOffRelay (pinValveRelay3, 3);
     }
   }
   
@@ -607,27 +604,15 @@ void loop() {
     //if low current limit detected 3 counts in a row
     if (count == 3) // if current threshold low for about 10s, turn off pump relay
     {
-      digitalWrite(pumpRelay, LOW); // turn pump off
+      digitalWrite(pinPumpRelay, LOW); // turn pump off
       Serial.println("*** Low current limit! Pump Relay turned OFF ***");
       pump_state = 0; // stop monitoring current level
       count = 0; // reset current limit count
       
       // turning off valve relay
-      if (valve_1_state == 1)
-      {
-        int valveHere = valveRelay1;
-        turnOffRelay (valveHere);
-      }
-      if (valve_2_state == 1)
-      {
-        int valveHere = valveRelay2;
-        turnOffRelay (valveHere);
-      }
-      if (valve_3_state == 1)
-      {
-        int valveHere = valveRelay3;
-        turnOffRelay (valveHere);
-      }
+      if (valve_1_state == 1){valve_1_state = turnOffRelay (pinValveRelay1, 1);}
+      if (valve_2_state == 1){valve_2_state = turnOffRelay (pinValveRelay2, 2);}
+      if (valve_3_state == 1){valve_3_state = turnOffRelay (pinValveRelay3, 3);}
     }
   }
 
@@ -643,27 +628,15 @@ void loop() {
     //if current limit detected 3 counts in a row
     if (count == 3) // if current threshold exceeded for about 10s, turn off pump relay
     {
-      digitalWrite(pumpRelay, LOW); // turn pump off
+      digitalWrite(pinPumpRelay, LOW); // turn pump off
       Serial.println("*** High current limit! Pump Relay turned OFF ***");
       pump_state = 0; // stop monitoring current level
       count = 0; // reset current limit count
     
       // turning off valve relay
-      if (valve_1_state == 1)
-      {
-        int valveHere = valveRelay1;
-        turnOffRelay (valveHere);
-      }
-      if (valve_2_state == 1)
-      {
-        int valveHere = valveRelay2;
-        turnOffRelay (valveHere);
-      }
-      if (valve_3_state == 1)
-      {
-        int valveHere = valveRelay3;
-        turnOffRelay (valveHere);
-      }
+      if (valve_1_state == 1){valve_1_state = turnOffRelay (pinValveRelay1, 1);}
+      if (valve_2_state == 1){valve_2_state = turnOffRelay (pinValveRelay2, 2);}
+      if (valve_3_state == 1){valve_3_state = turnOffRelay (pinValveRelay3, 3);}
     }
   }
 
