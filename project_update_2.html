@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,8 +30,10 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
+
     </script>
 </head>
+
 <body onload="menu()">
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
@@ -452,22 +455,71 @@
         <h4><a id="14/06/2020">14th of June, 2020</a></h4>
         <p>After all this personal breakthru I decided I need to start the code from scratch and use only the general Algorithm of the current irrigation system installed in the farm. The reason is that the code is too messy and repetitive, the approaches found in the last the sources of yesterday made me realize its faster to add the features on the last code one by one than to recode everything from the code currently running on the farm.</p>
         <p>I will today attempt to add updated information like temperature and humidity information. I am basing again on the works by Rui Santos <a href="https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-web-server-arduino-ide/">on this page about a weather station.</a> With this approach I believe I will be able to also include time of the day using a RTC clock.</p>
-                <p>The schematics for connecting the DHT22 are from his Website:</p>
+        <p>The schematics for connecting the DHT22 are from his Website:</p>
         <p class="pic"> <img src="media/final_project/images/initial_stage/ESP32-DHT-wiring_bb.jpg">
             <legend></legend>
         </p>
         <p>It uses a 4.7l Ohm Resistor the as a pull up. </p>
         <p>After some work this is how the page looks: </p>
-                <p class="pic"> <img src="media/final_project/images/initial_stage/initial09.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial09.jpg">
             <legend></legend>
         </p>
         <p>The reason the temperature now is negative I believe is because the temperature and humidity sensor is either faulty or my wirings are a bit loose, I believe once I mill my own board and solder everything instead of plunging on a breadboard this will be more reliable, anyway I am getting the values and being able to show them on the web interface. </p>
-        <p>On Serial monitor I am currently being able to display the Internet time as well as the Network information now I need to find out a way to get the time value and display in the web interface. Currentelly I am sendin trhu code the word TESTE and that is beeing displayed instead of the time.</p>
+        <p>On Serial monitor I am currently being able to display the Internet time as well as the Network information now I need to find out a way to get the time value and display in the web interface. Currently I am sending through code the word TESTE and that is being displayed instead of the time.</p>
         <p class="pic"> <img src="media/final_project/images/initial_stage/initial10.jpg">
-        <legend></legend>
+            <legend></legend>
         </p>
         <hr>
         <h4><a id="15/06/2020">15th of June, 2020</a></h4>
+        <p>Today I will focus on getting the time displayed in the web interface and perhaps create a function to turn on the relay on specific set time.</p>
+        <p>8:44 Update:</p>
+        <p>- After the hole day trying I were able to display the machine time and the irrigation system (ESP32) time.</p>
+        <p>Now the interface looks like this:</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial11.jpg">
+            <legend></legend>
+        </p>
+        <p>When I grow up I want to be a programmer :-) and not spend a entire day on something someone puts together in a few lines!</p>
+        <p>My struggles where stooped by a saint with <a href="https://arduino.stackexchange.com/a/52677">this answer</a> on stack overflow.</p>
+        <p>Here follows the original function posted there:</p>
+        <pre><code>
+void printLocalTime()
+{
+  time_t rawtime;
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo))
+  {
+    Serial.println("Failed to obtain time");
+   return;
+  }
+  char timeStringBuff[50]; //50 chars should be enough
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%A, %B %d %Y %H:%M:%S", &timeinfo);
+  //print like "const char*"
+  Serial.println(timeStringBuff);
+
+  //Optional: Construct String object 
+  String asString(timeStringBuff);
+}
+</code></pre>
+        <p> With minor modifications by changing it from avoid function into a String function and adding a return that I named "timeAsAString":</p>
+        <pre><code>
+//this function was found here https://arduino.stackexchange.com/questions/52676/how-do-you-convert-a-formatted-print-statement-into-a-string-variable
+//I did a minor change so instead of a void function it now returns a string to be used to show time in the webinterface
+String printFarmTime()
+{
+  time_t rawtime;
+  struct tm timeinfo;
+  getLocalTime(&timeinfo);
+  char timeStringBuff[50]; //50 chars should be enough
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%A, %B %d %Y %H:%M:%S", &timeinfo);
+  //print like "const char*"
+  Serial.println(timeStringBuff);
+
+  //Construct to create the String object
+  String timeAsAString(timeStringBuff);
+  return timeAsAString;
+}
+</code></pre>
+        <p>So with that out of the way I will try to create the functions to turn on and off the relays according to the time scheduled. Lets see if I can finish it by today.</p>
         <hr>
         <h4>Footnote</h4>
         <p>Links:</p>
