@@ -64,6 +64,7 @@
         <a href="#13/06/2020">13/06/2020</a>
         <a href="#14/06/2020">14/06/2020</a>
         <a href="#15/06/2020">15/06/2020</a>
+        <a href="#16/06/2020">16/06/2020</a>
     </div>
     <div class="container">
         <!-- Insert your content here below! -->
@@ -519,8 +520,61 @@ String printFarmTime()
   return timeAsAString;
 }
 </code></pre>
-        <p>So with that out of the way I will try to create the functions to turn on and off the relays according to the time scheduled. Lets see if I can finish it by today.</p>
+        <p>So with that out of the way I will try to create the functions to turn on and off the relays according to the time scheduled. Lets see if I can finish it by today...</p>
         <hr>
+        <h4><a id="09/06/2020">9th of June, 2020</a></h4>
+        <p>No I did not work on it I was tired, so today I made a few sketches.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial12.jpg">
+            <legend></legend>
+        <p>In this Sketch I show how the package shape is going to be and how the web interface is going to be as well.</p>
+        <p>I am also reading about <a href="https://www.arduino.cc/en/Reference.StringConstructor">String</a> as well as its <a href="https://arduino.stackexchange.com/questions/1013/how-do-i-split-an-incoming-string">manipulation</a>.</p>
+        <p>I could follow an approach of splitting the dates as a String and convert it to other types of values for the operations I intend. Or another possibility is to get the data in the type I need from the beginning, although I like the latter better I haven't find a solution for it yet as I don't understand the getLocalTime() function well yet. So I will read more on it now.</p>
+        <p>Wait... that was fast! I found a post that answers my need. Here it is:</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial13.jpg">
+            <legend>Post in the <a href="https://forum.arduino.cc/index.php?topic=536464.0">Arduino Forum</a> by user Abhay</legend>
+        <p>So I based on the post above to create a function bellow:</p>
+        <pre><code>
+          
+          int gimeTime(char what) {
+
+          int OnlyYear;
+          int onlyMonth;
+          int onlyDay;
+          int onlyHour;
+          int onlyMin;
+          int onlySec;
+      
+          struct tm timeinfo;
+          if(!getLocalTime(&timeinfo)){
+            Serial.println("Failed to obtain time");
+            //return;
+            }
+          onlyHour = timeinfo.tm_hour;
+          onlyMin  = timeinfo.tm_min;
+          onlySec  = timeinfo.tm_sec;
+          onlyDay = timeinfo.tm_mday;
+          onlyMonth = timeinfo.tm_mon + 1;
+          OnlyYear = timeinfo.tm_year +1900;
+      
+          switch (what) {
+            case 1:
+            return onlyHour;
+            break;
+            case 2:
+            return onlyMin;
+            break;
+            case 3:
+            return onlySec;
+            break;
+            default:
+          // if nothing else matches, do the default
+          // default is optional
+          break;
+          }
+      }
+    
+    </code></pre>
+    <p>Thats it now I can finally work on the timer scheduling code. by the way I spent almost the hole day try a simpler way to get the times but just couldn't as I am strugling to understand the (Struct) type. well maybe will go back to it in the future but for now its good.</p>
         <h4>Footnote</h4>
         <p>Links:</p>
         <p><a href="https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/">Rui Silva's resources on ESP32</a></p>
