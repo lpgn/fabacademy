@@ -186,9 +186,9 @@ void setup() {
   Serial.print("IP Address: ");
   Serial.println(WiFi.localIP());
 
-  // Send web page with input fields to client
+  // Route for root / web page
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/html", index_html, processor);
+    request->send(SPIFFS, "/index.html", String(), false, processor);
   });
 
   // Send a GET request to <ESP_IP>/get?inputString=<inputMessage>
