@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="index.html">Lucio Pentagna</a> </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Embedded Networking and Communications</h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <ul>
+                <li>...</li>
+            </ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>...</li>
+            </ul>
+            <br>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>...</li>
+            </ul><br>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Linked to the group assignment page</li>
+                <li>Documented your process</li>
+                <li>Outlined problems and how you fixed them</li>
+                <li>Included original code (or a screenshot of the app code if that's not possible)</li>
+                <li>Included a ‘hero shot/video’ of your application running with your board</li>
+            </ul>
+        </div>
+        <hr>
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li>VScode</li>
+            <li>Platformio</li>
+            <li>Brackets</li>
+            <li>Arduino IDE</li>
+            <li><a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></li>
+        </ul>
+        <hr>
+        <h3>Files</h3>
+        <ol>
+            <li><a href="media/interface/code/irrigationsystem.zip">Code</a></li>
+        </ol>
+        <hr>
+        <h4>Introduction</h4>
+        <p>My network protocol is going to be around a json file, before a project becomes gigantic simple text files are a good option and json is my wepon of choice</p>
+        <p>Creating a Json file by hand :-)</p>
+        <p>Json files are ...........</p>
+        <p>Having created the json file its time to create the programs in C++ and in Java Script to parse (c++) and serialize (javaScript) the json file. This can be done efortless at the Arduino Json website Assistant.</p>
+        <h4>JSON</h4>
+        <p>Json is the format I chose for the communication of the Web interface and the microprocessor.</p>
+        <p>The Library is <a href="ArduinoJson">ArduinoJson</a></p>
+        <p>The usage is as follows:</p>
+        <ol>
+            <li>Declare size of Json Document</li>
+        </ol>
+        
+        
+        
+        <p>A great source of documentation and a great assistant to create the parsing program and the serializing program is a <a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></p>
+        <h4>Input Jason</h4>
+        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">{
+    "data": {
+        "currentTime": "Wednesday, June 24 2020 23:49:23",
+        "temperature": "22.30",
+        "humidity": "74.00",
+        "override": 0,
+        "ssid": "rato",
+        "pass": "imakestuff"
+    },
+    "relays": [
+        {
+            "name": "Fruit Tree",
+            "pin": 25,
+            "isRunning": 1,
+            "isEnabled": 0,
+            "times": [
+                {
+                    "startTime": "01:01",
+                    "duration": 0,
+                    "hour": 1,
+                    "min": 1
+                }
+            ]
+        },
+        {
+            "name": "Vegie Garden",
+            "pin": 26,
+            "isRunning": 1,
+            "isEnabled": 0,
+            "status": 1,
+            "times": [
+                {
+                    "startTime": "02:02",
+                    "duration": 32,
+                    "hour": 2,
+                    "min": 2
+                },
+                {
+                    "startTime": "02:02",
+                    "duration": 32,
+                    "hour": 2,
+                    "min": 2
+                }
+            ]
+        },
+        {
+            "name": "Cypress Hill",
+            "pin": 33,
+            "isRunning": 1,
+            "isEnabled": 0,
+            "status": 1,
+            "times": [
+                {
+                    "startTime": "03:03",
+                    "duration": 60,
+                    "hour": 3,
+                    "min": 3
+                },
+                {
+                    "startTime": "03:03",
+                    "duration": 60,
+                    "hour": 3,
+                    "min": 3
+                },
+                {
+                    "startTime": "03:03",
+                    "duration": 60,
+                    "hour": 3,
+                    "min": 3
+                }
+            ]
+        }
+    ]
+}</code></pre>
+        <h4>Arduino Json Library and resources</h4>
+        <h4>Parsing program</h4>
+        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6) + 540;
+DynamicJsonDocument doc(capacity);
+
+const char* json = "{\"data\":{\"currentTime\":\"Wednesday, June 24 2020 23:49:23\",\"temperature\":\"22.30\",\"humidity\":\"74.00\",\"override\":0,\"ssid\":\"rato\",\"pass\":\"imakestuff\"},\"relays\":[{\"name\":\"Fruit Tree\",\"pin\":25,\"isRunning\":1,\"isEnabled\":0,\"times\":[{\"startTime\":\"01:01\",\"duration\":0,\"hour\":1,\"min\":1}]},{\"name\":\"Vegie Garden\",\"pin\":26,\"isRunning\":1,\"isEnabled\":0,\"status\":1,\"times\":[{\"startTime\":\"02:02\",\"duration\":32,\"hour\":2,\"min\":2},{\"startTime\":\"02:02\",\"duration\":32,\"hour\":2,\"min\":2}]},{\"name\":\"Cypress Hill\",\"pin\":33,\"isRunning\":1,\"isEnabled\":0,\"status\":1,\"times\":[{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3},{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3},{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3}]}]}";
+
+deserializeJson(doc, json);
+
+JsonObject data = doc["data"];
+const char* data_currentTime = data["currentTime"]; // "Wednesday, June 24 2020 23:49:23"
+const char* data_temperature = data["temperature"]; // "22.30"
+const char* data_humidity = data["humidity"]; // "74.00"
+int data_override = data["override"]; // 0
+const char* data_ssid = data["ssid"]; // "rato"
+const char* data_pass = data["pass"]; // "imakestuff"
+
+JsonArray relays = doc["relays"];
+
+JsonObject relays_0 = relays[0];
+const char* relays_0_name = relays_0["name"]; // "Fruit Tree"
+int relays_0_pin = relays_0["pin"]; // 25
+int relays_0_isRunning = relays_0["isRunning"]; // 1
+int relays_0_isEnabled = relays_0["isEnabled"]; // 0
+
+JsonObject relays_0_times_0 = relays_0["times"][0];
+const char* relays_0_times_0_startTime = relays_0_times_0["startTime"]; // "01:01"
+int relays_0_times_0_duration = relays_0_times_0["duration"]; // 0
+int relays_0_times_0_hour = relays_0_times_0["hour"]; // 1
+int relays_0_times_0_min = relays_0_times_0["min"]; // 1
+
+JsonObject relays_1 = relays[1];
+const char* relays_1_name = relays_1["name"]; // "Vegie Garden"
+int relays_1_pin = relays_1["pin"]; // 26
+int relays_1_isRunning = relays_1["isRunning"]; // 1
+int relays_1_isEnabled = relays_1["isEnabled"]; // 0
+int relays_1_status = relays_1["status"]; // 1
+
+JsonObject relays_1_times_0 = relays_1["times"][0];
+const char* relays_1_times_0_startTime = relays_1_times_0["startTime"]; // "02:02"
+int relays_1_times_0_duration = relays_1_times_0["duration"]; // 32
+int relays_1_times_0_hour = relays_1_times_0["hour"]; // 2
+int relays_1_times_0_min = relays_1_times_0["min"]; // 2
+
+JsonObject relays_1_times_1 = relays_1["times"][1];
+const char* relays_1_times_1_startTime = relays_1_times_1["startTime"]; // "02:02"
+int relays_1_times_1_duration = relays_1_times_1["duration"]; // 32
+int relays_1_times_1_hour = relays_1_times_1["hour"]; // 2
+int relays_1_times_1_min = relays_1_times_1["min"]; // 2
+
+JsonObject relays_2 = relays[2];
+const char* relays_2_name = relays_2["name"]; // "Cypress Hill"
+int relays_2_pin = relays_2["pin"]; // 33
+int relays_2_isRunning = relays_2["isRunning"]; // 1
+int relays_2_isEnabled = relays_2["isEnabled"]; // 0
+int relays_2_status = relays_2["status"]; // 1
+
+JsonArray relays_2_times = relays_2["times"];
+
+JsonObject relays_2_times_0 = relays_2_times[0];
+const char* relays_2_times_0_startTime = relays_2_times_0["startTime"]; // "03:03"
+int relays_2_times_0_duration = relays_2_times_0["duration"]; // 60
+int relays_2_times_0_hour = relays_2_times_0["hour"]; // 3
+int relays_2_times_0_min = relays_2_times_0["min"]; // 3
+
+JsonObject relays_2_times_1 = relays_2_times[1];
+const char* relays_2_times_1_startTime = relays_2_times_1["startTime"]; // "03:03"
+int relays_2_times_1_duration = relays_2_times_1["duration"]; // 60
+int relays_2_times_1_hour = relays_2_times_1["hour"]; // 3
+int relays_2_times_1_min = relays_2_times_1["min"]; // 3
+
+JsonObject relays_2_times_2 = relays_2_times[2];
+const char* relays_2_times_2_startTime = relays_2_times_2["startTime"]; // "03:03"
+int relays_2_times_2_duration = relays_2_times_2["duration"]; // 60
+int relays_2_times_2_hour = relays_2_times_2["hour"]; // 3
+int relays_2_times_2_min = relays_2_times_2["min"]; // 3</code></pre>
+
+        <h4>Serializing Program</h4>
+        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6);
+DynamicJsonDocument doc(capacity);
+
+JsonObject data = doc.createNestedObject("data");
+data["currentTime"] = "Wednesday, June 24 2020 23:49:23";
+data["temperature"] = "22.30";
+data["humidity"] = "74.00";
+data["override"] = 0;
+data["ssid"] = "rato";
+data["pass"] = "imakestuff";
+
+JsonArray relays = doc.createNestedArray("relays");
+
+JsonObject relays_0 = relays.createNestedObject();
+relays_0["name"] = "Fruit Tree";
+relays_0["pin"] = 25;
+relays_0["isRunning"] = 1;
+relays_0["isEnabled"] = 0;
+
+JsonArray relays_0_times = relays_0.createNestedArray("times");
+
+JsonObject relays_0_times_0 = relays_0_times.createNestedObject();
+relays_0_times_0["startTime"] = "01:01";
+relays_0_times_0["duration"] = 0;
+relays_0_times_0["hour"] = 1;
+relays_0_times_0["min"] = 1;
+
+JsonObject relays_1 = relays.createNestedObject();
+relays_1["name"] = "Vegie Garden";
+relays_1["pin"] = 26;
+relays_1["isRunning"] = 1;
+relays_1["isEnabled"] = 0;
+relays_1["status"] = 1;
+
+JsonArray relays_1_times = relays_1.createNestedArray("times");
+
+JsonObject relays_1_times_0 = relays_1_times.createNestedObject();
+relays_1_times_0["startTime"] = "02:02";
+relays_1_times_0["duration"] = 32;
+relays_1_times_0["hour"] = 2;
+relays_1_times_0["min"] = 2;
+
+JsonObject relays_1_times_1 = relays_1_times.createNestedObject();
+relays_1_times_1["startTime"] = "02:02";
+relays_1_times_1["duration"] = 32;
+relays_1_times_1["hour"] = 2;
+relays_1_times_1["min"] = 2;
+
+JsonObject relays_2 = relays.createNestedObject();
+relays_2["name"] = "Cypress Hill";
+relays_2["pin"] = 33;
+relays_2["isRunning"] = 1;
+relays_2["isEnabled"] = 0;
+relays_2["status"] = 1;
+
+JsonArray relays_2_times = relays_2.createNestedArray("times");
+
+JsonObject relays_2_times_0 = relays_2_times.createNestedObject();
+relays_2_times_0["startTime"] = "03:03";
+relays_2_times_0["duration"] = 60;
+relays_2_times_0["hour"] = 3;
+relays_2_times_0["min"] = 3;
+
+JsonObject relays_2_times_1 = relays_2_times.createNestedObject();
+relays_2_times_1["startTime"] = "03:03";
+relays_2_times_1["duration"] = 60;
+relays_2_times_1["hour"] = 3;
+relays_2_times_1["min"] = 3;
+
+JsonObject relays_2_times_2 = relays_2_times.createNestedObject();
+relays_2_times_2["startTime"] = "03:03";
+relays_2_times_2["duration"] = 60;
+relays_2_times_2["hour"] = 3;
+relays_2_times_2["min"] = 3;
+
+serializeJson(doc, Serial);</code></pre>
+
+
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+</body></html>
