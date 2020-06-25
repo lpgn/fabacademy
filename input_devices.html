@@ -30,7 +30,6 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
-
     </script>
 </head>
 
@@ -130,7 +129,7 @@
         <p> The thermistor I chose is the B57560G0104, after reading its data-sheet I learned that at 25 degrees Celsius it has an resistance of 100K.</p>
         <p> The way the thermistor works is by decreasing its resistance as the temperature increases. Because the IC on its ADC pin reads voltage not resistance we need to set a voltage divider in other to derive its resistance.</p>
         <p> I will connect the Thermistor in series with the resistor that will be connected to VCC. One end of the thermistor will be connected to ground and the other that is in series.</p>
-        <p class="pic"><img src="media/molding_and_casting/tiny45withsensor.jpg">
+        <p class="pic"><img src="media/wildcard_week/tiny45withsensor.jpg">
             <legend>Hero shot of my board and temperature sensor</legend>
         </p>
         <hr>
@@ -148,12 +147,18 @@
         <p class="pic"><img src="media/input_devices/experiment03.jpg"></p>
         <legend>detail of thermistor and temperature probe together.</legend>
         <hr>
+        <h4><a id="programming">Programming the Attiny with a USBasp</a></h4>
+        <p class="pic"><img src="media/input_devices/programming_withUSBasp.jpg">Programer USBasp on a ATtiny45</p>
+        <p>In the video below I show the programming taking place.</p>
+        <p class="pic"><video controls>
+                <source src="media/input_devices/programmingwith_usbasp.mp4">Your browser does not support HTML5 video.</video><a href="https://youtu.be/2oB4e1vzaPE">High res video on Youtube</a></p>
+        <hr>
         <h4>Experiment with the board I designed</h4>
         <p class="pic"><video controls>
                 <source src="media/input_devices/experiment_with_boardcomp.mp4">Your browser does not support HTML5 video.</video></p>
         <p class="pic"><video controls>
                 <source src="media/input_devices/tinyandthermistortestcomp.mp4">Your browser does not support HTML5 video.</video></p>
-        <p class="pic"><img src="media/molding_and_casting/tiny45withsensor.jpg">
+        <p class="pic"><img src="media/wildcard_week/tiny45withsensor.jpg">
             <legend>Hero shot of my board and temperature sensor</legend>
             <hr>
             <h4>Designing the PCB</h4>
@@ -178,6 +183,15 @@
             <p class="pic left"><img src="media/input_devices/schematics.jpg"> </p>
             <legend>Schematics of <a href="media/input_devices/tiny/tiny.bot.mill.zip"></a> with Attiny45</legend>
             <p class="pic left"><img src="media/input_devices/tinyboard.jpg"> </p>
+        <a></a>
+        <h4><a id="thermistor">The thermistor board</a></h4>
+            <p>On my thermistor board I used:</p>
+            <ol>
+                <li><a href="https://www.digikey.com/product-detail/en/NTHS1206N01N1003KE/541-1145-1-ND/1869426">Vishay Dale NTHS1206N01N1003KE</a> NTC 100KOHM 3964K 1206, datasheet <a href="media/input_devices/datasheet/nths.pdf">here</a>.</li>
+                <li>And a 100k resistor as a pull-down resistor</li>
+            </ol>
+            <p>The way the a NTC thermistor works is as the temperature raises the resistance reduces and vice-versa, so we need to find out the resistance.</p>
+            <p>We will then have to use a resistor to help us calculate the voltage drop. The IC used the ATtiny45 doen't measure resistance so in order to calculate the resistance of the thermistor we'll have to use a known resistor and measure the voltage coming and calculate the voltage drop between the thermistor and the 100k resistor. The formula I used in the program is this: RT = ((VCC*R-R*VRT)/VRT) </p>
             <legend>Attiny45 input devices board</legend>
             <p class="pic left"><img src="media/input_devices/thermistorsch.jpg"> </p>
             <legend>Schematics of thermistor board</legend>
@@ -489,7 +503,7 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             <p class="pic"><img src="media/input_devices/machining01.jpg"></p>
             <p>In my cnc I have machined a pocket prior so the board has a fixed location, that helps immobilizing the blank.</p>
             <p class="pic"><img src="media/input_devices/machining02.jpg"></p>
-        <a id="mach3"></a>
+            <a id="mach3"></a>
             <p>In the CNC with the PFG loaded follow the instruction on the screen by attaching the probe.</p>
             <p class="pic"><img src="media/input_devices/mach3.jpg"></p>
             <p>Here I am attaching the probe to the surface of the board and the the alligator clip to the mill bit.</p>
@@ -560,10 +574,7 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
-
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body>
-
-</html>
+</body></html>
