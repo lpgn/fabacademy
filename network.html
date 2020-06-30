@@ -30,6 +30,7 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
+
     </script>
 </head>
 
@@ -96,7 +97,41 @@
         </ol>
         <hr>
         <h4>Introduction</h4>
-        <p>My network protocol is going to be around a json file, before a project becomes gigantic simple text files are a good option and json is my wepon of choice</p>
+        <hr>
+        <h4>Designing my Irrigation System Board</h4>
+        <p>After tinkering with a ESP32 Development kit for a while I had an idea of what I needed for my PCB. So lets see the list of capabilities I want for it:</p>
+        <ol>
+            <li>Control:
+            <li>
+                <ol type="a">
+                    <li>3 valve relays;</li>
+                    <li>1 pump relay;</li>
+                </ol>
+            <li>Sense:</li>
+            <ol type="a">
+                <li>Temperature and humidity sensor;</li>
+                <li>Amp meter expansion header (for pump);</li>
+                <li>Battery charging/sensing;</li>
+                <li>RTC clock expansion header or solder pad;</li>
+            </ol>
+        </ol>
+        <p>With the requirements in hand I went looking for a eagle library for the ESP-WROOM-32, found several:</p>
+        <ol>
+            <li><a href="https://github.com/MacroYau/MacroYau-EAGLE-Libraries"> MacroYau/MacroYau-EAGLE-Libraries </a></li>
+            <li><a href="https://github.com/lpodkalicki/eagle-libraries">lpodkalicki/eagle-libraries </a></li>
+            <li><a href="https://github.com/sparkfun/ESP32_Miscellany">sparkfun/ESP32_Miscellany</a></li>
+        </ol>
+        <p>After reviewing all of them I decided to use the one from MacroYau/MacroYau. </p>
+        <p class="pic left"><img src="media/network/esppcb01.jpg"></p>
+        <p>The relay I found at <a href="https://www.snapeda.com/parts/SRD-05VDC-SL-C/Songle%20Relay/view-part/1029484/">snapeda</a> its not the same model than the one I have but the footprint is.</p>
+        <p>The relay circuit I found online <a href="">here</a> at web.archive schematics below.</p>
+        <p class="pic left"><img src="media/network/relay_circuit_schematic_S.jpg"></p>
+        <p>With the schematics in hand I draw the following in eagle:</p>
+                <p class="pic left"><img src="media/network/relayssch.jpg"></p>
+
+        <hr>
+        <h4>Code</h4>
+        <p>My network protocol is going to be around a json file, before a project becomes gigantic simple text files are a good option and json is my weapon of choice</p>
         <p>Creating a Json file by hand :-)</p>
         <p>Json files are ...........</p>
         <p>Having created the json file its time to create the programs in C++ and in Java Script to parse (c++) and serialize (javaScript) the json file. This can be done efortless at the Arduino Json website Assistant.</p>
@@ -107,9 +142,9 @@
         <ol>
             <li>Declare size of Json Document</li>
         </ol>
-        
-        
-        
+
+
+
         <p>A great source of documentation and a great assistant to create the parsing program and the serializing program is a <a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></p>
         <h4>Input Jason</h4>
         <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">{
@@ -365,7 +400,10 @@ serializeJson(doc, Serial);</code></pre>
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
+
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body></html>
+</body>
+
+</html>
