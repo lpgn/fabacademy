@@ -123,12 +123,28 @@
         </ol>
         <p>After reviewing all of them I decided to use the one from MacroYau/MacroYau. </p>
         <p class="pic left"><img src="media/network/esppcb01.jpg"></p>
+        <p>Because I want maximum compatibility with the dev kits for ESP32 I was use to I went looking for and found a ESP32 Wroom pinout that I used to name the pins.</p>
+        <p class="pic left"><img src="media/network/esp32-pinout-chip-esp-wroom-32.jpg">Found again on Random Nerds tutorial website :-)</p>
+        <p>Next step was to go and attach net wires to each pin. I wish I did this in the order I am presenting as it would have saved me redoing many wires I connected wrongly in the first place. Wheel the lesson is logical pin number and physical pin numbers are not always the same so with that in mind connected them this time correctly.</p>
+        <p class="pic left"><img src="media/network/connectingthewiresineagle.jpg"></p>
+        <p>Thats the end result:</p>
+        <p class="pic left"><img src="media/network/endresultesp32.jpg"></p>
         <p>The relay I found at <a href="https://www.snapeda.com/parts/SRD-05VDC-SL-C/Songle%20Relay/view-part/1029484/">snapeda</a> its not the same model than the one I have but the footprint is.</p>
         <p>The relay circuit I found online <a href="">here</a> at web.archive schematics below.</p>
         <p class="pic left"><img src="media/network/relay_circuit_schematic_S.jpg"></p>
         <p>With the schematics in hand I draw the following in eagle:</p>
-                <p class="pic left"><img src="media/network/relayssch.jpg"></p>
-
+        <p class="pic left"><img src="media/network/relayssch.jpg"></p>
+        <p>For the battery circuit I followed a circuit in the web page <a href="https://randomnerdtutorials.com/power-esp32-esp8266-solar-panels-battery-level-monitoring/">Random Nerds Tutorial</a>.</p>
+        <p class="pic left">name<img src="media/network/esp32-solar-powered-circuit-1.jpg"></p>
+        <p>Since I don't have the TP4056 module for now my circuit will contain only the sensing part.</p>
+        <p class="pic left"><img src="media/network/powersense.jpg"></p>
+        <p>For the future I found the library for the TP4056 <a href="https://breadboardtronics.wordpress.com/tag/tp4056/">here</a>.</p>
+        <p>The humidity Sensor library can be found <a href="">here</a> with it in hand I simply had to net some wires to the ESP32 pin 32</p>
+        <p class="pic left"><img src="media/network/dhtsch.jpg"></p>
+        <p>As for the current sensor I chose to use the ACS712 the library I found on this <a href="https://github.com/triffid/ESC/tree/master/Schematic%20and%20Board">Github.</a>the finished Schematics is below:</p>
+        <p class="pic left"><img src="media/network/currentsensesch.jpg"></p>
+        <p>I got the Real time clock library as well at <a href="https://www.snapeda.com/parts/DS1302ZN/Maxim%20Integrated/view-part/?ref=search&t=DS1302Z">Snapeda</a> but for now I will not use it so the full Schematics I draw is bellow:</p>
+        <p class="pic left"><img src="media/network/schematics.jpg"></p>
         <hr>
         <h4>Code</h4>
         <p>My network protocol is going to be around a json file, before a project becomes gigantic simple text files are a good option and json is my weapon of choice</p>
@@ -142,9 +158,6 @@
         <ol>
             <li>Declare size of Json Document</li>
         </ol>
-
-
-
         <p>A great source of documentation and a great assistant to create the parsing program and the serializing program is a <a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></p>
         <h4>Input Jason</h4>
         <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">{
