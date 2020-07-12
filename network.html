@@ -140,7 +140,9 @@
         <p class="pic left">name<img src="media/network/esp32-solar-powered-circuit-1.jpg"></p>
         <p>Since I don't have the TP4056 module for now my circuit will contain only the sensing part.</p>
         <p class="pic left"><img src="media/network/powersense.jpg"></p>
-        <p>For the future I found the library for the TP4056 <a href="https://breadboardtronics.wordpress.com/tag/tp4056/">here</a>.</p>
+        <p>The voltage divider resistor was calculated using the online calculator <a href="http://www.ohmslawcalculator.com/voltage-divider-calculator">here</a>.</p>
+        <p class="pic left"><img src="media/network/voltage_divider_calculator.jpg"></p>
+        <p>For the future I found the library for the TP4056 <a href="https://breadboardtronics.wordpress.com/tag/tp4056/">here</a> thanks to a tip from Luis Carvão my remote intructor.</p>
         <p>The humidity Sensor library can be found <a href="">here</a> with it in hand I simply had to net some wires to the ESP32 pin 32</p>
         <p class="pic left"><img src="media/network/dhtsch.jpg"></p>
         <p>As for the current sensor I chose to use the ACS712 the library I found on this <a href="https://github.com/triffid/ESC/tree/master/Schematic%20and%20Board">Github.</a>the finished Schematics is below:</p>
@@ -158,7 +160,7 @@
         <p class="pic left"><img src="media/network/schematicsfinal.jpg"></p>
         <p>Now I will start the routing work on the board I have to say I am a bit anxious as I never made such a complex PCB!</p>
         <p>How encouraging is what I see when I move to the board mode in Eagle!!!</p>
-        <p class="pic left"><img src="media/network/encoraging.png"></p>
+        <p class="pic left"><img src="media/network/encoraging.jpg"></p>
         <p>First thing I do is to move the devkit foot print to the center along with the ESP32</p>
         <p class="pic left"><img src="media/network/firstthing.jpg"></p>
         <p>After trying for a while to connect by hand I give a try on the autorouter, I had to stop after a few minutes and the result is laughable. I will try again moving the esp32 up and if not I will not attempt a ESP32devkit compatibility.</p>
@@ -170,7 +172,93 @@
         <p>So now I copied the first valve relay and when I went to the board eagle presented me with the pasted components, I believe this way is much easier.</p>
         <p class="pic left"><img src="media/network/step02b1.jpg"></p>
         <p>So far the board looks like this, I haven't route any power wires included GND 3.3V and 5V. Will try autoroute now see results and maybe route manually.</p>
-        <p class="pic left"><img src="media/network/step02b1.jpg"></p>
+        <p class="pic left"><img src="media/network/step3b.jpg"></p>
+        <p>a</p>
+        <p class="pic left"><img src="media/network/logo01.jpg"></p>
+        <p class="pic left"><img src="media/network/logo02.jpg"></p>
+        <p class="pic left"><img src="media/network/logo03.jpg"></p>
+        <p class="pic left"><img src="media/network/logo04.jpg"></p>
+        <p class="pic left"><img src="media/network/logo05.jpg"></p>
+        <p class="pic left"><img src="media/network/logo06.jpg"></p>
+        <h4>Milling</h4>
+        <p class="pic left"><img src="media/network/f.jpg"></p>
+        <p class="pic left"><img src="media/network/f.jpg"></p>
+        <p class="pic left"><img src="media/network/f.jpg"></p>
+        <h4>Soldering and testing/Debuging</h4>
+        <p class="pic left"><img src="media/network/f.jpg"></p>
+        <p class="pic left"><img src="media/network/f.jpg"></p>
+        <p>Testing First boot with serial monitor</p>
+        <pre><code>
+            --- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+            --- More details at http://bit.ly/pio-monitor-filters
+            --- Miniterm on COM5  115200,8,N,1 ---
+            --- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+            ets Jun  8 2016 00:22:57
+
+            rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+            configsip: 0, SPIWP:0x00
+            clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+            mode:DIO, clock div:2
+            load:0x3fff0008,len:8
+            load:0x3fff0010,len:3480
+            load:0x40078000,len:7804
+            ho 0 tail 12 room 4
+            load:0x40080000,len:252
+            entry 0x40080034
+            ␛[0;32mI (45) boot: ESP-IDF v2.0-3-gbef9896 2nd stage bootloader␛[0m   
+            ␛[0;32mI (45) boot: compile time 05:59:45␛[0m
+            ␛[0;32mI (45) boot: Enabling RNG early entropy source...␛[0m
+            ␛[0;32mI (64) boot: SPI Speed      : 40MHz␛[0m
+            ␛[0;32mI (77) boot: SPI Mode       : DIO␛[0m
+            ␛[0;32mI (89) boot: SPI Flash Size : 4MB␛[0m
+            ␛[0;32mI (101) boot: Partition Table:␛[0m
+            ␛[0;32mI (113) boot: ## Label            Usage          Type ST Offset   Length␛[0m
+            ␛[0;32mI (136) boot:  0 phy_init         RF data          01 01 0000f000 00001000␛[0m
+            ␛[0;32mI (159) boot:  1 otadata          OTA data         01 00 00010000 00002000␛[0m
+            ␛[0;32mI (182) boot:  2 nvs              WiFi data        01 02 00012000 0000e000␛[0m
+            ␛[0;32mI (205) boot:  3 at_customize     unknown          40 00 00020000 000e0000␛[0m
+            ␛[0;32mI (228) boot:  4 ota_0            OTA app          00 10 00100000 00180000␛[0m
+            ␛[0;32mI (252) boot:  5 ota_1            OTA app          00 11 00280000 00180000␛[0m
+            ␛[0;32mI (275) boot: End of partition table␛[0m
+            ␛[0;32mI (288) boot: Disabling RNG early entropy source...␛[0m
+            ␛[0;32mI (305) boot: Loading app partition at offset 00100000␛[0m
+            ␛[0;32mI (1481) boot: segment 0: paddr=0x00100018 vaddr=0x00000000 size=0x0ffe8 ( 65512) ␛[0m
+            ␛[0;32mI (1481) boot: segment 1: paddr=0x00110008 vaddr=0x3f400010 size=0x1c5f0 (116208) map␛[0m
+            ␛[0;32mI (1498) boot: segment 2: paddr=0x0012c600 vaddr=0x3ffb0000 size=0x0215c (  8540) load␛[0m
+            ␛[0;32mI (1528) boot: segment 3: paddr=0x0012e764 vaddr=0x40080000 size=0x00400 (  1024) load␛[0m
+            ␛[0;32mI (1551) boot: segment 4: paddr=0x0012eb6c vaddr=0x40080400 size=0x1b028 (110632) load␛[0m
+            ␛[0;32mI (1630) boot: segment 5: paddr=0x00149b9c vaddr=0x400c0000 size=0x00034 (    52) load␛[0m
+            ␛[0;32mI (1631) boot: segment 6: paddr=0x00149bd8 vaddr=0x00000000 size=0x06430 ( 25648) ␛[0m
+            ␛[0;32mI (1648) boot: segment 7: paddr=0x00150010 vaddr=0x400d0018 size=0x7a56c (501100) map␛[0m
+            ␛[0;32mI (1675) heap_alloc_caps: Initializing. RAM available for dynamic allocation:␛[0m
+            ␛[0;32mI (1697) heap_alloc_caps: At 3FFBA6B8 len 00025948 (150 KiB): DRAM␛[0m
+            ␛[0;32mI (1719) heap_alloc_caps: At 3FFE8000 len 00018000 (96 KiB): D/IRAM␛[0m
+            ␛[0;32mI (1740) heap_alloc_caps: At 4009B428 len 00004BD8 (18 KiB): IRAM␛[0m
+            ␛[0;32mI (1761) cpu_start: Pro cpu up.␛[0m
+            ␛[0;32mI (1773) cpu_start: Single core mode␛[0m
+            ␛[0;32mI (1786) cpu_start: Pro cpu start user code␛[0m
+            ␛[0;32mI (1846) cpu_start: Starting scheduler on PRO CPU.␛[0m
+            ␛[0;32mI (2085) uart: queue free spaces: 10␛[0m
+            Bin version:0.10.0
+            I (2087) wifi: wifi firmware version: c604573
+            I (2087) wifi: config NVS flash: enabled
+            I (2088) wifi: config nano formating: disabled
+            I (2096) wifi: Init dynamic tx buffer num: 32
+            I (2097) wifi: wifi driver task: 3ffc4eac, prio:23, stack:3584
+            I (2102) wifi: Init static rx buffer num: 10
+            I (2106) wifi: Init dynamic rx buffer num: 0
+            I (2110) wifi: Init rx ampdu len mblock:7
+            I (2114) wifi: Init lldesc rx ampdu entry mblock:4
+            I (2118) wifi: wifi power manager task: 0x3ffca254 prio: 21 stack: 2560
+            I (2125) wifi: wifi timer task: 3ffcb2d4, prio:22, stack:3584
+            ␛[0;31mE (2130) phy_init: PHY data partition validated␛[0m
+            ␛[0;32mI (2152) phy: phy_version: 329, Feb 22 2017, 15:58:07, 0, 0␛[0m
+            I (2152) wifi: mode : softAP (3c:71:bf:10:66:e1)
+            I (2155) wifi: mode : sta (3c:71:bf:10:66:e0) + softAP (3c:71:bf:10:66:e1)
+            I (2159) wifi: mode : softAP (3c:71:bf:10:66:e1)
+        </code></pre>
+        <p>Burning program:</p>
+        
         <hr>
         <h4>Code</h4>
         <p>My network protocol is going to be around a json file, before a project becomes gigantic simple text files are a good option and json is my weapon of choice</p>
