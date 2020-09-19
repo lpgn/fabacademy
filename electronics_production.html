@@ -107,7 +107,7 @@
         <hr>
         <h2> Group Assignment
         </h2>
-        <p>Go to <a href="http://fabacademy.org/2018/labs/farmlabalgarve/">group assignment page</a></p>
+        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/electronic_production.html"> for the group assignment page</a></p>
         <h2>Individual Assignment</h2><br>
         <p>This week I will be making a ISP <a href="https://en.wikipedia.org/wiki/In-system_programming">(In-system programming)</a> or in-circuit programmer.</p>
         <p>I chose to do <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP</a>. I chose it for its simplicity and cost as it is striped down to a bare minimum of components.</p>
@@ -380,7 +380,8 @@
         <p>After that I proceed soldering all components in place.</p>
 
         <p class="pic"><video controls>
-                <source src="media/electronics_production/soldering.mp4"> Your browser does not support HTML5 video.</video></p>
+                <source src="media/electronics_production/soldering.mp4"> Your browser does not support HTML5 video.
+            </video></p>
         <h4>3- Pre-Debugging</h4>
         <p>I started with a visual inspection.</p>
         <p class="pic"><img src="media/electronics_production/image053.jpg">
@@ -507,12 +508,14 @@
             <li>then <code>-c usbtiny</code> defines the programmer name, "usbtiny" is the fabricated programmer name</li>
             <li>Next <code>-p at90usb1286</code> is the target IC to be programmed, here the at90usb1286 that is installed on my printrboard.</li>
             <li>
-                <code>-U flash:w:BootloaderHID.hex:i </code>defines the name/location of the firmware to be loaded, in this case "BootloaderHID.hex"</li>
+                <code>-U flash:w:BootloaderHID.hex:i </code>defines the name/location of the firmware to be loaded, in this case "BootloaderHID.hex"
+            </li>
             <li><code>-U lfuse:w:0xDE:m -U hfuse:w:0xdb:m -U efuse:w:0xF0:m</code> is the part of the command that burn the fuses.</li>
         </ol>
         <p>The above mentioned is shown in the terrible footage ;-) bellow</p>
         <p class="pic"><video controls>
-                <source src="media/electronics_production/ispworks.mp4"> Your browser does not support HTML5 video.</video></p>
+                <source src="media/electronics_production/ispworks.mp4"> Your browser does not support HTML5 video.
+            </video></p>
         <p>All working!</p>
         <!-- End of your content -->
     </div> <!-- /container -->
