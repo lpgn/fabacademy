@@ -100,6 +100,11 @@
             <li>Datasheet <a href="media/input_devices/datasheet/">files</a></li>
         </ol>
         <hr>
+
+        <h3> Group Assignment
+        </h3>
+        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
+        <hr>
         <h4>Introduction</h4>
         <p> I started this assignment with the intention to improve the farm irrigation automation. We already have an ESP8266 controlling a pump and 4 relays and monitoring the pump's current draw. The problem is that the ESP8266 on its program is not responsive and makes setting up the times time consuming. This is due to a limitation on the quantity of ADC pins. It was explained to me by the Shakeel one volunteer that we had in the farm that the ESP8266 uses the only ADC pin to monitor its wifi connection so he created a program that reduces the samples taken by the amp meter in other to share the pin with the wifi. Well this works but makes the wifi connection unreliable, so my challenge will be trying to understand the ESP32 so I can port his program and complete the assignment at the same time. Lets try!</p>
         <p>The other thing I would like to point is that I will focus more on the code as I already demonstrated the PCB manufacturing process In the other week and also as a major change in the way I complete the assignment is that I will document as I learn and do things so the assignment will feel more like a log than a tutorial.</p>
@@ -225,7 +230,8 @@ if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
 </pre>
         <p>here is how it runs on the ESP32 development board</p>
         <p class="pic"><video controls>
-                <source src="media/output_devices/programexperiment.mp4">Your browser does not support HTML5 video.</video>
+                <source src="media/output_devices/programexperiment.mp4">Your browser does not support HTML5 video.
+            </video>
             <legend>You can see a higher resolution on <a href="https://www.youtube.com/watch?v=cW_LQhQiVxQ">Youtube</a></legend>
         </p>
         <hr>
@@ -251,7 +257,8 @@ if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
         <p class="pic"><img src="media/output_devices/tiny44autoleveller.jpg">Board Layout</p>
         <p>Milling the PCB</p>
         <p class="pic"><video controls>
-                <source src="media/output_devices/attiny44finalmillingcomp.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/output_devices/attiny44finalmillingcomp.mp4">Your browser does not support HTML5 video.
+            </video></p>
         <p>The milled pcb</p>
         <p class="pic"><img src="media/output_devices/attiny44milled.jpg">blank pcb</p>
         <p>The Attiny44 board with the soldered components looks like this.</p>
@@ -307,13 +314,16 @@ if ((myRTC.minutes) >= 17) digitalWrite(pumprelayPin1, LOW);
         <p class="pic"><img src="media/output_devices/programingATtiny44_with_arduino02.jpg"></p>
         <p>In the video bellow I show the the process of programming with the FabISP.</p>
         <p class="pic"><video controls>
-                <source src="media/output_devices/programming_usbtiny.mp4">Your browser does not support HTML5 video.</video>For a full resolution video check <a href="https://youtu.be/CKtFtvp55ME">Youtube</a></p>
+                <source src="media/output_devices/programming_usbtiny.mp4">Your browser does not support HTML5 video.
+            </video>For a full resolution video check <a href="https://youtu.be/CKtFtvp55ME">Youtube</a></p>
         <p>In this video I show the process of programming with the USBasp.</p>
         <p class="pic"><video controls>
-                <source src="media/output_devices/programming_usbasp.mp4">Your browser does not support HTML5 video.</video>For a full resolution video check <a href="https://youtu.be/ZyDkVr3AqaQ">Youtube</a></p>
+                <source src="media/output_devices/programming_usbasp.mp4">Your browser does not support HTML5 video.
+            </video>For a full resolution video check <a href="https://youtu.be/ZyDkVr3AqaQ">Youtube</a></p>
         <p>I can show the Attiny44 controling a relay to turn on a compressor on a specific time set in the program.</p>
         <p class="pic"><video controls>
-                <source src="media/output_devices/outputdevicestest.mp4">Your browser does not support HTML5 video.</video>For a full resolution video check <a href="https://www.youtube.com/watch?v=wcq0y42teHU">Youtube</a></p>
+                <source src="media/output_devices/outputdevicestest.mp4">Your browser does not support HTML5 video.
+            </video>For a full resolution video check <a href="https://www.youtube.com/watch?v=wcq0y42teHU">Youtube</a></p>
         <p>Hero Shot</p>
         <p class="pic"><img src="media/output_devices/heroshot.jpeg">Board Layout</p>
         <hr>

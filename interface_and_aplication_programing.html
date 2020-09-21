@@ -30,7 +30,6 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
-
     </script>
 </head>
 
@@ -90,6 +89,11 @@
             <li>Brackets</li>
             <li>Arduino IDE</li>
         </ul>
+        <hr>
+
+        <h3> Group Assignment
+        </h3>
+        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
         <hr>
         <h3>Files</h3>
         <ol>
@@ -653,14 +657,14 @@ String printFarmTime()
                 <li>/humidity: returns humidity</li>
                 <li>/update: <strong>sets</strong> values</li>
             </il>
-            
+
             <p>On Startup:</p>
             <ul>
                 <li>we read from csv file</li>
                 <li>keep info in memory to check against in loop (is this the window?)</li>
                 <li>we also have to tell the html what settings it should PRE SET</li>
             </ul>
-            
+
             <p>Problem:</p>
             <ul>
                 <li>If the microcontroller loses power, we can lose state. We therefore need a way to persist settings to disk</li>
@@ -718,10 +722,7 @@ String printFarmTime()
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
-
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body>
-
-</html>
+</body></html>
