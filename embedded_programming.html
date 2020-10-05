@@ -319,12 +319,21 @@ void loop() {
      }
      }
 }</pre>
+        <a id="Schema">Schema</a>
+        <p>Because I lost this board many years ago I can only show how to connect the programmer on a similar board. Just like I did in <a href="electronics_design.html#programmer" >Electronic Design week.</a></p>
+        <a id="programmer">Programmer FabISP and USBisp</a>
+        <p>Here I show how I used the programmers on Output devices, for Another method without the Arduino IDE check <a href="embedded_programming.html">Embedded Programing</a></p>
+        <p class="pic"><img src="media/output_devices/programmerusbasp.jpg">USBasp</p>
+        <p>Programming an attiny44 board with arduino using a FabTinyISP or USBtinyISP that I made.</p>
+        <p class="pic"><img src="media/output_devices/programmerfabisp.jpg">FabISP</p>
+        
         <p class="pic"><video controls>
                 <source src="media/embedded_programming/hello1.mp4">Your browser does not support HTML5 video.</video></p>
         <p> In order to change the behavior of the button I simply replaced the constant <code>&lt;HIGH&gt;</code> for the constant <code>&lt;LOW&gt;</code> here:</p>
         <pre class="prettyprint linenums">if (buttonState == LOW) {</pre>
         <p>This way the logic of the code is inverted meaning that when the button is depressed the LED is off.</p>
         <p>now I inverted when the LED turns on and off. Here is the <a href="media/code/embedded_programming/buttonblink2/buttonblink2.ino">code without comments:</a></p>
+    
         <pre class="prettyprint linenums">const int buttonPin = 3;
 const int ledPin =  7;
 
