@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,6 +30,7 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
+
     </script>
 </head>
 
@@ -267,34 +269,41 @@
             <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/05.jpg"></p>
             <hr>
             <li id="testing">First Test</li>
-            <p>Here I test the motor and its strength and temperature (by touch and thermometer). I do that</p>
+            <p>Here I test the motor and its strength and temperature (by touch and thermometer). I do that in other to properly set the DIP switches.</p>
             <video width="300" controls>
                 <source src="media/machine/laser_2nd_part/05_testing/04.mp4"> Your browser does not support HTML5 video.
             </video>
-            <p>.....</p>
-            <p>.....</p>
+            <p>After the tests I decide to use a 2 amps, the motor is rated for 1.5 amps but during all the tests the motor would never pass more than 1 amp and the temperature remained under 45 degrees.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/05_testing/3a.jpg"></p>
+            <p>The setting is done by selecting the dip switches. 4 - ON (down), 5 - OFF (UP), 6 - OFF (UP)</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/05_testing/3b.jpg"></p>
+            <p>Here I try moving the motors for the first time using the computer. The X axis moved well but the Y axis no. I believe this was due to wiring so I reviewed it all over again. I ended up disabling the double motor on the Y axis (sparsely documented) and wired the two motors in the Y axis in parallel.</p>
             <video width="300" controls>
                 <source src="media/machine/laser_2nd_part/05_testing/01.mp4"> Your browser does not support HTML5 video.
             </video>
-            <p>.....</p>
-            <video width="300" controls>
-                <source src="media/machine/laser_2nd_part/05_testing/02.mp4"> Your browser does not support HTML5 video.
-            </video>
-
             <hr>
             <li id="setup_grbl">Setting up GRBL</li>
-            <p>.....</p>
+            <p>Here I measured the effective movement against the movement commanded. I take a note and then using the <a href="https://en.wikipedia.org/wiki/Cross-multiplication#Rule_of_Three"> Rule of three</a>, basically a/b=c/d</p>
+            <p>Where in my test a=118.8 (real movement), b=25(desired movement), c=250 (current steps per mm) and d=X.</p>
+            <p>After doing the math I get rhe result 52.609 that I replace in the GRBL setting $100 and $101. </p>
             <p class="pic"><img src="media/machine/laser_2nd_part/06_setup_calibration_grbl/01.jpg"></p>
-            <p>.....</p>
+            <p>Bellow is the print of the settings I used for the the machine so far. This <a href="https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration">wiki</a> shows all the configurations of Gnea/GRBL.</p>
+            <ol>
+                <li>$3 = (10) this inverts the Y axis</li>
+                <li>$100 = (52.609) </li>
+                <li>$101 = (52.609) </li>
+                <li>$110 = (15000) </li>
+                <li>$111 = (7000) </li>
+                <li>$120 = (300) </li>
+                <li>$121 = (300) </li>
+            </ol>
             <p class="pic"><img src="media/machine/laser_2nd_part/06_setup_calibration_grbl/02.jpg"></p>
-            <p>.....</p>
             <hr>
-            <li id="second_test">Second Test</li>
-            <p>.....</p>
+            <li id="second_test">Second and Final Test for this assignment.</li>
+            <p>Because this assignment requires that I show the control over the machine I made. I present here a "Hello World". I am running out of time, I would love to come back to this documentation later and finish the laser cutter but now I need to focus on the other assignments. So for now its a Sharpie attached with tape.</p>
             <video width="300" controls>
                 <source src="media/machine/laser_2nd_part/07_test_again/test.mp4"> Your browser does not support HTML5 video.
             </video>
-            <p>.....</p>
             <hr>
         </ol>
 
@@ -353,7 +362,10 @@
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
+
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body></html>
+</body>
+
+</html>
