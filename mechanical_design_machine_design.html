@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -119,6 +118,7 @@
         <h3> Group Assignment
         </h3>
         <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
+        <p>This assignment was completely done by me as I am the only student at the Algarve FabFarm this year.</p>
         <hr>
         <h3>Frankenlaser cutter</h3>
         <p>Design Files and Gcode files @ <a href="https://github.com/lpgn/frankenlaser">github repo</a> (to big for this server)</p> <br>
@@ -205,69 +205,72 @@
             <li> <a href="#second_test">Second Test</a></li>
         </ol>
         <h4>It moves!</h4>
-
         <p>The machine is speaking and with its immature voice it spoke "Hello World"</p>
         <video width="300" controls>
             <source src="media/machine/laser_2nd_part/07_test_again/test.mp4"> Your browser does not support HTML5 video.
         </video>
         <p>How did I get there? Lets see the steps:</p>
-
         <hr>
         <ol>
             <li id="external_frame">Milling and Assembly External Frame</li>
-            <p>.....</p>
+            <p>I design the frame with Solidworks. The thechnics already explained in the week of <a href="computer_aided_design.html">Computer aided design</a> and <a href="computer_controlled_machining.html">Computer controled machining</a>.</p>
+            <p>The design files are <a href="https://github.com/lpgn/frankenlaser">here</a>.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/01_simulation.jpg"></p>
-            <p>.....</p>
+            <p>Next using the software mach3 I started the job. The material used was 19mm OSB. The milling bit was a 3.175mm and when I chose the tool I offset it by -0.1mm to compensate for imperfections and allow an easier fit, just like explained in the group assignment <a href="http://fabacademy.org/2020/labs/algarve/computer_controled_machining.html">Computer controlled Machining</a>.</p>
+            <p>I split the milling in two jobs holes job and contour job. The feed rate was max 2500 mm/Minutes. Gcode<a href="https://github.com/lpgn/frankenlaser/blob/master/to%20cnc/gcode/frame.tap"> here</a> and <a href="https://github.com/lpgn/frankenlaser/blob/master/to%20cnc/gcode/frame2.tap">here</a>.</p>
             <video width="300" controls>
                 <source src="media/machine/laser_2nd_part/01_milling_external_frame/02.mp4"> Your browser does not support HTML5 video.
             </video>
-            <p>.....</p>
+            <p>All the fightings had correspondent holes that where also used as clamps. This way I was sure that there would be no collisions. As I only fitted them after the holes job, and before the contour job.</p>
             <video width="300" controls>
                 <source src="media/machine/laser_2nd_part/01_milling_external_frame/03.mp4"> Your browser does not support HTML5 video.
             </video>
-            <p>.....</p>
-            <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/04.jpg"></p>
-            <p>.....</p>
+            <p>After the milling job me and my son started sanding the sides and the surface for a better fit and finish.</p>
             <video width="300" controls>
                 <source src="media/machine/laser_2nd_part/01_milling_external_frame/05.mp4"> Your browser does not support HTML5 video.
             </video>
-            <p>.....</p>
+            <p>All sanded here.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/06.jpg"></p>
-            <p>.....</p>
+            <p>The assembly went smoothly and we the only tools used were a rubber mallet and a screwdriver.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/07.jpeg"></p>
-            <p>.....</p>
+            <p>The frame is super sturdy! We were really happy with the result.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/08.jpeg"></p>
             <hr>
             <li id="frame_assembly_to_axis">Frame Assembly to Axis</li>
-            <p>.....</p>
+            <p>The axis were secured with "t" slot nuts not sure if this is the correct name.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/01.jpg"></p>
-            <p>.....</p>
+            <p>Big mess now as I was using many more tools like a caliper, a digital level and square, so I would have a squared machine.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/02.jpg"></p>
-            <p>.....</p>
+            <p>The laser tube was temporarily fit here just to see if things fit well.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/03.jpg"></p>
-            <p>.....</p>
+            <p>Here is an overlook of the machine almost finished.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/04.jpg"></p>
-            <p>.....</p>
             <hr>
             <li id="wiring">Wiring</li>
-            <p>.....</p>
+            <p>The board I m using for this assignment is an Arduino Uno. Bellow the diagramof the UNO GRBL wiring.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/03_wiring/01.webp"></p>
-            <p>.....</p>
-            <p class="pic"><img src="media/machine/laser_2nd_part/03_wiring/02.jpg"></p>
-            <p>.....</p>
             <hr>
             <li id="burning_the_firmware">Burning the Firmware</li>
-            <p>.....</p>
+            <p>I tested 3 methods to burn the <a href="https://github.com/gnea/grbl">grbl firmware</a>. The first method I used the incredibly practical software <a href="https://github.com/zkemble/AVRDUDESS">Avrdudess</a>its a gui version of AVRDUDE.</p>
+            <p>The usage was quite simple. Plug the programmer or the usb directly to the Arduino. Next Sect the Programmer, in my case usbasp, or Arduino for USB. Next select the hex file, downloaded from <a href="https://github.com/gnea/grbl">grbl repo</a>, press the button to the right in other to detect the MCU, then press Go to start the firmware burn. </p>
             <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/01_burning_grbl.jpg"></p>
-            <p>.....</p>
+            <p>The next method I tried was using the software <a href="https://lasergrbl.com/download/">LaserGRBL</a>. Clicking on Tools, Flash GRBL Firmware, then...</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/02.jpg"></p>
-            <p>.....</p>
+            <p>A dialog will show that allows the selection of the target board, in my case Arduino Uno, the firmware version, the port and bound rate. Next...</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/03.jpg"></p>
-            <p>.....</p>
+            <p>The screen will show the successful completion.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/04.jpg"></p>
-            <p>.....</p>
+            <p>The next method I tried was compiling and burning the firmware using the Arduino IDE. For this method I followed the method described at the Gnea/GRBL <a href="https://github.com/gnea/grbl/wiki/Compiling-Grbl"> wiki</a>. First I modified the two lines bellow in other to enable dual motor for the y axis. I did were not successful so far and because of lack of time I ended up not using it, anyway I documented the method here for in the future I will try it again with more time.</p>
+            <p>Start by downloading the grbl firmware then add it as a library to the arduino.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/06.jpg"></p>
+            <p>Open the GrblUpload Arduino file example and compile the upload just like described in <a href="embedded_programming.html">Embedded Programming week</a> changing the MCU for Arduino UNO board.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/05.jpg"></p>
             <hr>
             <li id="testing">First Test</li>
+            <p>Here I test the motor and its strength and temperature (by touch and thermometer). I do that</p>
+            <video width="300" controls>
+                <source src="media/machine/laser_2nd_part/05_testing/04.mp4"> Your browser does not support HTML5 video.
+            </video>
             <p>.....</p>
             <p>.....</p>
             <video width="300" controls>
@@ -277,10 +280,7 @@
             <video width="300" controls>
                 <source src="media/machine/laser_2nd_part/05_testing/02.mp4"> Your browser does not support HTML5 video.
             </video>
-            <p>.....</p>
-            <video width="300" controls>
-                <source src="media/machine/laser_2nd_part/05_testing/04.mp4"> Your browser does not support HTML5 video.
-            </video>
+
             <hr>
             <li id="setup_grbl">Setting up GRBL</li>
             <p>.....</p>
