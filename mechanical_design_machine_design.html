@@ -30,7 +30,6 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
-
     </script>
 </head>
 
@@ -263,6 +262,7 @@
             <p>The screen will show the successful completion.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/04.jpg"></p>
             <p>The next method I tried was compiling and burning the firmware using the Arduino IDE. For this method I followed the method described at the Gnea/GRBL <a href="https://github.com/gnea/grbl/wiki/Compiling-Grbl"> wiki</a>. First I modified the two lines bellow in other to enable dual motor for the y axis. I did were not successful so far and because of lack of time I ended up not using it, anyway I documented the method here for in the future I will try it again with more time.</p>
+            <p>Another referece for Getting dual axis self square gantry working is found at the <a href="https://forum.protoneer.co.nz/viewtopic.php?t=7588">Protoneer Product Forum</a>, but again in the future I will look into that.</p>
             <p>Start by downloading the grbl firmware then add it as a library to the arduino.</p>
             <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/06.jpg"></p>
             <p>Open the GrblUpload Arduino file example and compile the upload just like described in <a href="embedded_programming.html">Embedded Programming week</a> changing the MCU for Arduino UNO board.</p>
@@ -306,8 +306,23 @@
             </video>
             <hr>
         </ol>
-
-
+        <!--Hooking the laser 3rd part-->
+        <h3>Lets hook the laser</h3>
+        <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/laser_myjg100w_wire_diagram.jpg"></p>
+        <p>I found this info at <a href="https://github.com/grbl/grbl/issues/1263">this grbl issue page</a></p>
+        <il>
+            <li>H--Should be connected to activate the laser when hight</li>
+            <li>L--Should be connected to activate the laser when hight</li>
+            <li>P--connect to water protection switch</li>
+            <li>G--Connect to Arduino Ground</li>
+            <li>IN--Connect to Arduino PWM, pin 11, or middle leg of potentiometer</li>
+            <li>5V-- To be used in with potentiometer</li>
+        </il>
+        <br>
+        <p>As fore the laser tube itself I found a beautiful diagram <a href="https://australia.desertcart.com/products/2295378-ten-high-ac-110-v-glass-laser-tube-40-w-co-2-700-mm-length-50-mm-dia-for-laser-engraving-and-cutting-machine">here</a> that I copied below.</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/71D1wY82rwL.jpg"></p>
+        <p>Made my own diagram as well></p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/03.jpg"></p>
         <!--another machine-->
         <!--        
         <h3>Solidworks designing</h3> <video width="300" controls>
@@ -347,10 +362,9 @@
         <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
-
     <!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
-    ================================================== -->
+ ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="media/jquery-1.9.1.min.js"></script>
     <!-- Syntax Highlighter -->
@@ -362,10 +376,7 @@
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
-
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body>
-
-</html>
+</body></html>
