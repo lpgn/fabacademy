@@ -30,6 +30,7 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
+
     </script>
 </head>
 
@@ -307,6 +308,24 @@
             <hr>
         </ol>
         <!--Hooking the laser 3rd part-->
+        <h2>For the Future...</h2>
+        <h3>Recognize opportunities for improvements in the design!</h3>
+        <p>The Machine is not finished yet. It will become a laser cutter by the end of the cycle. I will update here its updates. So far I have the following issues to solve:
+            <br><br>
+            <il>
+                <li>Make my own board</li>
+                <li>Hook the laser power to the controller board</li>
+                <li>Make sure the Arduino doesn't start the beam accidentally
+                <li>Design and build a z axis controlled manually or from the grbl in other to focus the machine on different thickness of materials.</li>
+                <li>Include safety glass with hinges + switch to prevent operation with door open</li>
+                <li>Install cooling system + switch to prevent dry operation</li>
+            </il>
+        </p>
+        <hr>
+        <h3> The Future is now!
+        </h3>
+        <p>The machine week was completed with actuation and automation of my machine as far as the requirements in the <a href="https://fabacademy.org/2020/docs/fabacademy-assessment/mechanical_design,_machine_design.html">assessments page</a> for this week, but that is not stooping me from making my machine become a laser cutter! I only can't do it and at the same time finish the other assignments that I have due.</p>
+        <p>Well that is not stooping me from improving the machine in any free time that I will have.</p>
         <h3>Lets hook the laser</h3>
         <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/laser_myjg100w_wire_diagram.jpg"></p>
         <p>I found this info at <a href="https://github.com/grbl/grbl/issues/1263">this grbl issue page</a></p>
@@ -319,7 +338,7 @@
             <li>5V-- To be used in with potentiometer</li>
         </il>
         <br>
-        <p>As fore the laser tube itself I found a beautiful diagram <a href="https://australia.desertcart.com/products/2295378-ten-high-ac-110-v-glass-laser-tube-40-w-co-2-700-mm-length-50-mm-dia-for-laser-engraving-and-cutting-machine">here</a> that I copied below.</p>
+        <p>As for the laser tube itself I found a beautiful diagram <a href="https://australia.desertcart.com/products/2295378-ten-high-ac-110-v-glass-laser-tube-40-w-co-2-700-mm-length-50-mm-dia-for-laser-engraving-and-cutting-machine">here</a> that I copied below.</p>
         <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/71D1wY82rwL.jpg"></p>
         <p>Made my own diagram as well></p>
         <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/03.jpg"></p>
@@ -376,7 +395,10 @@
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
+
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body></html>
+</body>
+
+</html>
