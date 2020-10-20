@@ -30,7 +30,6 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
-
     </script>
 </head>
 
@@ -125,7 +124,6 @@
         <h3>Frankenlaser cutter</h3>
         <p>Design Files and Gcode files @ <a href="https://github.com/lpgn/frankenlaser">github repo</a> (to big for this server)</p> <br>
         <p class="pic"><img src="media/machine/laser/01_frankenlaser.jpg"></p>
-
         <p>I gave it the name Frankenlaser because many of its parts come from retired machines I once design and fabricated. Its a machine again just like my CNC made with parts I had laying around as well as commercial parts.</p>
         <p>I designed the machine with solidworks and used the CNC in the bottom of this page that I also designed to cut the carbon fiber and the OSB parts.</p>
         <h3>Mechanical Design (part 1 of 2)</h3>
@@ -322,16 +320,21 @@
             </il>
         </p>
         <hr>
+        <h2>Dangerous Zone ahead.</h2>
+        <p class="pic"><img src="media/machine/laser.jpg"></p>
+        <p class="pic"><img src="media/machine/fire.jpg"></p>
+        <hr>
+        <h2>Extra Credit hum?!</h2>
         <h3> The Future is now!
         </h3>
         <p>The machine week was completed with actuation and automation of my machine as far as the requirements in the <a href="https://fabacademy.org/2020/docs/fabacademy-assessment/mechanical_design,_machine_design.html">assessments page</a> for this week, but that is not stooping me from making my machine become a laser cutter! I only can't do it and at the same time finish the other assignments that I have due.</p>
         <p>Well that is not stooping me from improving the machine in any free time that I will have.</p>
         <h3>Lets hook the laser</h3>
-        <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/laser_myjg100w_wire_diagram.jpg"></p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/01_laser_myjg100w_wire_diagram.jpg"></p>
         <p>I found this info at <a href="https://github.com/grbl/grbl/issues/1263">this grbl issue page</a></p>
         <il>
-            <li>H--Should be connected to activate the laser when hight</li>
-            <li>L--Should be connected to activate the laser when hight</li>
+            <li>H--Should be connected to pin 13 (spindle direction) it activates the laser when hight</li>
+            <li>L--Should be connected to ground it activate the laser when LOW</li>
             <li>P--connect to water protection switch</li>
             <li>G--Connect to Arduino Ground</li>
             <li>IN--Connect to Arduino PWM, pin 11, or middle leg of potentiometer</li>
@@ -339,9 +342,89 @@
         </il>
         <br>
         <p>As for the laser tube itself I found a beautiful diagram <a href="https://australia.desertcart.com/products/2295378-ten-high-ac-110-v-glass-laser-tube-40-w-co-2-700-mm-length-50-mm-dia-for-laser-engraving-and-cutting-machine">here</a> that I copied below.</p>
-        <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/71D1wY82rwL.jpg"></p>
-        <p>Made my own diagram as well></p>
-        <p class="pic"><img src="media/machine/laser_3rd_part/laser_wiring/03.jpg"></p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/02_diagram.jpg"></p>
+        <p>Made my own diagram as well</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/03_my_diagram.jpg"></p>
+        <p>Here I show the solder I did from the Anode wire to a crocodile connector. The terminals from the laser cutter should not be soldered as the heat differences could crack the co2 laser tube.</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/04_soldering.jpg"></p>
+        <P>This photo shows the Anode wire connected to its terminal as well as the water tube at the exit point of the coolant.</P>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/05_hoked.jpg"></p>
+        <p> Here I fit the water protection sensor switch to the laser power. This will prevent the laser from shooting without coolant.</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/06_water_protection.jpg"></p>
+        <h4>Laser Coolant</h4>
+        <p>To keep the laser tube cool, I fitted a small water fountain to a plastic container filled with automotive antifreeze. I used plane water in the past but bacterial growth always bugged me. In the future I hope to make this a closed system with a automotive radiator.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/02_laser_coolant/01.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>In this video you can see the laser tube being filled with antifreeze, sorry it gets upside down... At least you can see the coolant flowing</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/02_laser_coolant/02.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>Here I test the water protection. As I remove the water pump power plug the LED turns off at the laser power source.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/02_laser_coolant/03_testing_water_protection.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <h4>Lets test it.</h4>
+        <p>In this test I show the laser beam without the mirrors aiming it at a wood piece. It works, quite a display of power!</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/03_test/test_it.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <h4>Mirror Alignment</h4>
+        <p>The mirror alignment is the trickiest part.</p>
+        <p>I already had experience with laser alignment before but here follows some good tutorials on how to do it:</p>
+        <il>
+            <li>From Intructables <a href="https://www.instructables.com/Aligning-Laser-Cutter-Mirrors/">Aligning Laser Cutter Mirrors
+                    By Sythe101</a></li>
+            <li>From smoke and mirrors <a href="http://makestuffnow.com/laser-cutter-alignment"> website</a></li>
+            <li>From Make stuff now <a href="https://smokeandmirrors.store/pages/laser-beam-alignment-guide"> website</a></li>
+        </il>
+        <p>The way I have done is documented bellow.</p>
+        <ol>
+            <li>I took strips of painters tape and covered the hole in the first mirror support. Do not do this with a mirror in place as the tape glue and material when burned will stick to the mirrors ruining it!</li>
+            <li>Hit the pulse button, or in my case shorted the L terminal to ground inn the power source of the laser for a millisecond. </li>
+            <li>Then I check where the laser head hit the tape. The goal is to hit the center of the mirror support's hole using the tape as reference.</li>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/01_first_mirror.mp4"> Your browser does not support HTML5 video.
+            </video>
+            <li>When needed adjust the laser tube. In my case the dot was a bit to to the upper left side of the hole. So I adjusted the laser tube a bit. and got a better result next try. Next you should not move the laser tube anymore. </li><br>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/02_shoting_again.mp4"> Your browser does not support HTML5 video.
+            </video>
+            <li>Fit the first mirror being careful not to touch it with bare hands. I used a washer to turn and close the mirror backing nut.</li>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/03_fitting_the_first%20_mirror.mp4"> Your browser does not support HTML5 video.
+            </video>
+            <li>The first and second and third mirrors one after the other are then adjusted using the same procedure with the top and left knobs looking from behind the mirror support. The objective now is not to shot at the middle of the second mirror but to shoot 2 times in the same spot, the first with the y gantry (first mirror) near and the second time with the gantry further like I show in the video. repeat this process for each mirror until you get to the lens.</li>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/05_second_mirror_done.mp4"> Your browser does not support HTML5 video.
+            </video>
+
+            <li>The lens should be fit with the concave side up. Shot again and make sure the beam is in the center and is a round burn as opposed to a half moon that would mean the beam is hitting the walls of the tube after the third mirror.</li>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/06_fiting_the_lens.mp4"> Your browser does not support HTML5 video.
+            </video>
+        </ol>
+        <h4>Problem and Solution</h4>
+        <p>The first issue was the y axis stopped moving for a reason I still don't get it. I tested a different stepper controller and also rewire every thing so I could debug it. </p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/05_problem_solution/y_axis_problem.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>In the end I decided it was not the wiring so I recompile GRBL like I explained earlier, switching the Y direction bit (pin) 6 for 7 in the file <a href="media/machine/laser_3rd_part/05_problem_solution/grbl.zip">cpu_map.h</a> and it worked. Not sure what really caused it.</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/grbl.png"></p>
+        <p>Next issue was the scale of the X axis was completely off. I had created a simple 10 mm square and had it cut but instead it created a long rectangle.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/05_problem_solution/it_works_but_not_well.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>I solved the issue simply reapplying the steps per mm again to GRBL controller Eprom. and it started working as I can show in these pics.</p>
+        <p>The inside measurement of the square is 10.2mm</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/inside.jpg"></p>
+        <p>The outside measurement of the square is 9.9mm</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/outside.jpg"></p>
+        <p>Calculating the inside and outside measurements would give a kerf size of 0.15mm, not too bad for first tests but can be improved with better focus. But I will leave that for <a href="computer_controlled_cutting.html">Computer controlled cutting week</a>.</p>
+        <h4>Final Test</h4>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/06_final_test/VID_20201019_183645.mp4"> Your browser does not support HTML5 video.
+        </video>
         <!--another machine-->
         <!--        
         <h3>Solidworks designing</h3> <video width="300" controls>
@@ -395,10 +478,7 @@
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
-
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body>
-
-</html>
+</body></html>
