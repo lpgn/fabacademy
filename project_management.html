@@ -312,6 +312,9 @@ git push</pre>
             <pre class="prettyprint linenums">git remote show origin</pre>
             <li>copy a ssh key to a server</li>
             <pre class="prettyprint linenums">ssh-copy-id -i ~/.ssh/mykey.pub user@host</pre>
+            <li>When I want to push an existent repo commit by commit to a new adress</li>
+            <pre class="prettyprint linenums">git remote add gitlab git@gitlab.fabcloud.org:Lucio/frankenlaser.git
+git rev-list --reverse master | ruby -ne 'i ||= 0; i += 1; puts $_ if i % 1 == 0' | xargs -I{} git push gitlab +{}:refs/heads/master</pre>
         </ul>
         <h4>Creating a new Repo</h4>
         <p>I wanted to include instructions on how to create a new repo and upload it to github for future reference even it was not how I did</p>
@@ -332,6 +335,8 @@ git push</pre>
             <li>Finally push everything with:</li>
             <pre class="prettyprint linenums">git push -u origin master</pre>
             <p>and its done</p>
+            <li> Notes on git:</li>
+
             <li> Notes on ffmpeg:
             </li>
             <ul>

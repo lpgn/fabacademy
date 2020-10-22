@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightBurnProject AppVersion="0.9.16" FormatVersion="1" MaterialHeight="0" MirrorX="False" MirrorY="False">
+    <VariableText>
+        <Start Value="0"/>
+        <End Value="999"/>
+        <Current Value="0"/>
+        <Increment Value="1"/>
+        <AutoAdvance Value="0"/>
+    </VariableText>
+    <UIPrefs>
+        <Optimize_ByLayer Value="0"/>
+        <Optimize_ByGroup Value="-1"/>
+        <Optimize_ByPriority Value="1"/>
+        <Optimize_WhichDirection Value="0"/>
+        <Optimize_InnerToOuter Value="1"/>
+        <Optimize_ByDirection Value="0"/>
+        <Optimize_ReduceTravel Value="1"/>
+        <Optimize_HideBacklash Value="0"/>
+        <Optimize_ReduceDirChanges Value="0"/>
+        <Optimize_ChooseCorners Value="0"/>
+        <Optimize_AllowReverse Value="1"/>
+        <Optimize_RemoveOverlaps Value="0"/>
+        <Optimize_OptimalEntryPoint Value="1"/>
+    </UIPrefs>
+    <CutSetting type="Cut">
+        <index Value="0"/>
+        <name Value="C00"/>
+        <minPower Value="20"/>
+        <maxPower Value="20"/>
+        <minPower2 Value="20"/>
+        <maxPower2 Value="20"/>
+        <speed Value="100"/>
+        <kerf Value="0"/>
+        <zOffset Value="0"/>
+        <enableLaser1 Value="1"/>
+        <enableLaser2 Value="0"/>
+        <startDelay Value="0"/>
+        <endDelay Value="0"/>
+        <throughPower Value="0"/>
+        <throughPower2 Value="0"/>
+        <enableCutThroughStart Value="0"/>
+        <enableCutThroughEnd Value="0"/>
+        <priority Value="0"/>
+        <frequency Value="20000"/>
+        <overrideFrequency Value="0"/>
+        <PPI Value="200"/>
+        <enablePPI Value="0"/>
+        <doOutput Value="1"/>
+        <hide Value="0"/>
+        <runBlower Value="1"/>
+        <autoBlower Value="0"/>
+        <blowerSpeedOverride Value="0"/>
+        <blowerSpeedPercent Value="100"/>
+        <overcut Value="0"/>
+        <rampLength Value="0"/>
+        <rampOuter Value="0"/>
+        <numPasses Value="1"/>
+        <zPerPass Value="0"/>
+        <perforate Value="0"/>
+        <perfLen Value="0.1"/>
+        <perfSkip Value="0.1"/>
+        <dotMode Value="0"/>
+        <dotTime Value="0"/>
+        <dotSpacing Value="0"/>
+        <manualTabs Value="1"/>
+        <tabSize Value="0.5"/>
+        <tabCount Value="-1"/>
+        <tabSpacing Value="50"/>
+        <skipInnerTabs Value="0"/>
+        <tabsUseSpacing Value="1"/>
+        <scanOpt Value="mergeAll"/>
+        <bidir Value="1"/>
+        <crossHatch Value="0"/>
+        <overscan Value="0"/>
+        <overscanPercent Value="2.5"/>
+        <floodFill Value="0"/>
+        <interval Value="0.1"/>
+        <angle Value="0"/>
+        <cellsPerInch Value="50"/>
+        <halftoneAngle Value="22.5"/>
+    </CutSetting>
+    <Shape Type="Group">
+        <XForm>1 0 0 1 44.3309 336.072</XForm>
+        <Children>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -77.0717</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -77.0717</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -103.812</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -103.812</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -170.661</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -170.661</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -184.031</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -184.031</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -90.4416</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -90.4416</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -117.181</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -117.181</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -130.551</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -130.551</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -143.921</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -143.921</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -157.291</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -157.291</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+            <Shape Type="Group">
+                <XForm>1 0 0 1 0 0</XForm>
+                <Children>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 119.304 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 144.121 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 156.53 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 181.347 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 168.938 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 131.712 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 106.895 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 82.0778 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 69.6691 -197.401</XForm>
+                    </Shape>
+                    <Shape Type="Rect" CutIndex="0" W="10" H="10" Cr="0">
+                        <XForm>1 0 0 -1 94.4864 -197.401</XForm>
+                    </Shape>
+                </Children>
+            </Shape>
+        </Children>
+    </Shape>
+    <Notes ShowOnLoad="0" Notes=""/>
+</LightBurnProject>
