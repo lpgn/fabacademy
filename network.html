@@ -85,19 +85,24 @@
         <hr>
         <h3>Software Used</h3>
         <ul style="list-style-type:disc">
-            <li>VScode</li>
-            <li>Platformio</li>
-            <li>Brackets</li>
-            <li>Arduino IDE</li>
+            <li><a href="https://code.visualstudio.com/">vscode</a></li>
+            <li><a href="https://platformio.org/">Platformio</a></li>
+            <li><a href="https://www.arduino.cc/en/main/software">Arduino IDE</a></li>
             <li><a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></li>
+            <li> <a href="https://www.autodesk.com/products/eagle/free-download">Autodesk Eagle</a>
+            </li>
+            <li><a href="https://github.com/McNugget6750/pcb-gcode">PCB-Gcode ULP for Autodesk Eagle</a></li>
+            <li><a href="http://www.autoleveller.co.uk/downloads/">Auto Leveller</a></li>
         </ul>
         <hr>
         <h3>Files</h3>
         <ol>
-            <li><a href="media/interface/code/irrigationsystem.zip">Code</a></li>
+            <p>Gitlab Fabcloud<a href="https://gitlab.fabcloud.org/Lucio/e-splash/"> project page </a>containing the pcb, enclosure and firmware.</p>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/Firmware">Firmware</a></li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/pcb/ESPlash">Board Files</a></li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/board_enclosure">Enclosure</a></li>
         </ol>
         <hr>
-
         <h3> Group Assignment
         </h3>
         <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
@@ -128,70 +133,84 @@
             <li><a href="https://github.com/sparkfun/ESP32_Miscellany">sparkfun/ESP32_Miscellany</a></li>
         </ol>
         <p>After reviewing all of them I decided to use the one from MacroYau/MacroYau. </p>
-        <p class="pic left"><img src="media/network/esppcb01.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/esppcb01.jpg"></p>
         <p>Because I want maximum compatibility with the dev kits for ESP32 I was use to I went looking for and found a ESP32 Wroom pinout that I used to name the pins.</p>
-        <p class="pic left"><img src="media/network/esp32-pinout-chip-esp-wroom-32.jpg">Found again on Random Nerds tutorial website :-)</p>
+        <p class="pic left"><img src="media/network/pcb_design/esp32-pinout-chip-esp-wroom-32.jpg">Found again on Random Nerds tutorial website :-)</p>
         <p>Next step was to go and attach net wires to each pin. I wish I did this in the order I am presenting as it would have saved me redoing many wires I connected wrongly in the first place. Wheel the lesson is logical pin number and physical pin numbers are not always the same so with that in mind connected them this time correctly.</p>
-        <p class="pic left"><img src="media/network/connectingthewiresineagle.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/connectingthewiresineagle.jpg"></p>
         <p>Thats the end result:</p>
-        <p class="pic left"><img src="media/network/endresultesp32.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/endresultesp32.jpg"></p>
         <p>The relay I found at <a href="https://www.snapeda.com/parts/SRD-05VDC-SL-C/Songle%20Relay/view-part/1029484/">snapeda</a> its not the same model than the one I have but the footprint is.</p>
         <p>The relay circuit I found online <a href="">here</a> at web.archive schematics below.</p>
-        <p class="pic left"><img src="media/network/relay_circuit_schematic_S.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/relay_circuit_schematic_S.jpg"></p>
         <p>With the schematics in hand I draw the following in eagle:</p>
-        <p class="pic left"><img src="media/network/relayssch.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/relayssch.jpg"></p>
         <p>For the battery circuit I followed a circuit in the web page <a href="https://randomnerdtutorials.com/power-esp32-esp8266-solar-panels-battery-level-monitoring/">Random Nerds Tutorial</a>.</p>
-        <p class="pic left">name<img src="media/network/esp32-solar-powered-circuit-1.jpg"></p>
+        <p class="pic left">name<img src="media/network/pcb_design/esp32-solar-powered-circuit-1.jpg"></p>
         <p>Since I don't have the TP4056 module for now my circuit will contain only the sensing part.</p>
-        <p class="pic left"><img src="media/network/powersense.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/powersense.jpg"></p>
         <p>The voltage divider resistor was calculated using the online calculator <a href="http://www.ohmslawcalculator.com/voltage-divider-calculator">here</a>.</p>
-        <p class="pic left"><img src="media/network/voltage_divider_calculator.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/voltage_divider_calculator.jpg"></p>
         <p>For the future I found the library for the TP4056 <a href="https://breadboardtronics.wordpress.com/tag/tp4056/">here</a> thanks to a tip from Luis Carvão my remote intructor.</p>
         <p>The humidity Sensor library can be found <a href="">here</a> with it in hand I simply had to net some wires to the ESP32 pin 32</p>
-        <p class="pic left"><img src="media/network/dhtsch.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/dhtsch.jpg"></p>
         <p>As for the current sensor I chose to use the ACS712 the library I found on this <a href="https://github.com/triffid/ESC/tree/master/Schematic%20and%20Board">Github.</a>the finished Schematics is below:</p>
-        <p class="pic left"><img src="media/network/currentsensesch.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/currentsensesch.jpg"></p>
         <p>I got the Real time clock library as well at <a href="https://www.snapeda.com/parts/DS1302ZN/Maxim%20Integrated/view-part/?ref=search&t=DS1302Z">Snapeda</a> but for now I will not use it so the full Schematics I draw is bellow:</p>
-        <p class="pic left"><img src="media/network/schematics.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/schematics.jpg"></p>
         <p>After sometime staring at the Schematics I realize a few errors, I forgot to connect the relays LED's resistor to VCC and also forgot to include a reset and a program button necessary to put the ESP on programming mode as well as forgot to include headers for the serial mode and for expandability and finally I decided to include a crystal for better time keeping.</p>
         <p>I then drew the Reset and Program buttons:</p>
-        <p class="pic left"><img src="media/network/buttons.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/buttons.jpg"></p>
         <p>Here I corrected the relays adding the VCC as well as added an octocoupler in between the signal and the relays so I prevent any feedback from the relays.</p>
-        <p class="pic left"><img src="media/network/relayswithoctocoupler.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/relayswithoctocoupler.jpg"></p>
         <p>Here I added TX RX header, crystal for better internall RTC timekepeeng and ESP32DEVKIT compatibility headers.</p>
-        <p class="pic left"><img src="media/network/headersandcrystal.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/headersandcrystal.jpg"></p>
         <p>So hopefully finally my final Schematics...</p>
-        <p class="pic left"><img src="media/network/schematicsfinal.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/schematicsfinal.jpg"></p>
         <p>Now I will start the routing work on the board I have to say I am a bit anxious as I never made such a complex PCB!</p>
         <p>How encouraging is what I see when I move to the board mode in Eagle!!!</p>
-        <p class="pic left"><img src="media/network/encoraging.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/encoraging.jpg"></p>
         <p>First thing I do is to move the devkit foot print to the center along with the ESP32</p>
-        <p class="pic left"><img src="media/network/firstthing.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/firstthing.jpg"></p>
         <p>After trying for a while to connect by hand I give a try on the autorouter, I had to stop after a few minutes and the result is laughable. I will try again moving the esp32 up and if not I will not attempt a ESP32devkit compatibility.</p>
-        <p class="pic left"><img src="media/network/isthisevenfabable.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/isthisevenfabable.jpg"></p>
         <p>So I gave up on the DevKit compatibility and decided to move slowly this time. I created a backup of my work that I opened in another eagle window and deleted all the components I was not working on the schematics and board looked like this. My idea is to copy from the backup the components back as I finish each step. so below its how the step one looks.</p>
-        <p class="pic left"><img src="media/network/step01a.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/step01a.jpg"></p>
         <p>In the Board you can see #1 the relay and #2 the the current sensor circuit and #3 the on board LED.</p>
-        <p class="pic left"><img src="media/network/step01b.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/step01b.jpg"></p>
         <p>So now I copied the first valve relay and when I went to the board eagle presented me with the pasted components, I believe this way is much easier.</p>
-        <p class="pic left"><img src="media/network/step02b1.jpg"></p>
-        <p>So far the board looks like this, I haven't route any power wires included GND 3.3V and 5V. Will try autoroute now see results and maybe route manually.</p>
-        <p class="pic left"><img src="media/network/step3b.jpg"></p>
-        <p>a</p>
-        <p class="pic left"><img src="media/network/logo01.jpg"></p>
-        <p class="pic left"><img src="media/network/logo02.jpg"></p>
-        <p class="pic left"><img src="media/network/logo03.jpg"></p>
-        <p class="pic left"><img src="media/network/logo04.jpg"></p>
-        <p class="pic left"><img src="media/network/logo05.jpg"></p>
-        <p class="pic left"><img src="media/network/logo06.jpg"></p>
+        <p class="pic left"><img src="media/network/pcb_design/step02b1.jpg"></p>
+        <p>So far the board looks like this, I haven't route any power wires included GND 3.3V and 5V. Will try autoroute now to have an idea and maybe route manually. The entire routing process was best described at input devices <a href="input_devices.html">week</a>.</p>
+        <p class="pic left"><img src="media/network/pcb_design/step3b.jpg"></p>
+        <p>After finishing the layout of the board I decided to add the logo. Click on File, import and Bitmap (currently eagle only accepts .bmp).</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo01.jpg"></p>
+        <p>Chose the color to be imported.</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo02.jpg"></p>
+        <p>Then select the unit, mm in my case and the size and ok.</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo03.jpg"></p>
+        <p>Because I wanted to mill the logo as opposed to stamp it I had to move it to the top layer.</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo04.jpg"></p>
+        <p>The finalized board layout with holes and milling contours as described in output devices <a href="output_devices.html">week</a>.</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo05.jpg"></p>
         <h4>Milling</h4>
-        <p class="pic left"><img src="media/network/f.jpg"></p>
-        <p class="pic left"><img src="media/network/f.jpg"></p>
-        <p class="pic left"><img src="media/network/f.jpg"></p>
+        <p>Here I show the visualization of the gcode routes with red as the trace closest to the copper to be left.</p>
+        <p class="pic left"><img src="media/network/pcb_cam/logo06.jpg"></p>
+        <p>As usual and again best described at <a href="input_devices.html">week</a> here follows a glimpse of the autolevel software.</p>
+        <p class="pic left"><img src="media/network/pcb_cam/autolevel.jpg"></p>
+        <p></p>
+        <p class="pic left"><img src="media/network/milling/03_contourn.jpg"></p>
         <h4>Soldering and testing/Debuging</h4>
-        <p class="pic left"><img src="media/network/f.jpg"></p>
-        <p class="pic left"><img src="media/network/f.jpg"></p>
-        <p>Testing First boot with serial monitor</p>
+        <p>Inspecting pcb under the light.</p>
+        <p>In other to verify if the tracks are all good I place the light under the pcb and review everything looking for shorts or missing tracks.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/04_under_the_light.jpg"></p>
+        <p>The underside being populated.</p>
+        <p>I place the big components last as not to make soldering the small smd components hard.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/05_underside.jpg"></p>
+
+        <h4>Reading from Serial Monitor/Burning Firmware Schematics</h4>
+        <p>After soldering everything I connect the board to my serial adapter. bellow is the schematics.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/burnfirmware.jpg"></p>
+        <p>I pasted the first output from the esp32 with factory firmware, It boots!</p>
         <pre><code>
             --- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
             --- More details at http://bit.ly/pio-monitor-filters
@@ -261,98 +280,85 @@
             I (2155) wifi: mode : sta (3c:71:bf:10:66:e0) + softAP (3c:71:bf:10:66:e1)
             I (2159) wifi: mode : softAP (3c:71:bf:10:66:e1)
         </code></pre>
-        <p>Burning program:</p>
-
         <hr>
-        <h4>Code</h4>
-        <p>My network protocol is going to be around a json file, before a project becomes gigantic simple text files are a good option and json is my weapon of choice</p>
-        <p>Creating a Json file by hand :-)</p>
-        <p>Json files are ...........</p>
-        <p>Having created the json file its time to create the programs in C++ and in Java Script to parse (c++) and serialize (javaScript) the json file. This can be done efortless at the Arduino Json website Assistant.</p>
-        <h4>JSON</h4>
-        <p>Json is the format I chose for the communication of the Web interface and the microprocessor.</p>
-        <p>The Library is <a href="ArduinoJson">ArduinoJson</a></p>
-        <p>The usage is as follows:</p>
+        <h4>Burning the firmware:</h4>
+        <p>In order to burn my firmware I use Microsoft VScode with Platformio.</p>
+        <p>Before Starting with the burning process first I had to configure the enviroment of Platformio. I describe this <a href="project_development.html#13/06/2020">here</a> in the project development week.</p>
+        <p>Next I hold down the GPIO0 switch and press reset button to enter the firmware burning mode. After that I press on the icon to burn the firmware and it burns. Success!</p>
+
+        <!--        Debug-->
+        <hr>
+        <p>Debugging the board.</p>
+        <p> I ended up removing all the components in order to review the the signals directly produced by the microprocessor.</p>
+        <p class="pic"> <video controls>
+                <source src="media/network/debug_pcb/06.mp4"> Your browser does not support HTML5 video.
+            </video>
+            <legend></legend>
+        </p>
+        <p>The result from the debug was that I found out there was nothing wrong with the code or the microprocessor soldering or the immediate tracks.</p>
+        <P>What I found out was that the I needed to have 220 ohms resistors added between the signal and Anode pin number 1 of each octocoupler. It turns out the octocoupler has an internal LED and the voltage used to activate it needs to be limited.</P>
+        <p class="pic left"><img src="media/network/debug_pcb/calculate_resistor.jpg">
+            <legend>from electronics stack exchange <a href="https://electronics.stackexchange.com/questions/94097/calculate-resistor-value-for-optocoupler-24vdc-anode">website</a></legend>
+        </p>
+        <p class="pic left"><img src="media/network/debug_pcb/datasheet.jpg"></p>
+        <p>Then R=(3.3v-1.2v)/20ma=105ohms or</p>
+        <p class="pic left"><img src="media/network/debug_pcb/calculate.jpg"></p>
+        <p>I then cut the tracks and soldered the 220ohms resistors because that was what I had in hand and it worked but the right size is 120ohms as the online resistor calculator shows.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/resistor.jpg"></p>
+        <p>And this is how the schematics for the relay look like</p>
+        <p class="pic left"><img src="media/network/debug_pcb/sch.jpg"></p>
+        <hr>
+        <h4>Network Code in the firmware</h4>
+        <p>There are two types of communications happening in my board that I can describe.</p>
+        <br>
+        <il>
+            <li>The communication between the phone and the esp32 (TCP/IP protocol)</li>
+            <li>The communication between the c++ and the HTML <a href="https://arduinojson.org/">Arduino Json</a></li>
+        </il>
+        <br>
+        <h4>Phone and the esp32</h4>
+        <p>The network between the phone and the esp32 is established thanks to a few libraries working together: </p>
         <ol>
-            <li>Declare size of Json Document</li>
+            <li><a href="https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi">WiFi.h</a></li>
+            <p>It is described on its documentation:</p>
+            <p><i>"Enables network connection (local and Internet) using the ESP32 built-in WiFi. With this library you can initiate Servers, Clients and send/receive UDP packets through WiFi. The shield can connect either to open or encrypted networks (WEP, WPA). The IP address can be assigned statically or through a DHCP. The library can also manage DNS."</i></p>
+            <li><a href="https://github.com/me-no-dev/AsyncTCP">AsyncTCP.h</a></li>
+            <p>It is described on its documentations:</p>
+            <p><i>"This is a fully asynchronous TCP library, aimed at enabling trouble-free, multi-connection network environment for Espressif's ESP32 MCUs. This library is the base for ESPAsyncWebServer"</i></p>
+            <li><a href="https://github.com/me-no-dev/ESPAsyncWebServer">ESPAsyncWebServer.h</a></li>
+            <p>It is described on its documentations:</p>
+            <p><i>"Async HTTP and WebSocket Server for ESP8266 Arduino"</i></p>
+            <p>So basically in my project this libraries are responsible to establish a network connection to a router as well as create an access point.</p>
+            <p>They also create web server as well as a dhcpserver and with that it issues an ip-address in case one connects to it via the access point created with this code: </p>
+            <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">  //Soft Wifi Access point setup
+  WiFi.softAP("softap", "password_here");
+  IPAddress IP = WiFi.softAPIP();</code></pre>
+            <p>The connection to the router is stabilished with this code:</p>
+            <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">  //start wifi sessions as a client.
+  //Wifi client setup
+  const char* ssid = doc["data"]["ssid"];
+  const char* password = doc["data"]["pass"];
+  ssid = "fabfarm";
+  password = "password_here";
+  WiFi.begin(ssid, password);</code></pre>
+            <p>The webserver is initiated with this code <code>AsyncWebServer server(81);</code> </p>
         </ol>
-        <p>A great source of documentation and a great assistant to create the parsing program and the serializing program is a <a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></p>
-        <h4>Input Jason</h4>
-        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">{
-    "data": {
-        "currentTime": "Wednesday, June 24 2020 23:49:23",
-        "temperature": "22.30",
-        "humidity": "74.00",
-        "override": 0,
-        "ssid": "rato",
-        "pass": "imakestuff"
-    },
-    "relays": [
-        {
-            "name": "Fruit Tree",
-            "pin": 25,
-            "isRunning": 1,
-            "isEnabled": 0,
-            "times": [
-                {
-                    "startTime": "01:01",
-                    "duration": 0,
-                    "hour": 1,
-                    "min": 1
-                }
-            ]
-        },
-        {
-            "name": "Vegie Garden",
-            "pin": 26,
-            "isRunning": 1,
-            "isEnabled": 0,
-            "status": 1,
-            "times": [
-                {
-                    "startTime": "02:02",
-                    "duration": 32,
-                    "hour": 2,
-                    "min": 2
-                },
-                {
-                    "startTime": "02:02",
-                    "duration": 32,
-                    "hour": 2,
-                    "min": 2
-                }
-            ]
-        },
-        {
-            "name": "Cypress Hill",
-            "pin": 33,
-            "isRunning": 1,
-            "isEnabled": 0,
-            "status": 1,
-            "times": [
-                {
-                    "startTime": "03:03",
-                    "duration": 60,
-                    "hour": 3,
-                    "min": 3
-                },
-                {
-                    "startTime": "03:03",
-                    "duration": 60,
-                    "hour": 3,
-                    "min": 3
-                },
-                {
-                    "startTime": "03:03",
-                    "duration": 60,
-                    "hour": 3,
-                    "min": 3
-                }
-            ]
-        }
-    ]
-}</code></pre>
-        <h4>Arduino Json Library and resources</h4>
+        <!--        -->
+        <hr>
+        <h4>Connecting C++ and the HTML with Arduino Json</h4>
+        <p>Json is the format I chose for the communication of the Web interface and the microprocessor.</p>
+        <p><a href="https://arduinojson.org/">ArduinoJson.h</a> is described on its documentations as:</p>
+        <p><i>ArduinoJson is a C++ JSON library for Arduino and IoT (Internet Of Things)</i></p>
+        <p>A great source of documentation and a great assistant to create the parsing <code>deserializeJson()</code> program and the serializing <code>serializeJson(doc, Serial)</code> program is a <a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></p>
+        <p>In order to use the library I had first to create an <a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/blob/V5-Development/Firmware/src/fabfarm_irrigation/data/sample.json">json file</a>. This file will be used by the assistant in order to generate code for the C++.</p>
+        <p>Having created the json file by hand its time to create the programs in C++. The assistant will then create a c++ code to serialize as well as parse data from and to the json file that is inside the file system.</p>
+        <p class="pic left"><img src="media/network/json/json01jpg.jpg">
+        </p>
+        <p>In the dialog box in the left I pasted the <a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/blob/V5-Development/Firmware/src/fabfarm_irrigation/data/sample.json">json file</a> contents.</p>
+        <p class="pic left"><img src="media/network/json/json02.jpg">
+        <p>The website generates the codes automatically.</p>
+        <p class="pic left"><img src="media/network/json/json03.jpg"></p>
+        <p>Bellow I show the code generated in the assistant.</p>
         <h4>Parsing program</h4>
         <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6) + 540;
 DynamicJsonDocument doc(capacity);
@@ -428,7 +434,6 @@ const char* relays_2_times_2_startTime = relays_2_times_2["startTime"]; // "03:0
 int relays_2_times_2_duration = relays_2_times_2["duration"]; // 60
 int relays_2_times_2_hour = relays_2_times_2["hour"]; // 3
 int relays_2_times_2_min = relays_2_times_2["min"]; // 3</code></pre>
-
         <h4>Serializing Program</h4>
         <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6);
 DynamicJsonDocument doc(capacity);
@@ -507,7 +512,20 @@ relays_2_times_2["min"] = 3;
 
 serializeJson(doc, Serial);</code></pre>
 
+        <p>With the help of my friend Jeff Knight that without I would not be able to do it alone the code generated was simplified for my program. I then created a few functions and the following picture shows the serial monitor printing the result of a deserialization of the json file read.</p>
+        <p class="pic left"><img src="media/network/json/deserialisingjson.jpg">
 
+        <p>I made this diagram so I don't forget how it works:</p>
+        <p class="pic left"><img src="media/network/diagramesplash.jpg">
+
+            <!--        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c"></code></pre>-->
+        <h3>Hero shot</h3>
+        <p>In the end it works like this:</p>
+        <p class="pic"> <video controls>
+                <source src="media/network/irrigation_on_off.mp4"> Your browser does not support HTML5 video.
+            </video>
+            <legend></legend>
+        </p>
         <!-- End of your content -->
     </div> <!-- /container -->
     <!-- footer -->
@@ -516,7 +534,6 @@ serializeJson(doc, Serial);</code></pre>
         <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
-
     <!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
