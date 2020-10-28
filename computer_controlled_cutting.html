@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -108,12 +109,8 @@
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#group_assignment">Group Assignment</a></li>
             <li><a href="#test">Characterization of my laser cutter</a></li>
-            <li><a href="#">..</a></li>
-            <li><a href="#">..</a></li>
-            <li><a href="#">..</a></li>
-            <li><a href="#">..</a></li>
-            <li><a href="#">..</a></li>
-            <li><a href="#">..</a></li>
+            <li><a href="#design">Press fit construction kit</a></li>
+            <li><a href="#vinyl">Vinyl Cutter</a></li>
         </il>
         <hr>
         <h3 id="workflow"> Week work-flow
@@ -127,8 +124,8 @@
         <h3 id="toolsused"> Tools used
         </h3>
         <ul style="list-style-type:disc">
-            <li> <a href="computer_controlled_cutting.html">laser cutter</a>
-            </li>
+            <li> <a href="mechanical_design_machine_design.html">laser cutter</a>
+                made during machine design week</li>
             <li><a href="https://wiki.imal.org/resource/silhouette-cameo-3">Silhouette Cameo</a> </li>
         </ul>
         <hr>
@@ -140,19 +137,24 @@
             <li> <a href="https://laserweb.yurl.ch/">laserweb</a></li>
             <li> <a href="https://inkscape.org/">Ink Scape</a>
             </li>
-            <li> <a href="https://www.repetier.com/">Repetier host</a>
-            </li>
-            <li> <a href="https://www.sublimetext.com/3">Sublime text 3</a>
-            </li>
             <li> <a href="https://www.silhouetteamerica.com/software">Silhouette Studio</a>
+            </li>
+        </ul>
+        <hr>
+        <h3>Files</h3>
+        <ul style="list-style-type:disc">
+            <li>Press fit construction kit<a href="media/computer_controlled_cutting/lasercutting/construction_kit/triangles.zip"> Zip file </a>with the solid works file, dxf file as well as the lasercutter gcode.
+            </li>
+            <li><a href="media/computer_controlled_cutting/lasercutting/group/speed_power_test.zip">Test Files</a>
             </li>
         </ul>
         <hr>
         <h3 id="introduction"> Introduction
         </h3>
-        <p> On this assignment I was going to be using a 3dprinter I designed and made and then I upgraded it with a 2 watts diode laser. But I ended up designing and making a co2 <a href="computer_controlled_cutting.html">laser cutter</a>
+        <p> On this assignment I was going to be using a 3dprinter I designed and made and then I upgraded it with a 2 watts diode laser. But I ended up designing and making a co2 <a href="mechanical_design_machine_design.html">laser cutter </a>as I did not want to finish this course without such machine in my lab. I am really happy with my machine. It is showing amazing results even as a DIY machine.
         </p>
-        <p>I will be testing its capabilities and testing it to its limits in other to have a better understand of its capabilities and limitations. On the Vinyl side of the assignment I will be using a <a href="https://wiki.imal.org/resource/silhouette-cameo-3">Silhouette Cameo</a> and document its results.</p>
+        <p>I will be testing its capabilities and testing it to its limits in other to have a better understand of its capabilities and limitations. </p>
+        <p>On the Vinyl side of the assignment I will be using a <a href="https://wiki.imal.org/resource/silhouette-cameo-3">Silhouette Cameo</a> and document its results.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/3dprinter.jpg">
             <legend> 3D printer I designed and made with a carbon fiber milled body
             </legend>
@@ -166,44 +168,115 @@
         </p>
         <hr>
         <h3 id=group_assignment> Group Assignment</h3>
-        check http://academany.fabcloud.io/fabacademy/2020/labs/barcelona/students/tue-ngo/assignments/week-03-computer-controlled-cutting.html
-
-        <p>Go to for the group assignment<a href="http://fabacademy.org/2020/labs/algarve/index.html"> page </a>for other assignments, this weeks group assignment I am doing bymyself as I am alone in the lab.</p>
+        <p>Go to for the group assignment<a href="http://fabacademy.org/2020/labs/algarve/index.html"> page </a>for other assignments, this weeks group assignment I am doing by myself as I am alone in the lab.</p>
         <h4 id="test">Characterization of my laser cutter</h4>
         <il>
-            <li>Work area: 400 x 400mm</li>
-            <li>Height: ?mm</li>
+            <li>Work area: 400 x 290mm</li>
+            <li>Height: 150mm</li>
             <li>Laser power: 50W</li>
         </il>
         <hr>
         <lo>
             <li>focus</li>
-            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/focus/01.jpg">
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/01.jpg">
                 <legend>image extracted from Laser Cutter Focus <a href="https://www.youtube.com/watch?v=Eg6THrEdleo">video</a> from makestuffnow!</legend>
             </p>
-            <p>The lens I use in my laser is a 20mm diameter lens with 50.8mm focal length. This means I should the a range around this focal point, for that I created this pattern</p>
-            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/focus/focus.jpg">
-                <legend>original svg used <a href="media/computer_controlled_cutting/lasercutting/group/focus/drawing.svg">here</a></legend>
+            <p>The lens I use in my laser is a 20mm diameter lens with 50.8mm focal length. This means I should keep the hight from the lens around that measurement.</p>
+            <p>It would be a challenge to measure the the focal distance every time for this reason I design the ramp bellow. This will allow the laser to trace a line from the highest point of the ramp (0mm from the tip of the laser) to the lowest point from of the ramp.</p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/02.jpg">
+                <legend>Design files for focus ramp <a href="https://gitlab.fabcloud.org/Lucio/frankenlaser/-/blob/master/tools/focus%20ramp.zip">here</a></legend>
             </p>
-            <p>The result from the test is the that I should use the distance of... in other to cut. And .... in orther to engrave.</p>
-            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/focus/02.jpg">
+            <p>The result from the test is the that I should use the distance of 5 to 7 mm from the material top to the tip of the laser head.</p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/03.jpg">
                 <legend>laser cut result from focus test</legend>
             </p>
-
+            <video width="300" controls>
+                <source src="media/computer_controlled_cutting/lasercutting/group/03_a.mp4"> Your browser does not support HTML5 video.
+            </video>
+            <p>With the trace done I started measuring with a caliper and a square the most focused area of the trace.</p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/04.jpg">
+            </p>
+            <p>The result is a range from 5 to 7mm.</p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/05.jpg">
+            </p>
+            <p>to easily measure the encountered optimal distance I designed a small steps of 1mm starting from 3mm ending on 8mm</p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/06_a.jpg">
+            </p>
+            <p>I then laser cut it.</p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/06_b.jpg">
+            </p>
+            <p> Placing the nozzle on top of the desired hight gives a consistent measurement across the surface of the material.</p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/08.jpg">
+            </p>
+            <!--            kerf-->
+            <p> Measuring the kerf was simple. I used the previous template and the hole left by the cut. The difference is the kerf or the thickness of the removed material by the laser beam.</p>
+            <p>The inside measurement was 8.1mm</p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/07.jpg">
+            </p>
+            <p> The outside measurement was 7.9 this means the kerf is 0.2mm/2= 0.1mm
+            </p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/07_a.jpg">
+            </p>
+            <!--            power speed-->
             <li>power and speed</li>
-            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/focus/power_speed.jpg">
-                <legend>original svg used <a href="media/computer_controlled_cutting/lasercutting/group/focus/speed_power_test.svg">here</a></legend>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/09.jpg">
+                <legend>original svg used <a href="media/computer_controlled_cutting/lasercutting/group/speed_power_test.zip">here</a></legend>
             </p>
-            <p>The result from the test is the that I should use the distance of... in other to cut. And .... in orther to engrave.</p>
-            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/focus/111.jpg">
-                <legend>laser cut result from focus test</legend>
-            </p>
-            <li>rate</li>
-            <li>kerf</li>
-            <li>joint clearance</li>
-
+            <p>The power test above was done with a speed of 5000mm/min on a 2.7mm plywood. The power I chose as most suitable for this speed is 50%.</p>
+            <p>The speed test above was done on a 2.7mm plywood, with power set at 60%, even with the low power the laser were able to cut on almost all speeds tested. To be on the safe side I wold chose to cut at 5000mm/min with the power at 60% this thickness of plywood.</p>
         </lo>
-        <h3>Vinyl Cutting</h3>
+        <h4 id="design">Press fit construction kit</h4>
+        <p> For this assignment I will use 2d design from Solidworks. This is done within the sketches. Solidworks is a parametric design tool able to dynamically change its features with a change of a variable.
+        </p>
+        <p>I started by creating a sketch. I then draw an triangle.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/01.jpg"></p>
+        <p> Next I started creating global variables simply typing "equal" and then naming the variable. Next I confirmed the creation of the global variable.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/03.jpg"></p>
+        <p>I kept drawing more features to the sketch adding parameters to each measurement. </p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/05.jpg"></p>
+        <p>Next I created a pattern with the desired feature that will be the connection of the piece.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/07.jpg"></p>
+        <p>In this panel I am able to edit each variable changing it and dynamically changing the model.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/09.jpg"></p>
+        <p>I added a little fillet here to allow an smooth coupling of the parts. </p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/10.jpg"></p>
+        <p>I precede then to create formulas this will allow me to change the opening by changing one variable and it will take into account the kerf size.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/11.jpg"></p>
+        <p>Next I prepared the kit to for exporting as an dxf file</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/12.jpg"></p>
+        <p>In Solidworks, in orther to export a sketch keep it open then click in save as and do not rebuild, then chose the format, in my case, DXF and finish the export process.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/13.jpg"></p>
+        <p>In Laserweb, add document. Next drag the added document to the gray area bellow.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/01b.jpg"></p>
+        <p>After draging the file an dialog with configurations will open. The software sometimes wont prevent you from creating inviable gcode. This means if some parameters are filled up it will not warn about.</p>
+        <p> For this job sice its a cut used one of my presets with the speed 4000mm/min, power 80%, and segment 0.1.
+        </p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/01c.jpg"></p>
+        <p>Next I positioned the object using either the arrows or the coordinates.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/02.jpg"></p>
+        <p>Here I show that I ended up multiplied the triangles in Solidworks and then reopened the file.</p>
+        <p>In this picture is also possible to see the middle top cam that is positioned on top of the laser so I don't need to keep my eyes on it. Even I wear protective glasses still I prefer not to look at the laser while it is still without a cover. </p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/06.jpg"></p>
+        <video width="300" controls>
+            <p>The laser cuts it very well.</p>
+            <source src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/03.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>I then remove it from the machine and pile it to start inspecting and assembly.</p>
+        <video width="300" controls>
+            <source src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/05.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>Just a pile.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/04.jpg"></p>
+        <p>I then start assembly and it fits perfectly.</p>
+        <video width="300" controls>
+            <source src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/06.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <video width="300" controls>
+            <source src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/07.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <hr>
+        <!--        Vinyl cutter-->
+        <h3 id="vinyl">Vinyl Cutting</h3>
         <p> The Vinyl cutter we have in the Lab is the Silhouette Cameo 3. It's a nice affordable easy to use Vinyl Cutter.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/cameo3.jpg">
             <legend> Lab's Silhouette Cameo 3
@@ -240,45 +313,36 @@
                 </p>
                 <p>Then using ctrl+c Ctrl+v I copied and pasted the bat several times.</p>
                 <p> <img src="media/computer_controlled_cutting/batcopypaste.jpg">
-                    <legend> outline of the bat chosen from the Studio's library
-                    </legend>
                 </p>
-                <p>I chose the bat from the library</p>
+                <p>I then select all the pasted bats.</p>
                 <p> <img src="media/computer_controlled_cutting/batselection.jpg">
-                    <legend> outline of the bat chosen from the Studio's library
-                    </legend>
                 </p>
-                <p>I chose the bat from the library</p>
+                <p>With the selected drawings is possible to align the drawings uniformly.</p>
                 <p> <img src="media/computer_controlled_cutting/batalign.jpg">
-                    <legend> outline of the bat chosen from the Studio's library
-                    </legend>
                 </p>
-                <p>I chose the bat from the library</p>
+                <p>I then selected the vinyl size.</p>
                 <p> <img src="media/computer_controlled_cutting/mediasize.jpg">
-                    <legend> outline of the bat chosen from the Studio's library
-                    </legend>
                 </p>
-                <p>I chose the bat from the library</p>
-                <p> <img src="media/computer_controlled_cutting/batusingthemostofthevinyl.jpg">
-                    <legend> outline of the bat chosen from the Studio's library
-                    </legend>
-                </p>
-                <p>I chose the bat from the library</p>
+                <p>I then paste again some more bats and start setting up the job. This machine is capable of automatically set the thickness of the material but the option autoblade must be selected.</p>
                 <p> <img src="media/computer_controlled_cutting/batchecksetingsandsendagain.jpg">
-                    <legend> outline of the bat chosen from the Studio's library
-                    </legend>
+                </p>
+                <p>I then align the vinyl. And lift the roll that drags the material.</p>
+                <p> <img src="media/computer_controlled_cutting/02.jpg">
+                </p>
+                <p>Using the Screen I feed the material a little bit.</p>
+                <p> <img src="media/computer_controlled_cutting/03.jpg">
+                </p>
+                <p>At this point I could either connect an USB directly to the machine or use the USB.</p>
+                <p> <img src="media/computer_controlled_cutting/04.jpg">
+                </p>
+                <p>I press start and in minutes the bats are cut.</p>
+                <p> <img src="media/computer_controlled_cutting/07.jpg">
+                </p>
+                <p>For a project simple as that it is sufficient to just peal the adhesive out of the protective paper and stick it everywhere!</p>
+                <p> <img src="media/computer_controlled_cutting/08.jpg">
                 </p>
             </ol>
         </ol>
-        <ul>
-            <li>Design and create the final object</li>
-        </ul>
-        <h4>Have you:</h4>
-        <ul>
-            <li>Explained how you drew your files</li>
-            <li>Shown how you made your vinyl project</li>
-            <li>Included your design files and photos of your finished project</li>
-        </ul>
         <!-- End of your content -->
     </div> <!-- /container -->
     <!-- footer -->
