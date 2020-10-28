@@ -103,9 +103,9 @@
         <!--start of page-->
         <h3>Index</h3>
         <il>
-            <li><a href="#workflow">Week work-flow</a></li>
             <li><a href="#toolsused">Tools used</a></li>
             <li><a href="#softwareused">Software Used</a></li>
+            <li><a href="#files">Files</a></li>
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#group_assignment">Group Assignment</a></li>
             <li><a href="#test">Characterization of my laser cutter</a></li>
@@ -113,14 +113,6 @@
             <li><a href="#vinyl">Vinyl Cutter</a></li>
         </il>
         <hr>
-        <h3 id="workflow"> Week work-flow
-        </h3>
-        <p class="pic"> <img src="media/computer_controlled_cutting/diagram.jpg">
-            <legend> Chart made at
-                <a href="https://www.draw.io/"> Draw.io
-                </a>
-            </legend>
-        </p>
         <h3 id="toolsused"> Tools used
         </h3>
         <ul style="list-style-type:disc">
@@ -141,13 +133,15 @@
             </li>
         </ul>
         <hr>
-        <h3>Files</h3>
+        <h3 id="files">Files</h3>
         <ul style="list-style-type:disc">
             <li>Press fit construction kit<a href="media/computer_controlled_cutting/lasercutting/construction_kit/triangles.zip"> Zip file </a>with the solid works file, dxf file as well as the lasercutter gcode.
             </li>
             <li><a href="media/computer_controlled_cutting/lasercutting/group/speed_power_test.zip">Test Files</a>
             </li>
         </ul>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/heroshot.jpg"></p>
+        <legend>Hero Shot</legend>
         <hr>
         <h3 id="introduction"> Introduction
         </h3>
@@ -177,7 +171,7 @@
         </il>
         <hr>
         <lo>
-            <li>focus</li>
+            <li>focus and Kerf</li>
             <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/01.jpg">
                 <legend>image extracted from Laser Cutter Focus <a href="https://www.youtube.com/watch?v=Eg6THrEdleo">video</a> from makestuffnow!</legend>
             </p>
@@ -215,8 +209,13 @@
             </p>
             <p> The outside measurement was 7.9 this means the kerf is 0.2mm/2= 0.1mm
             </p>
-            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/07_a.jpg">
+            <p> I really like the fact the fit perfectelly!
             </p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/scale1.jpg">
+            </p>
+            <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/scale2.jpg">
+            </p>
+            <hr>
             <!--            power speed-->
             <li>power and speed</li>
             <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/09.jpg">
@@ -225,12 +224,13 @@
             <p>The power test above was done with a speed of 5000mm/min on a 2.7mm plywood. The power I chose as most suitable for this speed is 50%.</p>
             <p>The speed test above was done on a 2.7mm plywood, with power set at 60%, even with the low power the laser were able to cut on almost all speeds tested. To be on the safe side I wold chose to cut at 5000mm/min with the power at 60% this thickness of plywood.</p>
         </lo>
-        <h4 id="design">Press fit construction kit</h4>
+        <hr>
+        <h3 id="design">Press fit construction kit</h3>
         <p> For this assignment I will use 2d design from Solidworks. This is done within the sketches. Solidworks is a parametric design tool able to dynamically change its features with a change of a variable.
         </p>
-        <p>I started by creating a sketch. I then draw an triangle.</p>
+        <p>I started by creating a sketch. I then draw a triangle.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/01.jpg"></p>
-        <p> Next I started creating global variables simply typing "equal" and then naming the variable. Next I confirmed the creation of the global variable.</p>
+        <p> Next I started creating global variables. While adding dimensions I simply typed "equal" and then named the variables. Next I confirmed the creation of the global variable.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/03.jpg"></p>
         <p>I kept drawing more features to the sketch adding parameters to each measurement. </p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/05.jpg"></p>
@@ -240,22 +240,22 @@
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/09.jpg"></p>
         <p>I added a little fillet here to allow an smooth coupling of the parts. </p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/10.jpg"></p>
-        <p>I precede then to create formulas this will allow me to change the opening by changing one variable and it will take into account the kerf size.</p>
+        <p>I proceed then to create formulas this will allow me to change the opening by changing one variable and it will take into account the kerf size.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/11.jpg"></p>
-        <p>Next I prepared the kit to for exporting as an dxf file</p>
+        <p>Next I prepared the kit for exporting as an dxf file</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/12.jpg"></p>
         <p>In Solidworks, in orther to export a sketch keep it open then click in save as and do not rebuild, then chose the format, in my case, DXF and finish the export process.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/13.jpg"></p>
         <p>In Laserweb, add document. Next drag the added document to the gray area bellow.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/01b.jpg"></p>
-        <p>After draging the file an dialog with configurations will open. The software sometimes wont prevent you from creating inviable gcode. This means if some parameters are filled up it will not warn about.</p>
+        <p>After draging the file a dialog with configurations will open. The software sometimes won't prevent you from creating inviable gcode. This means if some parameters are filled up it will not warn about.</p>
         <p> For this job sice its a cut used one of my presets with the speed 4000mm/min, power 80%, and segment 0.1.
         </p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/01c.jpg"></p>
         <p>Next I positioned the object using either the arrows or the coordinates.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/02.jpg"></p>
         <p>Here I show that I ended up multiplied the triangles in Solidworks and then reopened the file.</p>
-        <p>In this picture is also possible to see the middle top cam that is positioned on top of the laser so I don't need to keep my eyes on it. Even I wear protective glasses still I prefer not to look at the laser while it is still without a cover. </p>
+        <p>In this picture is also possible to see the middle top the web camera that is positioned on top of the laser so I don't need to keep my eyes on it. Even I wear protective glasses still I prefer not to look at the laser while it is still without a cover. </p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/06.jpg"></p>
         <video width="300" controls>
             <p>The laser cuts it very well.</p>
@@ -308,7 +308,7 @@
                 </p>
                 <p></p>
                 <p> <img src="media/computer_controlled_cutting/batresize.jpg">
-                    <legend> outline of the bat chosen from the Studio's library. Once clicking twice the bat getis inserted in the middle of the work area.
+                    <legend>Once clicking twice the bat gets inserted in the middle of the work area.
                     </legend>
                 </p>
                 <p>Then using ctrl+c Ctrl+v I copied and pasted the bat several times.</p>
