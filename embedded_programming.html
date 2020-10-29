@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -138,10 +152,12 @@
                 </li>
                 <p> - for that I start by pointing I want to program a
                     <a href="http://www.atmel.com/Images/8183S.pdf"> ATTINY44A
-                    </a> </p>
+                    </a>
+                </p>
                 <p> - Download
                     <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c.make"> makefile
-                    </a> </p>
+                    </a>
+                </p>
                 <p> - Bootloader is not going to be used here since there is no USB
                 </p>
                 <li> download bootloader
@@ -219,7 +235,8 @@ make</pre>
         <p>Here instead of using terminal and avrdude, I used the Arduino IDE as it has a built-in serial monitor.</p>
         <p>The results are as follows in the video</p>
         <p class="pic"><video controls>
-                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.
+            </video></p>
         <hr>
         <h2>Program something else</h2>
         <p>Now I will try to program it to blink as I press the button.</p>
@@ -320,20 +337,21 @@ void loop() {
      }
 }</pre>
         <a id="Schema">Schema</a>
-        <p>Because I lost this board many years ago I can only show how to connect the programmer on a similar board. Just like I did in <a href="electronics_design.html#programmer" >Electronic Design week.</a></p>
+        <p>Because I lost this board many years ago I can only show how to connect the programmer on a similar board. Just like I did in <a href="electronics_design.html#programmer">Electronic Design week.</a></p>
         <a id="programmer">Programmer FabISP and USBisp</a>
         <p>Here I show how I used the programmers on Output devices, for Another method without the Arduino IDE check <a href="embedded_programming.html">Embedded Programing</a></p>
         <p class="pic"><img src="media/output_devices/programmerusbasp.jpg">USBasp</p>
         <p>Programming an attiny44 board with arduino using a FabTinyISP or USBtinyISP that I made.</p>
         <p class="pic"><img src="media/output_devices/programmerfabisp.jpg">FabISP</p>
-        
+
         <p class="pic"><video controls>
-                <source src="media/embedded_programming/hello1.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/embedded_programming/hello1.mp4">Your browser does not support HTML5 video.
+            </video></p>
         <p> In order to change the behavior of the button I simply replaced the constant <code>&lt;HIGH&gt;</code> for the constant <code>&lt;LOW&gt;</code> here:</p>
         <pre class="prettyprint linenums">if (buttonState == LOW) {</pre>
         <p>This way the logic of the code is inverted meaning that when the button is depressed the LED is off.</p>
         <p>now I inverted when the LED turns on and off. Here is the <a href="media/code/embedded_programming/buttonblink2/buttonblink2.ino">code without comments:</a></p>
-    
+
         <pre class="prettyprint linenums">const int buttonPin = 3;
 const int ledPin =  7;
 
@@ -361,7 +379,8 @@ void loop() {
 </pre>
         <p>Let's see some proof...</p>
         <p class="pic"><video controls>
-                <source src="media/embedded_programming/hello2.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/embedded_programming/hello2.mp4">Your browser does not support HTML5 video.
+            </video></p>
         <hr>
         <h2>Hacking the board</h2>
         <p>I was a bit annoyed my board would not advise me when powered so I decide to solder a red LED and a 22 Ohms resistor and a resistor so if I got the connections wrong I would know and switch it.</p>

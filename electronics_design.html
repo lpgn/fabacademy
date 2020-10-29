@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +44,7 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
+
     </script>
 </head>
 
@@ -554,17 +569,20 @@ make</pre>
         <p class="pic"><img src="media/output_devices/programingATtiny44_with_arduino02.jpg"></p>
         <p>In the video bellow I show the the process of programming with the FabISP.</p>
         <p class="pic"><video controls>
-                <source src="media/output_devices/programming_usbtiny.mp4">Your browser does not support HTML5 video.</video>For a full resolution video check <a href="https://youtu.be/CKtFtvp55ME">Youtube</a></p>
+                <source src="media/output_devices/programming_usbtiny.mp4">Your browser does not support HTML5 video.
+            </video>For a full resolution video check <a href="https://youtu.be/CKtFtvp55ME">Youtube</a></p>
         <p>In this video I show the process of programming with the USBasp.</p>
         <p class="pic"><video controls>
-                <source src="media/output_devices/programming_usbasp.mp4">Your browser does not support HTML5 video.</video>For a full resolution video check <a href="https://youtu.be/ZyDkVr3AqaQ">Youtube</a></p>
+                <source src="media/output_devices/programming_usbasp.mp4">Your browser does not support HTML5 video.
+            </video>For a full resolution video check <a href="https://youtu.be/ZyDkVr3AqaQ">Youtube</a></p>
         <hr>
         <h4>First test</h4>
         <h4>Burning Neil's code "hello.ftdi.44.echo.c"</h4>
         <p>Here instead of using terminal and avrdude, I used the Arduino IDE as it has a built-in serial monitor.</p>
         <p>The results are as follows in the video</p>
         <p class="pic"><video controls>
-                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.
+            </video></p>
         <hr>
         <li>Conclusion</li>
         <p>I really enjoyed learning this new tool. I have used eagle before to view pcb's but never actually designed one. I feel it opens my mind to a lot of new things to come!</p>
@@ -593,7 +611,10 @@ make</pre>
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
+
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body></html>
+</body>
+
+</html>

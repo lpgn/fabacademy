@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +44,7 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
+
     </script>
 </head>
 
@@ -251,6 +266,7 @@
                         viewer.setParameter('Renderer', 'webgl');
                         viewer.init();
                         viewer.update();
+
                     </script>
                     <legend> rendered 3D model of the STL file
                     </legend>
@@ -355,6 +371,7 @@
                         background-color: #104E8B;
                         color: #FFF;
                         font-weight: bold;
+
                 </style>
                 <table class="tableizer-table">
                     <thead>
@@ -621,6 +638,7 @@
                         viewer.setParameter('Renderer', 'webgl');
                         viewer.init();
                         viewer.update();
+
                     </script>
 
                 </p>
@@ -753,6 +771,7 @@
                         viewer.setParameter('Renderer', 'webgl');
                         viewer.init();
                         viewer.update();
+
                     </script>
                 </p>
                 <li>Preparation of Stone Model
@@ -823,7 +842,10 @@
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
+
     </script>
     <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-</body></html>
+</body>
+
+</html>

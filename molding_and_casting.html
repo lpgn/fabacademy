@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,7 +73,8 @@
         <div class="jumbotron" style="width: 100%">
             <h3>Molding and Casting</h3>
             <hr>
-            <h4>Group assignment</h4>            <ul>
+            <h4>Group assignment</h4>
+            <ul>
                 <li>Review the safety data sheets for each of your molding and casting materials, then make and compare test casts with each of them</li>
             </ul>
             <h4>Individual assignment</h4>
@@ -98,7 +113,7 @@
             <li>Solidworks <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/tree/master/media/molding_and_casting/solidworks">files</a></li>
             <li>G-code <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/blob/master/media/molding_and_casting/cam/Positive.tap">files</a></li>
         </ol>
-                <hr>
+        <hr>
 
         <h3> Group Assignment
         </h3>
@@ -165,7 +180,7 @@
         <p>Finally I calculate the volume of the part. This will be useful when casting so so I waste the minimum amount of silicone when casting the part. About 5ml of silicone I guess. But I will actually prepare twice that as I have some plans for the leftover. Ah in case you noticed the Positive part is different than the one I used initially its because I decided to reduce its size as it was too big for the machinable wax I created in the <a href="wildcard_week.html">wildcard week</a>.</p>
         <p class="pic left"><img src="media/molding_and_casting/design/design20.jpg"></p>
         <hr>
-       <!-- <h4>Tool path / G-code</h4>
+        <!-- <h4>Tool path / G-code</h4>
         <p>The CNC speaks, or at least understands, one language <a href="https://en.wikipedia.org/wiki/G-code">G-code</a> </p>
         <p>In order to create the G-code toolpath </p>
         <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath01.jpg"></p>
@@ -195,17 +210,20 @@
         <p>The process to start the CNC is the same presented in the <a href="output_devices.html#mach3">input devices week</a>, except there is no auto calibration or finding the 0 automatically, so in case you forgot: Start Mach3 using the arrows move the cnc to the desired location you want the origin to be, than clicking on each axis ) X, Y and Z.</p>
         <p> The video Shows the CNC doing its initial moves clearing the first steps with a 1/4" mill bit.</p>
         <p class="pic"><video controls>
-                <source src="media/molding_and_casting/smurfjuice02.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/molding_and_casting/smurfjuice02.mp4">Your browser does not support HTML5 video.
+            </video></p>
         <p>Here we can see more the process with the smaller 1.5mm mill bit witch was the last bit I used.</p>
         <p class="pic"><video controls>
-                <source src="media/molding_and_casting/smurfjuice03.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/molding_and_casting/smurfjuice03.mp4">Your browser does not support HTML5 video.
+            </video></p>
         <p>The final result of the positive mold is really nice, its smooth and the details are satisfying.</p>
         <p class="pic left"><img src="media/molding_and_casting/milling05result.jpg"></p>
         <hr>
         <h4>Casting the Negative Mold</h4>
         <p>We started by reading the datasheet aloud! My dear colleague and daughter Bianca did the honors. :-)</p>
         <p class="pic"><video controls>
-                <source src="media/molding_and_casting/castingthemold/datasheetreading.mp4">Your browser does not support HTML5 video.</video></p>
+                <source src="media/molding_and_casting/castingthemold/datasheetreading.mp4">Your browser does not support HTML5 video.
+            </video></p>
         <p>Here you can see the <a href="http://fab.academany.org/2018/labs/farmlabalgarve/group/moldandcast.html">3030 Slide</a> I used initially.</p>
         <p>We marked each bamboo stick with a different color tape, with glasses on and gloves we started the process.</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding02.jpg"></p>
@@ -215,7 +233,10 @@
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding05.jpg"></p>
         <p>Here you can see the pouring, how satisfying!</p>
         <p class="pic"><video controls>
-                <source src="media/molding_and_casting/castingthemold/molding05.mp4">Your browser does not support HTML5 video.</video><legend>Ups I forgot the gloves, but I swear no spill and it was a clean pour.</legend></p>
+                <source src="media/molding_and_casting/castingthemold/molding05.mp4">Your browser does not support HTML5 video.
+            </video>
+            <legend>Ups I forgot the gloves, but I swear no spill and it was a clean pour.</legend>
+        </p>
         <p>The results were not good! After waiting more than 48 hours the mold was still sticky. I believe there is something wrong with my silicone, its been 2 years since I bought it, so that might be it.</p>
         <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding06.jpg"></p>
         <p>The second problem was the features I created to prevent the mold from moving they would not fit well against each other so I decided to fill it up with regular paraffin and smooth it with a blade, the results were decent.</p>
