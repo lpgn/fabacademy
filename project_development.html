@@ -150,7 +150,7 @@
         <br>
         <p>Below I documented my learning process from installing a Platformio IDE on VScode to improving my programming skills with c++</p>
         <div class="container">
-            <p><a id="diary">Diary </a>Dates</p>
+            <p><a id="diary">Diary </a>Dates on the test environment before the final PCB</p>
             <a href="#06/06/2020">06/06/2020</a>
             <a href="#07/06/2020">07/06/2020</a>
             <a href="#08/06/2020">08/06/2020</a>
@@ -161,8 +161,18 @@
             <a href="#15/06/2020">15/06/2020</a>
             <a href="#16/06/2020">16/06/2020</a>
             <a href="#17/06/2020">17/06/2020</a>
-            <a href="#27/06/2020">27/06/2020</a>
-            <a href="#28/06/2020">28/06/2020</a>
+            <hr>
+            <h4>From here I lost track of time</h4>
+            <a href="#pcbdesign">Designing The PCB</a><br>
+            <a href="#pcbmaking">Milling the PCB</a><br>
+            <a href="#pcbdebug">Debuging the PCB</a><br>
+            <a href="#burningthefirmware">Burning The Firmware</a><br>
+            <a href="#code"> Network Code</a><br>
+            <a href="#casemilling">Milling the Enclosure</a><br>
+            <a href="#wiring">Wiring</a><br>
+
+            <a href="#greenhouse">Seting up the test enviroment (greenhouse)</a><br>
+
         </div>
         <hr>
         <h3>Final Project Progress Diary from 6th of June to 16th of June</h3>
@@ -703,7 +713,8 @@ String printFarmTime()
 
         <hr><!-- End of your content -->
         <p>After this day I moved on to <a href="interface_and_aplication_programing.html">interface and application programing week </a>where I show how I designed the final board as well as the final touches to the interface.</p>
-        <h4>Designing my Irrigation System Board</h4>
+        <hr>
+        <h4 id="pcbdesign">Designing my Irrigation System Board</h4>
         <p>After tinkering with a ESP32 Development kit for a while I had an idea of what I needed for my PCB. So lets see the list of capabilities I want for it:</p>
         <ol>
             <li>Control:
@@ -786,14 +797,14 @@ String printFarmTime()
         <p class="pic left"><img src="media/network/pcb_design/logo04.jpg"></p>
         <p>The finalized board layout with holes and milling contours as described in output devices <a href="output_devices.html">week</a>.</p>
         <p class="pic left"><img src="media/network/pcb_design/logo05.jpg"></p>
-        <h4>Milling</h4>
+        <h4 id="pcbmaking">Milling</h4>
         <p>Here I show the visualization of the gcode routes with red as the trace closest to the copper to be left.</p>
         <p class="pic left"><img src="media/network/pcb_cam/logo06.jpg"></p>
         <p>As usual and again best described at <a href="input_devices.html">week</a> here follows a glimpse of the autolevel software.</p>
         <p class="pic left"><img src="media/network/pcb_cam/autolevel.jpg"></p>
         <p></p>
         <p class="pic left"><img src="media/network/milling/03_contourn.jpg"></p>
-        <h4>Soldering and testing/Debuging</h4>
+        <h4 id="pcbdebug">Soldering and testing/Debuging</h4>
         <p>Inspecting pcb under the light.</p>
         <p>In other to verify if the tracks are all good I place the light under the pcb and review everything looking for shorts or missing tracks.</p>
         <p class="pic left"><img src="media/network/debug_pcb/04_under_the_light.jpg"></p>
@@ -801,7 +812,7 @@ String printFarmTime()
         <p>I place the big components last as not to make soldering the small smd components hard.</p>
         <p class="pic left"><img src="media/network/debug_pcb/05_underside.jpg"></p>
 
-        <h4>Reading from Serial Monitor/Burning Firmware Schematics</h4>
+        <h4 id="burningthefirmware">Reading from Serial Monitor/Burning Firmware Schematics</h4>
         <p>After soldering everything I connect the board to my serial adapter. bellow is the schematics.</p>
         <p class="pic left"><img src="media/network/debug_pcb/burnfirmware.jpg"></p>
         <p>I pasted the first output from the esp32 with factory firmware, It boots!</p>
@@ -902,7 +913,7 @@ String printFarmTime()
         <p>And this is how the schematics for the relay look like</p>
         <p class="pic left"><img src="media/network/debug_pcb/sch.jpg"></p>
         <hr>
-        <h4>Network Code in the firmware</h4>
+        <h4 id="code">Network Code in the firmware</h4>
         <p>There are two types of communications happening in my board that I can describe.</p>
         <br>
         <il>
@@ -1100,8 +1111,7 @@ relays_2_times_1["min"] = 3;
 
 JsonObject relays_2_times_2 = relays_2_times.createNestedObject();
 relays_2_times_2["startTime"] = "03:03";
-relays_2_times_2["duration"] = 60;
-relays_2_times_2["hour"] = 3;
+relays_2_times_2["duration"] = 60;relays_2_times_2["hour"] = 3;
 relays_2_times_2["min"] = 3;
 
 serializeJson(doc, Serial);</code></pre>
@@ -1109,10 +1119,55 @@ serializeJson(doc, Serial);</code></pre>
         <p>With the help of my friend Jeff Knight that without I would not be able to do it alone the code generated was simplified for my program. I then created a few functions and the following picture shows the serial monitor printing the result of a deserialization of the json file read.</p>
         <p class="pic left"><img src="media/network/json/deserialisingjson.jpg">
 
-        <p>I made this diagram so I don't forget how it works:</p>
+        <p>I made this logic diagram so I don't forget how it works:</p>
         <p class="pic left"><img src="media/network/diagramesplash.jpg">
 
             <!--        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c"></code></pre>-->
+            <hr>
+        <h4 id="enclosure">Milling the Enclosure</h4>
+        <p>I designed the enclosure with Solidworks and animated bellow the pcb inside of it.</p>
+        <p class="pic"> <video controls>
+                <source src="media/project_development/01enclosure/e-splash_project.mp4"> Your browser does not support HTML5 video.
+            </video>
+            <legend></legend>
+        </p>
+        <p>Here I mill the inside of the enclose, with the screw holes and spacer all integrated.</p>
+        <p class="pic left"><img src="media/project_development/01enclosure/01.jpg">
+        <p>After flipping the enclosure inside a jig I am able to perfectly align the enclosure so I mill the front side. </p>
+        <p class="pic left"><img src="media/project_development/01enclosure/02.jpg">
+        <p>Here The PCB and the enclosure</p>
+        <p class="pic left"><img src="media/project_development/01enclosure/04.jpg">
+        <p>Here I test fit before wiring the pcb.</p>
+        <p class="pic left"><img src="media/project_development/01enclosure/05.jpg">
+            <hr>
+        <h4 id="wiring">Wiring the PCB inside the enclosure.</h4>
+        <p>I use waterprof wire passage to the inside of the enclosure</p>
+        <p class="pic left"><img src="media/project_development/02wiring/01.jpg">
+        <p>Here I test the fit of the board inside with the wires</p>
+        <p class="pic left"><img src="media/project_development/02wiring/02.jpg">
+        <p>Here the wires are fixated. And ready to be closed inside.</p>
+        <p class="pic left"><img src="media/project_development/02wiring/03.jpg">
+        <p>Here the enclosure is screwed and ready to be connected.</p>
+        <p class="pic left"><img src="media/project_development/02wiring/04.jpg">
+            <hr>
+        <h4 id="epoxy">Applying epoxy.</h4>
+        <p>I taped the outside and layered epoxy inside the holes so the light from the led would be transfered to the outside even they are not totally aligned with the LED inside.</p>
+        <p class="pic left"><img src="media/project_development/03epoxy/01.jpg">
+        <p>Here the epoxy cured before sanding.</p>
+        <p class="pic left"><img src="media/project_development/03epoxy/02.jpg">
+            <hr>
+        <h4 id="greenhouse">Tubes in the greenhouse</h4>
+        <p>I then setup some tubes for the demo</p>
+        <p class="pic left"><img src="media/project_development/04greenhouse/01.jpg">
+        <p>And all works</p>
+        <p class="pic left"><img src="media/project_development/04greenhouse/02.jpg">
+        <p></p>
+        <p class="pic left"><img src="media/project_development/04greenhouse/03.jpg">
+            <hr>
+        <h4 id="diagram">Connection Diagram</h4>
+        <p>Here is the General Diagram of the whole system.</p>
+        <p class="pic left"><img src="media/final_project/diagram.jpg">
+            <hr>
         <h3>Hero shot</h3>
         <p>In the end it works like this:</p>
         <p class="pic"> <video controls>
