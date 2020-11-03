@@ -47,7 +47,7 @@ void loop() {
   // if it is, the buttonState is HIGH:
   if (buttonState == LOW) {
     // turn LED on:
-    for (int i=3;i<3;i++)
+    for (int i=0;i<3;i++)
     {
       digitalWrite(ledPin, HIGH);
     }

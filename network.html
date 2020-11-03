@@ -397,7 +397,7 @@
         <p>The website generates the codes automatically.</p>
         <p class="pic left"><img src="media/network/json/json03.jpg"></p>
         <p>Bellow I show the code generated in the assistant.</p>
-        <h4>Parsing program</h4>
+        <h4>Parsing program (Deserialise/decode)</h4>
         <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6) + 540;
 DynamicJsonDocument doc(capacity);
 
@@ -472,7 +472,7 @@ const char* relays_2_times_2_startTime = relays_2_times_2["startTime"]; // "03:0
 int relays_2_times_2_duration = relays_2_times_2["duration"]; // 60
 int relays_2_times_2_hour = relays_2_times_2["hour"]; // 3
 int relays_2_times_2_min = relays_2_times_2["min"]; // 3</code></pre>
-        <h4>Serializing Program</h4>
+        <h4>Serializing Program (encode)</h4>
         <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6);
 DynamicJsonDocument doc(capacity);
 
