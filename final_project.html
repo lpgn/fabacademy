@@ -104,7 +104,7 @@
         <!--  content here  -->
         <h4>Presentation Slide</h4>
         <hr>
-        <p class="pic"><img src="slide.png">
+        <p class="pic"><img src="slide.png" alt="Presentation slide">
             <legend></legend>
         </p>
         <hr>
@@ -112,19 +112,21 @@
         <h4>Presentation Video</h4>
         <hr>
 
-        <p class="pic"><video controls>
+        <p class="pic"><video controls title="Project presentation video">
                 <source src="video.mp4">Your browser does not support HTML5 video.
             </video></p>
         <legend></legend>
         <hr>
         <h4 id="diagram">Connection Diagram</h4>
         <p>Here is the General Diagram of the whole system.</p>
-        <p class="pic left"><img src="media/final_project/diagram.jpg">
-            <hr>
+        <p class="pic left"><img src="media/final_project/diagram.jpg" alt="Connection diagram"></p>
+        <hr>
         <h4>Links</h4>
         <p>Final Project summary <a href="finalresult.html">page</a></p>
         <hr>
-        <h4>All the files</h4>What did you design?
+        <h4>All the files</h4>
+        <hr>
+        <p>What did you design?</p>
         <ol>
             <p>Gitlab Fabcloud<a href="https://gitlab.fabcloud.org/Lucio/e-splash/"> project page </a>containing the pcb, enclosure and firmware.</p>
             <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/Firmware">Firmware</a></li>
@@ -139,7 +141,7 @@
         <h4>Who's done what beforehand?</h4>
         <hr>
         <p>There are a number of companies that sell irrigation controller systems.</p>
-        <p>On <a href="https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=irrigation+timer+phone&isPremium=y&secondFlag=true">Alibaba</a> website we ca see many options with an almost infinite price range, as well as capabilities.</p>
+        <p>On <a href="https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=irrigation+timer+phone&isPremium=y&secondFlag=true">Alibaba</a> website we can see many options with an almost infinite price range, as well as capabilities.</p>
         <p class="pic"><img src="media/aplicationsimplications/alibaba.jpg" width="400">
             <legend></legend>
         <p><a href="http://archive.fabacademy.org/2018/labs/fablabkochi/students/jogin-francis/project.html">JOGIN FRANCIS</a> made a really nice automatic valve for irrigation automation that could definitely add to my project but for now I will focus more on the interface and controller and use commercial valves.</p>
@@ -187,13 +189,13 @@
         <table class="tableizer-table">
             <thead>
                 <tr class="tableizer-firstrow">
-                    <th>Materials and components</th>
-                    <th>What for</th>
-                    <th>Where they come from</th>
-                    <th>Links</th>
-                    <th>Qty</th>
-                    <th> Unit Price </th>
-                    <th> Total Price </th>
+                    <th scope="col">Materials and components</th>
+                    <th scope="col">What for</th>
+                    <th scope="col">Where they come from</th>
+                    <th scope="col">Links</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col"> Unit Price </th>
+                    <th scope="col"> Total Price </th>
                 </tr>
             </thead>
             <tbody>
@@ -216,7 +218,7 @@
                     <td> $2.39 </td>
                 </tr>
                 <tr>
-                    <td>Epoxy resin</td>
+                    <td>Epoxy resin</td>
                     <td>to further waterproof the interior of the enclosure and help with the light refraction of the LEDs</td>
                     <td>fablab stock</td>
                     <td>https://www.amazon.es/gp/product/B07KQ6Q5CB/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1</td>
@@ -260,13 +262,13 @@
         <table class="tableizer-table">
             <thead>
                 <tr class="tableizer-firstrow">
-                    <th>Value</th>
-                    <th>Package</th>
-                    <th>Description</th>
-                    <th>Where they come from Links</th>
-                    <th>Qty</th>
-                    <th>Pc Price</th>
-                    <th>Total Price</th>
+                    <th scope="col">Value</th>
+                    <th scope="col">Package</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Where they come from Links</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Pc Price</th>
+                    <th scope="col">Total Price</th>
                 </tr>
             </thead>
             <tbody>
@@ -528,12 +530,11 @@
         <h4>What parts and systems were made?</h4>
         <hr>
 
-        <p>I made: </p>
-        <il>
+        <ul>
             <li>the enclosure</li>
             <li>the pcb</li>
             <li>the gasket</li>
-        </il>
+        </ul>
         <hr>
         <h4 id="alltheprocess">What processes were used?</h4>
         <hr>
@@ -543,7 +544,7 @@
             <ul>
                 <li>Electronics design, <a href="project_development.html#pcbdesign">Designing the PCB </a>in Eagle.</li>
                 <li>Electronics Production, <a href="project_development.html#pcbmaking">Milling the PCB</a>.</li>
-                <li><a href="project_development.html#pcbdebug">Debuging the PCB</a><br></li>
+                <li><a href="project_development.html#pcbdebug">Debugging the PCB</a><br></li>
                 <li><a href="interface_and_aplication_programing.html">Web interface</a>, communication with c++ with Json, and the embedded program itself on C++</li>
                 <li><a href="project_development.html#burningthefirmware">Burning The Firmware</a><br></li>
                 <li><a href="project_development.html#code"> Network Code</a><br></li>
@@ -560,7 +561,7 @@
             <ul>
                 <li><a href="project_development.html#wiring">Wiring</a></li>
                 <li><a href="project_development.html#diagram">General Diagram of the whole system</a></li>
-                <li><a href="project_development.html#greenhouse">Seting up the test enviroment (greenhouse)</a></li>
+                <li><a href="project_development.html#greenhouse">Setting up the test enviroment (greenhouse)</a></li>
                 <li><a href="project_development.html#hero">Hero Shot</a></li>
             </ul>
         </ul>
@@ -569,7 +570,7 @@
         <hr>
 
         <p>How to make a web interface that communicates smoothly with the c++? I used an ArduinoJson library that serialised and deserialised the comunication betuin the HTML, JavaScript and C++?</p>
-        <p>How to set time and keep it from losing it with a power loss? Thats still a challenge to be tacked as I m not completely happy how the system keeps time, right now it relies heavily on the battery in case of power failure.</p>
+        <p>How to set time and keep it from losing it with a power loss? That's still a challenge to be tacked as I m not completely happy how the system keeps time, right now it relies heavily on the battery in case of power failure.</p>
         <hr>
         <h4>What worked? and What didn't?</h4>
         <hr>
@@ -582,7 +583,7 @@
 
         <p>My objectives with my final project were to have a irrigation controller on my fabfarm and at the same time learn code and electronics.</p>
         <p>Lets see my evaluation questions.</p>
-        <il>
+        <ul>
             <li>Can I connect using my phone to the web interface of the irrigation controller?</li>
             <p>Yes</p>
             <li>Can I view the scheduled times and irrigation zones from the web interface?</li>
@@ -594,14 +595,14 @@
             <li>Does it irrigate the plants according to the schedule?</li>
             <p>Yes</p>
             <li>Can farmer install/operate the system without a lot of technical knowledge?</li>
-            <p>Yes and no, I don't believe a non technical person can install it but anywone can operate it.</p>
+            <p>Yes and no, I don't believe a non technical person can install it but anyone can operate it.</p>
             <li>Will it improve the life of a small farmer/plant enthusiast reducing, with a relative low cost, the time it needs to spend watering plants?</li>
             <p>Yes! It improved mine! We don't need to go water the plants like before having to open and close valves about 8 times a day.</p>
             <li>Did I improve c++ skill while making this project?</li>
             <p>Yes, I am much more confident programing in C++ now.</p>
             <li>Did I improve electronics design skills while making this project?</li>
             <p>Yes, I feel like I can move on to much more projects in electronics.</p>
-        </il>
+        </ul>
         <hr>
         <!--
         <h4>What are the implications?</h4>
@@ -624,10 +625,10 @@
         <h4>Acknowledgments</h4>
         <hr>
 
-        <p>I would like to thanks my local instructor Luis Carvão for all the tips and time dedicated to help me finish this project and the Fabacademy course</p>
+        <p>I would like to thank my local instructor Luis Carvão for all the tips and time dedicated to help me finish this project and the Fabacademy course</p>
         <p>I also would like to thanks Jeff Knight my friend for the instructions on C++ during one day and a late night he spent helping me implementing the the arduinojson library into my project.</p>
         <p>Jeff contributed also in the following commits in the firmware <a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/commits/V5-Development">here</a>: </p>
-        <il>
+        <ul>
             <li>67b8986dc461a48e3b30200d0f11b5dd3fbc80ac</li>
             <li>f25d13f2b7815fac7dd77ed1649d91ac00ccd9ad</li>
             <li>f378d6e14cc321061a00d9e26984945cc89e626b</li>
@@ -643,7 +644,7 @@
             <li>0ef9ce70e71ce3fa1ea8c4f2e82f5ba4ffe742cd</li>
             <li>4a4b18f125d0b8d175301a3b7c5c0e4a61e3627d</li>
             <li>39a5eae10aaf87dca6e1f879e6e0390f5c1f7761</li>
-        </il>
+        </ul>
         <hr> <!-- End of your content -->
     </div> <!-- /container -->
     <!-- footer -->
