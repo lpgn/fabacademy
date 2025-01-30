@@ -335,7 +335,7 @@
         </p>
         <p>The result from the debug was that I found out there was nothing wrong with the code or the microprocessor soldering or the immediate tracks.</p>
         <P>What I found out was that the I needed to have 220 ohms resistors added between the signal and Anode pin number 1 of each octocoupler. It turns out the octocoupler has an internal LED and the voltage used to activate it needs to be limited.</P>
-        <p class="pic left"><img src="media/network/debug_pcb/calculate_resistor.jpg">
+        <p class="pic left"><img src="media/network/debug_pcb/calculate_resistor.jpg" alt="Resistor calculation">
             <legend>from electronics stack exchange <a href="https://electronics.stackexchange.com/questions/94097/calculate-resistor-value-for-optocoupler-24vdc-anode">website</a></legend>
         </p>
         <p class="pic left"><img src="media/network/debug_pcb/datasheet.jpg"></p>
@@ -398,7 +398,7 @@
         <p class="pic left"><img src="media/network/json/json03.jpg"></p>
         <p>Bellow I show the code generated in the assistant.</p>
         <h4>Parsing program (Deserialise/decode)</h4>
-        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6) + 540;
+        <pre class="prettyprint linenums"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6) + 540;
 DynamicJsonDocument doc(capacity);
 
 const char* json = "{\"data\":{\"currentTime\":\"Wednesday, June 24 2020 23:49:23\",\"temperature\":\"22.30\",\"humidity\":\"74.00\",\"override\":0,\"ssid\":\"rato\",\"pass\":\"imakestuff\"},\"relays\":[{\"name\":\"Fruit Tree\",\"pin\":25,\"isRunning\":1,\"isEnabled\":0,\"times\":[{\"startTime\":\"01:01\",\"duration\":0,\"hour\":1,\"min\":1}]},{\"name\":\"Vegie Garden\",\"pin\":26,\"isRunning\":1,\"isEnabled\":0,\"status\":1,\"times\":[{\"startTime\":\"02:02\",\"duration\":32,\"hour\":2,\"min\":2},{\"startTime\":\"02:02\",\"duration\":32,\"hour\":2,\"min\":2}]},{\"name\":\"Cypress Hill\",\"pin\":33,\"isRunning\":1,\"isEnabled\":0,\"status\":1,\"times\":[{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3},{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3},{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3}]}]}";
@@ -473,7 +473,7 @@ int relays_2_times_2_duration = relays_2_times_2["duration"]; // 60
 int relays_2_times_2_hour = relays_2_times_2["hour"]; // 3
 int relays_2_times_2_min = relays_2_times_2["min"]; // 3</code></pre>
         <h4>Serializing Program (encode)</h4>
-        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6);
+        <pre class="prettyprint linenums"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6);
 DynamicJsonDocument doc(capacity);
 
 JsonObject data = doc.createNestedObject("data");
@@ -551,16 +551,16 @@ relays_2_times_2["min"] = 3;
 serializeJson(doc, Serial);</code></pre>
 
         <p>With the help of my friend Jeff Knight that without I would not be able to do it alone the code generated was simplified for my program. I then created a few functions and the following picture shows the serial monitor printing the result of a deserialization of the json file read.</p>
-        <p class="pic left"><img src="media/network/json/deserialisingjson.jpg">
+        <p class="pic left"><img src="media/network/json/deserialisingjson.jpg" alt="JSON deserialization output">
 
         <p>I made this diagram so I don't forget how it works:</p>
-        <p class="pic left"><img src="media/network/diagramesplash.jpg">
+        <p class="pic left"><img src="media/network/diagramesplash.jpg" alt="System diagram">
 
             <!--        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c"></code></pre>-->
             <hr>
         <h3 id="hero">Hero shot</h3>
         <p>In the end it works like this:</p>
-        <p class="pic"> <video controls>
+        <p class="pic"> <video controls title="Irrigation system demo">
                 <source src="media/network/irrigation_on_off.mp4"> Your browser does not support HTML5 video.
             </video>
             <legend></legend>

@@ -61,7 +61,7 @@
                         <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
                     </li>
                     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
-                        <ul id="project" class="dropdown-menu" role="menu"> S</ul>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -114,7 +114,7 @@
         <hr>
         <h4><a id="07/06/2020">7th of June, 2020</a></h4>
         <p>As of today 07th of June 2020 the development is like this.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial01.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial01.jpg" alt="Initial irrigation system setup">
             <legend>What I start with is a system that works on a Uno and is a torture on a ESP8266 besides is a shock hazard and because of water damage I need to replace some relays.</legend>
         </p>
         <p>The code running on this setup can be found on the Fabfarm Github <a href="https://github.com/fabfarm/autovalve/tree/master/Uno/Irrigation/original/irrigation_system_arduino_code">Autovalve</a></p>
@@ -123,10 +123,10 @@
         <h4><a id="08/06/2020">8th of June, 2020</a></h4>
         <p>After many hours trying to understand the code I managed to port Shakeel's code to a ESP32 and also split the file with each function on a separate file. </p>
         <p>In this video I show the progress I did so far in the merging the codes and having it work in the ESP32</p>
-        <p class="pic"> <video controls>
+        <p class="pic"> <video controls title="Code merging progress">
                 <source src="media/final_project/images/initial_stage/initial03_codediff.mp4"> Your browser does not support HTML5 video.
             </video>
-            <legend>Check hight resolution version on <a href="https://youtu.be/oxlblIs7CC0">Youtube</a></legend>
+            <legend>Check high resolution version on <a href="https://youtu.be/oxlblIs7CC0">Youtube</a></legend>
         </p>
         <p>To port the code to ESP32 might be simple for a programmer but it took many hours for me.</p>
         <p>Steps:</p>
@@ -141,10 +141,10 @@
         </ol>
         <p>The code is to big for displaying on the HTML so I will leave a link for the state of the code as this early morning: <a href="https://github.com/fabfarm/autovalve/tree/master/ESP32/esp32irrigation_historical_no_change"> codehere</a>.</p>
         <p>Here in this video you can see the testing setup of the current irrigation system of the farm</p>
-        <p class="pic"> <video controls>
+        <p class="pic"> <video controls title="Testing setup">
                 <source src="media/final_project/images/initial_stage/initial02_showthesetup.mp4"> Your browser does not support HTML5 video.
             </video>
-            <legend>Check hight resolution version on <a href="https://youtu.be/ytQwHZToBWM">Youtube</a></legend>
+            <legend>Check high resolution version on <a href="https://youtu.be/ytQwHZToBWM">Youtube</a></legend>
         </p>
         <hr>
         <h4><a id="09/06/2020">9th of June, 2020</a></h4>
@@ -187,7 +187,7 @@
         <p class="pic"><img src="media/final_project/images/initial_stage/initial07.jpg">
             <legend>Wiring the system</legend>
         </p>
-        <p class="pic"> <video controls>
+        <p class="pic"> <video controls title="Testing...Testing...">
                 <source src="media/final_project/images/initial_stage/initial08360.mp4"> Your browser does not support HTML5 video.
             </video>
             <legend>testing...testing...</legend>
@@ -371,7 +371,7 @@
            and a function that will be executed when a request is received on that route.
            We specify this by calling the "on" method on the server object. With server.on(){}; 
            As first input, this method receives a string with the path where it will be listening. 
-           We are going to set it to listen for requests on the “/” route. This could be anything. 
+           We are going to set it to listen for requests on the "root" route. This could be anything. 
            It is basically what you write after the ip adress when in the browser or an APP.
            This website has a great explanation of the ESP32 Arduino: Asynchronous HTTP web server
            https://techtutorialsx.com/2017/12/01/esp32-arduino-asynchronous-http-webserver/
@@ -417,7 +417,7 @@
                Serial.println(inputMessage + inputMessage2);
            
                //This is the last part of the lambda function. 
-               //This method receives as first input the HTTP response code, which will be 200 in our case.  This is the HTTP response code for “OK”.
+               //This method receives as first input the HTTP response code, which will be 200 in our case.  This is the HTTP response code for "OK".
                request->send_P(200, "text/plain", "OK");
              });
            

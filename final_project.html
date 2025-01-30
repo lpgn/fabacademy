@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Explore Lucio Pentagna's final project for Fab Academy 2020, featuring an innovative irrigation system controller with detailed documentation and multimedia presentations.">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
     <title>Final Project - Fab Academy 2020 - Lucio Pentagna</title>
@@ -28,10 +28,10 @@
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
     <!-- 3D files viewer -->
-    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
-    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
@@ -104,18 +104,15 @@
         <!--  content here  -->
         <h4>Presentation Slide</h4>
         <hr>
-        <p class="pic"><img src="slide.png" alt="Presentation slide">
-            <legend></legend>
-        </p>
+        <p class="pic"><img src="slide.png" alt="Presentation slide"></p>
         <hr>
 
         <h4>Presentation Video</h4>
         <hr>
 
         <p class="pic"><video controls title="Project presentation video">
-                <source src="video.mp4">Your browser does not support HTML5 video.
+                <source src="video.mp4" type="video/mp4">Your browser does not support HTML5 video.
             </video></p>
-        <legend></legend>
         <hr>
         <h4 id="diagram">Connection Diagram</h4>
         <p>Here is the General Diagram of the whole system.</p>
@@ -128,7 +125,7 @@
         <hr>
         <p>What did you design?</p>
         <ol>
-            <p>Gitlab Fabcloud<a href="https://gitlab.fabcloud.org/Lucio/e-splash/"> project page </a>containing the pcb, enclosure and firmware.</p>
+            <li>Gitlab Fabcloud <a href="https://gitlab.fabcloud.org/Lucio/e-splash/">project page</a> containing the pcb, enclosure and firmware.</li>
             <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/Firmware">Firmware</a></li>
             <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/pcb/ESPlash">Board Files</a></li>
             <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/board_enclosure">Enclosure</a></li>
@@ -142,16 +139,11 @@
         <hr>
         <p>There are a number of companies that sell irrigation controller systems.</p>
         <p>On <a href="https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=irrigation+timer+phone&isPremium=y&secondFlag=true">Alibaba</a> website we can see many options with an almost infinite price range, as well as capabilities.</p>
-        <p class="pic"><img src="media/aplicationsimplications/alibaba.jpg" width="400">
-            <legend></legend>
+        <p class="pic"><img src="media/aplicationsimplications/alibaba.jpg" width="400" alt="Alibaba irrigation systems"></p>
         <p><a href="http://archive.fabacademy.org/2018/labs/fablabkochi/students/jogin-francis/project.html">JOGIN FRANCIS</a> made a really nice automatic valve for irrigation automation that could definitely add to my project but for now I will focus more on the interface and controller and use commercial valves.</p>
-        <p class="pic"><img src="http://archive.fabacademy.org/2018/labs/fablabkochi/students/jogin-francis/presentation.png" width="400">
-            <legend></legend>
-        </p>
+        <p class="pic"><img src="http://archive.fabacademy.org/2018/labs/fablabkochi/students/jogin-francis/presentation.png" width="400" alt="Jogin Francis irrigation project"></p>
         <p><a href="http://archive.fabacademy.org/archives/2017/fablabaldeias/students/375/">João Milheiro</a> also made an irrigation system. He is using it to control the environment of a mushroom growing kit.</p>
-        <p class="pic"><img src="http://archive.fabacademy.org/archives/2017/fablabaldeias/students/375/presentation.png" width="400">
-            <legend></legend>
-        </p>
+        <p class="pic"><img src="http://archive.fabacademy.org/archives/2017/fablabaldeias/students/375/presentation.png" width="400" alt="João Milheiro irrigation project"></p>
         <hr>
         <h4>What did you design?</h4>
         <hr>
@@ -569,20 +561,20 @@
         <h4>What questions were answered?</h4>
         <hr>
 
-        <p>How to make a web interface that communicates smoothly with the c++? I used an ArduinoJson library that serialised and deserialised the comunication betuin the HTML, JavaScript and C++?</p>
-        <p>How to set time and keep it from losing it with a power loss? That's still a challenge to be tacked as I m not completely happy how the system keeps time, right now it relies heavily on the battery in case of power failure.</p>
+        <p>How to make a web interface that communicates smoothly with C++? I used an ArduinoJson library that serialized and deserialized the communication between the HTML, JavaScript, and C++.</p>
+        <p>How to set time and keep it from losing it with a power loss? That's still a challenge to be tackled as I am not completely happy with how the system keeps time. Right now, it relies heavily on the battery in case of power failure.</p>
         <hr>
         <h4>What worked? and What didn't?</h4>
         <hr>
 
-        <p>The firmware worked for 3 months so far irrigating my plants. What I am not very happy is that if the battery finishes because it is on a remote location we need to have bring a hot spot so it connects to the internet automatically to to get the internet time.</p>
-        <p>I did not have time to create a safety routine to check the pump amperage. The board has the componets but the software is not developed yet.</p>
+        <p>The firmware worked for 3 months so far, irrigating my plants. What I am not very happy with is that if the battery finishes because it is in a remote location, we need to bring a hotspot so it connects to the internet automatically to get the internet time.</p>
+        <p>I did not have time to create a safety routine to check the pump amperage. The board has the components, but the software is not developed yet.</p>
         <hr>
         <h4>How was it evaluated?</h4>
         <hr>
 
-        <p>My objectives with my final project were to have a irrigation controller on my fabfarm and at the same time learn code and electronics.</p>
-        <p>Lets see my evaluation questions.</p>
+        <p>My objectives with my final project were to have an irrigation controller on my fabfarm and at the same time learn code and electronics.</p>
+        <p>Let's see my evaluation questions.</p>
         <ul>
             <li>Can I connect using my phone to the web interface of the irrigation controller?</li>
             <p>Yes</p>
@@ -599,9 +591,9 @@
             <li>Will it improve the life of a small farmer/plant enthusiast reducing, with a relative low cost, the time it needs to spend watering plants?</li>
             <p>Yes! It improved mine! We don't need to go water the plants like before having to open and close valves about 8 times a day.</p>
             <li>Did I improve c++ skill while making this project?</li>
-            <p>Yes, I am much more confident programing in C++ now.</p>
+            <p>Yes, I am much more confident programming in C++ now.</p>
             <li>Did I improve electronics design skills while making this project?</li>
-            <p>Yes, I feel like I can move on to much more projects in electronics.</p>
+            <p>Yes, I feel like I can move on to many more projects in electronics.</p>
         </ul>
         <hr>
         <!--
@@ -658,9 +650,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="media/jquery-1.9.1.min.js"></script>
+    <script src="media/jquery-1.9.1.min.js" defer></script>
     <!-- Syntax Highlighter -->
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script>
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         ! function($) {
@@ -670,8 +662,8 @@
         }(window.jQuery)
 
     </script>
-    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
 </body>
 
 </html>

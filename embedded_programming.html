@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Explore embedded programming with microcontrollers, including reading datasheets, programming boards, and using various tools and software.">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
     <title>Embedded Programming - Fab Academy 2020 - Lucio Pentagna</title>
@@ -28,13 +28,13 @@
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
     <!-- 3D files viewer -->
-    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
-    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
     <!-- Load the menu file -->
@@ -75,7 +75,7 @@
             <hr>
             <h4>Group assignment</h4>
             <ul>
-                <li>compare the performance and development workflows for other architectures</li>
+                <li>Compare the performance and development workflows for other architectures.</li>
             </ul>
             <h4>Individual assignment</h4>
             <ul>
@@ -96,13 +96,13 @@
             </ul>
         </div>
         <h3>Week workflow</h3>
-        <p class="pic"><img src="media/embedded_programming/week8diagram.jpg"></p>
+        <p class="pic"><img src="media/embedded_programming/week8diagram.jpg" alt="Week 8 workflow diagram"></p>
         <hr>
         <h3>Tools used</h3>
 
         <ul style="list-style-type:disc">
-            <li>soldering station</li>
-            <li>usbtiny ISP</li>
+            <li>Soldering station</li>
+            <li>USBtiny ISP</li>
         </ul>
         <hr>
 
@@ -119,15 +119,15 @@
         <h2> Read the Datasheet</h2>
         <h4>A few thoughts about it:</h4>
         <ul>
-            <li>are you joking? 200 plus pages of very technical stuff!</li>
-            <li>slept on the first pages</li>
-            <li>is there a movie version?</li>
+            <li>Are you joking? 200 plus pages of very technical stuff!</li>
+            <li>Slept on the first pages</li>
+            <li>Is there a movie version?</li>
         </ul>
         <p> One a more serious note, I really think this assignment is one of the hardest I m stuck because of this datasheet.</p>
 
         <p> Will jump to programing and use it to consult only. While I do will detach important sections bellow:
         </p>
-        <p class="pic"> <img src="media/embedded_programming/01.jpg">
+        <p class="pic"> <img src="media/embedded_programming/01.jpg" alt="ATTINY44A pin configurations">
             <legend> ATTINY44A pin configurations
             </legend>
         </p>
@@ -184,19 +184,19 @@
                 <p>- with all files prior downloaded on one directory, in linux I rename the file to makefile and run the script to create the firmware (this step I will repeat every time I want to modify the code: </p>
                 <pre class="prettyprint linenums">mv hello.ftdi.44.echo.c.make makefile
 make</pre>
-                <p class="pic"><img src="media/embedded_programming/lsmake.jpg">
+                <p class="pic"><img src="media/embedded_programming/lsmake.jpg" alt="Renaming to makefile and compiling">
                     <legend>renaming to makefile and compiling</legend>
                 </p>
                 <li>compile source code</li>
                 <p>- done in previous step</p>
                 <li>Adapting makefile to work with my programer</li>
-                <p class="pic"><img src="media/embedded_programming/makefile.jpg">
+                <p class="pic"><img src="media/embedded_programming/makefile.jpg" alt="Editing makefile to work with programmer">
                     <legend>I had to edit the makefile file to work with my programmer. That was done by replacing the entry usbtiny with USBasp 2 times, one when burning the firmware the other when burning the fuses</legend>
                 </p>
                 <li>burn firmware</li>
                 <p>run:</p>
                 <pre class="prettyprint linenums">make program-usbtiny</pre>
-                <p class="pic"><img src="media/embedded_programming/burn.jpg">
+                <p class="pic"><img src="media/embedded_programming/burn.jpg" alt="Burning firmware">
                     <legend>renaming to makefile and compiling</legend>
                 </p>
                 <li>identify what fuses to burn</li>
@@ -204,7 +204,7 @@ make</pre>
                 <li>burn fuses</li>
                 <p>run:</p>
                 <pre class="prettyprint linenums">make program-usbasp-fuses</pre>
-                <p class="pic"><img src="media/embedded_programming/fuses.jpg">
+                <p class="pic"><img src="media/embedded_programming/fuses.jpg" alt="Burning fuses">
                     <legend>burning fuses</legend>
                 </p>
             </ol>
@@ -217,17 +217,17 @@ make</pre>
             <li> Add additional board to the boards manager:</li>
             <p>Paste the following into (Preferences)-(Additional Boards Manage URLs:)</p>
             <pre class="prettyprint linenums">https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json</pre>
-            <p class="pic"><img src="media/embedded_programming/step1.jpg"></p>
+            <p class="pic"><img src="media/embedded_programming/step1.jpg" alt="Adding board to Arduino IDE"></p>
             <li>Chose your new added board, in my case ATtiny44</li>
-            <p class="pic"><img src="media/embedded_programming/step2.jpg"></p>
+            <p class="pic"><img src="media/embedded_programming/step2.jpg" alt="Choosing ATtiny44 board"></p>
             <li>Chose your processor, same as before</li>
-            <p class="pic"><img src="media/embedded_programming/step3.jpg"></p>
+            <p class="pic"><img src="media/embedded_programming/step3.jpg" alt="Choosing processor"></p>
             <li>select clock, because I am using an external 20Mhz oscillator, I chose "External 20 MHZ"</li>
-            <p class="pic"><img src="media/embedded_programming/step4.jpg"></p>
+            <p class="pic"><img src="media/embedded_programming/step4.jpg" alt="Selecting clock"></p>
             <li>Because I want to do some serial monitoring on this board I chose the best mach for my FTDI wich is "/dev/cu.usbserial-A7032T9C</li>
-            <p class="pic"><img src="media/embedded_programming/step5.jpg"></p>
+            <p class="pic"><img src="media/embedded_programming/step5.jpg" alt="Selecting serial port"></p>
             <li>The last step before compiling and burning was to select the programmer, in my case "USBasp"</li>
-            <p class="pic"><img src="media/embedded_programming/step6.jpg"></p>
+            <p class="pic"><img src="media/embedded_programming/step6.jpg" alt="Selecting programmer"></p>
         </ol>
         <hr>
         <h2>First test</h2>
@@ -235,14 +235,15 @@ make</pre>
         <p>Here instead of using terminal and avrdude, I used the Arduino IDE as it has a built-in serial monitor.</p>
         <p>The results are as follows in the video</p>
         <p class="pic"><video controls>
-                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.
+                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video></p>
         <hr>
         <h2>Program something else</h2>
         <p>Now I will try to program it to blink as I press the button.</p>
         <ol>
             <li>determine the pin where switch is connected</li>
-            <p class="pic"><img src="media/embedded_programming/schematics.jpg"></p>
+            <p class="pic"><img src="media/embedded_programming/schematics.jpg" alt="PCB schematics"></p>
             <p>after looking into the PCB schematics I determined the button is connected to pin 10</p>
             <li>determine the pin where LED is connected</li>
             <p>after looking into the PCB schematics I determined the LED is connected to pin 6</p>
@@ -304,7 +305,7 @@ void loop()     {
 }
         </pre>
         <p>No more empirically finding pins. Here is the ATtiny44 Arduino pinout diagram</p>
-        <p class="pic"> <img src="media/embedded_programming/pinsetup.jpeg"></p>
+        <p class="pic"> <img src="media/embedded_programming/pinsetup.jpeg" alt="ATtiny44 Arduino pinout diagram"></p>
         <p> In order to have the button recognized by the board I needed to initialize it too with the following code in the beginning of the sketch:</p>
         <pre class="prettyprint linenums">const int buttonPin = "the pin number here"</pre>
         <p>Next I had to set the state of the pin with the following code:</p>
@@ -340,12 +341,13 @@ void loop() {
         <p>Because I lost this board many years ago I can only show how to connect the programmer on a similar board. Just like I did in <a href="electronics_design.html#programmer">Electronic Design week.</a></p>
         <a id="programmer">Programmer FabISP and USBisp</a>
         <p>Here I show how I used the programmers on Output devices, for Another method without the Arduino IDE check <a href="embedded_programming.html">Embedded Programing</a></p>
-        <p class="pic"><img src="media/output_devices/programmerusbasp.jpg">USBasp</p>
+        <p class="pic"><img src="media/output_devices/programmerusbasp.jpg" alt="USBasp programmer">USBasp</p>
         <p>Programming an attiny44 board with arduino using a FabTinyISP or USBtinyISP that I made.</p>
-        <p class="pic"><img src="media/output_devices/programmerfabisp.jpg">FabISP</p>
+        <p class="pic"><img src="media/output_devices/programmerfabisp.jpg" alt="FabISP programmer">FabISP</p>
 
         <p class="pic"><video controls>
-                <source src="media/embedded_programming/hello1.mp4">Your browser does not support HTML5 video.
+                <source src="media/embedded_programming/hello1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video></p>
         <p> In order to change the behavior of the button I simply replaced the constant <code>&lt;HIGH&gt;</code> for the constant <code>&lt;LOW&gt;</code> here:</p>
         <pre class="prettyprint linenums">if (buttonState == LOW) {</pre>
@@ -379,23 +381,24 @@ void loop() {
 </pre>
         <p>Let's see some proof...</p>
         <p class="pic"><video controls>
-                <source src="media/embedded_programming/hello2.mp4">Your browser does not support HTML5 video.
+                <source src="media/embedded_programming/hello2.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video></p>
         <hr>
         <h4 id="3times">Blink 3 times</h4>
         <p>With a simple addition to the code I changed the behaviour so it blinks 3 times.</p>
-        <p class="pic"><img src="media/code/embedded_programming/buttonblink3times/code.jpg">donload the <a href="media/code/embedded_programming/buttonblink3times/buttonblink3times.ino">code</a></p>
+        <p class="pic"><img src="media/code/embedded_programming/buttonblink3times/code.jpg" alt="Code for blinking 3 times">donload the <a href="media/code/embedded_programming/buttonblink3times/buttonblink3times.ino">code</a></p>
         <hr>
         <h2>Hacking the board</h2>
         <p>I was a bit annoyed my board would not advise me when powered so I decide to solder a red LED and a 22 Ohms resistor and a resistor so if I got the connections wrong I would know and switch it.</p>
         <p>Thats the before and after</p>
-        <p class="pic"><img src="media/embedded_programming/pcb01.jpg">
+        <p class="pic"><img src="media/embedded_programming/pcb01.jpg" alt="PCB before modification">
             <legend>Before</legend>
         </p>
-        <p class="pic"><img src="media/embedded_programming/pcb02.jpg">
+        <p class="pic"><img src="media/embedded_programming/pcb02.jpg" alt="PCB after modification">
             <legend>After</legend>
         </p>
-        <p class="pic"><img src="media/embedded_programming/pcb03.jpg">
+        <p class="pic"><img src="media/embedded_programming/pcb03.jpg" alt="PCB after modification">
             <legend>After</legend>
         </p>
         <!-- End of your content -->
@@ -411,9 +414,9 @@ void loop() {
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="media/jquery-1.9.1.min.js"></script>
+    <script src="media/jquery-1.9.1.min.js" defer></script>
     <!-- Syntax Highlighter -->
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         ! function($) {
@@ -423,8 +426,8 @@ void loop() {
         }(window.jQuery)
 
     </script>
-    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
 </body>
 
 </html>

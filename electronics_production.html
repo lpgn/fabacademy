@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Explore the process of electronics production, including PCB milling, stuffing, debugging, and programming, as part of the Fab Academy 2020 by Lucio Pentagna.">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
 
@@ -32,14 +32,14 @@
     <link href="media/fabacademy.css" rel="stylesheet">
 
     <!-- 3D files viewer -->
-    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
-    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -107,15 +107,14 @@
             </ul>
             <h4>Learning outcomes:</h4>
             <ul>
-                <li>Describe the process of milling, stuffing, de-bugging and programming
-                </li>
+                <li>Describe the process of milling, stuffing, debugging, and programming</li>
                 <li>Demonstrate correct workflows and identify areas for improvement if required</li>
             </ul>
             <h4>Have you:</h4>
             <ul>
                 <li>Shown how you made and programmed the board</li>
                 <li>Explained any problems and how you fixed them</li>
-                <li>Included a ‘hero shot’ of your board</li>
+                <li>Included a 'hero shot' of your board</li>
             </ul>
         </div>
         <hr>
@@ -124,12 +123,12 @@
         <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/electronic_production.html"> for the group assignment page</a></p>
         <h2>Individual Assignment</h2><br>
         <p>This week I will be making a ISP <a href="https://en.wikipedia.org/wiki/In-system_programming">(In-system programming)</a> or in-circuit programmer.</p>
-        <p>I chose to do <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP</a>. I chose it for its simplicity and cost as it is striped down to a bare minimum of components.</p>
-        <p class="pic"><img src="media/electronics_production/image001.jpg">
-            <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
+        <p>I chose to do <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP</a>. I chose it for its simplicity and cost as it is stripped down to a bare minimum of components.</p>
+        <p class="pic"><img src="media/electronics_production/image001.jpg" alt="Brian's ISP image 1">
+            <legend>Image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
-        <p class="pic"><img src="media/electronics_production/image003.jpg">
-            <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
+        <p class="pic"><img src="media/electronics_production/image003.jpg" alt="Brian's ISP image 2">
+            <legend>Image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
 
         <p>The process will be split in phases, Milling, Stuffing/Populating, De-buging, Programing:</p>
@@ -394,12 +393,13 @@
         <p>After that I proceed soldering all components in place.</p>
 
         <p class="pic"><video controls>
-                <source src="media/electronics_production/soldering.mp4"> Your browser does not support HTML5 video.
+                <source src="media/electronics_production/soldering.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video></p>
         <h4>3- Pre-Debugging</h4>
         <p>I started with a visual inspection.</p>
-        <p class="pic"><img src="media/electronics_production/image053.jpg">
-            <legend>photo of my semi-finished ISP</legend>
+        <p class="pic"><img src="media/electronics_production/image053.jpg" alt="Semi-finished ISP">
+            <legend>Photo of my semi-finished ISP</legend>
         </p>
         <p>OK I need to clean a bit more</p>
         <p>With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.</p>
@@ -436,7 +436,7 @@
             <legend>capture of my computer screen</legend>
         </p>
         <p>But no success. So I run <code>lsusb</code> to get the list of avaiable usb devices.</p>
-        <p>and I get a message <code>“unable to initialize libusb: -99</code></p>
+        <p>and I get a message <code>"unable to initialize libusb: -99</code></p>
         <p class="pic"><img src="media/electronics_production/image067.jpg">
             <legend>capture of my computer screen</legend>
         </p>
@@ -486,11 +486,11 @@
         <p>After having the firmware uploaded and fuses burnt my new ASP would not be recognised.</p>
         <p>So back to debugging…</p>
         <p>I end up measuring each resistor value, and replacing the attiny with a new one. With a multimeter I found out that the R1 1K resistor was not working, replaced and voila. Board detected!!! Oh also I decided to install a usb connector I cut from an old cable and after some washing that's how it looks.</p>
-        <p class="pic"><img src="media/electronics_production/image079.jpg">
-            <legend>photo of my tiny ISP without cover</legend>
+        <p class="pic"><img src="media/electronics_production/image079.jpg" alt="Tiny ISP without cover">
+            <legend>Photo of my tiny ISP without cover</legend>
         </p>
-        <p class="pic"><img src="media/electronics_production/ispworking.jpg">
-            <legend>photo of my tiny ISP with cover and programing</legend>
+        <p class="pic"><img src="media/electronics_production/ispworking.jpg" alt="Tiny ISP with cover and programming">
+            <legend>Photo of my tiny ISP with cover and programming</legend>
         </p>
         <p>Final command <code>make rstdisbl</code></p>
         <p class="pic"><img src="media/electronics_production/image081.jpg">
@@ -507,7 +507,7 @@
         <h4>5- Final Test</h4>
         <p>Not tired of changing platforms I decided to test Windows. here I print how I load the driver for my USBasp. I use this very usefull software that makes installing drivers on windows 10 less traumatic.</p>
         <p>Loading the driver on windows I use the tool "Zadig_2.2.exe"</p>
-        <p class="pic"><img src="media/electronics_production/image085.jpg">
+        <p class="pic"><img src="media/electronics_production/image085.jpg" alt="Driver installation screen">
             <legend>capture of my computer screen</legend>
         </p>
         <p>Here I show a recent print the proves the USBtiny is detected under windows. Since I have done this exercise years ago I do not have the driver installation procedure outlined for windows but I have showed its detection before on Linux as well as now on Windows.</p>
@@ -527,8 +527,9 @@
             <li><code>-U lfuse:w:0xDE:m -U hfuse:w:0xdb:m -U efuse:w:0xF0:m</code> is the part of the command that burn the fuses.</li>
         </ol>
         <p>The above mentioned is shown in the terrible footage ;-) bellow</p>
-        <p class="pic"><video controls>
-                <source src="media/electronics_production/ispworks.mp4"> Your browser does not support HTML5 video.
+        <p class="pic"><video controls title="Programming demonstration">
+                <source src="media/electronics_production/ispworks.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video></p>
         <p>All working!</p>
         <!-- End of your content -->
@@ -543,9 +544,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="media/jquery-1.9.1.min.js"></script>
+    <script src="media/jquery-1.9.1.min.js" defer></script>
     <!-- Syntax Highlighter -->
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         ! function($) {
@@ -555,8 +556,8 @@
         }(window.jQuery)
 
     </script>
-    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
 </body>
 
 </html>

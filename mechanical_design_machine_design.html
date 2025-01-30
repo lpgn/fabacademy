@@ -347,7 +347,7 @@
         <h4>Laser Radiation</h4>
         <p>The laser beam can blind you or burn your skin in nano seconds for this reason never operate it with the lid open, aways wear the safety glasses for the type of laser you are using.</p>
         <p class="pic"> <img src="media/machine/laser.jpg"></p>
-        <p>CO2 laser cutter are typically 10600nm wavelength, in our lab this is the correct glasses.</p>
+        <p>CO2 laser cutters are typically 10600nm wavelength, in our lab this is the correct glasses.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/co2glasses.jpg"></p>
         <p>Diode laser cutters are typically in the range of 200-550nm wavelength, in our lab this is the correct glasses.</p>
         <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/diodelaser.jpg"></p>
@@ -441,14 +441,15 @@
         <p>In the end I decided it was not the wiring so I recompile GRBL like I explained earlier, switching the Y direction bit (pin) 6 for 7 in the file <a href="media/machine/laser_3rd_part/05_problem_solution/grbl.zip">cpu_map.h</a> and it worked. Not sure what really caused it.</p>
         <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/grbl.jpg"></p>
         <p>Next issue was the scale of the X axis was completely off. I had created a simple 10 mm square and had it cut but instead it created a long rectangle.</p>
-        <video width="300" controls>
-            <source src="media/machine/laser_3rd_part/05_problem_solution/it_works_but_not_well.mp4"> Your browser does not support HTML5 video.
+        <video width="300" controls title="Laser cutter test">
+            <source src="media/machine/laser_3rd_part/05_problem_solution/it_works_but_not_well.mp4">
+            Your browser does not support HTML5 video.
         </video>
         <p>I solved the issue simply reapplying the steps per mm again to GRBL controller Eprom. and it started working as I can show in these pics.</p>
         <p>The inside measurement of the square is 10.2mm</p>
-        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/inside.jpg"></p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/inside.jpg" alt="Inside measurement of test square"></p>
         <p>The outside measurement of the square is 9.9mm</p>
-        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/outside.jpg"></p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/outside.jpg" alt="Outside measurement of test square"></p>
         <p>Calculating the inside and outside measurements would give a kerf size of 0.15mm, not too bad for first tests but can be improved with better focus. But I will leave that for <a href="computer_controlled_cutting.html">Computer controlled cutting week</a>.</p>
         <h4>Final Test</h4>
         <video width="300" controls>

@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Explore the Gantt chart for Fab Academy 2020 by Lucio Pentagna, showcasing project timelines and exercises.">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
     <title>Gantt - Fab Academy 2020 - Lucio Pentagna</title>
@@ -61,11 +61,11 @@
 <body style="padding: 0px;">
     <div id="ganttChart"></div> <br /><br />
     <div id="eventMessage"></div>
-    <script type="text/javascript" src="media/jquery-1.4.2.js"></script>
-    <script type="text/javascript" src="media/date.js"></script>
-    <script type="text/javascript" src="media/jquery-ui-1.8.4.js"></script>
-    <script type="text/javascript" src="media/jquery.ganttView.js"></script>
-    <script type="text/javascript" src="gantt.js"></script>
+    <script type="text/javascript" src="media/jquery-1.4.2.js" defer></script>
+    <script type="text/javascript" src="media/date.js" defer></script>
+    <script type="text/javascript" src="media/jquery-ui-1.8.4.js" defer></script>
+    <script type="text/javascript" src="media/jquery.ganttView.js" defer></script>
+    <script type="text/javascript" src="gantt.js" defer></script>
     <script type="text/javascript">
         $(function() {
             $("#ganttChart").ganttView({
@@ -74,6 +74,7 @@
                 behavior: {
                     onClick: function(data) {
                         var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                        $('#eventMessage').text(msg);
                     }
                 }
             });
