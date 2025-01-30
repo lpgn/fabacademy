@@ -84,6 +84,8 @@
         <div class="jumbotron" style="width: 100%">
             <h3>Input Devices</h3>
             <hr>
+            <h4>Overview</h4>
+            <p>This section covers the design and implementation of input devices, focusing on sensor integration and microcontroller programming as part of the Fab Academy 2020 project by Lucio Pentagna.</p>
             <h4>Group Project</h4>
             <ul>
                 <li>Measure the analog levels and digital signals in an input device.</li>
@@ -93,7 +95,7 @@
                 <li>Measure something: add a sensor to a micro-controller board that you have designed and read it.</li>
             </ul>
             <br>
-            <h4>Learning outcomes:</h4>
+            <h4>Learning Outcomes</h4>
             <ul>
                 <li>Demonstrate workflows used in circuit board design and fabrication.</li>
                 <li>Implement and interpret programming protocols.</li>
@@ -107,10 +109,10 @@
                 <li>Included original design files and code.</li>
             </ul>
         </div>
-        <h4>Week workflow</h4>
-        <p>Study Neil's <a href="http://academy.cba.mit.edu/classes/input_devices/index.html">input boards</a> → Decide what type of input → Design Schematic/Board → Mill the board → solder components → debug → edit and publish website</p>
+        <h4>Week Workflow</h4>
+        <p>Study Neil's <a href="http://academy.cba.mit.edu/classes/input_devices/index.html">input boards</a> → Decide what type of input → Design Schematic/Board → Mill the board → Solder components → Debug → Edit and publish website</p>
         <hr>
-        <h4>Tools used</h4>
+        <h4>Tools Used</h4>
         <ul style="list-style-type:disc">
             <li>Solder Station</li>
             <li>TaoBao CNC</li>
@@ -134,30 +136,30 @@
         </ol>
         <hr>
         <h3>Group Assignment</h3>
-        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
+        <p>Visit the <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a> for more details.</p>
         <hr>
         <h3>Individual Project</h3>
-        <p>This week I will be testing a thermistor. Since I am building an incubator I will be needing to measure and control temperature.</p>
-        <p>The thermistor I chose is the B57560G0104, after reading its data-sheet I learned that at 25 degrees Celsius it has a resistance of 100K.</p>
-        <p>The way the thermistor works is by decreasing its resistance as the temperature increases. Because the IC on its ADC pin reads voltage not resistance we need to set a voltage divider in order to derive its resistance.</p>
-        <p>I will connect the Thermistor in series with the resistor that will be connected to VCC. One end of the thermistor will be connected to ground and the other that is in series.</p>
+        <p>This week, I focused on testing a thermistor, which is essential for my incubator project to measure and control temperature.</p>
+        <p>The thermistor I chose is the B57560G0104. According to its datasheet, it has a resistance of 100K at 25 degrees Celsius.</p>
+        <p>The thermistor's resistance decreases as the temperature increases. Since the IC on its ADC pin reads voltage, not resistance, a voltage divider is necessary to derive its resistance.</p>
+        <p>I connected the thermistor in series with a resistor to VCC. One end of the thermistor is connected to ground, and the other is in series.</p>
         <p class="pic"><img src="media/wildcard_week/tiny45withsensor.jpg" alt="Hero shot of my board and temperature sensor">
             <legend>Hero shot of my board and temperature sensor</legend>
         </p>
         <hr>
         <h4>References</h4>
-        <p>As done on <a href="electronics_design.html">week 6</a> I started by reviewing Neil's boards. The one I would be redesigning is the <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png">visible light input board</a>.</p>
+        <p>As done in <a href="electronics_design.html">week 6</a>, I started by reviewing Neil's boards. The one I redesigned is the <a href="http://academy.cba.mit.edu/classes/input_devices/light/hello.light.45.png">visible light input board</a>.</p>
         <p class="pic"><img src="media/input_devices/hello.temp.45.jpg" alt="Professor Neil's light board">
             <legend>Professor Neil's light board</legend>
         </p>
         <hr>
         <h4>Experimenting with an Arduino</h4>
-        <p>My objective with this experiment was to understand and test the thermistor and the code. I got it working but the temperature was not really accurate. Of course, I am not using accurate instruments to calibrate the thermistor so I never know what is not correct so I ended up boiling water so I would know at least the temperature needed to be around 100 degrees Celsius.</p>
+        <p>The goal of this experiment was to understand and test the thermistor and the code. Although I got it working, the temperature readings were not very accurate. Without precise instruments for calibration, I boiled water to ensure the temperature was around 100 degrees Celsius.</p>
         <p class="pic"><video controls>
                 <source src="media/input_devices/experimentwaterboilingcomp.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <legend>Boiling water with soldering iron. Thermistor inserted in the liquid.</legend>
+            <legend>Boiling water with a soldering iron. Thermistor inserted in the liquid.</legend>
         </p>
         <p class="pic"><img src="media/input_devices/experiment03.jpg" alt="Detail of thermistor and temperature probe together.">
             <legend>Detail of thermistor and temperature probe together.</legend>
@@ -165,7 +167,7 @@
         <hr>
         <h4><a id="programming">Programming the Attiny with a USBasp</a></h4>
         <p class="pic"><img src="media/input_devices/programming_withUSBasp.jpg" alt="Programmer USBasp on a ATtiny45">Programmer USBasp on a ATtiny45</p>
-        <p>In the video below I show the programming taking place.</p>
+        <p>The video below demonstrates the programming process.</p>
         <p class="pic"><video controls>
                 <source src="media/input_devices/programmingwith_usbasp.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -173,7 +175,7 @@
             <a href="https://youtu.be/2oB4e1vzaPE">High res video on Youtube</a>
         </p>
         <hr>
-        <h4>Experiment with the board I designed</h4>
+        <h4>Experiment with the Board I Designed</h4>
         <p class="pic"><video controls>
                 <source src="media/input_devices/experiment_with_boardcomp.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -206,30 +208,29 @@
         <p class="pic"><img src="media/input_devices/ledresistorcalculation.jpg" alt="Resistor calculation">
             <legend>Resistor calculation</legend>
         </p>
-        <p>Below is how my schematics look like:</p>
+        <p>Below is the schematic of my design:</p>
         <p class="pic left"><img src="media/input_devices/schematics.jpg" alt="Schematics of ATtiny45 board"> </p>
         <legend>Schematics of <a href="media/input_devices/tiny/tiny.bot.mill.zip"></a> with Attiny45</legend>
         <p class="pic left"><img src="media/input_devices/tinyboard.jpg" alt="ATtiny45 board design"> </p>
         <a></a>
-        <h4><a id="thermistor">The thermistor board</a></h4>
-        <p>On my thermistor board I used:</p>
+        <h4><a id="thermistor">The Thermistor Board</a></h4>
+        <p>On my thermistor board, I used:</p>
         <ol>
             <li><a href="https://www.digikey.com/product-detail/en/NTHS1206N01N1003KE/541-1145-1-ND/1869426">Vishay Dale NTHS1206N01N1003KE</a> NTC 100KOHM 3964K 1206, datasheet <a href="media/input_devices/datasheet/nths.pdf">here</a>.</li>
-            <li>And a 100k resistor as a pull-down resistor</li>
+            <li>A 100k resistor as a pull-down resistor</li>
         </ol>
-        <p>The way the a NTC thermistor works is as the temperature raises the resistance reduces and vice-versa, so we need to find out the resistance.</p>
-        <p>We will then have to use a resistor to help us calculate the voltage drop. The IC used the ATtiny45 doesn't measure resistance so in order to calculate the resistance of the thermistor we'll have to use a known resistor and measure the voltage coming and calculate the voltage drop between the thermistor and the 100k resistor. The formula I used in the program is this: RT = ((VCC*R-R*VRT)/VRT) </p>
+        <p>An NTC thermistor's resistance decreases as the temperature increases, and vice-versa. To calculate the resistance, a known resistor is used to measure the voltage drop. The ATtiny45 doesn't measure resistance directly, so the formula used in the program is: RT = ((VCC*R-R*VRT)/VRT) </p>
         <legend>Attiny45 input devices board</legend>
         <p class="pic left"><img src="media/input_devices/thermistorsch.jpg" alt="Schematics of thermistor board"> </p>
         <legend>Schematics of thermistor board</legend>
         <p class="pic left"><img src="media/input_devices/thermistor.jpg" alt="Thermistor board design"> </p>
         <legend>Thermistor board design</legend>
         <hr>
-        <h4>Code for the attiny45</h4>
-        <p>I used 3 sets of code for this assignment.</p>
+        <h4>Code for the Attiny45</h4>
+        <p>I used three sets of code for this assignment:</p>
         <ol>
             <li>Software serial sources: <a href="https://www.hackster.io/porrey/easy-serial-on-the-attiny-2676e6">source1</a> <a href="https://arduino.stackexchange.com/questions/6712/is-softwareserial-left-out-for-the-attiny85-84">source2</a></li>
-            <p>Because I could not use regular hardware serial on the attiny it was necessary to include a library to make this function available:</p>
+            <p>Since regular hardware serial couldn't be used on the attiny, a library was included to enable this function:</p>
             <pre class="prettyprint linenums">
 #include "SoftwareSerial.h"
 SoftwareSerial Monitor(1, 0);
@@ -241,13 +242,13 @@ void setup()
     pinMode(1, INPUT);
 }
             </pre>
-            <p>Also when you want to print something you need to do it in a different way:</p>
+            <p>Printing is done differently:</p>
             <pre class="prettyprint linenums">
 Monitor.println(whatever you want to print here);
             </pre>
 
             <li>Temperature collection with Arduino</li>
-            <p>The code I used for the experiments with Arduino I found on the Arduino's project hub <a href="https://create.arduino.cc/projecthub/Marcazzan_M/how-easy-is-it-to-use-a-thermistor-e39321">How Easy Is It to Use a Thermistor?!</a> authored by <a href="https://create.arduino.cc/projecthub/Marcazzan_M">Marcazzan_M</a>:</p>
+            <p>The code used for Arduino experiments was found on the Arduino's project hub <a href="https://create.arduino.cc/projecthub/Marcazzan_M/how-easy-is-it-to-use-a-thermistor-e39321">How Easy Is It to Use a Thermistor?!</a> by <a href="https://create.arduino.cc/projecthub/Marcazzan_M">Marcazzan_M</a>:</p>
             <pre class="prettyprint linenums">
 //Thermometer with thermistor
 
@@ -296,7 +297,7 @@ void loop() {
   delay(500);
 }
             </pre>
-            <li>My version of the code contains both the software serial and also part of Marcazzan's code as the attiny would not compile with both the software serial and the log calculations. The code had to then be limited to only 4k after compilation.</li>
+            <li>My version of the code includes both the software serial and part of Marcazzan's code, as the attiny wouldn't compile with both the software serial and the log calculations. The code had to be limited to only 4k after compilation.</li>
             <p>The <a href="media/input_devices/code/tinytempcode.ino">code here</a></p>
             <pre class="prettyprint linenums">
 #include "SoftwareSerial.h"
@@ -329,70 +330,70 @@ void loop() {
     delay(1000);
 }
             </pre>
-            <p>Also, his formula for finding the resistance did not work for me. I suspect it is because I use a NTC thermistor, so I had to modify the formula and it looks like this now:</p>
+            <p>The original formula for finding the resistance didn't work for me, likely due to using an NTC thermistor. I modified the formula to:</p>
             <pre class="prettyprint linenums">
 RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
             </pre>
         </ol>
         <hr>
-        <h3>Designing and making the PCB</h3>
-        <p>Since I modified my workflow I decided to update it. Now It contains the usage of PCB-Gcode ULP and Autoleveller software usage.</p>
+        <h3>Designing and Making the PCB</h3>
+        <p>After modifying my workflow, I updated it to include the usage of PCB-Gcode ULP and Autoleveller software.</p>
         <hr>
         <h4>Autodesk Eagle Design</h4>
-        <p>With the schematics ready click on:</p>
+        <p>With the schematics ready, follow these steps:</p>
         <ol>
-            <li>SCH/BRD this will open a dialog</li>
-            <li>On the dialog click on yes in order to place the components next to what will be the board space.</li>
+            <li>Click SCH/BRD to open a dialog.</li>
+            <li>In the dialog, click yes to place the components next to the board space.</li>
         </ol>
         <p class="pic"><img src="media/input_devices/eagle05.jpg" alt="Eagle design step 1"></p>
-        <p>With the components placed next to the square that represents the board, the board will be resized later.</p>
+        <p>With the components placed next to the square representing the board, the board will be resized later.</p>
         <p class="pic"><img src="media/input_devices/eagle06.jpg" alt="Eagle design step 2"></p>
-        <p>Typing "move" then "pressing enter" allows you to click on each component and drag it inside the board.</p>
+        <p>Type "move" and press enter to click on each component and drag it inside the board.</p>
         <p class="pic"><img src="media/input_devices/eagle07.jpg" alt="Eagle design step 3"></p>
-        <p>Here I started dragging the attiny45 inside the board limits. Again, clicking each component won't require typing "move" again, unless "esc" is pressed or another command.</p>
+        <p>Here, I started dragging the attiny45 inside the board limits. Clicking each component won't require typing "move" again unless "esc" is pressed or another command is used.</p>
         <p class="pic"><img src="media/input_devices/eagle08.jpg" alt="Eagle design step 4"></p>
-        <p>Here all components are dragged and the superior limits are being dragged and resized with the command "move" as well. Another way of moving components is typing "info" and then left-clicking the component, this will allow typing the coordinates of the element instead of dragging.</p>
+        <p>All components are dragged, and the superior limits are being dragged and resized with the "move" command. Another way to move components is by typing "info" and then left-clicking the component, allowing you to type the coordinates of the element instead of dragging.</p>
         <p class="pic"><img src="media/input_devices/eagle09.jpg" alt="Eagle design step 5"></p>
-        <p>The command "rotate" will allow you to turn the component to the ideal orientation routing the wires is more efficient. The yellow lines represent the connections created in the schematics part.</p>
+        <p>The "rotate" command allows you to turn the component to the ideal orientation for efficient wire routing. The yellow lines represent the connections created in the schematics part.</p>
         <p class="pic"><img src="media/input_devices/eagle10.jpg" alt="Eagle design step 6"></p>
-        <p>Here I am creating a contour with the command polygon, when it's closed it will open a dialog box.</p>
+        <p>Here, I am creating a contour with the "polygon" command. When it's closed, a dialog box will open.</p>
         <p class="pic"><img src="media/input_devices/eagle11.jpg" alt="Eagle design step 7"></p>
-        <p>After the polygon is finished the dialog will open typing "GND" connects the polygon to ground.</p>
+        <p>After the polygon is finished, the dialog will open. Typing "GND" connects the polygon to ground.</p>
         <p class="pic"><img src="media/input_devices/eagle12.jpg" alt="Eagle design step 8"></p>
-        <p>Typing ratsnest or clicking its icon will fill up the whole board area with the ground layer so now either by typing autoroute or the net command the components can be connected.</p>
+        <p>Typing "ratsnest" or clicking its icon will fill up the whole board area with the ground layer. Now, either by typing "autoroute" or using the "net" command, the components can be connected.</p>
         <p class="pic"><img src="media/input_devices/eagle13.jpg" alt="Eagle design step 9"></p>
-        <p>Now before routing the components go to edit --&#62 design rules and there the distances between each element can be defined.</p>
+        <p>Before routing the components, go to edit → design rules to define the distances between each element.</p>
         <p class="pic"><img src="media/input_devices/eagle13b.jpg" alt="Eagle design step 10"></p>
-        <p>In the tab sizes define the minimum width of wire. In my experience, 0.2mm works great.</p>
+        <p>In the "sizes" tab, define the minimum width of the wire. In my experience, 0.2mm works great.</p>
         <p class="pic"><img src="media/input_devices/eagle15.jpg" alt="Eagle design step 11"></p>
-        <p>The tab clearance sets the distance between each element of the pcb I am using currently 0.3mm on all Signals.</p>
+        <p>The "clearance" tab sets the distance between each element of the PCB. I am currently using 0.3mm on all signals.</p>
         <p class="pic"><img src="media/input_devices/eagle25.jpg" alt="Eagle design step 12"></p>
-        <p>Now with all design rules set typing autorouter or clicking its icon will start the process of connecting each component.</p>
+        <p>With all design rules set, typing "autorouter" or clicking its icon will start the process of connecting each component.</p>
         <p class="pic"><img src="media/input_devices/eagle16.jpg" alt="Eagle design step 13"></p>
-        <p>An important setting is clicking on the dialog box labeled bottom and selecting N/A if not desired two sides. Then pressing will start the process.</p>
+        <p>An important setting is clicking on the dialog box labeled "bottom" and selecting N/A if two sides are not desired. Then pressing will start the process.</p>
         <p class="pic"><img src="media/input_devices/eagle17.jpg" alt="Eagle design step 14"></p>
-        <p>Next chose one of the options and then click on evaluate or end job in order to go back to the board layout.</p>
-        <p>I circled in yellow to show the bottom layer of the board in blue. I do not want this so I will reset the board in the next step.</p>
+        <p>Next, choose one of the options and then click on "evaluate" or "end job" to return to the board layout.</p>
+        <p>I circled in yellow to show the bottom layer of the board in blue. I do not want this, so I will reset the board in the next step.</p>
         <p class="pic"><img src="media/input_devices/eagle18.jpg" alt="Eagle design step 15"></p>
-        <p>Here you can see the effect of the command "ratsnest". This command will basically fill up all the spaces not occupied by a via with the ground element.</p>
+        <p>Here, you can see the effect of the "ratsnest" command. This command fills up all the spaces not occupied by a via with the ground element.</p>
         <p class="pic"><img src="media/input_devices/eagle19.jpg" alt="Eagle design step 16"></p>
-        <p>Because I want autorouter do it over I typed "ripup" and then I selected all so all routes are undone.</p>
+        <p>Because I want the autorouter to do it over, I typed "ripup" and then selected all so all routes are undone.</p>
         <p class="pic"><img src="media/input_devices/eagle20.jpg" alt="Eagle design step 17"></p>
         <p>And redo the autoroute process.</p>
         <p class="pic"><img src="media/input_devices/eagle22.jpg" alt="Eagle design step 18"></p>
-        <p>Here the route is done but not yet with ratsnest.</p>
+        <p>Here, the route is done but not yet with "ratsnest".</p>
         <p class="pic"><img src="media/input_devices/eagle23.jpg" alt="Eagle design step 19"></p>
-        <p>Here ratsnest is applied.</p>
+        <p>Here, "ratsnest" is applied.</p>
         <p class="pic"><img src="media/input_devices/eagle24.jpg" alt="Eagle design step 20"></p>
-        <p>In here I moved the components around in order to shrink the board a bit. This is basically done with the command "move" If you want to move numerous components select them and type group then type "move" and right-click them to move the whole group.</p>
+        <p>In this step, I moved the components around to shrink the board a bit. This is done with the "move" command. If you want to move numerous components, select them and type "group", then type "move" and right-click them to move the whole group.</p>
         <p class="pic"><img src="media/input_devices/eagle26.jpg" alt="Eagle design step 21"></p>
         <hr>
-        <h4>Ratsnest dilemma</h4>
-        <p>Below you can see a board with and without ratsnest.</p>
-        <p>The first board has ratsnest on. It's a bit more cluttered. One advantage is thermal, having a greater copper surface allows for cooling of the board as well as larger conductivity especially in 2 sided boards as one side can be ground and the other side can be for VCC making almost all surfaces for power transfer. The second board looks cleaner.</p>
+        <h4>Ratsnest Dilemma</h4>
+        <p>Below, you can see a board with and without "ratsnest".</p>
+        <p>The first board has "ratsnest" on. It's a bit more cluttered. One advantage is thermal, having a greater copper surface allows for cooling of the board as well as larger conductivity, especially in 2-sided boards where one side can be ground and the other side can be for VCC, making almost all surfaces for power transfer. The second board looks cleaner.</p>
         <p class="pic"><img src="media/input_devices/board_ratsnest.jpg" alt="Board with ratsnest"></p>
-        <p>I currently prefer making boards without ratsnest, because manual soldering can be imprecise and short circuits are easy to happen and the ratsnest feature can increase that.</p>
-        <p>The thick light blue contour drawn with the layer "milling" is used by the ULP pcb-gcode to create a G-code milling contour, the software will use that to create the limits and the cut can be used to detach the board from the copper stock. The thickness of the polygon will define the milling bit size.
+        <p>I currently prefer making boards without "ratsnest" because manual soldering can be imprecise, and short circuits are easy to happen, and the "ratsnest" feature can increase that risk.</p>
+        <p>The thick light blue contour drawn with the layer "milling" is used by the ULP pcb-gcode to create a G-code milling contour. The software will use that to create the limits, and the cut can be used to detach the board from the copper stock. The thickness of the polygon will define the milling bit size.
         </p>
         <p class="pic"><img src="media/input_devices/board_without_ratsnest.jpg" alt="Board without ratsnest"></p>
         <hr>
@@ -459,64 +460,64 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
         </div>
         <hr>
         <h4>PCB-Gcode</h4>
-        <p>A while back I started using the User Language Programs(ULP) called <a href="https://github.com/McNugget6750/pcb-gcode">PCB-Gcode</a> it's a great program allows many settings that I discovered in part reading the documentation and in part with trial and error.</p>
-        <p>Below I show how I setup it for a smooth G-code creation.</p>
+        <p>A while back, I started using the User Language Programs (ULP) called <a href="https://github.com/McNugget6750/pcb-gcode">PCB-Gcode</a>. It's a great program that allows many settings, which I discovered partly by reading the documentation and partly through trial and error.</p>
+        <p>Below, I show how I set it up for smooth G-code creation.</p>
         <ol>
             <li>Click file</li>
-            <li>then Run ULP</li>
-            <li>then click pcb-gcode-setup</li>
+            <li>Then Run ULP</li>
+            <li>Then click pcb-gcode-setup</li>
         </ol>
         <p class="pic"><img src="media/input_devices/eagle27.jpg" alt="PCB-Gcode setup step 1"></p>
-        <p>The settings that I customized are:</p>
+        <p>The settings I customized are:</p>
         <ol>
-            <li>I chose to generate only top outlines and top drills: -the first is the generation of the board G-code to cut off the board from the stock. -the second is the holes the board might have. the thickness of the mill bit or drill is chosen in the machine tab</li>
-            <li>Here we can set the board thickness, my boards are separated well with 1.72mm cut. and the "num Slices" I chose to do 6, these will mean the board will be cut off in 6 passes. </li>
-            <li>Spot drill holes are light markings made while etching the via and all features of the board design, it serves the purpose of alignment of the drill bit that can be used to drill the hole and prevent the bit heat from sliding on the board. My choice is 0.055mm the same I have for etching.</li>
-            <li>Isolation was one of the most important settings. This setting might make your computer slow down a lot if the maximum is set too high, what works for me is: -minimum 0.0254mm (default); maximum 1.5mm; step size 0.05mm. The last one together with maximum will ensure 30 passes that will make sure there is no copper in between the traces and they are sufficiently isolated reducing the risks of shorts. These numbers could be an exaggeration but it is working very well and I am obtaining gorgeous boards. In the future, I might reduce it or increase the step size. </li>
+            <li>I chose to generate only top outlines and top drills: -the first is the generation of the board G-code to cut off the board from the stock. -the second is the holes the board might have. The thickness of the mill bit or drill is chosen in the machine tab</li>
+            <li>Here, we can set the board thickness. My boards are separated well with a 1.72mm cut, and the "num Slices" I chose to do 6, meaning the board will be cut off in 6 passes. </li>
+            <li>Spot drill holes are light markings made while etching the via and all features of the board design. It serves the purpose of alignment of the drill bit that can be used to drill the hole and prevent the bit heat from sliding on the board. My choice is 0.055mm, the same I have for etching.</li>
+            <li>Isolation was one of the most important settings. This setting might slow down your computer a lot if the maximum is set too high. What works for me is: -minimum 0.0254mm (default); maximum 1.5mm; step size 0.05mm. The last one, together with maximum, will ensure 30 passes that will make sure there is no copper in between the traces and they are sufficiently isolated, reducing the risks of shorts. These numbers could be an exaggeration, but it is working very well, and I am obtaining gorgeous boards. In the future, I might reduce it or increase the step size. </li>
         </ol>
         <p class="pic"><img src="media/input_devices/pcb_gcode01.jpg" alt="PCB-Gcode setup step 2"></p>
-        <p>In the Machine tab there are settings like: depth of cuts, unit, feed rates, and tool diameter are chosen.</p>
+        <p>In the Machine tab, there are settings like depth of cuts, unit, feed rates, and tool diameter are chosen.</p>
         <ol>
-            <li>- Z high is set to 12.7 (default), this setting should allow clearance for fixtures that could be in the way; -Z up is the clearance from the board when moving from location to location; -Z down is the depth of the cut. This number is very important in my case because I use a 10-degree V bit if I go too deep I cut more than I should and if too shallow I cut less. Of course, 10 degrees is not too steep and is more forgiving than a depth mistake with a more steep etching bit; - the drill depth is the depth of the through holes, and it should be generally a bit higher than the thickness of the blank pcb to account for imperfections; Drill dwell is the pause between each hole, it allows for cool down of the drill bit, I leave it default.</li>
-            <li>Here I set the unit as mm</li>
+            <li>- Z high is set to 12.7 (default), this setting should allow clearance for fixtures that could be in the way; -Z up is the clearance from the board when moving from location to location; -Z down is the depth of the cut. This number is very important in my case because I use a 10-degree V bit. If I go too deep, I cut more than I should, and if too shallow, I cut less. Of course, 10 degrees is not too steep and is more forgiving than a depth mistake with a more steep etching bit; - the drill depth is the depth of the through holes, and it should be generally a bit higher than the thickness of the blank PCB to account for imperfections; Drill dwell is the pause between each hole, it allows for cool down of the drill bit, I leave it default.</li>
+            <li>Here, I set the unit as mm</li>
             <li>All my etching feed rates are default</li>
             <li>The tool diameter I use is 0.1 mm</li>
         </ol>
         <p class="pic"><img src="media/input_devices/pcb_gcode02.jpg" alt="PCB-Gcode setup step 3"></p>
         <p>The G-code style tab is used to choose the post processor. I use Mach3.</p>
         <p class="pic"><img src="media/input_devices/pcb_gcode03.jpg" alt="PCB-Gcode setup step 4"></p>
-        <p>Here is the visualization of the G-code provided by the ULP, arrows can be used to move around the image as well as plus-minus signs.</p>
+        <p>Here is the visualization of the G-code provided by the ULP. Arrows can be used to move around the image, as well as plus-minus signs.</p>
         <p class="pic"><img src="media/input_devices/pcb_gcode04.jpg" alt="PCB-Gcode visualization"></p>
-        <p>4 files get generated</p>
+        <p>Four files get generated:</p>
         <ol>
             <li>*.bot.mill.gcode: it is the bottom milling (contour), I do not use this file.</li>
             <li>*.top.drill.gcode: is the G-code for the holes</li>
-            <li>*.top.mill.gcode: is the file for the top layer contour, these files will allow detaching the pcb.</li>
-            <li>Finally *.top.etch.gcode is the G-code of the etching of the pcb containing all the features designed.</li>
+            <li>*.top.mill.gcode: is the file for the top layer contour, these files will allow detaching the PCB.</li>
+            <li>Finally, *.top.etch.gcode is the G-code of the etching of the PCB containing all the features designed.</li>
         </ol>
         <p class="pic"><img src="media/input_devices/pcb_gcode05.jpg" alt="PCB-Gcode file generation"></p>
         <p>Below is the thermistor board isolation visualization.</p>
         <p class="pic"><img src="media/input_devices/thermistorpath.jpg" alt="Thermistor board isolation visualization"></p>
         <hr>
         <h4>Autoleveller</h4>
-        <p>Autoleveller is a great software. By probing the blank pcb and then using the file generated to adjust the depth of cut of the G-code, it ensures the milling machine will follow the relief of the blank pcb. I start Autoleveller running its executable, there is no installation needed on Linux. Next click File and then Original G-code File (OFG): this will allow loading the original G-code in the program.</p>
+        <p>Autoleveller is a great software. By probing the blank PCB and then using the file generated to adjust the depth of cut of the G-code, it ensures the milling machine will follow the relief of the blank PCB. I start Autoleveller by running its executable; there is no installation needed on Linux. Next, click File and then Original G-code File (OFG): this will allow loading the original G-code in the program.</p>
         <p class="pic"><img src="media/input_devices/autoleveller01.jpg" alt="Autoleveller setup step 1"></p>
-        <p>Click in the original G-code.</p>
+        <p>Click on the original G-code.</p>
         <p class="pic"><img src="media/input_devices/autoleveller02.jpg" alt="Autoleveller setup step 2"></p>
-        <p>Click yes so the settings will be based on the file loaded</p>
+        <p>Click yes so the settings will be based on the file loaded.</p>
         <p class="pic"><img src="media/input_devices/autoleveller03.jpg" alt="Autoleveller setup step 3"></p>
-        <p>Next click on Generate PFG on the bottom right of the window, this will create a G-code with a set of instructions, it will: -first probe the Z 0; -second probe several points in the area of the board; - third it will ask for a location in order to save the raw file, that will later be used to create the autoleveled G-code.</p>
+        <p>Next, click on Generate PFG on the bottom right of the window. This will create a G-code with a set of instructions. It will: -first probe the Z 0; -second probe several points in the area of the board; - third, it will ask for a location to save the raw file, which will later be used to create the autoleveled G-code.</p>
         <p class="pic"><img src="media/input_devices/autoleveller11.jpg" alt="Autoleveller setup step 4"></p>
-        <p>This is the PFG file being saved. Next load this G-code to the cnc and follow the instructions on the G-code area.</p>
+        <p>This is the PFG file being saved. Next, load this G-code to the CNC and follow the instructions on the G-code area.</p>
         <p class="pic"><img src="media/input_devices/autoleveller05.jpg" alt="Autoleveller setup step 5"></p>
-        <p>Now it's the time to attach the blank PCB to the CNC bed. I am no longer using double-sided tape as it's not as effective as the fixtures, also there is the need to clean up the leftover tape later.</p>
+        <p>Now it's time to attach the blank PCB to the CNC bed. I am no longer using double-sided tape as it's not as effective as the fixtures, and there is also the need to clean up the leftover tape later.</p>
         <p class="pic"><img src="media/input_devices/machining01.jpg" alt="Attaching PCB to CNC bed"></p>
-        <p>In my cnc I have machined a pocket prior so the board has a fixed location, that helps immobilizing the blank.</p>
+        <p>In my CNC, I have machined a pocket prior so the board has a fixed location, which helps immobilize the blank.</p>
         <p class="pic"><img src="media/input_devices/machining02.jpg" alt="Machined pocket for PCB"></p>
         <a id="mach3"></a>
-        <p>In the CNC with the PFG loaded follow the instruction on the screen by attaching the probe.</p>
+        <p>In the CNC, with the PFG loaded, follow the instruction on the screen by attaching the probe.</p>
         <p class="pic"><img src="media/input_devices/mach3.jpg" alt="Attaching probe to CNC"></p>
-        <p>Here I am attaching the probe to the surface of the board and the alligator clip to the mill bit.</p>
+        <p>Here, I am attaching the probe to the surface of the board and the alligator clip to the mill bit.</p>
         <p class="pic"><img src="media/input_devices/machining03.jpg" alt="Attaching probe and clip"></p>
         <p>This video shows the probing process.</p>
         <p class="pic"><video controls>
@@ -524,20 +525,20 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
                 Your browser does not support HTML5 video.
             </video>
         </p>
-        <p>With the probing done save the raw file and take it to Autoleveller and load it.</p>
+        <p>With the probing done, save the raw file and take it to Autoleveller and load it.</p>
         <p class="pic"><img src="media/input_devices/autoleveller06.jpg" alt="Loading raw file into Autoleveller"></p>
-        <p>Load the raw probe file back into the autoleveller.</p>
+        <p>Load the raw probe file back into the Autoleveller.</p>
         <p class="pic"><img src="media/input_devices/autoleveller07.jpg" alt="Loading raw probe file"></p>
-        <p>Last save the adjusted G-code by clicking Autolevel on the bottom right of the screen. Save the file and take it to the CNC for the milling process to begin.</p>
+        <p>Finally, save the adjusted G-code by clicking Autolevel on the bottom right of the screen. Save the file and take it to the CNC for the milling process to begin.</p>
         <p class="pic"><img src="media/input_devices/autoleveller10.jpg" alt="Saving adjusted G-code"></p>
-        <h4>Machining process videos</h4>
+        <h4>Machining Process Videos</h4>
         <p class="pic"><video controls>
                 <source src="media/input_devices/machining03acomp.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
             <legend>Slow motion video of etching (milling) process.</legend>
         </p>
-        <p>The final result is here, sometimes I use sandpaper 1000 grit to give it a better finishing.</p>
+        <p>The final result is here. Sometimes I use sandpaper 1000 grit to give it a better finish.</p>
         <p class="pic"><img src="media/input_devices/machining04.jpg" alt="Final result of milling"></p>
         <p>Now I am going to show the border being cut.</p>
         <p class="pic">
@@ -548,7 +549,7 @@ RT = ((VCC*R-R*VRT)/VRT);               //Resistance of RT
         </p>
         <legend>Milling the board borders</legend>
         <hr>
-        <h4>The results</h4>
+        <h4>The Results</h4>
         <p class="pic"><img src="media/input_devices/thermistorboardnosolder.jpg" alt="Thermistor board before soldering">
             <legend>Thermistor board just before soldering.</legend>
         </p>

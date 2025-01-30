@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Explore the interface and application programming techniques used in the Fab Academy 2020 by Lucio Pentagna. Learn about the tools, software, and processes involved in creating user interfaces and applications.">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
     <title>Interface and Application Programming - Fab Academy 2020 - Lucio Pentagna</title>
@@ -28,15 +28,18 @@
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
     <!-- 3D files viewer -->
-    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
-    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <!-- Load the menu file -->
     <script>
         function menu() {
@@ -79,13 +82,12 @@
             </ul>
             <h4>Individual assignment</h4>
             <ul>
-                <li>Write an application that interfaces a user with an input and/or output device that you made
-                </li>
+                <li>Write an application that interfaces a user with an input and/or output device that you made</li>
             </ul>
             <br>
             <h4>Learning outcomes:</h4>
             <ul>
-                <li>DInterpret and implement design and programming protocols to create a Graphic User Interface (GUI).</li>
+                <li>Interpret and implement design and programming protocols to create a Graphic User Interface (GUI).</li>
             </ul><br>
             <h4>Have you:</h4>
             <ul>
@@ -93,7 +95,7 @@
                 <li>Documented your process</li>
                 <li>Outlined problems and how you fixed them</li>
                 <li>Included original code (or a screenshot of the app code if that's not possible)</li>
-                <li>Included a ‘hero shot/video’ of your application running with your board</li>
+                <li>Included a 'hero shot/video' of your application running with your board</li>
             </ul>
         </div>
         <hr>
@@ -121,40 +123,57 @@
             <li>To access the online version go to this <a href="http://ai2.appinventor.mit.edu/">link</a>.</li>
             <li>Next login with your google account</li>
             <li>Click start a new project.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/01.jpg">
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/01.jpg" alt="MIT App Inventor start new project">
             </p>
             <li>Name the project Mine is "groupproject"</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/02.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/02.jpg" alt="Naming the project">
+            </p>
             <li>#1 in the center is the area reserved for the design of the app, #2 this section is used in case you want to have more than one screen, #3 to the left the palette contains all the objects like buttons or a video player used in the app visual construction, #4 each object can have its properities edited in this area to the right, #5 will switch to the blocks area where the logics of the app are created.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/03.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/03.jpg" alt="App design interface">
+            </p>
             <li>In this quick example I drag a button from the left side to the screen.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/04.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/04.jpg" alt="Dragging a button">
+            </p>
             <li>Here I also show how to add a text in the same fashion as the button but I won't be using the text in my app.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/05.jpg"></p>
-            <li>Using the application paint3D from windows 10 I quickly drawn a big red button.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/06.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/05.jpg" alt="Adding text">
+            </p>
+            <li>Using the application Paint3D from Windows 10 I quickly drew a big red button.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/06.jpg" alt="Drawing a red button">
+            </p>
             <li>Next I upload the red button to the MIT app Inventor. This procedure will be used every time there is a media element used.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/07.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/07.jpg" alt="Uploading the red button">
+            </p>
             <li>Then I edidt its properties like hight, with and text. On #3 I define the image that will serve as the button, in my case the big red button.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/08.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/08.jpg" alt="Editing button properties">
+            </p>
             <li>Then I drag a sound object to the screen area. The process to link this object to its media is the same done before. I will repeat that also for a video.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/08b.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/08b.jpg" alt="Adding a sound object">
+            </p>
             <li>Next I move to the block editor area to the upper right corner. Clicking on button open the possible blocks I can add to the app logic. I then add a button click block.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/09.jpg"></p>
-            <li>Clicking on the sound block and selecting from the options "call sound1. play" allows me to add a command to the button to be executed when its clicked. </li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/10.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/09.jpg" alt="Adding a button click block">
+            </p>
+            <li>Clicking on the sound block and selecting from the options "call sound1.play" allows me to add a command to the button to be executed when its clicked. </li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/10.jpg" alt="Adding sound play command">
+            </p>
             <li>I do the same as before to add a video and then to open it full screen.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/14.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/14.jpg" alt="Adding a video">
+            </p>
             <li>After the app is done I then generate an apk and saved it to my phone file system in order to install the program.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/15.jpg"></p>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/16.jpg"></p>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/17.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/15.jpg" alt="Generating APK">
+            </p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/16.jpg" alt="Saving APK">
+            </p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/17.jpg" alt="Installing APK">
+            </p>
             <li>On the phone I went to the location I saved the apk and installed it. Play protect will try blocking the app but that can be ignored.</li>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/18.jpg"></p>
-            <p class="pic"> <img src="media/interface/groupassignment/appinventor/19.jpg"></p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/18.jpg" alt="Installing on phone">
+            </p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/19.jpg" alt="Play Protect warning">
+            </p>
             <li>This is the resulting app made in the group assignment.</li>
             <p class="pic"> <video controls>
-                    <source src="media/interface/groupassignment/appinventor/output.mp4"> Your browser does not support HTML5 video.
+                    <source src="media/interface/groupassignment/appinventor/output.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
                 </video>
             </p>
         </ol>
@@ -168,7 +187,7 @@
         <p>This Assignment is part of my final project development</p>
         <p>As my final project has been changed to a Irrigation system I started developing its Web Interface.</p>
         <p>Its really complicated to separate the competences and keep here only the part of my project that has to do with Interface, so in some points I will have subjects that are related with other weeks.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial11.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial11.jpg" alt="Hero-Shot">
             <legend>Hero-Shot</legend>
         </p>
         <p>The design so far is the one above. I still need to modify it for the final project as I do not want it merelly activating deactivating the pumps, but I also what in Scheduling of zones among other features.</p>
@@ -190,7 +209,7 @@
         <h4>Development</h4>
         <h4><a id="07/06/2020">7th of June, 2020</a></h4>
         <p>As of today 07th of June 2020 the development is like this.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial01.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial01.jpg" alt="Initial setup">
             <legend>What I start with is a system that works on a Uno and is a torture on a ESP8266 besides is a shock hazard and because of water damage I need to replace some relays.</legend>
         </p>
         <p>The code running on this setup can be found on the Fabfarm Github <a href="https://github.com/fabfarm/autovalve/tree/master/Uno/Irrigation/original/irrigation_system_arduino_code">Autovalve</a></p>
@@ -200,9 +219,10 @@
         <p>After many hours trying to understand the code I managed to port Shakeel's code to a ESP32 and also split the file with each function on a separate file. </p>
         <p>In this video I show the progress I did so far in the merging the codes and having it work in the ESP32</p>
         <p class="pic"> <video controls>
-                <source src="media/final_project/images/initial_stage/initial03_codediff.mp4"> Your browser does not support HTML5 video.
+                <source src="media/final_project/images/initial_stage/initial03_codediff.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video>
-            <legend>Check hight resolution version on <a href="https://youtu.be/oxlblIs7CC0">Youtube</a></legend>
+            <legend>Check high resolution version on <a href="https://youtu.be/oxlblIs7CC0">Youtube</a></legend>
         </p>
         <p>To port the code to ESP32 might be simple for a programmer but it took many hours for me.</p>
         <p>Steps:</p>
@@ -215,19 +235,20 @@
             <li>created variables for the RTC pins</li>
             <li>Commented parts of the code that print error to the serial monitor</li>
         </ol>
-        <p>The code is to big for displaying on the HTML so I will leave a link for the state of the code as this early morning: <a href="https://github.com/fabfarm/autovalve/tree/master/ESP32/esp32irrigation_historical_no_change"> codehere</a>.</p>
+        <p>The code is too big for displaying on the HTML so I will leave a link for the state of the code as this early morning: <a href="https://github.com/fabfarm/autovalve/tree/master/ESP32/esp32irrigation_historical_no_change">code here</a>.</p>
         <p>Here in this video you can see the testing setup of the current irrigation system of the farm</p>
         <p class="pic"> <video controls>
-                <source src="media/final_project/images/initial_stage/initial02_showthesetup.mp4"> Your browser does not support HTML5 video.
+                <source src="media/final_project/images/initial_stage/initial02_showthesetup.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video>
-            <legend>Check hight resolution version on <a href="https://youtu.be/ytQwHZToBWM">Youtube</a></legend>
+            <legend>Check high resolution version on <a href="https://youtu.be/ytQwHZToBWM">Youtube</a></legend>
         </p>
         <hr>
         <h4><a id="09/06/2020">9th of June, 2020</a></h4>
         <p>Today after testing the relays I realized that some relays work some not. After testing on the lab power supply directly with 5volts applied to the signal pin I believe that this is due to low voltage being supplied by the esp32 or the signal voltage.</p>
         <p>I watched then the Great Scott's video on Youtube about <a href="https://www.youtube.com/watch?v=2BdevOmN-Zk">relays and optocouplers</a>.</p>
         <p>I will make sure the relays have at least a 5 volts power supply. Wich are their required voltage acording to the <a href="media/final_project/datasheet/SRD-12VDC-xx-x_ETC.pdf">datasheet</a>. The signal should be fine at 3.3. Will be tested in situ.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial04.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial04.jpg" alt="Relay setup">
             <legend></legend>
         </p>
         <p>The other point is the current reading that is completely wrong. In other to have the irrigation system working I will have to run it without current sensing until debugged.</p>
@@ -245,26 +266,26 @@
         <p>Strangely the external RTC clock is not keeping accurate time. I will look into utilizing internal clock with external battery in case of power failure.</p>
         <p>According to <a href="https://github.com/espressif/arduino-esp32/issues/3641">this closed issue discussion at the esp repo at Github</a> and this <a href="https://www.esp32.com/viewtopic.php?t=3715#p17038">esp accuracy topic</a> the internal clock will delay "Internal RTC clock frequency error is about 5%", this can be solved with a external crystal of 32.768KHz crystal assembled according to the schematics below:</p>
         <p>Another solution would be to have the esp always connected to the Internet and grabbing the time from the Internet updates to compensate for inaccuracy.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/73125119-71fc6c80-3f60-11ea-879e-9a5b5f027982.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/73125119-71fc6c80-3f60-11ea-879e-9a5b5f027982.jpg" alt="RTC clock schematic">
         </p>
         <p>After wakeup update</p>
         <p>Today I went into installing the temporary testing setup. I troubleshoot a few problems.</p>
         <ol>
             <li>Setup was not working when disconnected from computer: -solution power wiring was not correct, ended up connecting 2 USB cables one for the ESP32 and another for the relays, they both share the same ground, also I might have solved the RTC clock problem as well with the same approach.</li>
-            <li></li>
         </ol>
         <p>This is how the prototype looks now:</p>
-        <p class="pic"><img src="media/final_project/images/initial_stage/initial05.jpg">
+        <p class="pic"><img src="media/final_project/images/initial_stage/initial05.jpg" alt="Prototype setup">
             <legend>Still need to wire the pump and the solenoid valves.</legend>
         </p>
-        <p class="pic"><img src="media/final_project/images/initial_stage/initial06.jpg">
+        <p class="pic"><img src="media/final_project/images/initial_stage/initial06.jpg" alt="I hope the wasps don't mind the invasion">
             <legend>I hope the wasps don't mind the invasion</legend>
         </p>
-        <p class="pic"><img src="media/final_project/images/initial_stage/initial07.jpg">
+        <p class="pic"><img src="media/final_project/images/initial_stage/initial07.jpg" alt="Wiring the system">
             <legend>Wiring the system</legend>
         </p>
         <p class="pic"> <video controls>
-                <source src="media/final_project/images/initial_stage/initial08360.mp4"> Your browser does not support HTML5 video.
+                <source src="media/final_project/images/initial_stage/initial08360.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video>
             <legend>testing...testing...</legend>
         </p>
@@ -295,13 +316,13 @@
         <p>I still haven't tested the behaviour but at least it compiles :-)</p>
         <hr>
         <h4><a id="09/06/2020">9th of June, 2020</a></h4>
-        <p> I burned it on the ESP32 and the behavior is unexpected. The function keeps printing again and again I believe I need to send back the sate of one variable and I did not do that. I will try using the code <code>return variable;</code> to do it and then test but before I will watch again the functions video to better understand it.</p>
+        <p> I burned it on the ESP32 and the behavior is unexpected. The function keeps printing again and again I believe I need to send back the state of one variable and I did not do that. I will try using the code <code>return variable;</code> to do it and then test but before I will watch again the functions video to better understand it.</p>
         <hr>
         <h4><a id="13/06/2020">13th of June, 2020</a></h4>
         <p>Argh... OK Long time no updates, well the last code uploaded works and I have some functions but not happy yet as Its working on Arduino but not Platformio. What I learned so far is that Arduino IDE does a lot "under the hood" and with platformio you need to setup it in more detail.</p>
         <p>Read the following</p>
         <ul>
-            <li><a href="https://community.platformio.org/t/i-cannot-figure-out-how-to-upload-a-spiffs-image/6172/5">Platformio comunity tread</a></li>
+            <li><a href="https://community.platformio.org/t/i-cannot-figure-out-how-to-upload-a-spiffs-image/6172/5">Platformio community thread</a></li>
             <li><a href="https://docs.platformio.org/en/latest/projectconf/section_platformio.html#projectconf-pio-data-dir">Platformio docs</a></li>
         </ul>
         <p>I ended up being able to write a file to the spiffs using platformio. I already were able to do it with arduino but without really understanding how now maybe I think I got it so to do that I had to setup the file platformio.ini and the tree directory following a set of steps so lets see:</p>
@@ -309,7 +330,7 @@
             <li>I created a new project file in the "projects" tab area in platformio</li>
             <li>Then I created a data folder in the same level as the src folder. Another option is to include in the platformio.ini file a different path for the data file.</li>
             <li>Then with the board connected I run <code>pio run -t uploadfs</code></li>
-            <li>had to remove time library from platformio as it was conflicting with ESPAsyncWebServer and <a href="https://community.platformio.org/t/errors-after-updating-espasyncwebserver/476">here</a> is where I fund the relevant information.</li>
+            <li>Had to remove time library from platformio as it was conflicting with ESPAsyncWebServer and <a href="https://community.platformio.org/t/errors-after-updating-espasyncwebserver/476">here</a> is where I fund the relevant information.</li>
         </ol>
         <p>It worked.</p>
         <p>With that I started understanding how I did not know what I was doing. The code I started with had the html included in the Arduino Sketch. That bothered me. Now with this new understanding I can have it apart from the sketch file.</p>
@@ -447,7 +468,7 @@
            and a function that will be executed when a request is received on that route.
            We specify this by calling the "on" method on the server object. With server.on(){}; 
            As first input, this method receives a string with the path where it will be listening. 
-           We are going to set it to listen for requests on the “/” route. This could be anything. 
+           We are going to set it to listen for requests on the "/" route. This could be anything. 
            It is basically what you write after the ip adress when in the browser or an APP.
            This website has a great explanation of the ESP32 Arduino: Asynchronous HTTP web server
            https://techtutorialsx.com/2017/12/01/esp32-arduino-asynchronous-http-webserver/
@@ -493,7 +514,7 @@
                Serial.println(inputMessage + inputMessage2);
            
                //This is the last part of the lambda function. 
-               //This method receives as first input the HTTP response code, which will be 200 in our case.  This is the HTTP response code for “OK”.
+               //This method receives as first input the HTTP response code, which will be 200 in our case.  This is the HTTP response code for "OK".
                request->send_P(200, "text/plain", "OK");
              });
            
@@ -541,40 +562,40 @@
         </legend>
         <p style="text-align:center"><a href="https://adress_here">View raw code</a></p>
         <p>It currently looks like this:</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial08.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial08.jpg" alt="Current interface">
             <legend></legend>
         </p>
         <p>The appearance and code right now are pretty much similar to that in the <a href="https://randomnerdtutorials.com/esp32-esp8266-relay-web-server/">Random Nerd tutorial Website for Relays controlled with ESP32</a>.</p>
         <p>The main difference from the original code is that it runs on Platformio for VScode and also it uses a separate folder structure for the html file that is written in the SPIFFS of the ESP.</p>
         <hr>
         <h4><a id="14/06/2020">14th of June, 2020</a></h4>
-        <p>After all this personal breakthru I decided I need to start the code from scratch and use only the general Algorithm of the current irrigation system installed in the farm. The reason is that the code is too messy and repetitive, the approaches found in the last the sources of yesterday made me realize its faster to add the features on the last code one by one than to recode everything from the code currently running on the farm.</p>
+        <p>After all this personal breakthrough I decided I need to start the code from scratch and use only the general Algorithm of the current irrigation system installed in the farm. The reason is that the code is too messy and repetitive, the approaches found in the last the sources of yesterday made me realize its faster to add the features on the last code one by one than to recode everything from the code currently running on the farm.</p>
         <p>I will today attempt to add updated information like temperature and humidity information. I am basing again on the works by Rui Santos <a href="https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-web-server-arduino-ide/">on this page about a weather station.</a> With this approach I believe I will be able to also include time of the day using a RTC clock.</p>
         <p>The schematics for connecting the DHT22 are from his Website:</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/ESP32-DHT-wiring_bb.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/ESP32-DHT-wiring_bb.jpg" alt="DHT22 wiring">
             <legend></legend>
         </p>
-        <p>It uses a 4.7l Ohm Resistor the as a pull up. </p>
+        <p>It uses a 4.7k Ohm Resistor as a pull-up. </p>
         <p>After some work this is how the page looks: </p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial09.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial09.jpg" alt="Updated interface">
             <legend></legend>
         </p>
-        <p>The reason the temperature now is negative I believe is because the temperature and humidity sensor is either faulty or my wirings are a bit loose, I believe once I mill my own board and solder everything instead of plunging on a breadboard this will be more reliable, anyway I am getting the values and being able to show them on the web interface. </p>
+        <p>The reason the temperature now is negative I believe is because the temperature and humidity sensor is either faulty or my wirings are a bit loose, I believe once I mill my own board and solder everything instead of plugging on a breadboard this will be more reliable, anyway I am getting the values and being able to show them on the web interface. </p>
         <p>On Serial monitor I am currently being able to display the Internet time as well as the Network information now I need to find out a way to get the time value and display in the web interface. Currently I am sending through code the word TESTE and that is being displayed instead of the time.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial10.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial10.jpg" alt="Serial monitor output">
             <legend></legend>
         </p>
         <hr>
         <h4><a id="15/06/2020">15th of June, 2020</a></h4>
         <p>Today I will focus on getting the time displayed in the web interface and perhaps create a function to turn on the relay on specific set time.</p>
         <p>8:44 Update:</p>
-        <p>- After the hole day trying I were able to display the machine time and the irrigation system (ESP32) time.</p>
+        <p>- After the whole day trying I were able to display the machine time and the irrigation system (ESP32) time.</p>
         <p>Now the interface looks like this:</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial11.jpg">
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial11.jpg" alt="Interface with time">
             <legend></legend>
         </p>
-        <p>When I grow up I want to be a programmer :-) and not spend a entire day on something someone puts together in a few lines!</p>
-        <p>My struggles where stooped by a saint with <a href="https://arduino.stackexchange.com/a/52677">this answer</a> on stack overflow.</p>
+        <p>When I grow up I want to be a programmer :-) and not spend an entire day on something someone puts together in a few lines!</p>
+        <p>My struggles were stopped by a saint with <a href="https://arduino.stackexchange.com/a/52677">this answer</a> on stack overflow.</p>
         <p>Here follows the original function posted there:</p>
         <pre><code>
 void printLocalTime()
@@ -595,7 +616,7 @@ void printLocalTime()
   String asString(timeStringBuff);
 }
 </code></pre>
-        <p> With minor modifications by changing it from avoid function into a String function and adding a return that I named "timeAsAString":</p>
+        <p> With minor modifications by changing it from a void function into a String function and adding a return that I named "timeAsAString":</p>
         <pre><code>
 //this function was found here https://arduino.stackexchange.com/questions/52676/how-do-you-convert-a-formatted-print-statement-into-a-string-variable
 //I did a minor change so instead of a void function it now returns a string to be used to show time in the webinterface
@@ -614,19 +635,20 @@ String printFarmTime()
   return timeAsAString;
 }
 </code></pre>
-        <p>So with that out of the way I will try to create the functions to turn on and off the relays according to the time scheduled. Lets see if I can finish it by today...</p>
+        <p>So with that out of the way I will try to create the functions to turn on and off the relays according to the time scheduled. Let's see if I can finish it by today...</p>
         <hr>
         <h4>Conclusion</h4>
         <p>As for this assignment I am happy with the point I am now but I will develop further the web interface for the final project, you can pick up from where this assignment stops and continue on <a id="16/06/2020">16th of June, 2020 in the Project development page</a>.</p>
-        <p>After a meeting with a friend of mine Jeff Knight who is a professional programmer he helped me draft a sketch of a plan for where I want to take my final project and where we are its bellow and is part of the README.md of the <a href="https://github.com/fabfarm/ESPlash">Github page I created for the software I am writing for my final project.</a></p>
-        <p>In the video Bellow I show the functionality</p>
+        <p>After a meeting with a friend of mine Jeff Knight who is a professional programmer he helped me draft a sketch of a plan for where I want to take my final project and where we are its below and is part of the README.md of the <a href="https://github.com/fabfarm/ESPlash">Github page I created for the software I am writing for my final project.</a></p>
+        <p>In the video Below I show the functionality</p>
         <p class="pic"> <video controls>
-                <source src="media/interface/irrigationsytem.mp4"> Your browser does not support HTML5 video.
+                <source src="media/interface/irrigationsytem.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video>
-            <legend>Check hight resolution version on <a href="https://www.youtube.com/watch?v=kPZFBc8P_nI">Youtube</a></legend>
+            <legend>Check high resolution version on <a href="https://www.youtube.com/watch?v=kPZFBc8P_nI">Youtube</a></legend>
         </p>
         <div id="readme">
-            <h4>Plan Skecth</h4>
+            <h4>Plan Sketch</h4>
             <p>HTML &lt;--&gt; JavaScript &lt;--&gt; C++</p>
             <table>
                 <thead>
@@ -645,8 +667,8 @@ String printFarmTime()
                         <td>[ ] start times</td>
                     </tr>
                     <tr>
-                        <td>[ ] duration of cicle, max 1 hour</td>
-                        <td>[ ] Duration or cicle</td>
+                        <td>[ ] duration of cycle, max 1 hour</td>
+                        <td>[ ] Duration or cycle</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -682,7 +704,7 @@ String printFarmTime()
                     </tr>
                     <tr>
                         <td>[ ] override button</td>
-                        <td>wait for override buton and turn on/off anytime</td>
+                        <td>wait for override button and turn on/off anytime</td>
                     </tr>
                     <tr>
                         <td>[ ] current zone state (ON/OFF)</td>
@@ -711,7 +733,7 @@ String printFarmTime()
                 </tbody>
             </table>
             <p>microprocessor</p>
-            <il>
+            <ul>
                 <li>Runs: webserver</li>
                 <li>/index.html: displays index</li>
                 <li>/temp.htmml: placeholder</li>
@@ -720,7 +742,7 @@ String printFarmTime()
                 <li>/temperature: returns temp</li>
                 <li>/humidity: returns humidity</li>
                 <li>/update: <strong>sets</strong> values</li>
-            </il>
+            </ul>
 
             <p>On Startup:</p>
             <ul>
@@ -776,9 +798,9 @@ String printFarmTime()
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="media/jquery-1.9.1.min.js"></script>
+    <script src="media/jquery-1.9.1.min.js" defer></script>
     <!-- Syntax Highlighter -->
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         ! function($) {
@@ -788,8 +810,8 @@ String printFarmTime()
         }(window.jQuery)
 
     </script>
-    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
 </body>
 
 </html>
