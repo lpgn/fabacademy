@@ -20,7 +20,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Follow Lucio Pentagna's journey in the Fab Academy 2020, focusing on project updates, challenges, and solutions in developing an irrigation system.">
     <meta name="author" content="Lucio Pentagna">
     <link rel="icon" href="media/favicon.ico">
     <title>Project Update 2 - Fab Academy 2020 - Lucio Pentagna</title>
@@ -29,15 +29,18 @@
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
     <!-- 3D files viewer -->
-    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.min.js"></script>
-    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
-    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <!-- Load the menu file -->
     <script>
         function menu() {
@@ -98,7 +101,7 @@
         <h4>Software Requirements and stage</h4>
         <ol>
             <li>Simplify the code creating more functions;</li>
-            <li>try to separate the HTML part for a cleaner code;</li>
+            <li>Try to separate the HTML part for a cleaner code;</li>
             <li>Improve the appearance/Interface of the code;</li>
             <li>Add readings to HTML;</li>
             <li>Add a log of occurrences like over current;</li>
@@ -114,7 +117,8 @@
         <hr>
         <h4><a id="07/06/2020">7th of June, 2020</a></h4>
         <p>As of today 07th of June 2020 the development is like this.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial01.jpg" alt="Initial irrigation system setup">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial01.jpg" alt="Initial irrigation system setup">
             <legend>What I start with is a system that works on a Uno and is a torture on a ESP8266 besides is a shock hazard and because of water damage I need to replace some relays.</legend>
         </p>
         <p>The code running on this setup can be found on the Fabfarm Github <a href="https://github.com/fabfarm/autovalve/tree/master/Uno/Irrigation/original/irrigation_system_arduino_code">Autovalve</a></p>
@@ -123,74 +127,84 @@
         <h4><a id="08/06/2020">8th of June, 2020</a></h4>
         <p>After many hours trying to understand the code I managed to port Shakeel's code to a ESP32 and also split the file with each function on a separate file. </p>
         <p>In this video I show the progress I did so far in the merging the codes and having it work in the ESP32</p>
-        <p class="pic"> <video controls title="Code merging progress">
-                <source src="media/final_project/images/initial_stage/initial03_codediff.mp4"> Your browser does not support HTML5 video.
+        <p class="pic">
+            <video controls title="Code merging progress">
+                <source src="media/final_project/images/initial_stage/initial03_codediff.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video>
             <legend>Check high resolution version on <a href="https://youtu.be/oxlblIs7CC0">Youtube</a></legend>
         </p>
         <p>To port the code to ESP32 might be simple for a programmer but it took many hours for me.</p>
         <p>Steps:</p>
         <ol>
-            <li>separated everything that was a function already to its own file to make it more readable;</li>
+            <li>Separated everything that was a function already to its own file to make it more readable;</li>
             <li>Opened then another session of the Arduino IDE and started copying every part of the code line by line to the new session, in this session I renamed the main file to "esp32irrigation"</li>
-            <li>remapped the pins to ESP32 pins</li>
-            <li>run beautify on the HTML on Brackets</li>
-            <li>organized the code so pins are on top</li>
-            <li>created variables for the RTC pins</li>
+            <li>Remapped the pins to ESP32 pins</li>
+            <li>Run beautify on the HTML on Brackets</li>
+            <li>Organized the code so pins are on top</li>
+            <li>Created variables for the RTC pins</li>
             <li>Commented parts of the code that print error to the serial monitor</li>
         </ol>
-        <p>The code is to big for displaying on the HTML so I will leave a link for the state of the code as this early morning: <a href="https://github.com/fabfarm/autovalve/tree/master/ESP32/esp32irrigation_historical_no_change"> codehere</a>.</p>
+        <p>The code is too big for displaying on the HTML so I will leave a link for the state of the code as this early morning: <a href="https://github.com/fabfarm/autovalve/tree/master/ESP32/esp32irrigation_historical_no_change">code here</a>.</p>
         <p>Here in this video you can see the testing setup of the current irrigation system of the farm</p>
-        <p class="pic"> <video controls title="Testing setup">
-                <source src="media/final_project/images/initial_stage/initial02_showthesetup.mp4"> Your browser does not support HTML5 video.
+        <p class="pic">
+            <video controls title="Testing setup">
+                <source src="media/final_project/images/initial_stage/initial02_showthesetup.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video>
             <legend>Check high resolution version on <a href="https://youtu.be/ytQwHZToBWM">Youtube</a></legend>
         </p>
         <hr>
         <h4><a id="09/06/2020">9th of June, 2020</a></h4>
-        <p>Today after testing the relays I realized that some relays work some not. After testing on the lab power supply directly with 5volts applied to the signal pin I believe that this is due to low voltage being supplied by the esp32 or the signal voltage.</p>
+        <p>Today after testing the relays I realized that some relays work some not. After testing on the lab power supply directly with 5 volts applied to the signal pin I believe that this is due to low voltage being supplied by the esp32 or the signal voltage.</p>
         <p>I watched then the Great Scott's video on Youtube about <a href="https://www.youtube.com/watch?v=2BdevOmN-Zk">relays and optocouplers</a>.</p>
-        <p>I will make sure the relays have at least a 5 volts power supply. Wich are their required voltage acording to the <a href="media/final_project/datasheet/SRD-12VDC-xx-x_ETC.pdf">datasheet</a>. The signal should be fine at 3.3. Will be tested in situ.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial04.jpg">
+        <p>I will make sure the relays have at least a 5 volts power supply. Which are their required voltage according to the <a href="media/final_project/datasheet/SRD-12VDC-xx-x_ETC.pdf">datasheet</a>. The signal should be fine at 3.3. Will be tested in situ.</p>
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial04.jpg" alt="Relay testing setup">
             <legend></legend>
         </p>
-        <p>The other point is the current reading that is completely wrong. In other to have the irrigation system working I will have to run it without current sensing until debugged.</p>
+        <p>The other point is the current reading that is completely wrong. In order to have the irrigation system working I will have to run it without current sensing until debugged.</p>
         <hr>
         <h4><a id="10/06/2020">10th of June, 2020</a></h4>
-        <p>After the tests, the conclusion to the voltage problem is that the esp32 should not supply power to the relay, that should be supplied from an external power source, set at 5volts. The signal can come from the esp32 unchanged but the esp 32 should share the same ground.</p>
-        <p>more changes in the code:</p>
+        <p>After the tests, the conclusion to the voltage problem is that the esp32 should not supply power to the relay, that should be supplied from an external power source, set at 5 volts. The signal can come from the esp32 unchanged but the esp32 should share the same ground.</p>
+        <p>More changes in the code:</p>
         <ol>
-            <li>increased the interval the time is displayed from 3000 to 5000 ms (5s) in the variable <code>RTCtimeInterval</code></li>
-            <li>increased the interval the setup is displayed from 10000 to 30000 ms (30s) in the variable <code>configTimeInterval</code> </li>
-            <li>Set recognizable names to the relay's html interface</li>
+            <li>Increased the interval the time is displayed from 3000 to 5000 ms (5s) in the variable <code>RTCtimeInterval</code></li>
+            <li>Increased the interval the setup is displayed from 10000 to 30000 ms (30s) in the variable <code>configTimeInterval</code></li>
+            <li>Set recognizable names to the relay's HTML interface</li>
             <li>Cleaned up a bit more on the serial monitor by removing seconds from the setting display</li>
         </ol>
         <p>I will place the setup back to work today in the morning and set times for each irrigation and field test the esp32 irrigation module.</p>
         <p>Strangely the external RTC clock is not keeping accurate time. I will look into utilizing internal clock with external battery in case of power failure.</p>
-        <p>According to <a href="https://github.com/espressif/arduino-esp32/issues/3641">this closed issue discussion at the esp repo at Github</a> and this <a href="https://www.esp32.com/viewtopic.php?t=3715#p17038">esp accuracy topic</a> the internal clock will delay "Internal RTC clock frequency error is about 5%", this can be solved with a external crystal of 32.768KHz crystal assembled according to the schematics below:</p>
+        <p>According to <a href="https://github.com/espressif/arduino-esp32/issues/3641">this closed issue discussion at the esp repo at Github</a> and this <a href="https://www.esp32.com/viewtopic.php?t=3715#p17038">esp accuracy topic</a> the internal clock will delay "Internal RTC clock frequency error is about 5%", this can be solved with an external crystal of 32.768KHz crystal assembled according to the schematics below:</p>
         <p>Another solution would be to have the esp always connected to the Internet and grabbing the time from the Internet updates to compensate for inaccuracy.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/73125119-71fc6c80-3f60-11ea-879e-9a5b5f027982.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/73125119-71fc6c80-3f60-11ea-879e-9a5b5f027982.jpg" alt="RTC clock schematic">
         </p>
         <p>After wakeup update</p>
         <p>Today I went into installing the temporary testing setup. I troubleshoot a few problems.</p>
         <ol>
             <li>Setup was not working when disconnected from computer: -solution power wiring was not correct, ended up connecting 2 USB cables one for the ESP32 and another for the relays, they both share the same ground, also I might have solved the RTC clock problem as well with the same approach.</li>
-            <li></li>
         </ol>
         <p>This is how the prototype looks now:</p>
-        <p class="pic"><img src="media/final_project/images/initial_stage/initial05.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial05.jpg" alt="Prototype setup">
             <legend>Still need to wire the pump and the solenoid valves.</legend>
         </p>
-        <p class="pic"><img src="media/final_project/images/initial_stage/initial06.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial06.jpg" alt="Prototype setup with wasps">
             <legend>I hope the wasps don't mind the invasion</legend>
         </p>
-        <p class="pic"><img src="media/final_project/images/initial_stage/initial07.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial07.jpg" alt="Wiring the system">
             <legend>Wiring the system</legend>
         </p>
-        <p class="pic"> <video controls title="Testing...Testing...">
-                <source src="media/final_project/images/initial_stage/initial08360.mp4"> Your browser does not support HTML5 video.
+        <p class="pic">
+            <video controls title="Testing...Testing...">
+                <source src="media/final_project/images/initial_stage/initial08360.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
             </video>
-            <legend>testing...testing...</legend>
+            <legend>Testing...testing...</legend>
         </p>
         <p>After the tests I went back to the code for more customization.</p>
         <p>I first watched a series of <a href="">videos on Youtube</a> about functions really create and then started creating even more functions.</p>
@@ -219,13 +233,13 @@
         <p>I still haven't tested the behaviour but at least it compiles :-)</p>
         <hr>
         <h4><a id="09/06/2020">9th of June, 2020</a></h4>
-        <p> I burned it on the ESP32 and the behavior is unexpected. The function keeps printing again and again I believe I need to send back the sate of one variable and I did not do that. I will try using the code <code>return variable;</code> to do it and then test but before I will watch again the functions video to better understand it.</p>
+        <p> I burned it on the ESP32 and the behavior is unexpected. The function keeps printing again and again I believe I need to send back the state of one variable and I did not do that. I will try using the code <code>return variable;</code> to do it and then test but before I will watch again the functions video to better understand it.</p>
         <hr>
         <h4><a id="13/06/2020">13th of June, 2020</a></h4>
         <p>Argh... OK Long time no updates, well the last code uploaded works and I have some functions but not happy yet as Its working on Arduino but not Platformio. What I learned so far is that Arduino IDE does a lot "under the hood" and with platformio you need to setup it in more detail.</p>
         <p>Read the following</p>
         <ul>
-            <li><a href="https://community.platformio.org/t/i-cannot-figure-out-how-to-upload-a-spiffs-image/6172/5">Platformio comunity tread</a></li>
+            <li><a href="https://community.platformio.org/t/i-cannot-figure-out-how-to-upload-a-spiffs-image/6172/5">Platformio community thread</a></li>
             <li><a href="https://docs.platformio.org/en/latest/projectconf/section_platformio.html#projectconf-pio-data-dir">Platformio docs</a></li>
         </ul>
         <p>I ended up being able to write a file to the spiffs using platformio. I already were able to do it with arduino but without really understanding how now maybe I think I got it so to do that I had to setup the file platformio.ini and the tree directory following a set of steps so lets see:</p>
@@ -233,7 +247,7 @@
             <li>I created a new project file in the "projects" tab area in platformio</li>
             <li>Then I created a data folder in the same level as the src folder. Another option is to include in the platformio.ini file a different path for the data file.</li>
             <li>Then with the board connected I run <code>pio run -t uploadfs</code></li>
-            <li>had to remove time library from platformio as it was conflicting with ESPAsyncWebServer and <a href="https://community.platformio.org/t/errors-after-updating-espasyncwebserver/476">here</a> is where I fund the relevant information.</li>
+            <li>Had to remove time library from platformio as it was conflicting with ESPAsyncWebServer and <a href="https://community.platformio.org/t/errors-after-updating-espasyncwebserver/476">here</a> is where I found the relevant information.</li>
         </ol>
         <p>It worked.</p>
         <p>With that I started understanding how I did not know what I was doing. The code I started with had the html included in the Arduino Sketch. That bothered me. Now with this new understanding I can have it apart from the sketch file.</p>
@@ -465,40 +479,45 @@
         </legend>
         <p style="text-align:center"><a href="https://adress_here">View raw code</a></p>
         <p>It currently looks like this:</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial08.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial08.jpg" alt="Current web interface">
             <legend></legend>
         </p>
         <p>The appearance and code right now are pretty much similar to that in the <a href="https://randomnerdtutorials.com/esp32-esp8266-relay-web-server/">Random Nerd tutorial Website for Relays controlled with ESP32</a>.</p>
         <p>The main difference from the original code is that it runs on Platformio for VScode and also it uses a separate folder structure for the html file that is written in the SPIFFS of the ESP.</p>
         <hr>
         <h4><a id="14/06/2020">14th of June, 2020</a></h4>
-        <p>After all this personal breakthru I decided I need to start the code from scratch and use only the general Algorithm of the current irrigation system installed in the farm. The reason is that the code is too messy and repetitive, the approaches found in the last the sources of yesterday made me realize its faster to add the features on the last code one by one than to recode everything from the code currently running on the farm.</p>
+        <p>After all this personal breakthrough I decided I need to start the code from scratch and use only the general Algorithm of the current irrigation system installed in the farm. The reason is that the code is too messy and repetitive, the approaches found in the last the sources of yesterday made me realize its faster to add the features on the last code one by one than to recode everything from the code currently running on the farm.</p>
         <p>I will today attempt to add updated information like temperature and humidity information. I am basing again on the works by Rui Santos <a href="https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-web-server-arduino-ide/">on this page about a weather station.</a> With this approach I believe I will be able to also include time of the day using a RTC clock.</p>
         <p>The schematics for connecting the DHT22 are from his Website:</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/ESP32-DHT-wiring_bb.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/ESP32-DHT-wiring_bb.jpg" alt="DHT22 wiring schematic">
             <legend></legend>
         </p>
-        <p>It uses a 4.7l Ohm Resistor the as a pull up. </p>
+        <p>It uses a 4.7k Ohm Resistor as a pull up. </p>
         <p>After some work this is how the page looks: </p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial09.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial09.jpg" alt="Web interface with temperature and humidity">
             <legend></legend>
         </p>
         <p>The reason the temperature now is negative I believe is because the temperature and humidity sensor is either faulty or my wirings are a bit loose, I believe once I mill my own board and solder everything instead of plunging on a breadboard this will be more reliable, anyway I am getting the values and being able to show them on the web interface. </p>
         <p>On Serial monitor I am currently being able to display the Internet time as well as the Network information now I need to find out a way to get the time value and display in the web interface. Currently I am sending through code the word TESTE and that is being displayed instead of the time.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial10.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial10.jpg" alt="Serial monitor output">
             <legend></legend>
         </p>
         <hr>
         <h4><a id="15/06/2020">15th of June, 2020</a></h4>
         <p>Today I will focus on getting the time displayed in the web interface and perhaps create a function to turn on the relay on specific set time.</p>
         <p>8:44 Update:</p>
-        <p>- After the hole day trying I were able to display the machine time and the irrigation system (ESP32) time.</p>
+        <p>- After the whole day trying I were able to display the machine time and the irrigation system (ESP32) time.</p>
         <p>Now the interface looks like this:</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial11.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial11.jpg" alt="Web interface with time display">
             <legend></legend>
         </p>
-        <p>When I grow up I want to be a programmer :-) and not spend a entire day on something someone puts together in a few lines!</p>
-        <p>My struggles where stooped by a saint with <a href="https://arduino.stackexchange.com/a/52677">this answer</a> on stack overflow.</p>
+        <p>When I grow up I want to be a programmer :-) and not spend an entire day on something someone puts together in a few lines!</p>
+        <p>My struggles were stopped by a saint with <a href="https://arduino.stackexchange.com/a/52677">this answer</a> on stack overflow.</p>
         <p>Here follows the original function posted there:</p>
         <pre><code>
 void printLocalTime()
@@ -519,7 +538,7 @@ void printLocalTime()
   String asString(timeStringBuff);
 }
 </code></pre>
-        <p> With minor modifications by changing it from avoid function into a String function and adding a return that I named "timeAsAString":</p>
+        <p> With minor modifications by changing it from a void function into a String function and adding a return that I named "timeAsAString":</p>
         <pre><code>
 //this function was found here https://arduino.stackexchange.com/questions/52676/how-do-you-convert-a-formatted-print-statement-into-a-string-variable
 //I did a minor change so instead of a void function it now returns a string to be used to show time in the webinterface
@@ -538,19 +557,21 @@ String printFarmTime()
   return timeAsAString;
 }
 </code></pre>
-        <p>So with that out of the way I will try to create the functions to turn on and off the relays according to the time scheduled. Lets see if I can finish it by today...</p>
+        <p>So with that out of the way I will try to create the functions to turn on and off the relays according to the time scheduled. Let's see if I can finish it by today...</p>
         <hr>
         <h4><a id="16/06/2020">16th of June, 2020</a></h4>
         <p>No I did not work on it I was tired, so today I made a few sketches.</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial12.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial12.jpg" alt="Sketch of package shape and web interface">
             <legend></legend>
         <p>In this Sketch I show how the package shape is going to be and how the web interface is going to be as well.</p>
         <p>I am also reading about <a href="https://www.arduino.cc/en/Reference.StringConstructor">String</a> as well as its <a href="https://arduino.stackexchange.com/questions/1013/how-do-i-split-an-incoming-string">manipulation</a>.</p>
         <p>I could follow an approach of splitting the dates as a String and convert it to other types of values for the operations I intend. Or another possibility is to get the data in the type I need from the beginning, although I like the latter better I haven't find a solution for it yet as I don't understand the getLocalTime() function well yet. So I will read more on it now.</p>
         <p>Wait... that was fast! I found a post that answers my need. Here it is:</p>
-        <p class="pic"> <img src="media/final_project/images/initial_stage/initial13.jpg">
+        <p class="pic">
+            <img src="media/final_project/images/initial_stage/initial13.jpg" alt="Post in the Arduino Forum by user Abhay">
             <legend>Post in the <a href="https://forum.arduino.cc/index.php?topic=536464.0">Arduino Forum</a> by user Abhay</legend>
-        <p>So I based on the post above to create a function bellow:</p>
+        <p>So I based on the post above to create a function below:</p>
         <pre><code>
           
       int gimeTime(char what) {
@@ -592,7 +613,7 @@ String printFarmTime()
       }
     
     </code></pre>
-        <p>Thats it now I can finally work on the timer scheduling code. by the way I spent almost the hole day try a simpler way to get the times but just couldn't as I am strugling to understand the (Struct) type. well maybe will go back to it in the future but for now its good.</p>
+        <p>That's it now I can finally work on the timer scheduling code. By the way, I spent almost the whole day trying a simpler way to get the times but just couldn't as I am struggling to understand the (Struct) type. Well, maybe will go back to it in the future but for now, it's good.</p>
         <hr>
         <h4><a id="17/06/2020">17th of June, 2020</a></h4>
         <p>Super early morning update: </p>
@@ -620,9 +641,9 @@ String printFarmTime()
         Serial.print("*** Pump turned ON ***");
         }
         }</code></pre>
-        <p>Its a start but not yet there and I haven't tested.</p>
+        <p>It's a start but not yet there and I haven't tested.</p>
         <p>Morning Update:</p>
-        <p>so I will now look into another example to set a timer again by Rui Santos, its <a href="https://randomnerdtutorials.com/esp32-esp8266-web-server-timer-pulse/">here</a>, maybe I can change it a bit and integrate to my code and add a start time then using the slide to set how long in minutes it will run. That would be enough for now!</p>
+        <p>So I will now look into another example to set a timer again by Rui Santos, it's <a href="https://randomnerdtutorials.com/esp32-esp8266-web-server-timer-pulse/">here</a>, maybe I can change it a bit and integrate to my code and add a start time then using the slide to set how long in minutes it will run. That would be enough for now!</p>
         <p>So far I made the code compatible to Platformio and also separated the index.html file from the C++ code and placed it in its own folder to be saved by the save to Spiffs routine, that I described on <a href="#13/06/2020">13/06/2020</a>.</p>
         <h4>References</h4>
         <p><a href="https://esp32.com/viewtopic.php?t=7004">esp32 eagle library</a></p>
@@ -645,9 +666,9 @@ String printFarmTime()
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="media/jquery-1.9.1.min.js"></script>
+    <script src="media/jquery-1.9.1.min.js" defer></script>
     <!-- Syntax Highlighter -->
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         ! function($) {
@@ -657,8 +678,8 @@ String printFarmTime()
         }(window.jQuery)
 
     </script>
-    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
 </body>
 
 </html>
