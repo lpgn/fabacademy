@@ -13,9 +13,8 @@
         gtag('js', new Date());
 
         gtag('config', 'G-7QEDKLDK8M');
-
     </script>
-    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
+    <!-- Finish Global site tag (gtag.js) - Google Analytics -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,14 +31,14 @@
     <link href="media/fabacademy.css" rel="stylesheet">
 
     <!-- 3D files viewer -->
-    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
-    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
-    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
-    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
+    <script defer src="media/jsc3d_ie.min.js"></script>
+    <script defer src="media/jsc3d.min.js"></script>
+    <script defer src="media/jsc3d.webgl.js"></script>
+    <script defer src="media/jsc3d.touch.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
+    <script defer src="bootstrap/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -54,7 +53,6 @@
             $('#project').load("project-menu.html");
             $('#cclicense').load("license.html");
         }
-
     </script>
 
 </head>
@@ -118,11 +116,10 @@
             </ul>
         </div>
         <hr>
-        <h3> Group Assignment
-        </h3>
-        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/electronic_production.html"> for the group assignment page</a></p>
+        <h3>Group Assignment</h3>
+        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/electronic_production.html">the group assignment page</a></p>
         <h2>Individual Assignment</h2><br>
-        <p>This week I will be making a ISP <a href="https://en.wikipedia.org/wiki/In-system_programming">(In-system programming)</a> or in-circuit programmer.</p>
+        <p>This week I will be making an ISP <a href="https://en.wikipedia.org/wiki/In-system_programming">(In-system programming)</a> or in-circuit programmer.</p>
         <p>I chose to do <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP</a>. I chose it for its simplicity and cost as it is stripped down to a bare minimum of components.</p>
         <p class="pic"><img src="media/electronics_production/image001.jpg" alt="Brian's ISP image 1">
             <legend>Image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
@@ -131,115 +128,114 @@
             <legend>Image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
 
-        <p>The process will be split in phases, Milling, Stuffing/Populating, De-buging, Programing:</p>
+        <p>The process will be split in phases: Milling, Stuffing/Populating, Debugging, Programming:</p>
         <h4>Milling</h4>
-        <p>On this phase I will be using the following:</p>
+        <p>In this phase I will be using the following:</p>
         <ul>
             <li>Fab Modules <a href="http://fabmodules.org"></a></li>
             <li>Mach3</li>
             <li>The CNC</li>
         </ul>
         <h4>Fab Modules</h4>
-        <p>- I started by downloading the Traces (1000 dpi) and Outline Cutout (1000 dpi) of the circuit provided at Brian's tutorial.</p>
+        <p>- I started by downloading the Traces (1000 dpi) and Outline Cutout (1000 dpi) of the circuit provided in Brian's tutorial.</p>
         <p class="pic"><img src="media/electronics_production/image005.png">
-            <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
+            <legend>Image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
         <p class="pic"><img src="media/electronics_production/image007.png">
-            <legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
+            <legend>Image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend>
         </p>
-        <h4>- At Fab modules</h4>
+        <h4>- At Fab Modules</h4>
         <p>I selected the option "image (.jpg)"</p>
         <p class="pic"><img src="media/electronics_production/image009.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>I choose the image file</p>
+        <p>I chose the image file</p>
         <p class="pic"><img src="media/electronics_production/image011.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>Once image is loaded I selected "output format" and then "G-codes (.nc)"</p>
+        <p>Once the image is loaded, I selected "output format" and then "G-codes (.nc)"</p>
         <p class="pic"><img src="media/electronics_production/image013.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>On Process I selected "PCB traces (1/64)"</p>
+        <p>In Process, I selected "PCB traces (1/64)"</p>
         <p class="pic"><img src="media/electronics_production/image015.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>Before calculating I changed the cut depth to 0.05, half of the default value as I was being a bit cautious on it.</p>
+        <p>Before calculating, I changed the cut depth to 0.05, half of the default value, as I was being a bit cautious.</p>
         <p class="pic"><img src="media/electronics_production/image017.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>Then pressed calculate</p>
+        <p>Then I pressed calculate</p>
         <p class="pic"><img src="media/electronics_production/image019.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>After calculation I proceed with an inspection of the tool path to make sure that all traces were covered. By holding left mouse key I was able to move the image and with the wheel button I could zoom the image to better check the tool path.</p>
+        <p>After calculation, I proceeded with an inspection of the tool path to make sure that all traces were covered. By holding the left mouse key, I was able to move the image, and with the wheel button, I could zoom the image to better check the tool path.</p>
         <p class="pic"><img src="media/electronics_production/image021.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>By holding right mouse key I was able to even see it with a different perspective.</p>
+        <p>By holding the right mouse key, I was able to even see it with a different perspective.</p>
         <p class="pic"><img src="media/electronics_production/image023.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>Last I saved the file for the milling process.</p>
+        <p>Lastly, I saved the file for the milling process.</p>
         <p class="pic"><img src="media/electronics_production/image025.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
         <p class="pic"><img src="media/electronics_production/image027.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>To outline I followed the same steps as before except I chose to "PCB outline (1/32)" instead of traces.</p>
+        <p>To outline, I followed the same steps as before, except I chose "PCB outline (1/32)" instead of traces.</p>
         <p class="pic"><img src="media/electronics_production/image029.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
         <h4>2- Mach3</h4>
-        <p>I started the preparation of the cnc by milling a pocket the size of the blank PCB (76x50x1.5mm)</p>
+        <p>I started the preparation of the CNC by milling a pocket the size of the blank PCB (76x50x1.5mm)</p>
         <p class="pic"><img src="media/electronics_production/image031.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
         <p>Milling the pocket</p>
         <p class="pic"><img src="media/electronics_production/image033.jpg">
-            <legend>photo of my cnc making a pocket for the blank pcb</legend>
+            <legend>Photo of my CNC making a pocket for the blank PCB</legend>
         </p>
         <p>Finished pocket</p>
         <p class="pic"><img src="media/electronics_production/image035.jpg">
-            <legend>photo of my cnc finishing pocket</legend>
+            <legend>Photo of my CNC finishing pocket</legend>
         </p>
-        <p>Gluing double face tape on the FR1 board
-        </p>
+        <p>Gluing double-sided tape on the FR1 board</p>
         <p class="pic"><img src="media/electronics_production/image037.jpg">
-            <legend>back of blank pcb</legend>
+            <legend>Back of blank PCB</legend>
         </p>
         <p>The end result is this.</p>
         <p class="pic"><img src="media/electronics_production/image039.jpg">
-            <legend>finishing the outside of the ISP</legend>
+            <legend>Finishing the outside of the ISP</legend>
         </p>
-        <p>Milling the cutout of one of the ISP's </p>
+        <p>Milling the cutout of one of the ISPs</p>
         <p class="pic"><img src="media/electronics_production/image041.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
         <p>Removing the PCB from the pocket.</p>
         <p class="pic"><img src="media/electronics_production/image043.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
         <p>I used a blade and sandpaper to remove shavings left from the milling process.</p>
         <p class="pic"><img src="media/electronics_production/image045.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
-        <p>Removed the double face tape from behind the pcb.</p>
+        <p>Removed the double-sided tape from behind the PCB.</p>
         <p class="pic"><img src="media/electronics_production/image047.jpg">
-            <legend> capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
         <h4>3. Stuffing</h4>
-        <p>Basing on Brian's ISP's page tutorial I started by creating a spreadsheet with the components and its positions.</p>
+        <p>Based on Brian's ISP's page tutorial, I started by creating a spreadsheet with the components and their positions.</p>
         <p class="pic"><img src="media/electronics_production/image049.jpg">
-            <legend>image capture from my computer</legend>
+            <legend>Image capture from my computer</legend>
         </p>
         <p class="pic"><img src="media/electronics_production/image051.jpg">
-            <legend>image from Brian's ISP's page</legend>
+            <legend>Image from Brian's ISP's page</legend>
         </p>
         <h4>BOM</h4>
         <div class="table-responsive">
-            <table class="table" border with="800">
+            <table class="table" border width="800">
                 <tr>
                     <td width="300">
                         <p>Components</p>
@@ -249,7 +245,7 @@
                     </td>
                     <td width="200">
                         <p><span>Digikey</span> or Mouser</p>
-                        <p>Part number </p>
+                        <p>Part number</p>
                     </td>
                     <td width="200">
                         <p>Manufacture Part #</p>
@@ -281,7 +277,7 @@
                         <p><a href="http://www.digikey.com/product-detail/en/yageo/RC1206FR-071KL/311-1.00KFRCT-ND/731334"><span>311-1.00KFRCT-ND</span></a></p>
                     </td>
                     <td width="200">
-                        <p>RC1206FR-071KL </p>
+                        <p>RC1206FR-071KL</p>
                     </td>
                 </tr>
                 <tr>
@@ -296,7 +292,7 @@
                         <p><a href="http://www.digikey.com/product-detail/en/yageo/RC1206FR-07499RL/311-499FRCT-ND/731891"><span>311-499FRCT-ND</span></a></p>
                     </td>
                     <td width="200">
-                        <p>RC1206FR-07499RL </p>
+                        <p>RC1206FR-07499RL</p>
                     </td>
                 </tr>
                 <tr>
@@ -390,7 +386,7 @@
                 </tr>
             </table>
         </div>
-        <p>After that I proceed soldering all components in place.</p>
+        <p>After that, I proceeded to solder all components in place.</p>
 
         <p class="pic"><video controls>
                 <source src="media/electronics_production/soldering.mp4" type="video/mp4">
@@ -401,91 +397,91 @@
         <p class="pic"><img src="media/electronics_production/image053.jpg" alt="Semi-finished ISP">
             <legend>Photo of my semi-finished ISP</legend>
         </p>
-        <p>OK I need to clean a bit more</p>
-        <p>With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.</p>
-        <p>Overall the board seemed fine so I proceed with the programing.</p>
+        <p>OK, I need to clean a bit more.</p>
+        <p>With the multimeter, I looked for shorts and nothing was detected, especially between Vcc and GND.</p>
+        <p>Overall, the board seemed fine, so I proceeded with the programming.</p>
         <hr>
         <h4>4- Programming</h4>
-        <p>In order to program the programmer fabricated, I make use of a hardware called <a href="https://www.fischl.de/usbasp/">UsbASP</a>. Extracted from Thomas Fischl's website he describes it as:</p>
+        <p>In order to program the fabricated programmer, I made use of a hardware called <a href="https://www.fischl.de/usbasp/">UsbASP</a>. Extracted from Thomas Fischl's website, he describes it as:</p>
         <p><i>"USBasp is a USB in-circuit programmer for Atmel AVR controllers. It simply consists of an ATMega88 or an ATMega8 and a couple of passive components. The programmer uses a firmware-only USB driver, no special USB controller is needed."</i></p>
         <p class="pic"><img src="media/electronics_production/usbasp.jpg">
             <legend>My old and faithful USBasp</legend>
         </p>
         <p>You use it just like the tinyUSB.</p>
-        <p>The header poking out of the transparent plastic cover is to program at 8 or 16 Mhz, the USBasp I have does not detect speeds automatically speeds so simply install a jumper to change speed modes. This is necessary for example when programing the ATTINY44 or 45 (slower speeds) while with an IC like the AT90USB1286 can be programed at 16 Mhz. The new firmware on this programmers usually can detect the speed of the chip automatically like the ones sold today at <a href="aliexpress.com">Aliexpress</a> for less than 2 dolars.</p>
-        <p>So going back to the software, under Ubuntu for Windows 10 (Linux windows subsystem). I Started by installing the programing environment with the code <code>sudo apt-get install avrdude gcc-avr avr-libc make</code></p>
+        <p>The header poking out of the transparent plastic cover is to program at 8 or 16 MHz. The USBasp I have does not detect speeds automatically, so simply install a jumper to change speed modes. This is necessary, for example, when programming the ATTINY44 or 45 (slower speeds) while with an IC like the AT90USB1286, it can be programmed at 16 MHz. The new firmware on these programmers usually can detect the speed of the chip automatically, like the ones sold today at <a href="aliexpress.com">Aliexpress</a> for less than 2 dollars.</p>
+        <p>So going back to the software, under Ubuntu for Windows 10 (Linux Windows Subsystem), I started by installing the programming environment with the code <code>sudo apt-get install avrdude gcc-avr avr-libc make</code></p>
         <p class="pic"><img src="media/electronics_production/image057.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>With the prior command the programs got downloaded.</p>
+        <p>With the prior command, the programs got downloaded.</p>
         <p class="pic"><img src="media/electronics_production/image059.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>I then downloaded the firmware source to a directory. Following that I run the command <code>make</code></p>
+        <p>I then downloaded the firmware source to a directory. Following that, I ran the command <code>make</code></p>
         <p class="pic"><img src="media/electronics_production/image061.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>Using Sublime-text I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".</p>
-        <p>As explained before making a USBtiny I did not have a programmer other than the USBasp so thats why I replaced the code with the one compatible to my device.</p>
+        <p>Using Sublime Text, I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".</p>
+        <p>As explained before, making a USBtiny, I did not have a programmer other than the USBasp, so that's why I replaced the code with the one compatible with my device.</p>
         <p class="pic"><img src="media/electronics_production/image063.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>I then run</p>
+        <p>I then ran</p>
         <pre class="prettyprint linenums">make flash</pre>
         <p class="pic"><img src="media/electronics_production/image065.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>But no success. So I run <code>lsusb</code> to get the list of avaiable usb devices.</p>
-        <p>and I get a message <code>"unable to initialize libusb: -99</code></p>
+        <p>But no success. So I ran <code>lsusb</code> to get the list of available USB devices.</p>
+        <p>And I got a message <code>"unable to initialize libusb: -99"</code></p>
         <p class="pic"><img src="media/electronics_production/image067.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shell yet! Argh!</p>
-        <p>note: I haven't confirmed yet but aparentelly in 2020 the usb is suported in Windows linux subsystem OS but not at the time of making this exercises.</p>
+        <p>After a quick search on Stack Overflow, I found out there is no support for USB under Windows 10 Ubuntu shell yet! Argh!</p>
+        <p>Note: I haven't confirmed yet, but apparently in 2020, USB is supported in Windows Linux Subsystem OS, but not at the time of making these exercises.</p>
         <p class="pic"><img src="media/electronics_production/image069.jpg">
-            <legend>capture of my computer screen on <a href="http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10">stackoverflow</a> </legend>
+            <legend>Capture of my computer screen on <a href="http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-Windows-10">Stack Overflow</a></legend>
         </p>
-        <p>Then I gave up on Ubuntu bash for windows 10 and run a copy of Ubuntu under VMware player.
-            At ubuntu I run:</p>
+        <p>Then I gave up on Ubuntu Bash for Windows 10 and ran a copy of Ubuntu under VMware Player.
+            At Ubuntu, I ran:</p>
         <pre class="prettyprint linenums">sudo apt install avrdude gcc-avr avr-libc make</pre>
         <p class="pic"><img src="media/electronics_production/image071.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
 
-        <p>This time after running lsusb I can see that device is present.</p>
-        <p>I run </p>
+        <p>This time, after running <code>lsusb</code>, I could see that the device is present.</p>
+        <p>I ran</p>
         <pre class="prettyprint linenums">make</pre>
         <p>in order to compile the firmware.</p>
         <p class="pic"><img src="media/electronics_production/image073.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
 
-        <p>I then run</p>
+        <p>I then ran</p>
         <pre class="prettyprint linenums">make flash
 </pre>
-        <p>But again I got an error message.
+        <p>But again, I got an error message.
         </p>
-        <p>I realize that Brian's ISP has to have a jumper installed in order to program the Attiny45 and yes I forgot to solder the jumper.</p>
+        <p>I realized that Brian's ISP has to have a jumper installed in order to program the ATtiny45, and yes, I forgot to solder the jumper.</p>
         <p class="pic"><img src="media/electronics_production/needsolderinghere.jpg">
-            <legend>The Programmer needs to have the jumper soldered while programing and them have it removed afterwards.</legend>
+            <legend>The Programmer needs to have the jumper soldered while programming and then have it removed afterwards.</legend>
         </p>
-        <p> That made me remove the shrink tube I had installed prior.</p>
+        <p>That made me remove the shrink tube I had installed prior.</p>
         <p class="pic"><img src="media/electronics_production/image055.jpg">
-            <legend>photo of my semi-finished ISP</legend>
+            <legend>Photo of my semi-finished ISP</legend>
         </p>
-        <p>So I do it! </p>
+        <p>So I did it!</p>
         <p>And it works!</p>
         <p class="pic"><img src="media/electronics_production/image075.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>Next I run </p>
+        <p>Next, I ran</p>
         <pre class="prettyprint linenums">make fuses</pre>
         <p class="pic"><img src="media/electronics_production/image077.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>After having the firmware uploaded and fuses burnt my new ASP would not be recognised.</p>
+        <p>After having the firmware uploaded and fuses burned, my new ASP would not be recognized.</p>
         <p>So back to debugging…</p>
-        <p>I end up measuring each resistor value, and replacing the attiny with a new one. With a multimeter I found out that the R1 1K resistor was not working, replaced and voila. Board detected!!! Oh also I decided to install a usb connector I cut from an old cable and after some washing that's how it looks.</p>
+        <p>I ended up measuring each resistor value and replacing the ATtiny with a new one. With a multimeter, I found out that the R1 1K resistor was not working. I replaced it, and voila! Board detected!!! Oh, also, I decided to install a USB connector I cut from an old cable, and after some washing, that's how it looks.</p>
         <p class="pic"><img src="media/electronics_production/image079.jpg" alt="Tiny ISP without cover">
             <legend>Photo of my tiny ISP without cover</legend>
         </p>
@@ -494,39 +490,39 @@
         </p>
         <p>Final command <code>make rstdisbl</code></p>
         <p class="pic"><img src="media/electronics_production/image081.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>It worked! Now I remove jumper!</p>
+        <p>It worked! Now I remove the jumper!</p>
         <p class="pic"><img src="media/electronics_production/image083.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>It works! That is proved by the detection of the USBtiny by the linux command <code>lsusb</code> as its shown in the picture above and zommed bellow:</p>
+        <p>It works! That is proved by the detection of the USBtiny by the Linux command <code>lsusb</code> as shown in the picture above and zoomed below:</p>
         <p class="pic"><img src="media/electronics_production/zoomdetection.jpg">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
         <h4>5- Final Test</h4>
-        <p>Not tired of changing platforms I decided to test Windows. here I print how I load the driver for my USBasp. I use this very usefull software that makes installing drivers on windows 10 less traumatic.</p>
-        <p>Loading the driver on windows I use the tool "Zadig_2.2.exe"</p>
+        <p>Not tired of changing platforms, I decided to test Windows. Here I print how I load the driver for my USBasp. I use this very useful software that makes installing drivers on Windows 10 less traumatic.</p>
+        <p>Loading the driver on Windows, I use the tool "Zadig_2.2.exe"</p>
         <p class="pic"><img src="media/electronics_production/image085.jpg" alt="Driver installation screen">
-            <legend>capture of my computer screen</legend>
+            <legend>Capture of my computer screen</legend>
         </p>
-        <p>Here I show a recent print the proves the USBtiny is detected under windows. Since I have done this exercise years ago I do not have the driver installation procedure outlined for windows but I have showed its detection before on Linux as well as now on Windows.</p>
+        <p>Here I show a recent print that proves the USBtiny is detected under Windows. Since I have done this exercise years ago, I do not have the driver installation procedure outlined for Windows, but I have shown its detection before on Linux as well as now on Windows.</p>
         <p class="pic"><img src="media/electronics_production/devicesmanager.jpg">
-            <legend>recent capture of my computer screen</legend>
+            <legend>Recent capture of my computer screen</legend>
         </p>
-        <p>After the driver installation I tested under windows the burning of my 3D printer board's firmware. The firmware I burned as just outlined was the firmware for a <a href="https://reprap.org/wiki/Printrboard">Printrboard</a> I made years ago with the open source plans.</p>
-        <p>In the terrible fotage bellow you can see this happening with the code <code>avrdude -c usbtiny -p at90usb1286 -U flash:w:BootloaderHID.hex:i -U lfuse:w:0xDE:m -U hfuse:w:0xdb:m -U efuse:w:0xF0:m</code></p>
-        <p>To eliminate confusions weather the USBtiny fabricated burns or not, lets dissect the code above:</p>
+        <p>After the driver installation, I tested under Windows the burning of my 3D printer board's firmware. The firmware I burned, as just outlined, was the firmware for a <a href="https://reprap.org/wiki/Printrboard">Printrboard</a> I made years ago with the open-source plans.</p>
+        <p>In the terrible footage below, you can see this happening with the code <code>avrdude -c usbtiny -p at90usb1286 -U flash:w:BootloaderHID.hex:i -U lfuse:w:0xDE:m -U hfuse:w:0xdb:m -U efuse:w:0xF0:m</code></p>
+        <p>To eliminate confusion about whether the fabricated USBtiny burns or not, let's dissect the code above:</p>
         <ol>
-            <li>the first part <code>avrdude</code> is the name of the program.</li>
-            <li>then <code>-c usbtiny</code> defines the programmer name, "usbtiny" is the fabricated programmer name</li>
-            <li>Next <code>-p at90usb1286</code> is the target IC to be programmed, here the at90usb1286 that is installed on my printrboard.</li>
+            <li>The first part <code>avrdude</code> is the name of the program.</li>
+            <li>Then <code>-c usbtiny</code> defines the programmer name, "usbtiny" is the fabricated programmer name.</li>
+            <li>Next <code>-p at90usb1286</code> is the target IC to be programmed, here the AT90USB1286 that is installed on my Printrboard.</li>
             <li>
-                <code>-U flash:w:BootloaderHID.hex:i </code>defines the name/location of the firmware to be loaded, in this case "BootloaderHID.hex"
+                <code>-U flash:w:BootloaderHID.hex:i </code>defines the name/location of the firmware to be loaded, in this case "BootloaderHID.hex".
             </li>
-            <li><code>-U lfuse:w:0xDE:m -U hfuse:w:0xdb:m -U efuse:w:0xF0:m</code> is the part of the command that burn the fuses.</li>
+            <li><code>-U lfuse:w:0xDE:m -U hfuse:w:0xdb:m -U efuse:w:0xF0:m</code> is the part of the command that burns the fuses.</li>
         </ol>
-        <p>The above mentioned is shown in the terrible footage ;-) bellow</p>
+        <p>The above-mentioned is shown in the terrible footage ;-) below</p>
         <p class="pic"><video controls title="Programming demonstration">
                 <source src="media/electronics_production/ispworks.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -536,8 +532,8 @@
     </div> <!-- /container -->
     <!-- footer -->
     <footer id="footer">
-        <p id="cclicense"> </p>
-        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        <p id="cclicense"></p>
+        <p class="license">Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a><br>Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
     <!-- Do not touch this! -->
@@ -554,7 +550,6 @@
                 window.prettyPrint && prettyPrint()
             })
         }(window.jQuery)
-
     </script>
     <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>

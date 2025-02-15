@@ -1,11 +1,11 @@
 # Replace the text below to customize your site
 site_name: Fab Academy Lucio Pentagna Guimarães Neto
-site_description: My Fabacademy site
+site_description: My Fab Academy site
 
 site_author: Lucio Pentagna Guimarães Neto
 docs_dir: docs
 site_dir: _site
-copyright: Creative Commons Attribution Non Commercial
+copyright: Creative Commons Attribution Non-Commercial
 theme:
   name: material
   # see https://squidfunk.github.io/mkdocs-material/getting-started/#color-palette
