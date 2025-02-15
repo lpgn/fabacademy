@@ -26,14 +26,15 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- 3D files viewer -->
-    <script defer src="media/jsc3d_ie.min.js"></script>
-    <script defer src="media/jsc3d.min.js"></script>
-    <script defer src="media/jsc3d.webgl.js"></script>
-    <script defer src="media/jsc3d.touch.js"></script>
+    <script  src="media/jsc3d_ie.min.js"></script>
+    <script  src="media/jsc3d.min.js"></script>
+    <script  src="media/jsc3d.webgl.js"></script>
+    <script  src="media/jsc3d.touch.js"></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+  
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -161,7 +162,7 @@
         <p>I designed the PCB that has on its center an ESP32 and relays for the activation of various equipment like solenoid valves, a pump, and a sensor.</p>
         <p>I also designed the waterproof enclosure as well as a gasket.</p>
         <p>Finally, I designed the web interface to allow connectivity and operation of the system.</p>
-        <p>I won't design valves, sensors, actuators, or power supplies. All of these are going to be commercially available items that will be integrated into my final project.</p>
+        <p>I did not design valves, sensors, actuators, or power supplies. These were commercially available items that were integrated into my final project.</p>
         <hr>
         <h4>What materials and components were used?</h4>
         <h4>Where did they come from?</h4>
@@ -192,12 +193,12 @@
             <thead>
                 <tr class="tableizer-firstrow">
                     <th scope="col">Materials and components</th>
-                    <th scope="col">What for</th>
-                    <th scope="col">Where they come from</th>
+                    <th scope="col">Purpose</th>
+                    <th scope="col">Source</th>
                     <th scope="col">Links</th>
-                    <th scope="col">Qty</th>
+                    <th scope="col">Quantity</th>
                     <th scope="col">Unit Price</th>
-                    <th scope="col">Total Price</th>
+                    <th scope="col">Total Cost</th>
                 </tr>
             </thead>
             <tbody>
@@ -266,10 +267,10 @@
                     <th scope="col">Value</th>
                     <th scope="col">Package</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Where they come from Links</th>
-                    <th scope="col">Qty</th>
-                    <th scope="col">Pc Price</th>
-                    <th scope="col">Total Price</th>
+                    <th scope="col">Source Links</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Total Cost</th>
                 </tr>
             </thead>
             <tbody>
@@ -427,7 +428,7 @@
                     <td> $2.28</td>
                 </tr>
                 <tr>
-                    <td>220omh</td>
+                    <td>220ohm</td>
                     <td>R1206</td>
                     <td>RES SMD 220 OHM 1% 1/4W 1206</td>
                     <td>https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF1206FT220R/RMCF1206FT220RCT-ND/2418647</td>
@@ -543,9 +544,9 @@
         <ul>
             <li>Electronics</li>
             <ul>
-                <li>Electronics design, <a href="project_development.html#pcbdesign">Designing the PCB</a> in Eagle.</li>
-                <li>Electronics Production, <a href="project_development.html#pcbmaking">Milling the PCB</a>.</li>
-                <li><a href="project_development.html#pcbdebug">Debugging the PCB</a><br></li>
+                <li>Electronics design, <a href="project_development.html#PCB design">Designing the PCB</a> in Eagle.</li>
+                <li>Electronics Production, <a href="project_development.html#PCB milling">Milling the PCB</a>.</li>
+                <li><a href="project_development.html#PCB debugging">Debugging the PCB</a><br></li>
                 <li><a href="interface_and_application_programing.html">Web interface</a>, communication with C++ with Json, and the embedded program itself on C++</li>
                 <li><a href="project_development.html#burningthefirmware">Burning The Firmware</a><br></li>
                 <li><a href="project_development.html#code">Network Code</a><br></li>
@@ -577,7 +578,7 @@
         <hr>
 
         <p>The firmware worked for 3 months so far, irrigating my plants. What I am not very happy with is that if the battery finishes because it is in a remote location, we need to bring a hotspot so it connects to the internet automatically to get the internet time.</p>
-        <p>I did not have time to create a safety routine to check the pump amperage. The board has the components, but the software is not developed yet.</p>
+        <p>I did not have time to to create a safety routine to check the pump amperage. The board has the components, but the software is not developed yet.</p>
         <hr>
         <h4>How was it evaluated?</h4>
         <hr>
@@ -615,7 +616,7 @@
         <hr>
 
         <p><a href="network.html">Network</a></p>
-        <p><a href="interface_and_application_programing.html">Interface and Application Programing</a></p>
+        <p><a href="interface_and_aplication_programing.html">Interface and Aplication Programing</a></p>
         <hr>
         <h4>License</h4>
         <hr>
